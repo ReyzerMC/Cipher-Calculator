@@ -1,0 +1,242 @@
+:root {
+    --hsr-bg-card: rgba(43, 49, 79, 0.75);
+    --hsr-bg-hover: rgba(82, 93, 138, 0.8);
+    --hsr-acent: #ece5d8;
+    --hsr-text-dim: #a0a7c2;
+    --hsr-border: rgba(255, 255, 255, 0.15);
+}
+
+.hsr-traces-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  max-height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.hsr-traces-canvas {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    max-width: 90vw;
+    max-height: 90vw;
+    transform-origin: center center;
+}
+
+/* Marca de Agua Central */
+.hsr-traces-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 390px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* Capa SVG */
+.hsr-traces-svg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hsr-svg-orbit {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 0.3;
+  stroke-dasharray: 1 1;
+}
+
+.hsr-svg-line {
+  stroke: rgba(255, 255, 255, 0.9);
+  stroke-width: 0.4;
+}
+
+/* Layer de Nodos */
+.hsr-traces-nodes-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hsr-trace-node-wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Botones de Nodos */
+.hsr-trace-node-btn {
+  background: rgba(20, 24, 40, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.hsr-trace-node-wrapper:hover .hsr-trace-node-btn,
+.hsr-trace-node-wrapper.selected .hsr-trace-node-btn {
+  border-color: #ffc700;
+  box-shadow: 0 0 14px rgba(255, 199, 0, 0.7);
+  transform: scale(1.1);
+}
+
+/* Tipos de Nodos */
+.node-type-basic .hsr-trace-node-btn,
+.node-type-skill .hsr-trace-node-btn,
+.node-type-ultimate .hsr-trace-node-btn,
+.node-type-talent .hsr-trace-node-btn,
+.node-type-technique .hsr-trace-node-btn {
+  width: 50px;
+  height: 50px;
+  background: rgba(35, 30, 25, 0.92);
+  border-color: #cbb292;
+}
+
+.node-type-bonus .hsr-trace-node-btn {
+  width: 56px;
+  height: 56px;
+  border-width: 2.5px;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+.node-type-stat .hsr-trace-node-btn {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.node-type-stat .hsr-node-icon {
+  filter: invert(1);
+}
+
+.hsr-node-icon {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+}
+
+.hsr-node-level {
+  position: absolute;
+  bottom: -16px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 0.68rem;
+  padding: 1px 5px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Indicador de seleccion */
+.hsr-node-arrow {
+  position: absolute;
+  top: -12px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #ffc700;
+}
+
+/* Popover Informativo Flotante */
+.hsr-trace-info-popover {
+  position: fixed;
+  top: 25%;
+  right: 0px;
+  width: 320px;
+  background: rgba(18, 22, 38, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: none; /* Se fusiona con el borde derecho de la pantalla */
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+  padding: 20px;
+  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+  text-align: left;
+  animation: slideInRight 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hsr-info-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.hsr-info-badge {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffc700;
+  border: 1px solid rgba(255, 199, 0, 0.3);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hsr-info-title {
+  margin: 4px 0 0 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.hsr-info-level {
+  font-size: 0.85rem;
+  color: #a0a7c2;
+  font-weight: 500;
+}
+
+.hsr-info-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), transparent);
+  margin: 12px 0;
+}
+
+.hsr-info-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #ece5d8;
+  margin: 0;
+}
+
+.hsr-info-desc b,
+.hsr-info-desc strong {
+  color: #ffc700;
+  font-weight: 600;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

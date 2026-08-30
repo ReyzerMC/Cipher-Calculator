@@ -1,0 +1,319 @@
+:root {
+    --hsr-bg-card: rgba(43, 49, 79, 0.75);
+    --hsr-bg-hover: rgba(82, 93, 138, 0.8);
+    --hsr-acent: #ece5d8;
+    --hsr-text-dim: #a0a7c2;
+    --hsr-border: rgba(255, 255, 255, 0.15);
+}
+
+body {
+    margin: 0;
+    background-color: #0d0f1d;
+    color: var(--hsr-acent);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.hsr-container {
+    display: grid;
+    grid-template-columns: 280px 1fr 320px;
+    gap: 24px;
+    min-height: 100vh;
+    padding: 32px;
+    box-sizing: border-box;
+    background: radial-gradient(circle at center, #1b1e36 0%, #0a0b14 100%);
+    overflow: hidden;
+}
+
+/* Panel Izquierdo */
+.hsr-left-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform-origin: left top;
+}
+
+.hsr-title {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.hsr-rarity {
+    color: #ffc700;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.hsr-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--hsr-bg-card);
+    padding: 12px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--hsr-border);
+}
+
+.hsr-menu-item {
+    background: transparent;
+    border: none;
+    color: var(--hsr-text-dim);
+    padding: 10px 16px;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.hsr-menu-item.active,
+.hsr-menu-item:hover {
+    background: var(--hsr-bg-hover);
+    color: #fff;
+}
+
+.hsr-menu-item:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.hsr-center-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hsr-character-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.hsr-art-placeholder {
+    color: var(--hsr-text-dim);
+    border: 2px dashed var(--hsr-border);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+
+/* Panel Derecho */
+.hsr-right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transform-origin: right top;
+}
+
+.hsr-card {
+    background: var(--hsr-bg-card);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--hsr-border);
+}
+
+.hsr-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--hsr-text-dim);
+    margin: 8px 0 4px;
+}
+
+.hsr-select {
+    width: 100%;
+    padding: 10px;
+    background: rgba(15, 18, 32, 0.6);
+    border: 1px solid var(--hsr-border);
+    color: #fff;
+    border-radius: 8px;
+    outline: none;
+    margin-bottom: 8px;
+}
+
+.hsr-select:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Stats */
+.hsr-stats-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--hsr-border);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.hsr-stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hsr-stats-list li {
+    display: flex;
+    justify-content: space-between;
+    color: var(--hsr-text-dim);
+}
+
+.hsr-stats-list li strong {
+    color: #fff;
+}
+
+.hsr-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    border-top: 1px solid var(--hsr-border);
+    padding-top: 12px;
+    font-size: 0.9rem;
+}
+
+.hsr-details-grid div {
+    display: flex;
+    flex-direction: column;
+    color: var(--hsr-text-dim);
+}
+
+.hsr-details-grid strong {
+    color: #fff;
+    margin-top: 2px;
+}
+
+/* Separadores e Infraestructura */
+.hsr-divider {
+    border: 0;
+    border-top: 1px solid var(--hsr-border);
+    margin: 12px 0;
+}
+
+/* Cono de luz header */
+.hsr-lc-card {
+    position: relative;
+}
+
+.hsr-lc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.hsr-ls-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.hsr-lc-title {
+    font-size: 0.75rem;
+    color: var(--hsr-text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hsr-lc-name {
+    margin: 4px 0 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.hsr-lc-thumb {
+    width: 52px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--hsr-border);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hsr-lc-thumb-placeholder {
+    width: 52px;
+    height: 68px;
+    border-radius: 8px;
+    border: 1px dashed var(--hsr-border);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Boton habilidad pasiva */
+.hsr-passive-wrapper {
+    margin-top: 12px;
+    position: relative;
+}
+
+.hsr-btn-passive {
+    width: 100%;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--hsr-border);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hsr-btn-passive:hover:not(:disabled) {
+    background: var(--hsr-bg-hover);
+}
+
+.hsr-btn-passive:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Desplegable / Popover Flotante */
+.hsr-popover {
+    position: absolute;
+    bottom: 110%;
+    left: 0;
+    right: 0;
+    background: rgba(20, 24, 40, 0.95);
+    border: 1px solid var(--hsr-border);
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    z-index: 20;
+}
+
+.hsr-popover-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: var(--hsr-text-dim);
+}
+
+.hsr-select-super {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--hsr-border);
+    color: #ffc700;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 2px 6px;
+    outline: none;
+}
+
+.hsr-popover-desc {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--hsr-acent);
+}
