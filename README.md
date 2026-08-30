@@ -185,4 +185,4 @@ Si encuentras algún problema, utiliza el sistema de **Issues** del repositorio 
 
 </div>
 
-[English - README](https://github.com/ReyzerMC/Cipher-Calculator/EN-README.md)
+[English - README](https://github.com/ReyzerMC/Cipher-Calculator/blob/main/EN-README.md)
