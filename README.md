@@ -133,7 +133,7 @@ Esto ayudará considerablemente a localizar y solucionar el problema.
 
 ## ⚠️ Disclaimer / Derechos de autor
 
-**Nada del contenido relacionado con Honkai: Star Rail incluido en este repositorio es propiedad de mi propiedad.**
+**Nada del contenido relacionado con Honkai: Star Rail incluido en este repositorio es de mi propiedad.**
 
 Todos los derechos sobre:
 
