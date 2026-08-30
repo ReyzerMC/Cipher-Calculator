@@ -4,7 +4,7 @@ import { Characters } from "./items/characters/CharactersList";
 import { LightCones } from "./items/lightCones/LightConesList";
 import "./App.css";
 import { TracesMenu } from "./TracesMenu";
-import { nihilityImg, destructionImg, elationImg } from "./assets/paths";
+import { nihilityImg, destructionImg, elationImg, harmonyImg } from "./assets/paths";
 import { Paths } from "./items/item/ResourcesLists";
 
 const useTraceScale = () => {
@@ -108,7 +108,7 @@ export default function App() {
                 [Paths.Erudition]: "",
                 [Paths.Hunt]: "",
                 [Paths.Preservation]: "",
-                [Paths.Harmony]: "",
+                [Paths.Harmony]: harmonyImg,
                 [Paths.Remembrance]: ""
               } [selectedCharacter.path]
             }

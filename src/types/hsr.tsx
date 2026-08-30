@@ -222,3 +222,64 @@ export class ElationTreeLayout {
     { from: "b2", to: "s8" },
   ];
 }
+
+export class HarmonyTreeLayout {
+  static readonly positions: Record<string, { x: number; y: number }> = {
+    // --- NODOS CENTRALES ---
+    attack: { x: 36, y: 47 },
+    skill: { x: 64, y: 47 },
+    ultimate: { x: 50, y: 59 },
+    talent: { x: 50, y: 43 },
+    technique: { x: 50, y: 73 },
+
+    // --- PASIVAS MAYORES (B1, B2, B3) ---
+    b1: { x: 50, y: 26 },         // Pasiva Mayor Superior
+    b2: { x: 19, y: 55 },         // Pasiva Mayor Izquierda
+    b3: { x: 81, y: 55 },         // Pasiva Mayor Derecha
+
+    // --- ANILLO EXTERIOR Y EXTENSIONES (s1 a s10) ---
+    // Arco Superior (Conectado a b1)
+    s1: { x: 35, y: 16 },         // Stat Bonus (Arriba Izq)
+    s2: { x: 50, y: 12 },         // Stat Bonus (Arriba Centro)
+    s3: { x: 65, y: 16 },         // Stat Bonus (Arriba Der)
+
+    // Rama Diagonal Izquierda (Desde b2 hacia afuera)
+    s4: { x: 24, y: 34 },         // Stat Bonus (Interno izq)
+    s5: { x: 11, y: 42 },         // Stat Bonus (Borde externo izq)
+
+    // Rama Diagonal Derecha (Desde b3 hacia abajo)
+    s6: { x: 61, y: 62 },         // Stat Bonus (Interno der)
+    s7: { x: 74, y: 68 },         // Stat Bonus (Extremo inferior der)
+
+    // Arco Inferior (Conectado desde Technique)
+    s8: { x: 50, y: 86 },         // Stat Bonus (Centro Abajo)
+    s9: { x: 34, y: 83 },         // Stat Bonus (Abajo Izq)
+    s10: { x: 66, y: 83 },        // Stat Bonus (Abajo Der)
+  };
+
+  static readonly connections: Connection[] = [
+    
+    { from: "s2", to: "s1" },
+    { from: "s2", to: "s3" },
+    { from: "s2", to: "b1" },
+
+    { from: "b2", to: "s5" },
+    { from: "s5", to: "s4" },
+    
+    { from: "talent", to: "b1" },
+    { from: "talent", to: "attack", arc: { radius: 33, sweep: 0 } },
+    { from: "talent", to: "skill", arc: { radius: 33, sweep: 1 } },
+    { from: "attack", to: "b2", arc: { radius: 60, sweep: 0 } },
+    { from: "skill", to: "b3", arc: { radius: 60, sweep: 1 } },
+    { from: "talent", to: "ultimate" },
+    { from: "ultimate", to: "technique" },
+
+
+    { from: "b3", to: "s7" },
+    { from: "s7", to: "s6" },
+
+    { from: "technique", to: "s8" },
+    { from: "s8", to: "s9" },
+    { from: "s8", to: "s10" }
+  ];
+}

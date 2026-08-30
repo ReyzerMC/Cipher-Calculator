@@ -96,6 +96,20 @@ export const Texts = {
         const Elation = ElationVal[index]; 
 
         return `Increases the wearer's CRIT Rate by <b><u>${CritRate}%</u></b>. When the wearer uses Elation Skill, gains "Updraft," which increases the wearer's SPD by <b><u>${SPD}%</u></b>. If the Elation Skill used is different from the one used last time, additionally gains "Uptrend", which increases the wearer's Elation by <b><u>${Elation}%</u></b>. When every wave starts or after the wearer uses Elation Skill 3 time(s), recovers 1 Skill Point.`;
+    },
+
+    PastSelfInMirrorENG: (rank: number): string => {
+        const BreakVal = [60, 70, 80, 90, 100];
+        const DMGVal = [24, 28, 32, 36, 40];
+        const EnergyVal = [10.0, 12.5, 15.0, 17.5, 20.0];
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const Break = BreakVal[index];
+        const DMG = DMGVal[index];
+        const Energy = EnergyVal[index]; 
+
+        return `Increases the wearer's Break Effect by <b><u>${Break}%</u></b>. When the wearer uses their Ultimate, increases all allies' DMG by <b><u>${DMG}%</u></b>, lasting for 3 turn(s). If the wearer's Break Effect exceeds or equals 150%, 1 Skill Point will be recovered. At the start of each wave, all allies regenerate <b><u>${Energy}</u></b> Energy immediately. Abilities of the same type cannot stack.`;
     }
 } as const;
 

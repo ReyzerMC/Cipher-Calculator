@@ -6,6 +6,8 @@ import MaxHP from "./global/IconMaxHP.png";
 import CritDMG from "./global/CRITdmg.webp";
 import CritRate from "./global/CRITrate.webp";
 import ElationStat from "./global/ElationStat.webp";
+import Def from "./global/DEF.webp";
+import Break from "./global/Break.webp";
 
 // Cipher
 import cipherImg from "./cipher.png";
@@ -43,6 +45,17 @@ import AvWfUltimate from "./AvWf/Ultimate.png";
 import AvWfTalent from "./AvWf/Talent.png";
 import AvWfTechnique from "./AvWf/Technique.png";
 
+// Ruan Mei
+import RuanmeiImg from "./Ruanmei.png";
+import RuanmeiBasicATK from "./Ruanmei/BasicATK.png";
+import RuanmeiSkill from "./Ruanmei/Skill.png";
+import RuanmeiUltimate from "./Ruanmei/Ultimate.png";
+import RuanmeiTalent from "./Ruanmei/Talent.png";
+import RuanmeiTechnique from "./Ruanmei/Technique.png";
+import CandleLightsOnStillWaters from "./Ruanmei/CandleLightsOnStillWaters.png";
+import InertRespiration from "./Ruanmei/InertRespiration.png";
+import DaysWaneThoughtsWax from "./Ruanmei/DaysWaneThoughtsWax.png";
+
 export {
     //Global
     SPD,
@@ -52,6 +65,8 @@ export {
     CritDMG,
     CritRate,
     ElationStat,
+    Def,
+    Break,
 
     //Cipher
     cipherImg,
@@ -85,5 +100,16 @@ export {
     AvWfSkill,
     AvWfUltimate,
     AvWfTalent,
-    AvWfTechnique
+    AvWfTechnique,
+
+    // Ruan Mei
+    RuanmeiImg,
+    RuanmeiBasicATK,
+    RuanmeiSkill,
+    RuanmeiUltimate,
+    RuanmeiTalent,
+    RuanmeiTechnique,
+    CandleLightsOnStillWaters,
+    InertRespiration,
+    DaysWaneThoughtsWax
 };

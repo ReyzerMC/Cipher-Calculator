@@ -25,7 +25,7 @@ const Cipher: Character = {
             type: "basic",
             level: "7/7",
             icon: CA.CipherBasicATK,
-            description: "Deals Quantum DMG equal to <u>130%</u> of Cipher's ATK to one designated enemy."
+            description: "Deals Quantum DMG equal to <b><u>130%</u></b> of Cipher's ATK to one designated enemy."
         },
         skill: {
             id: "skill",
@@ -33,7 +33,7 @@ const Cipher: Character = {
             type: "skill",
             level: "12/12",
             icon: CA.CipherSkill,
-            description: "Has a 120% base chance to Weaken one designated enemy and its adjacent targets (decreasing their DMG dealt by 10%) and increases Cipher's ATK by 30%, lasting for 2 turn(s). Moreover, deals Quantum DMG equal to <u>230%</u> of Cipher's ATK to one designated enemy, and Quantum DMG equal to <u>115%</u> of Cipher's ATK to the adjacent targets."
+            description: "Has a 120% base chance to Weaken one designated enemy and its adjacent targets (decreasing their DMG dealt by 10%) and increases Cipher's ATK by 30%, lasting for 2 turn(s). Moreover, deals Quantum DMG equal to <b><u>230%</u></b> of Cipher's ATK to one designated enemy, and Quantum DMG equal to <b><u>115%</u></b> of Cipher's ATK to the adjacent targets."
         },
         ultimate: {
             id: "ultimate",
@@ -41,7 +41,7 @@ const Cipher: Character = {
             type: "ultimate",
             level: "12/12",
             icon: CA.CipherUltimate,
-            description: "<b>Energy: 130</b><br> Deals Quantum DMG equal to <u>138%</u> of Cipher's ATK to one designated enemy. Then, deals True DMG equal to 25% of the current tally kept by Talent to the one designated enemy. Moreover, deals Quantum DMG equal to <u>46%</u> of Cipher's ATK alongside True DMG equal to 75% of the current tally kept by Talent to the one designated enemy and its adjacent targets. And this True DMG is distributed evenly among all targets of this ability."
+            description: "<b>Energy: 130</b><br> Deals Quantum DMG equal to <b><u>138%</u></b> of Cipher's ATK to one designated enemy. Then, deals True DMG equal to 25% of the current tally kept by Talent to the one designated enemy. Moreover, deals Quantum DMG equal to <b><u>46%</u></b> of Cipher's ATK alongside True DMG equal to 75% of the current tally kept by Talent to the one designated enemy and its adjacent targets. And this True DMG is distributed evenly among all targets of this ability."
         },
         talent: {
             id: "talent",
@@ -49,7 +49,7 @@ const Cipher: Character = {
             type: "talent",
             level: "12/12",
             icon: CA.CipherTalent,
-            description: "When there are no enemy targets in the \"Patron\" state on the battlefield, Cipher immediately causes one enemy target with the highest Max HP on the battlefield to become the \"Patron\". When using Skill and Ultimate, the primary target becomes the \"Patron\". The \"Patron\" state only takes effect on the most recent target. After the \"Patron\" gets attacked by other ally targets, Cipher immediately launches Follow-Up ATK against the \"Patron\", dealing Quantum DMG equal to <u>150%</u> of Cipher's ATK. This effect can trigger up to 1 time(s) per turn, and this trigger count resets at the start of Cipher's turn. Cipher will tally 12% of the non-True DMG dealt by ally targets to the \"Patron.\" Overflow DMG will not be tallied. After using Ultimate, clears this tally."
+            description: "When there are no enemy targets in the \"Patron\" state on the battlefield, Cipher immediately causes one enemy target with the highest Max HP on the battlefield to become the \"Patron\". When using Skill and Ultimate, the primary target becomes the \"Patron\". The \"Patron\" state only takes effect on the most recent target. After the \"Patron\" gets attacked by other ally targets, Cipher immediately launches Follow-Up ATK against the \"Patron\", dealing Quantum DMG equal to <b><u>150%</u></b> of Cipher's ATK. This effect can trigger up to 1 time(s) per turn, and this trigger count resets at the start of Cipher's turn. Cipher will tally 12% of the non-True DMG dealt by ally targets to the \"Patron.\" Overflow DMG will not be tallied. After using Ultimate, clears this tally."
         },
         technique: {
             id: "technique",
@@ -180,7 +180,7 @@ const Midey: Character = {
             type: "basic",
             level: "7/7",
             icon: CA.mideyBasicATK,
-            description: "Deals Imaginary DMG equal to 55% of Mydei's Max HP to one designated enemy."
+            description: "Deals Imaginary DMG equal to <b><u>55%</u></b> of Mydei's Max HP to one designated enemy."
         },
         skill: {
             id: "skill",
@@ -189,8 +189,8 @@ const Midey: Character = {
             level: "12/12",
             icon: CA.mideySkill,
             description: "<b>Deaths are Legion, Regrets are None</b><br>Consumes HP by an amount equal to 50% of Mydei's current HP. Deals Imaginary DMG equal to <u>99%</u> of Mydei's Max HP to one designated enemy and Imaginary DMG equal to <u>55%</u> of Mydei's Max HP to adjacent targets. If the current HP is not sufficient, using Skill reduces Mydei's current HP to 1.<br><br><b>Kingslayer Be King</b><br>" +
-            "Consumes HP by an amount equal to 35% of Mydei's current HP. Deals Imaginary DMG equal to <u>121%</u> of Mydei's Max HP to one enemy and Imaginary DMG equal to <u>73%</u> of Mydei's Max HP to adjacent targets. If the current HP is not sufficient, using Skill reduces Mydei's current HP to 1. This ability will be automatically used.<br><br><b>Godslayer Be God</b><br>" +
-            "Consumes 150 point(s) of Charge. Deals Imaginary DMG equal to <u>308%</u> of Mydei's Max HP to one enemy and Imaginary DMG equal to <u>185%</u> of Mydei's Max HP to adjacent targets. This ability will be automatically used. While this ability is in use, Charge cannot be accumulated."
+            "Consumes HP by an amount equal to 35% of Mydei's current HP. Deals Imaginary DMG equal to <b><u>121%</u></b> of Mydei's Max HP to one enemy and Imaginary DMG equal to <b><u>73%</u></b> of Mydei's Max HP to adjacent targets. If the current HP is not sufficient, using Skill reduces Mydei's current HP to 1. This ability will be automatically used.<br><br><b>Godslayer Be God</b><br>" +
+            "Consumes 150 point(s) of Charge. Deals Imaginary DMG equal to <b><u>308%</u></b> of Mydei's Max HP to one enemy and Imaginary DMG equal to <b><u>185%</u></b> of Mydei's Max HP to adjacent targets. This ability will be automatically used. While this ability is in use, Charge cannot be accumulated."
         },
         ultimate: {
             id: "ultimate",
@@ -198,7 +198,7 @@ const Midey: Character = {
             type: "ultimate",
             level: "12/12",
             icon: CA.mideyUltimate,
-            description: "<b>Energy: 160</b><br> Restores HP by <u>21.0%</u> of Mydei's Max HP and accumulates 20 Talent's Charge point(s). Deals Imaginary DMG equal to <u>173%</u> of Mydei's Max HP to one designated enemy, and deals Imaginary DMG equal to <u>108%</u> of Mydei's Max HP to adjacent targets. Additionally, Taunts the target and targets adjacent to it, lasting for 2 turn(s). The next use of \"Godslayer Be God\" prioritizes attacking one designated enemy, and this effect only works on the latest target."
+            description: "<b>Energy: 160</b><br> Restores HP by <b><u>21.0%</u></b> of Mydei's Max HP and accumulates 20 Talent's Charge point(s). Deals Imaginary DMG equal to <b><u>173%</u></b> of Mydei's Max HP to one designated enemy, and deals Imaginary DMG equal to <b><u>108%</u></b> of Mydei's Max HP to adjacent targets. Additionally, Taunts the target and targets adjacent to it, lasting for 2 turn(s). The next use of \"Godslayer Be God\" prioritizes attacking one designated enemy, and this effect only works on the latest target."
         },
         talent: {
             id: "talent",
@@ -206,7 +206,7 @@ const Midey: Character = {
             type: "talent",
             level: "12/12",
             icon: CA.mideyTalent,
-            description: "For each 1% of HP lost, accumulates 1 point of Charge (up to 200 points). When Charge reaches 100, consumes 100 points of Charge to enter the \"Vendetta\" state, restores HP equal to <u>27%</u> of Mydei's Max HP, and advances action by 100%. While the \"Vendetta\" state is active, Max HP increases by 50% of the current Max HP and DEF remains at 0. At the start of this unit's turn, automatically uses \"Kingslayer Be King.\" When Charge reaches 150 points during the \"Vendetta\" state, Mydei immediately gains 1 extra turn and automatically uses \"Godslayer Be God.\" When receiving a killing blow during the \"Vendetta\" state, Mydei will not be knocked down, but will clear his Charge, exits the \"Vendetta\" state, and restores HP by 50% of his Max HP."
+            description: "For each 1% of HP lost, accumulates 1 point of Charge (up to 200 points). When Charge reaches 100, consumes 100 points of Charge to enter the \"Vendetta\" state, restores HP equal to <b><u>27%</u></b> of Mydei's Max HP, and advances action by 100%. While the \"Vendetta\" state is active, Max HP increases by 50% of the current Max HP and DEF remains at 0. At the start of this unit's turn, automatically uses \"Kingslayer Be King.\" When Charge reaches 150 points during the \"Vendetta\" state, Mydei immediately gains 1 extra turn and automatically uses \"Godslayer Be God.\" When receiving a killing blow during the \"Vendetta\" state, Mydei will not be knocked down, but will clear his Charge, exits the \"Vendetta\" state, and restores HP by 50% of his Max HP."
         },
         technique: {
             id: "technique",
@@ -483,6 +483,162 @@ const AventurineWaveflair: Character = {
     }
 };
 
+const Ruanmei: Character = {
+    name: "Ruan Mei",
+    path: Paths.Harmony,
+    element: Elements.Ice,
+    world: Worlds.HertaSpaceStation,
+    image: CA.RuanmeiImg,
+
+    baseATK: 659,
+    baseDEF: 485,
+    baseHP: 1086,
+    baseSPD: 104,
+    aggro: 100,
+    dupe: 0,
+
+    traces: {
+        attack: {
+            id: "attack",
+            name: "Basic ATK: Threading Fragrance",
+            type: "basic",
+            level: "7/7",
+            icon: CA.RuanmeiBasicATK,
+            description: "Deals Ice DMG equal to <b><u>110%</u></b> of Ruan Mei's ATK to one designated enemy target."
+        },
+        skill: {
+            id: "skill",
+            name: "Skill: String Sings Slow Swirls",
+            type: "skill",
+            level: "12/12",
+            icon: CA.RuanmeiSkill,
+            description: "After using her Skill, Ruan Mei gains Overtone, lasting for 3 turn(s). This duration decreases by 1 at the start of Ruan Mei's every turn. When Ruan Mei has Overtone, all allies' DMG increases by <b><u>35.2%</u></b> and Weakness Break Efficiency increases by 50%."
+            },
+        ultimate: {
+            id: "ultimate",
+            name: "Ultimate: Petals to Stream, Repose in Dream",
+            type: "ultimate",
+            level: "12/12",
+            icon: CA.RuanmeiUltimate,
+            description: "<b>Energy: 130</b><br> Ruan Mei deploys a Zone that lasts for 2 turns. The Zone's duration decreases by 1 at the start of her turn. While inside the Zone, all allies' All-Type RES PEN increases by <b><u>27.0%</u></b> and their attacks apply Thanatoplum Rebloom to the enemies hit. When these enemies attempt to recover from Weakness Break, Thanatoplum Rebloom is triggered, extending the duration of their Weakness Break, delaying their action by an amount equal to 20% of Ruan Mei's Break Effect plus 10%, and dealing Break DMG equal to <b><u>54%</u></b> of Ruan Mei's Ice Break DMG. Enemy targets cannot have Thanatoplum Rebloom re-applied to them until they recover from Weakness Break."
+        },
+        talent: {
+            id: "talent",
+            name: "Talent: Somatotypical Helix",
+            type: "talent",
+            level: "12/12",
+            icon: CA.RuanmeiTalent,
+            description: "Increases SPD by <b><u>10.4%</u></b> for all teammates (i.e., excluding this unit). When allies Break an enemy target's Weakness, Ruan Mei deals to this enemy target Break DMG equal to <b><u>132.0%</u></b> of her Ice Break DMG."
+        },
+        technique: {
+            id: "technique",
+            name: "Technique: Silken Serenade",
+            type: "technique",
+            level: "1/1",
+            icon: CA.RuanmeiTechnique,
+            description: "After using the Technique, gains Silken Serenade. At the start of the next battle, automatically triggers the Skill for 1 time(s) without consuming Skill Points. In Simulated Universe or Divergent Universe, when Ruan Mei has Silken Serenade, the team actively attacking enemies will always be regarded as attacking their Weakness to enter combat, and this attack can reduce all enemies' Toughness regardless of Weakness types. When breaking Weakness, triggers Weakness Break Effect corresponding to the attacker's Type. For every Blessing in possession (up to a max of 20 Blessings will be taken into account), additionally increases the Toughness Reduction of this attack by 100%. After breaking an enemy target's Weakness, additionally deals to the enemy target Break DMG equal to 100% of Ruan Mei's Ice Break DMG."
+        },
+
+        // --- Pasivas ---
+        b1: {
+            id: "b1",
+            name: "Candle Lights on Still Waters",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.CandleLightsOnStillWaters,
+            description: "In battle, for every 10% of Ruan Mei's Break Effect that exceeds 120%, her Skill additionally increases allies' DMG by 6%, up to a maximum of 36%.",
+        },
+        b2: {
+            id: "b2",
+            name: "Inert Respiration",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.InertRespiration,
+            description: "Increases Break Effect by 20% for all allies.",
+        },
+        b3: {
+            id: "b3",
+            name: "Days Wane, Thoughts Wax",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.DaysWaneThoughtsWax,
+            description: "Ruan Mei regenerates 5 Energy at the start of her turn.",
+        },
+        // --- Stats Nodes (Nodos Pequeños) ---
+        s1: {
+            id: "s1",
+            name: "DEF Boost",
+            type: "stat",
+            icon: CA.Def,
+            description: "DEF Increases by: <b><u>10.0%</u></b>",
+        },
+        s2: {
+            id: "s2",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>3</u></b>",
+        },
+        s3: {
+            id: "s3",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+            description: "Break Effect Increases by: <b><u>10.7%</u></b>",
+        },
+        s4: {
+            id: "s4",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+            description: "Break Effect Increases by: <b><u>5.3%</u></b>",
+        },
+        s5: {
+            id: "s5",
+            name: "DEF Boost",
+            type: "stat",
+            icon: CA.Def,
+            description: "DEF Increases by: <b><u>5.0%</u></b>",
+        },
+        s6: {
+            id: "s6",
+            name: "DEF Boost",
+            type: "stat",
+            icon: CA.Def,
+            description: "DEF Increases by: <b><u>7.5%</u></b>",
+        },
+        s7: {
+            id: "s7",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+            description: "Break Effect Increases by: <b><u>8.0%</u></b>",
+        },
+        s8: {
+            id: "s8",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+            description: "Break Effect Increases by: <b><u>5.3%</u></b>",
+        },
+        s9: {
+            id: "s9",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>2</u></b>",
+        },
+        s10: {
+            id: "s10",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+            description: "Break Effect Increases by: <b><u>8.0%</u></b>",
+        },
+    }
+};
+
 Characters.push(Cipher);
 Characters.push(Midey);
 Characters.push(AventurineWaveflair);
+Characters.push(Ruanmei);

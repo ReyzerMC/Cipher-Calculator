@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg } from "../../assets/lightcones/index";
+import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg } from "../../assets/lightcones/index";
 
 export const LightCones : LightCone[] = [];
 
@@ -76,9 +76,22 @@ const SummerRidesTheSurf : LightCone = {
     dupe: 1,
 };
 
+const PastSelfInMirror : LightCone = {
+    name: "Past Self in Mirror",
+    path: Paths.Harmony,
+    description: Texts.PastSelfInMirrorENG,
+    image: PastSelfInMirrorImg,
+
+    baseHP: 1058,
+    baseATK: 529,
+    baseDEF: 529,
+    dupe: 1,
+}
+
 LightCones.push(LiesDanceOnTheBreeze);
 LightCones.push(FlameOfBlood_BlazeMyPath);
 LightCones.push(ATrailOfBygoneBlood);
 LightCones.push(GoodNightAndSleepWell);
 LightCones.push(InTheNight);
 LightCones.push(SummerRidesTheSurf);
+LightCones.push(PastSelfInMirror);
