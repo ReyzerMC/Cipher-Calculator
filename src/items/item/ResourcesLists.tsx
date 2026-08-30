@@ -64,7 +64,7 @@ export const Texts = {
         const defBamboozle = defBamboozleValues[index];
         const defTheft = defTheftValues[index];
 
-        return `<b>Deceit</b><br>Increases the wearer's SPD by <u>${spd}%</u>. After the wearer uses an attack, there is a 120% base chance to inflict the "Bamboozle" state on every enemy target. While under the "Bamboozle" state, enemy targets have their DEF decreased by <u>${defBamboozle}%</u> for 2 turn(s). If the wearer's SPD is higher than or equal to 170, there is a 120% base chance to inflict the "Theft" state on every enemy target. While under the "Theft" state, enemy targets have their DEF decreased by <u>${defTheft}%</u> for 2 turn(s). When "Bamboozle" or "Theft" is repeatedly inflicted, only the most recently inflicted instance takes effect.`;
+        return `<b>Deceit</b><br>Increases the wearer's SPD by <b><u>${spd}%</u></b>. After the wearer uses an attack, there is a 120% base chance to inflict the "Bamboozle" state on every enemy target. While under the "Bamboozle" state, enemy targets have their DEF decreased by <b><u>${defBamboozle}%</u></b> for 2 turn(s). If the wearer's SPD is higher than or equal to 170, there is a 120% base chance to inflict the "Theft" state on every enemy target. While under the "Theft" state, enemy targets have their DEF decreased by <b><u>${defTheft}%</u></b> for 2 turn(s). When "Bamboozle" or "Theft" is repeatedly inflicted, only the most recently inflicted instance takes effect.`;
     },
 
     FlameOfBloodBlazeMyPathTextENG: (rank: number): string => {
@@ -81,7 +81,21 @@ export const Texts = {
         const DMG1 = DMGVal1[index];
         const DMG2 = DMGVal1[index];
 
-        return `Increases the wearer's Max HP by <u>${Hp1}%</u> and Incoming Healing by <u>${Hl1}</u>%. When using Skill or Ultimate, consumes HP equal to <u>${Hp2}%</u> of the wearer's Max HP and increases the DMG dealt by this attack by <u>${DMG1}%</u>. If this effect's consumed HP is greater than 500, the DMG additionally increases by <u>${DMG2}%</u>. If the current HP is not sufficient, this effect reduces the wearer's current HP down to 1.`;
+        return `Increases the wearer's Max HP by <b><u>${Hp1}%</u></b> and Incoming Healing by <b><u>${Hl1}%</u></b>. When using Skill or Ultimate, consumes HP equal to <b><u>${Hp2}%</u></b> of the wearer's Max HP and increases the DMG dealt by this attack by <b><u>${DMG1}%</u></b>. If this effect's consumed HP is greater than 500, the DMG additionally increases by <b><u>${DMG2}%</u></b>. If the current HP is not sufficient, this effect reduces the wearer's current HP down to 1.`;
+    },
+
+    SummerRidesTheSurfENG: (rank: number): string => {
+        const CritRateVal = [18, 21, 24, 27, 30];
+        const SPDVal = [24, 28, 32, 36, 40];
+        const ElationVal = [40, 55, 70, 85, 100];
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const CritRate = CritRateVal[index];
+        const SPD = SPDVal[index];
+        const Elation = ElationVal[index]; 
+
+        return `Increases the wearer's CRIT Rate by <b><u>${CritRate}%</u></b>. When the wearer uses Elation Skill, gains "Updraft," which increases the wearer's SPD by <b><u>${SPD}%</u></b>. If the Elation Skill used is different from the one used last time, additionally gains "Uptrend", which increases the wearer's Elation by <b><u>${Elation}%</u></b>. When every wave starts or after the wearer uses Elation Skill 3 time(s), recovers 1 Skill Point.`;
     }
 } as const;
 

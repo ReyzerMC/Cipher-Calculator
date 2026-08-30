@@ -98,7 +98,7 @@ const Cipher: Character = {
             name: "DMG Boost: Quantum",
             type: "stat",
             icon: CA.QuantumBoost,
-            description: "Quantum DMG Increases by <b><u>6.4%</u></b>",
+            description: "Quantum DMG Increases by: <b><u>6.4%</u></b>",
         },
         s3: {
             id: "s3",
@@ -112,7 +112,7 @@ const Cipher: Character = {
             name: "DMG Boost: Quantum",
             type: "stat",
             icon: CA.QuantumBoost,
-            description: "Quantum DMG Increases by <b><u>4.8%</u></b>",
+            description: "Quantum DMG Increases by: <b><u>4.8%</u></b>",
         },
         s5: {
             id: "s5",
@@ -126,7 +126,7 @@ const Cipher: Character = {
             name: "DMG Boost: Quantum",
             type: "stat",
             icon: CA.QuantumBoost,
-            description: "Quantum DMG Increases by <b><u>3.2%</u></b>",
+            description: "Quantum DMG Increases by: <b><u>3.2%</u></b>",
         },
         s7: {
             id: "s7",
@@ -255,7 +255,7 @@ const Midey: Character = {
             name: "SPD Boost",
             type: "stat",
             icon: CA.SPD,
-            description: "SPD Increases by <b><u>3</u></b>",
+            description: "SPD Increases by: <b><u>3</u></b>",
         },
         s3: {
             id: "s3",
@@ -304,7 +304,7 @@ const Midey: Character = {
             name: "SPD Boost",
             type: "stat",
             icon: CA.SPD,
-            description: "SPD Increases by <b><u>2</u></b>",
+            description: "SPD Increases by: <b><u>2</u></b>",
         },
         s10: {
             id: "s10",
@@ -316,5 +316,173 @@ const Midey: Character = {
     }
 };
 
+const AventurineWaveflair: Character = {
+    name: "Aventurine Waveflair",
+    path: Paths.Elation,
+    element: Elements.Quantum,
+    world: Worlds.InterastralPeaceCorporation,
+    image: CA.AvWfImg,
+
+    baseATK: 485,
+    baseDEF: 606,
+    baseHP: 1164,
+    baseSPD: 107,
+    aggro: 100,
+    dupe: 0,
+
+    traces: {
+        attack: {
+            id: "attack",
+            name: "Basic ATK: Dead Center, the Torrent Hits",
+            type: "basic",
+            level: "7/7",
+            icon: CA.AvWfBaseATK,
+            description: "Deals Quantum DMG equal to <b><u>110%</u></b> of Aventurine • Waveflair's ATK to one designated enemy."
+        },
+        skill: {
+            id: "skill",
+            name: "Skill: Kill Shot, the Sands Boil",
+            type: "skill",
+            level: "12/12",
+            icon: CA.AvWfSkill,
+            description: "Deals Quantum DMG equal to <b><u>264%</u></b> of Aventurine • Waveflair's ATK to all enemies. Gains 4 Punchline and 4 \"Fervor.\"<br><br>"+
+                         "<b>Punchline</b><br>Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+        },
+        ultimate: {
+            id: "ultimate",
+            name: "Ultimate: Grand Slam, Crest That High Tide",
+            type: "ultimate",
+            level: "12/12",
+            icon: CA.AvWfUltimate,
+            description: "<b>Energy: 130</b><br> Deals Quantum DMG equal to <b><u>432%</u></b> of Aventurine • Waveflair's ATK to all enemies. Gains 6 Punchline and 8 \"Fervor.\" Increases this unit's SPD by <b><u>34%</u></b>, lasting for 4 turn(s)."
+        },
+        talent: {
+            id: "talent",
+            name: "Talent: Ante Up, the Abyss Answers",
+            type: "talent",
+            level: "12/12",
+            icon: CA.AvWfTalent,
+            description: "he duration of Aventurine • Waveflair's \"Certified Banger\" increases by 1 turn. After a teammate uses an attack, Aventurine • Waveflair gains 1 \"Fervor\" and 1 Punchline. \"Fervor\" is capped at 30 points. When \"Fervor\" reaches 10, Aventurine • Waveflair uses 1 instance of \"Cheers! To Summer's Blaze\" that takes into account a fixed amount of 20 Punchline. After this use, the next Elation Skill used by this unit in the Aha Instant gets enhanced into \"All In! To Summer's Blaze.\" While Aventurine • Waveflair holds \"Certified Banger,\" Skill additionally deals <b><u>44%</u></b> Quantum Elation DMG to all enemies, and Ultimate additionally deals <b><u>79%</u></b> Quantum Elation DMG to all enemies.<br><br>"+
+                         "<b>Certified Banger</b><br>Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account. Punchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation. The duration of each \"Certified Banger\" state is tracked independently.<br><br>"+
+                         "<b>Elation DMG</b><br>The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt. Elation DMG is not affected by DMG Boost effects."
+        },
+        technique: {
+            id: "technique",
+            name: "Technique: Make Waves in Still Waters",
+            type: "technique",
+            level: "1/1",
+            icon: CA.AvWfTechnique,
+            description: "Moves forward rapidly for a set distance, attacking all enemies in contact and blocking all incoming attacks. After entering combat via actively attacking enemies, deals Quantum DMG to all enemies equal to 100% of Aventurine • Waveflair's ATK, and gains 2 \"Fervor\" and 20 \"Certified Banger.\" Technique Points are not consumed if no enemies are hit."
+        },
+
+        // --- Pasivas ---
+        b1: {
+            id: "b1",
+            name: "Elation Skill: Cheers! To Summer's Blaze",
+            type: "bonus",
+            level: "12/12",
+            icon: CA.AvWfElationSkill,
+            description: "Deals <b><u>66%</u></b> Quantum Elation DMG to all enemies, and additionally deals 10 instance(s) of DMG, with each instance dealing <b><u>19.8%</u></b> Quantum Elation DMG to one random enemy.<br><br>"+
+                         "<b>All In! To Summer's Blaze</b><br>Deals <b><u>66%</u></b> Quantum Elation DMG to all enemies, and additionally deals 10 instances of DMG, with each instance dealing <b><u>19.8%</u></b> Quantum Elation DMG to one random enemy. Consumes all \"Fervor\" upon use. For every 1 point of \"Fervor\" consumed, additionally deals 1 instance of <b><u>23.1%</u></b> Quantum Elation DMG to one random enemy.",
+        },
+        b2: {
+            id: "b2",
+            name: "Party in Perfect Paradise",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.PartyInPerfectParadise,
+            description: "When SPD is 140 or higher, increases this unit's Elation by 30%. For every 1 SPD exceeding that threshold, additionally increases this unit's Elation by 1%. Up to a max of 200 excess SPD can be taken into account for this effect.",
+        },
+        b3: {
+            id: "b3",
+            name: "Revel in Raging Tides",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.RevelInRagingTides,
+            description: "At the start of combat, if the team includes an Elation character besides Aventurine • Waveflair, then while Aventurine • Waveflair is on the field, increases all allies' Elation by 20% and Aventurine • Waveflair's Elation by an additional 80%. At the start of combat, if Aventurine • Waveflair is the only Elation character in the team, then when Aventurine • Waveflair uses Elation Skill to deal DMG, it is considered as having launched Follow-Up ATK. After a teammate uses an attack, Aventurine • Waveflair gains 2 \"Certified Banger\" and 1 Punchline, and increases Aha's SPD by 25. The SPD Boost effect lasts until the end of Aha Instant.",
+        },
+        b4: {
+            id: "b4",
+            name: "Sift Through Gilded Dreams",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.SiftThroughGildedDreams,
+            description: "Increases CRIT DMG by 48%. After a teammate uses Basic ATK, Skill, Follow-Up ATK, or Ultimate, all allies' CRIT DMG increases by 48%, lasting for 3 turn(s), and Aventurine • Waveflair additionally gains 2 \"Fervor.\" This effect can trigger up to 6 time(s), and the trigger count resets when Aventurine • Waveflair uses Skill.",
+        },
+        // --- Stats Nodes (Nodos Pequeños) ---
+        s1: {
+            id: "s1",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "CRIT Rate Increases by: <b><u>2.7%</u></b>",
+        },
+        s2: {
+            id: "s2",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "CRIT Rate Increases by: <b><u>4.0%</u></b>",
+        },
+        s3: {
+            id: "s3",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>3</u></b>",
+        },
+        s4: {
+            id: "s4",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>2</u></b>",
+        },
+        s5: {
+            id: "s5",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "CRIT Rate Increases by: <b><u>5.3%</u></b>",
+        },
+        s6: {
+            id: "s6",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>4</u></b>",
+        },
+        s7: {
+            id: "s7",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "CRIT Rate Increases by: <b><u>2.7%</u></b>",
+        },
+        s8: {
+            id: "s8",
+            name: "Elation Boost",
+            type: "stat",
+            icon: CA.ElationStat,
+            description: "CRIT Rate Increases by: <b><u>4.0%</u></b>",
+        },
+        s9: {
+            id: "s9",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "CRIT Rate Increases by: <b><u>4.0%</u></b>",
+        },
+        s10: {
+            id: "s10",
+            name: "Elation Boost",
+            type: "stat",
+            icon: CA.ElationStat,
+            description: "Elation Increases by: <b><u>6.0%</u></b>",
+        },
+    }
+};
+
 Characters.push(Cipher);
 Characters.push(Midey);
+Characters.push(AventurineWaveflair);

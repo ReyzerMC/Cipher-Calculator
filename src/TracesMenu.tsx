@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import type { TraceNodeData } from "./types/hsr";
-import { DestructionTreeLayout, NihilityTreeLayout } from "./types/hsr";
+import { DestructionTreeLayout, ElationTreeLayout, NihilityTreeLayout } from "./types/hsr";
 import "./TracesMenu.css";
-import { destructionImg, nihilityImg } from "./assets/paths";
+import { destructionImg, elationImg, nihilityImg } from "./assets/paths";
 
 interface TracesMenuProps {
   path: string;
@@ -112,6 +112,37 @@ export const TracesMenu: React.FC<TracesMenuProps> = ({ path, nodes, bgWatermark
                 );
             })
         )}
+
+        { bgWatermark === elationImg && (
+            ElationTreeLayout.connections.map((conn, idx) => {
+                const start = ElationTreeLayout.positions[conn.from];
+                const end = ElationTreeLayout.positions[conn.to];
+                if (!start || !end) return null;
+
+                if (conn.arc) {
+                const d = `M ${start.x} ${start.y} A ${conn.arc.radius} ${conn.arc.radius} 0 0 ${conn.arc.sweep} ${end.x} ${end.y}`;
+                    return (
+                        <path
+                        key={idx}
+                        d={d}
+                        className="hsr-svg-line"
+                        fill="none"
+                        />
+                    );
+                }
+
+                return (
+                    <line
+                        key={idx}
+                        x1={start.x}
+                        y1={start.y}
+                        x2={end.x}
+                        y2={end.y}
+                        className="hsr-svg-line"
+                    />
+                );
+            })
+        )}
         
         </svg>
 
@@ -142,6 +173,29 @@ export const TracesMenu: React.FC<TracesMenuProps> = ({ path, nodes, bgWatermark
 
             {bgWatermark === destructionImg && (
                 Object.entries(DestructionTreeLayout.positions).map(([id, pos]) => {
+                    const nodeData = nodes[id];
+                    if (!nodeData) return null;
+                    const isSelected = selectedNodeId === id;
+
+                    return (
+                    <div
+                        key={id}
+                        className={`hsr-trace-node-wrapper node-type-${nodeData.type} ${isSelected ? "selected" : ""}`}
+                        style={{ left: `${pos.x}%`, top: `${pos.y}%` }}
+                        onClick={() => setSelectedNodeId(id)}
+                    >
+                        {isSelected && <div className="hsr-node-arrow" />}
+                        <button className="hsr-trace-node-btn">
+                        <img src={nodeData.icon} alt={nodeData.name} className="hsr-node-icon" />
+                        </button>
+                        {nodeData.level && <span className="hsr-node-level">{nodeData.level}</span>}
+                    </div>
+                    );
+                })
+            )}
+
+            {bgWatermark === elationImg && (
+                Object.entries(ElationTreeLayout.positions).map(([id, pos]) => {
                     const nodeData = nodes[id];
                     if (!nodeData) return null;
                     const isSelected = selectedNodeId === id;

@@ -158,3 +158,67 @@ export class DestructionTreeLayout {
     { from: "ultimate", to: "attack", arc: { radius: 21, sweep: 1 } },
   ];
 }
+
+export class ElationTreeLayout {
+  static readonly positions: Record<string, { x: number; y: number }> = {
+    // --- NODOS CENTRALES (Eje Vertical) ---
+    b1: { x: 50, y: 15 },         // Elation Skill
+    ultimate: { x: 50, y: 35 },   // Habilidad Definitiva
+    talent: { x: 50, y: 52 },     // Talento
+    technique: { x: 50, y: 69 },  // Técnica
+    b2: { x: 50, y: 86 },         // Pasiva Mayor Inferior
+
+    // --- NODOS SUPERIORES / DIAGONALES ---
+    attack: { x: 36, y: 22 },     // Ataque Básico (Izquierda)
+    skill: { x: 64, y: 22 },      // Habilidad Basica (Derecha)
+
+    // --- PASIVAS MAYORES LATERALES ---
+    b3: { x: 23, y: 32 },         // Pasiva Mayor (Izquierda)
+    b4: { x: 77, y: 32 },         // Pasiva Mayor (Derecha)
+
+    // --- ANILLO EXTERIOR Y RAMAS DE ATRIBUTOS (s1 a s10) ---
+    // Rama Izquierda (Conectada desde Technique)
+    s1: { x: 35, y: 64 },         // Stat Bonus (Diagonal inferior izq)
+    s2: { x: 29, y: 50 },         // Stat Bonus
+    s3: { x: 18, y: 58 },         // Stat Bonus (Borde externo izq)
+
+    // Rama Derecha (Conectada desde Technique)
+    s4: { x: 66, y: 64 },         // Stat Bonus (Diagonal inferior der)
+    s5: { x: 71, y: 50 },         // Stat Bonus
+    s6: { x: 82, y: 58 },         // Stat Bonus (Borde externo der)
+
+    // Rama Inferior (Conectada desde Pasiva Mayor b2)
+    s7: { x: 38, y: 86 },         // Stat Bonus (Abajo Izquierda)
+    s8: { x: 62, y: 86 },         // Stat Bonus (Abajo Derecha)
+
+    // Extensión del Anillo Exterior
+    s9: { x: 17, y: 44 },         // Stat Bonus (Entre B3 y S3)
+    s10: { x: 83, y: 45 },        // Stat Bonus (Entre B4 y S6)
+  };
+
+  static readonly connections: Connection[] = [
+    // --- TRONCO CENTRAL VERTICAL ---
+    { from: "ultimate", to: "talent" },
+    { from: "talent", to: "technique" },
+    { from: "technique", to: "b2" },
+
+    // --- RAMIFICACIONES CENTRALES SUPERIORES ---
+    { from: "ultimate", to: "attack" },
+    { from: "ultimate", to: "skill" },
+
+    // --- ARCOS SUPERIORES DEL ANILLO EXTERIOR (Radio 33) ---
+    { from: "b3", to: "attack", arc: { radius: 33, sweep: 1 } },
+    { from: "skill", to: "b4", arc: { radius: 33, sweep: 1 } },
+
+    { from: "b3", to: "s9", arc: { radius: 33, sweep: 0 } },
+    { from: "s9", to: "s3", arc: { radius: 33, sweep: 0 } },
+    { from: "s3", to: "s2" },
+    { from: "technique", to: "s1", arc: { radius: 33, sweep: 1 } },
+    { from: "technique", to: "s4", arc: { radius: 33, sweep: 0 } },
+    { from: "b4", to: "s10", arc: { radius: 33, sweep: 1 } },
+    { from: "s10", to: "s6", arc: { radius: 33, sweep: 1 } },
+    { from: "s6", to: "s5" },
+    { from: "b2", to: "s7" },
+    { from: "b2", to: "s8" },
+  ];
+}

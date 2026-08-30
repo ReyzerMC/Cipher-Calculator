@@ -161,7 +161,7 @@
 /* Popover Informativo Flotante */
 .hsr-trace-info-popover {
   position: fixed;
-  top: 25%;
+  top: 10%;
   right: 0px;
   width: 320px;
   background: rgba(18, 22, 38, 0.88);

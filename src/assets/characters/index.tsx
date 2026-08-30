@@ -4,6 +4,8 @@ import EffectHitRate from "./global/EffectHitRate.webp";
 import QuantumBoost from "./global/QuantumBoost.webp";
 import MaxHP from "./global/IconMaxHP.png";
 import CritDMG from "./global/CRITdmg.webp";
+import CritRate from "./global/CRITrate.webp";
+import ElationStat from "./global/ElationStat.webp";
 
 // Cipher
 import cipherImg from "./cipher.png";
@@ -29,6 +31,18 @@ import EarthAndWater from "./midey/EarthAndWater.png";
 import ThirtyTyrants from "./midey/ThirtyTyrants.png";
 import BloodiedChiton from "./midey/BloodiedChiton.png";
 
+// Aventurine - Waveflair
+import AvWfImg from "./AventurineWaveflair.png";
+import RevelInRagingTides from "./AvWf/RevelInRagingTides.png";
+import SiftThroughGildedDreams from "./AvWf/SiftThroughGildedDreams.png";
+import PartyInPerfectParadise from "./AvWf/PartyInPerfectParadise.png";
+import AvWfBaseATK from "./AvWf/BaseATK.png";
+import AvWfSkill from "./AvWf/Skill.png";
+import AvWfElationSkill from "./AvWf/ElationSkill.png";
+import AvWfUltimate from "./AvWf/Ultimate.png";
+import AvWfTalent from "./AvWf/Talent.png";
+import AvWfTechnique from "./AvWf/Technique.png";
+
 export {
     //Global
     SPD,
@@ -36,6 +50,8 @@ export {
     QuantumBoost,
     MaxHP,
     CritDMG,
+    CritRate,
+    ElationStat,
 
     //Cipher
     cipherImg,
@@ -58,4 +74,16 @@ export {
     EarthAndWater,
     ThirtyTyrants,
     BloodiedChiton,
+
+    // Aventurine - Waveflair
+    AvWfImg,
+    RevelInRagingTides,
+    SiftThroughGildedDreams,
+    PartyInPerfectParadise,
+    AvWfBaseATK,
+    AvWfElationSkill,
+    AvWfSkill,
+    AvWfUltimate,
+    AvWfTalent,
+    AvWfTechnique
 };

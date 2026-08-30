@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg } from "../../assets/lightcones/index";
+import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg } from "../../assets/lightcones/index";
 
 export const LightCones : LightCone[] = [];
 
@@ -64,8 +64,21 @@ const InTheNight : LightCone = {
     dupe: 1,
 };
 
+const SummerRidesTheSurf : LightCone = {
+    name: "Summer Rides the Surf",
+    path: Paths.Elation,
+    description: Texts.SummerRidesTheSurfENG,
+    image: SummerRidesTheSurfImg,
+
+    baseHP: 1058,
+    baseATK: 582,
+    baseDEF: 463,
+    dupe: 1,
+};
+
 LightCones.push(LiesDanceOnTheBreeze);
 LightCones.push(FlameOfBlood_BlazeMyPath);
 LightCones.push(ATrailOfBygoneBlood);
 LightCones.push(GoodNightAndSleepWell);
 LightCones.push(InTheNight);
+LightCones.push(SummerRidesTheSurf);
