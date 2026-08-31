@@ -30,11 +30,11 @@ The project is currently in a very early stage of development.
 
 ### Characters
 
-There are currently only **7 characters available**.
+There are currently only **8 characters available**.
 
 ### Light Cones
 
-There are currently **10 Light Cones implemented**.
+There are currently **11 Light Cones implemented**.
 
 ---
 

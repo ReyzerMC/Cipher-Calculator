@@ -24,16 +24,16 @@ import EmpyreanStrides from "./cipher/EmpyreanStrides.png";
 import SleightOfSky from "./cipher/SleightOfSky.png";
 import Rogues from "./cipher/300Rogues.png";
 
-// Midey
-import mideyImg from "./midey.png";
-import mideyBasicATK from "./midey/BasicATK.png";
-import mideySkill from "./midey/Skill.png";
-import mideyUltimate from "./midey/Ultimate.png";
-import mideyTalent from "./midey/Talent.png";
-import mideyTechnique from "./midey/Technique.png";
-import EarthAndWater from "./midey/EarthAndWater.png";
-import ThirtyTyrants from "./midey/ThirtyTyrants.png";
-import BloodiedChiton from "./midey/BloodiedChiton.png";
+// Mydei
+import MydeiImg from "./Mydei.png";
+import MydeiBasicATK from "./Mydei/BasicATK.png";
+import MydeiSkill from "./Mydei/Skill.png";
+import MydeiUltimate from "./Mydei/Ultimate.png";
+import MydeiTalent from "./Mydei/Talent.png";
+import MydeiTechnique from "./Mydei/Technique.png";
+import EarthAndWater from "./Mydei/EarthAndWater.png";
+import ThirtyTyrants from "./Mydei/ThirtyTyrants.png";
+import BloodiedChiton from "./Mydei/BloodiedChiton.png";
 
 // Aventurine - Waveflair
 import AvWfImg from "./AventurineWaveflair.png";
@@ -131,13 +131,13 @@ export {
     EmpyreanStrides,
     SleightOfSky,
 
-    //Midey
-    mideyImg,
-    mideyBasicATK,
-    mideySkill,
-    mideyUltimate,
-    mideyTalent,
-    mideyTechnique,
+    //Mydei
+    MydeiImg,
+    MydeiBasicATK,
+    MydeiSkill,
+    MydeiUltimate,
+    MydeiTalent,
+    MydeiTechnique,
     EarthAndWater,
     ThirtyTyrants,
     BloodiedChiton,

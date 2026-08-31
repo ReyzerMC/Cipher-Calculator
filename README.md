@@ -30,11 +30,11 @@ El proyecto se encuentra en una fase muy temprana de desarrollo.
 
 ### Personajes
 
-Actualmente solamente hay **7 personajes disponibles**.
+Actualmente solamente hay **8 personajes disponibles**.
 
 ### Conos de Luz
 
-Actualmente hay **10 Conos de Luz implementados**.
+Actualmente hay **11 Conos de Luz implementados**.
 
 ---
 

@@ -159,12 +159,12 @@ const Cipher: Character = {
     },
 };
 
-const Midey: Character = {
-    name: "Midey",
+const Mydei: Character = {
+    name: "Mydei",
     path: Paths.Destruction,
     element: Elements.Imaginary,
     world: Worlds.Amphoreus,
-    image: CA.mideyImg,
+    image: CA.MydeiImg,
 
     baseATK: 426,
     baseDEF: 194,
@@ -179,7 +179,7 @@ const Midey: Character = {
             name: "Basic ATK: Vow of Voyage",
             type: "basic",
             level: "7/7",
-            icon: CA.mideyBasicATK,
+            icon: CA.MydeiBasicATK,
             description: "Deals Imaginary DMG equal to <b><u>55%</u></b> of Mydei's Max HP to one designated enemy."
         },
         skill: {
@@ -187,7 +187,7 @@ const Midey: Character = {
             name: "Skill: Deaths are Legion, Regrets are None",
             type: "skill",
             level: "12/12",
-            icon: CA.mideySkill,
+            icon: CA.MydeiSkill,
             description: "<b>Deaths are Legion, Regrets are None</b><br>Consumes HP by an amount equal to 50% of Mydei's current HP. Deals Imaginary DMG equal to <u>99%</u> of Mydei's Max HP to one designated enemy and Imaginary DMG equal to <u>55%</u> of Mydei's Max HP to adjacent targets. If the current HP is not sufficient, using Skill reduces Mydei's current HP to 1.<br><br><b>Kingslayer Be King</b><br>" +
             "Consumes HP by an amount equal to 35% of Mydei's current HP. Deals Imaginary DMG equal to <b><u>121%</u></b> of Mydei's Max HP to one enemy and Imaginary DMG equal to <b><u>73%</u></b> of Mydei's Max HP to adjacent targets. If the current HP is not sufficient, using Skill reduces Mydei's current HP to 1. This ability will be automatically used.<br><br><b>Godslayer Be God</b><br>" +
             "Consumes 150 point(s) of Charge. Deals Imaginary DMG equal to <b><u>308%</u></b> of Mydei's Max HP to one enemy and Imaginary DMG equal to <b><u>185%</u></b> of Mydei's Max HP to adjacent targets. This ability will be automatically used. While this ability is in use, Charge cannot be accumulated."
@@ -197,7 +197,7 @@ const Midey: Character = {
             name: "Ultimate: Throne of Bones",
             type: "ultimate",
             level: "12/12",
-            icon: CA.mideyUltimate,
+            icon: CA.MydeiUltimate,
             description: "<b>Energy: 160</b><br> Restores HP by <b><u>21.0%</u></b> of Mydei's Max HP and accumulates 20 Talent's Charge point(s). Deals Imaginary DMG equal to <b><u>173%</u></b> of Mydei's Max HP to one designated enemy, and deals Imaginary DMG equal to <b><u>108%</u></b> of Mydei's Max HP to adjacent targets. Additionally, Taunts the target and targets adjacent to it, lasting for 2 turn(s). The next use of \"Godslayer Be God\" prioritizes attacking one designated enemy, and this effect only works on the latest target."
         },
         talent: {
@@ -205,7 +205,7 @@ const Midey: Character = {
             name: "Talent: Blood for Blood",
             type: "talent",
             level: "12/12",
-            icon: CA.mideyTalent,
+            icon: CA.MydeiTalent,
             description: "For each 1% of HP lost, accumulates 1 point of Charge (up to 200 points). When Charge reaches 100, consumes 100 points of Charge to enter the \"Vendetta\" state, restores HP equal to <b><u>27%</u></b> of Mydei's Max HP, and advances action by 100%. While the \"Vendetta\" state is active, Max HP increases by 50% of the current Max HP and DEF remains at 0. At the start of this unit's turn, automatically uses \"Kingslayer Be King.\" When Charge reaches 150 points during the \"Vendetta\" state, Mydei immediately gains 1 extra turn and automatically uses \"Godslayer Be God.\" When receiving a killing blow during the \"Vendetta\" state, Mydei will not be knocked down, but will clear his Charge, exits the \"Vendetta\" state, and restores HP by 50% of his Max HP."
         },
         technique: {
@@ -213,7 +213,7 @@ const Midey: Character = {
             name: "Technique: Cage of Broken Lance",
             type: "technique",
             level: "1/1",
-            icon: CA.mideyTechnique,
+            icon: CA.MydeiTechnique,
             description: "After using Technique, pulls in enemies within a certain area and inflicts Daze on them for 10 second(s). Dazed enemies will not actively attack ally targets. If actively attacking Dazed enemies, when entering battle, deals Imaginary DMG equal to 80% of Mydei's Max HP to all enemies, and Taunts the targets, lasting for 1 turn(s). This unit accumulates 50 point(s) of Talent's Charge."
         },
 
@@ -1282,7 +1282,7 @@ const Aventurine: Character = {
 // Nihility
 Characters.push(Cipher);
 // Destruction
-Characters.push(Midey);
+Characters.push(Mydei);
 // Elation
 Characters.push(AventurineWaveflair);
 // Harmony
