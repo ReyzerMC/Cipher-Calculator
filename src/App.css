@@ -317,3 +317,159 @@ body {
     line-height: 1.4;
     color: var(--hsr-acent);
 }
+
+/* =========================================================
+   RESPONSIVE - TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .hsr-container {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+
+        padding: 16px;
+        gap: 16px;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    /* =========================
+       PANEL IZQUIERDO
+       ========================= */
+
+    .hsr-left-panel {
+        width: 100%;
+        transform: none !important;
+
+        gap: 12px;
+
+        order: 1;
+    }
+
+    .hsr-header {
+        width: 100%;
+    }
+
+    .hsr-title {
+        font-size: 1.5rem;
+    }
+
+    .hsr-rarity {
+        font-size: 0.9rem;
+    }
+
+    .hsr-menu {
+        width: 100%;
+        box-sizing: border-box;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 4px;
+        padding: 6px;
+
+        border-radius: 12px;
+    }
+
+    .hsr-menu-item {
+        padding: 10px 6px;
+
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+
+    /* =========================
+       CENTRO
+       ========================= */
+
+    .hsr-center-art {
+        width: 100%;
+        min-width: 0;
+
+        min-height: 50vh;
+
+        order: 2;
+    }
+
+    .hsr-character-img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 60vh;
+
+        object-fit: contain;
+    }
+
+
+    /* =========================
+       PANEL DERECHO
+       ========================= */
+
+    .hsr-right-panel {
+        width: 100%;
+        min-width: 0;
+
+        transform: none !important;
+
+        order: 3;
+    }
+
+    .hsr-card {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 16px;
+    }
+
+
+    /* =========================
+       SELECTS
+       ========================= */
+
+    .hsr-select {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+
+    /* =========================
+       LIGHT CONE
+       ========================= */
+
+    .hsr-lc-header {
+        min-width: 0;
+    }
+
+    .hsr-lc-info {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .hsr-lc-name {
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =========================
+       POPOVER
+       ========================= */
+
+    .hsr-popover {
+        max-height: 50vh;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        box-sizing: border-box;
+    }
+}
