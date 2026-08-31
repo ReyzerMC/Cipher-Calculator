@@ -319,4 +319,30 @@
 
         z-index: 10;
     }
+
+    .node-type-basic .hsr-trace-node-btn,
+    .node-type-skill .hsr-trace-node-btn,
+    .node-type-ultimate .hsr-trace-node-btn,
+    .node-type-talent .hsr-trace-node-btn,
+    .node-type-technique .hsr-trace-node-btn {
+      width: 35px;
+      height: 35px;
+      background: rgba(35, 30, 25, 0.92);
+      border-color: #cbb292;
+    }
+
+    .node-type-bonus .hsr-trace-node-btn {
+      width: 43px;
+      height: 43px;
+      border-width: 2.5px;
+      border-color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+    }
+
+    .node-type-stat .hsr-trace-node-btn {
+      width: 23px;
+      height: 23px;
+      background: #ffffff;
+      border-color: #ffffff;
+    }
 }
