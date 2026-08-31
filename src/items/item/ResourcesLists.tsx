@@ -141,9 +141,9 @@ export const Texts = {
     },
 
     WorrisomeBlissfulENG: (rank: number): string => {
-        const CRITRateVal = [30, 38, 45, 53, 60];
+        const CRITRateVal = [18, 21, 24, 27, 30];
         const ATKVal = [30, 35, 40, 45, 50];
-        const CRITDmgVal = [12, 15, 18, 21, 24];
+        const CRITDmgVal = [12, 14, 16, 18, 20];
 
         const index = Math.max(0, Math.min(rank - 1, 4));
 
