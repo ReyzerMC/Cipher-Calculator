@@ -342,3 +342,70 @@ export class AbundanceTreeLayout {
 
   ];
 }
+
+export class RemembranceTreeLayout {
+  static readonly positions: Record<string, { x: number; y: number }> = {
+    // --- NODOS CENTRALES ---
+    // Eje Vertical
+    attack: { x: 38, y: 63 },
+    ultimate: { x: 52, y: 69 },
+    skill: { x: 66, y: 63 },
+    talent: { x: 74, y: 47 },
+    technique: { x: 29, y: 47 },
+
+    // Anillo Interior / Habilidades adicionales
+    b4: { x: 52, y: 26 },
+    b5: { x: 52, y: 45 },
+
+    // --- PASIVAS MAYORES (B1 a B5) ---
+    b1: { x: 38, y: 30 },              // Pasiva Mayor Superior Izquierda
+    b2: { x: 87, y: 47 },              // Pasiva Mayor Derecha
+    b3: { x: 52, y: 84 },              // Pasiva Mayor Inferior
+    
+
+    // --- ANILLO EXTERIOR Y STAT BONUS (s1 a s10) ---
+    // Arco Superior
+    s1: { x: 44, y: 12 },              // Stat Bonus (Arriba Centro-Izq)
+    s2: { x: 59.5, y: 12.50 },              // Stat Bonus (Arriba Centro-Der)
+    s3: { x: 29, y: 18 },              // Stat Bonus (Arriba Izq, salida de b1)
+
+    // Arco Lateral Izquierdo (Conectado desde attack)
+    s4: { x: 18, y: 32 },              // Stat Bonus
+    s5: { x: 13, y: 47 },              // Stat Bonus (Extremo Izquierda)
+    s6: { x: 16, y: 63 },              // Stat Bonus
+
+    // Arco Lateral Derecho (Conectado desde b2)
+    s7: { x: 82, y: 32 },              // Stat Bonus (Arriba de b2)
+    s8: { x: 84, y: 64 },              // Stat Bonus (Abajo de b2)
+
+    // Arco Inferior (Conectado a b3)
+    s9: { x: 39, y: 80 },              // Stat Bonus (Abajo Izq)
+    s10: { x: 65, y: 80 },             // Stat Bonus (Abajo Der)
+  };
+
+  static readonly connections: Connection[] = [
+    { from: "b4", to: "b5" },
+
+    { from: "talent", to: "b2" },
+    { from: "talent", to: "skill", arc: { radius: 20, sweep: 1} },
+    { from: "skill", to: "ultimate", arc: { radius: 20, sweep: 1} },
+    { from: "ultimate", to: "attack", arc: { radius: 20, sweep: 1} },
+    { from: "ultimate", to: "b3" },
+    { from: "attack", to: "technique", arc: { radius: 20, sweep: 1} },
+    { from: "technique", to: "s5" },
+    { from: "technique", to: "b1", arc: { radius: 20, sweep: 1} },
+    { from: "b1", to: "s3" },
+
+    { from: "s3", to: "s1", arc: { radius: 33, sweep: 1} },
+    { from: "s1", to: "s2", arc: { radius: 53, sweep: 1} },
+
+    { from: "b2", to: "s7", arc: { radius: 33, sweep: 0} },
+    { from: "b2", to: "s8", arc: { radius: 33, sweep: 1} },
+
+    { from: "s5", to: "s4", arc: { radius: 33, sweep: 1} },
+    { from: "s5", to: "s6", arc: { radius: 33, sweep: 0} },
+
+    { from: "b3", to: "s9", arc: { radius: 33, sweep: 1} },
+    { from: "b3", to: "s10", arc: { radius: 33, sweep: 0} },
+  ];
+}

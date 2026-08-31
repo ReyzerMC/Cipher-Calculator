@@ -68,7 +68,18 @@ import VermilionWaft from "./Lingsha/Vermilion Waft.png";
 import SylvanSmoke from "./Lingsha/SylvanSmoke.png";
 import EmbersEcho from "./Lingsha/EmbersEcho.png";
 
-// dsa
+// Castorice
+import CastoriceImg from "./Castorice.png";
+import CastoriceBasicATK from "./Castorice/BasicATK.png";
+import CastoriceSkill from "./Castorice/Skill.png";
+import CastoriceUltimate from "./Castorice/Ultimate.png";
+import CastoriceTalent from "./Castorice/Talent.png";
+import CastoriceTechnique from "./Castorice/Technique.png";
+import CastoriceMemoSkill from "./Castorice/MemospriteSkill.png";
+import CastoriceMemoTalent from "./Castorice/MemospriteTalent.png";
+import WhereTheWestWindDwells from "./Castorice/WhereTheWestWindDwells.png";
+import ContainedDarkTide from "./Castorice/ContainedDarkTide.png";
+import InvertedTorch from "./Castorice/InvertedTorch.png";
 
 export {
     //Global
@@ -139,5 +150,17 @@ export {
     SylvanSmoke,
     EmbersEcho,
 
-    // dsa
+    // Castorice
+    CastoriceImg,
+    CastoriceBasicATK,
+    CastoriceSkill,
+    CastoriceUltimate,
+    CastoriceTalent,
+    CastoriceTechnique,
+    CastoriceMemoSkill,
+    CastoriceMemoTalent,
+    WhereTheWestWindDwells,
+    ContainedDarkTide,
+    InvertedTorch,
+
 };

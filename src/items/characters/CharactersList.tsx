@@ -663,7 +663,7 @@ const Lingsha: Character = {
         },
         skill: {
             id: "skill",
-            name: "Skill: ",
+            name: "Skill: Smoke and Splendor",
             type: "skill",
             level: "12/12",
             icon: CA.LingshaSkill,
@@ -791,10 +791,194 @@ const Lingsha: Character = {
             description: "Break Effect Increases by: <b><u>5.3%</u></b>",
         },
     }
-}
+};
 
+const Castorice: Character = {
+    name: "Castorice",
+    path: Paths.Remembrance,
+    element: Elements.Quantum,
+    world: Worlds.Amphoreus,
+    image: CA.CastoriceImg,
+
+    baseATK: 523,
+    baseDEF: 485,
+    baseHP: 1629,
+    baseSPD: 95,
+    aggro: 100,
+    dupe: 0,
+
+    traces: {
+        attack: {
+            id: "attack",
+            name: "Basic ATK: Lament, Nethersea's Ripple",
+            type: "basic",
+            level: "7/7",
+            icon: CA.CastoriceBasicATK,
+            description: "Deals Quantum DMG equal to <u><b>55%</u></b> of Castorice's Max HP to one designated enemy."
+        },
+        skill: {
+            id: "skill",
+            name: "Skill: Silence, Wraithfly's Caress",
+            type: "skill",
+            level: "12/12",
+            icon: CA.CastoriceSkill,
+            description: "Consumes 30% of all allies' current HP. Deals Quantum DMG equal to <u><b>55%</u></b> of Castorice's Max HP to one designated enemy and Quantum DMG equal to <u><b>33%</u></b> of Castorice's Max HP to adjacent targets. If the current HP is insufficient, reduces the current HP down to 1. If Netherwing is on the battlefield, the Skill becomes \"Boneclaw, Doomdrake's Embrace\" instead.<br><br>"+
+                         "<b>Boneclaw, Doomdrake's Embrace</b><br>Consumes 40% of the current HP of all allies (except Netherwing). Castorice and Netherwing launch Joint ATK on the targets, dealing Quantum DMG equal to <u><b>33.0%</u></b> and <u><b>55.0%</u></b> of Castorice's Max HP to all enemies. If the current HP is insufficient, reduces the current HP down to 1"
+            },
+        ultimate: {
+            id: "ultimate",
+            name: "Ultimate: Doomshriek, Dawn's Chime",
+            type: "ultimate",
+            level: "12/12",
+            icon: CA.CastoriceUltimate,
+            description: "<b>Energy: --</b><br> Summons the memosprite Netherwing and advances its action by 100%. At the same time, deploys the Territory \"Lost Netherland,\" which decreases all enemies' All-Type RES by <u><b>22%</u></b>. If Castorice has the DMG Boost effect from her Talent, then this effect spreads to Netherwing. Netherwing has an initial SPD of 165 and a set Max HP equal to 100% of max \"Newbud.\" After Netherwing experiences 3 turns or when its HP is 0, it disappears and dispels the Territory \"Lost Netherland.\""
+        },
+        talent: {
+            id: "talent",
+            name: "Talent: Desolation Across Palms",
+            type: "talent",
+            level: "12/12",
+            icon: CA.CastoriceTalent,
+            description: "The maximum limit of \"Newbud\" is related to the levels of all characters on the battlefield. For every 1 point of HP lost by all allies, Castorice gains 1 point of \"Newbud.\" When \"Newbud\" reaches its maximum limit, can activate the Ultimate. When allies lose HP, Castorice's and Netherwing's DMG dealt increases by <u><b>22%</u></b>. This effect can stack up to 3 time(s), lasting for 3 turn(s). When Netherwing is on the field, \"Newbud\" cannot be gained through Talent, and every 1 point of HP lost by all allies (except Netherwing) will be converted to an equal amount of HP for Netherwing."
+        },
+        technique: {
+            id: "technique",
+            name: "Technique: Wail, Death's Herald",
+            type: "technique",
+            level: "1/1",
+            icon: CA.CastoriceTechnique,
+            description: "After using Technique, enters the \"Netherveil\" state that lasts for 20 seconds. While \"Netherveil\" is active, enemies are unable to actively approach Castorice. During \"Netherveil\", active attacks will cause all enemies within range to enter combat. At the same time, summons the memosprite Netherwing, advances its action by 100%, and deploys the Territory \"Lost Netherland\". Netherwing has its current HP equal to 50% of max \"Newbud\". After entering battle, consumes 40% of the current HP of all allies (except Netherwing). If Netherwing is not summoned after entering battle, Castorice gains \"Newbud\" by an amount equal to 30% of max \"Newbud\"."
+        },
+
+        // --- Pasivas ---
+        b1: {
+            id: "b1",
+            name: "Where The West Wind Dwells",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.WhereTheWestWindDwells,
+            description: "Each time Netherwing uses \"Breath Scorches the Shadow\", the DMG dealt increases by 30%. This effect stacks up to 6 time(s) and lasts until the end of this turn.",
+        },
+        b2: {
+            id: "b2",
+            name: "Contained Dark Tide",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.ContainedDarkTide,
+            description: "After ally targets (excluding Netherwing) receive healing, converts 100% of the healed amount into \"Newbud\". If Netherwing is on the field, this is converted to Netherwing's HP instead. Each ally target can accumulate a conversion amount up to 12% of the max \"Newbud\". After any unit takes action, all units reset their accumulated conversion amount.",
+        },
+        b3: {
+            id: "b3",
+            name: "Inverted Torch",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.InvertedTorch,
+            description: "When Castorice's current HP is higher than or equal to 50% of her Max HP, her SPD increases by 40%. When Netherwing uses \"Breath Scorches the Shadow\" and deals fatal damage to all enemies on the field or brings them to a point where their HP cannot be reduced further, Netherwing's SPD increases by 100%, lasting for 1 turn.",
+        },
+        b4: {
+            id: "b4",
+            name: "Memosprite Talent: Mooncocoon Shrouds the Form",
+            type: "bonus",
+            level: "10/10",
+            icon: CA.CastoriceMemoTalent,
+            description: "When Netherwing is on the field, it acts as backup for allies. When allies take DMG or consume HP, their current HP can be reduced down to a minimum of 1, after which Netherwing will bear the HP loss. But Netherwing consumes HP equal to 500% of the original value. This lasts until Netherwing disappears.<br><br>"+
+                         "<b>Roar Rumbles the Realm</b><br>When Netherwing is summoned, increases DMG dealt by all allies by 10%, lasting for 3 turn(s).<br><br>"+
+                         "<b>Wings Sweep the Ruins</b><br>When Netherwing disappears, deals 6 instance(s) of DMG, with each instance dealing Quantum DMG equal to <u><b>56.0%</u></b> of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to <u><b>8%</u></b> of Castorice's Max HP plus <u><b>1120</u></b> for all allies.",
+        },
+        b5: {
+            id: "b5",
+            name: "Memosprite Skill: Claw Splits the Veil",
+            type: "bonus",
+            level: "10/10",
+            icon: CA.CastoriceMemoSkill,
+            description: "Deals Quantum DMG equal to <u><b>56.0%</u></b> of Castorice's Max HP to all enemies.<br><br>"+
+                         "<b>Breath Scorches the Shadow</b><br>Launching \"Breath Scorches the Shadow\" will consume 25% of Netherwing's Max HP to deal Quantum DMG equal to <u><b>33.6%</u></b> of Castorice's Max HP to all enemies. In one attack, \"Breath Scorches the Shadow\" can be launched repeatedly, with the DMG multiplier increased progressively to <u><b>39.2% / 47.6%</u></b>. After reaching <u><b>47.6%</u></b>, it will not increase further. The DMG Multiplier Boost effect will not decrease before Netherwing disappears. When Netherwing's current HP is equal to or less than 25% of its Max HP, launching this ability will actively reduce HP down to 1, and then trigger the ability effect equal to that of the Talent \"Wings Sweep the Ruins\".<br><br>"+
+                         "<b>Wings Sweep the Ruins</b><br>Consumes all HP and deals 6 instance(s) of DMG, with each instance dealing Quantum DMG equal to <u><b>56.0%</u></b> of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to <u><b>8%</u></b> of Castorice's Max HP plus <u><b>1120</u></b> for all allies.",
+        },
+        // --- Stats Nodes (Nodos Pequeños) ---
+        s1: {
+            id: "s1",
+            name: "DMG Boost: Quantum",
+            type: "stat",
+            icon: CA.QuantumBoost,
+            description: "Quantum DMG Increases by: <b><u>6.4%</u></b>",
+        },
+        s2: {
+            id: "s2",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "CRIT Rate Increases by: <b><u>5.3%</u></b>",
+        },
+        s3: {
+            id: "s3",
+            name: "CRIT DMG Boost",
+            type: "stat",
+            icon: CA.CritDMG,
+            description: "CRIT DMG Increases by: <b><u>8.0%</u></b>",
+        },
+        s4: {
+            id: "s4",
+            name: "DMG Boost: Quantum",
+            type: "stat",
+            icon: CA.QuantumBoost,
+            description: "Quantum DMG Increases by: <b><u>3.2%</u></b>",
+        },
+        s5: {
+            id: "s5",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "Crit Rate Increases by: <b><u>2.7%</u></b>",
+        },
+        s6: {
+            id: "s6",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "Crit Rate Increases by: <b><u>2.7%</u></b>",
+        },
+        s7: {
+            id: "s7",
+            name: "CRIT DMG Boost",
+            type: "stat",
+            icon: CA.CritDMG,
+            description: "CRIT DMG Increases by: <b><u>5.3%</u></b>",
+        },
+        s8: {
+            id: "s8",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "Crit Rate Increases by: <b><u>4.0%</u></b>",
+        },
+        s9: {
+            id: "s9",
+            name: "DMG Boost: Quantum",
+            type: "stat",
+            icon: CA.QuantumBoost,
+            description: "Quantum DMG Increases by: <b><u>4.8%</u></b>",
+        },
+        s10: {
+            id: "s10",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "Crit Rate Increases by: <b><u>4.0%</u></b>",
+        },
+    }
+};
+
+
+// Nihility
 Characters.push(Cipher);
+// Destruction
 Characters.push(Midey);
+// Elation
 Characters.push(AventurineWaveflair);
+// Harmony
 Characters.push(Ruanmei);
+// Abundace
 Characters.push(Lingsha);
+// Remembrance
+Characters.push(Castorice);

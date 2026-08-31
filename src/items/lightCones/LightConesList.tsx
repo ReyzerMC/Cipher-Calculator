@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg } from "../../assets/lightcones/index";
+import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg } from "../../assets/lightcones/index";
 
 export const LightCones : LightCone[] = [];
 
@@ -91,7 +91,7 @@ const PastSelfInMirror : LightCone = {
 const ScentAloneStaysTrue : LightCone = {
     name: "Scent Alone Stays True",
     path: Paths.Abundance,
-    description: Texts.ScentAloneStaysTrueEng,
+    description: Texts.ScentAloneStaysTrueENG,
     image: ScentAloneStaysTrueImg,
 
     baseHP: 1058,
@@ -100,13 +100,31 @@ const ScentAloneStaysTrue : LightCone = {
     dupe: 1,
 };
 
+const MakeFarewellsMoreBeautiful : LightCone = {
+    name: "Make Farewells More Beautiful",
+    path: Paths.Remembrance,
+    description: Texts.MakeFarewellsMoreBeautifulENG,
+    image: MakeFarewellsMoreBeautifulImg,
 
+    baseHP: 1270,
+    baseATK: 529,
+    baseDEF: 396,
+    dupe: 1,
+};
 
+// Nihility
 LightCones.push(LiesDanceOnTheBreeze);
+LightCones.push(GoodNightAndSleepWell);
+// Destruction
 LightCones.push(FlameOfBlood_BlazeMyPath);
 LightCones.push(ATrailOfBygoneBlood);
-LightCones.push(GoodNightAndSleepWell);
+// Hunt
 LightCones.push(InTheNight);
+// Elation
 LightCones.push(SummerRidesTheSurf);
+// Harmony
 LightCones.push(PastSelfInMirror);
+// Abundance
 LightCones.push(ScentAloneStaysTrue);
+// Remembrance
+LightCones.push(MakeFarewellsMoreBeautiful);
