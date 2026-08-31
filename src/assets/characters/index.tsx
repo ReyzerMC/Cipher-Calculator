@@ -8,6 +8,7 @@ import CritRate from "./global/CRITrate.webp";
 import ElationStat from "./global/ElationStat.webp";
 import Def from "./global/DEF.webp";
 import Break from "./global/Break.webp";
+import ATK from "./global/ATK.webp";
 
 // Cipher
 import cipherImg from "./cipher.png";
@@ -56,6 +57,19 @@ import CandleLightsOnStillWaters from "./Ruanmei/CandleLightsOnStillWaters.png";
 import InertRespiration from "./Ruanmei/InertRespiration.png";
 import DaysWaneThoughtsWax from "./Ruanmei/DaysWaneThoughtsWax.png";
 
+// Lingsha
+import LingshaImg from "./Lingsha.png";
+import LingshaBasicATK from "./Lingsha/BasicATK.png";
+import LingshaSkill from "./Lingsha/Skill.png";
+import LingshaUltimate from "./Lingsha/Ultimate.png";
+import LingshaTalent from "./Lingsha/Talent.png";
+import LingshaTechnique from "./Lingsha/Technique.png";
+import VermilionWaft from "./Lingsha/Vermilion Waft.png";
+import SylvanSmoke from "./Lingsha/SylvanSmoke.png";
+import EmbersEcho from "./Lingsha/EmbersEcho.png";
+
+// dsa
+
 export {
     //Global
     SPD,
@@ -67,6 +81,7 @@ export {
     ElationStat,
     Def,
     Break,
+    ATK,
 
     //Cipher
     cipherImg,
@@ -111,5 +126,18 @@ export {
     RuanmeiTechnique,
     CandleLightsOnStillWaters,
     InertRespiration,
-    DaysWaneThoughtsWax
+    DaysWaneThoughtsWax,
+
+    // Lingsha
+    LingshaImg,
+    LingshaBasicATK,
+    LingshaSkill,
+    LingshaUltimate,
+    LingshaTalent,
+    LingshaTechnique,
+    VermilionWaft,
+    SylvanSmoke,
+    EmbersEcho,
+
+    // dsa
 };

@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg } from "../../assets/lightcones/index";
+import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg } from "../../assets/lightcones/index";
 
 export const LightCones : LightCone[] = [];
 
@@ -86,7 +86,21 @@ const PastSelfInMirror : LightCone = {
     baseATK: 529,
     baseDEF: 529,
     dupe: 1,
-}
+};
+
+const ScentAloneStaysTrue : LightCone = {
+    name: "Scent Alone Stays True",
+    path: Paths.Abundance,
+    description: Texts.ScentAloneStaysTrueEng,
+    image: ScentAloneStaysTrueImg,
+
+    baseHP: 1058,
+    baseATK: 529,
+    baseDEF: 529,
+    dupe: 1,
+};
+
+
 
 LightCones.push(LiesDanceOnTheBreeze);
 LightCones.push(FlameOfBlood_BlazeMyPath);
@@ -95,3 +109,4 @@ LightCones.push(GoodNightAndSleepWell);
 LightCones.push(InTheNight);
 LightCones.push(SummerRidesTheSurf);
 LightCones.push(PastSelfInMirror);
+LightCones.push(ScentAloneStaysTrue);

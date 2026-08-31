@@ -638,7 +638,163 @@ const Ruanmei: Character = {
     }
 };
 
+const Lingsha: Character = {
+    name: "Lingsha",
+    path: Paths.Abundance,
+    element: Elements.Fire,
+    world: Worlds.TheXianzhouLuofu,
+    image: CA.LingshaImg,
+
+    baseATK: 679,
+    baseDEF: 436,
+    baseHP: 1358,
+    baseSPD: 98,
+    aggro: 100,
+    dupe: 0,
+
+    traces: {
+        attack: {
+            id: "attack",
+            name: "Basic ATK: Votive Incense",
+            type: "basic",
+            level: "7/7",
+            icon: CA.LingshaBasicATK,
+            description: "Deals Fire DMG equal to <u><b>120%</u></b> of Lingsha's ATK to one designated enemy target."
+        },
+        skill: {
+            id: "skill",
+            name: "Skill: ",
+            type: "skill",
+            level: "12/12",
+            icon: CA.LingshaSkill,
+            description: "Deals Fire DMG equal to <u><b>88%</u></b> of Lingsha's ATK to all enemies and at the same time, restores HP equal to <u><b>14.8%</u></b> of Lingsha's ATK plus 467 for all allies. Fuyuan's action advances by 20%."
+            },
+        ultimate: {
+            id: "ultimate",
+            name: "Ultimate: Dripping Mistscape",
+            type: "ultimate",
+            level: "12/12",
+            icon: CA.LingshaUltimate,
+            description: "<b>Energy: 110</b><br> Inflicts \"Befog\" on all enemies. While in \"Befog,\" targets receive <u><b>27%</u></b> increased Break DMG, lasting for 2 turn(s). Deals Fire DMG equal to <u><b>162%</u></b> of Lingsha's ATK to all enemies, and at the same time restores HP equal to <u><b>12.8%</u></b> of Lingsha's ATK plus <u><b>401</u></b> for all allies. Fuyuan's action advances by 100%."
+        },
+        talent: {
+            id: "talent",
+            name: "Talent: Mistdance Manifest",
+            type: "talent",
+            level: "12/12",
+            icon: CA.LingshaTalent,
+            description: "When using Skill, summons \"Fuyuan,\" with an initial SPD of 90 and an initial action count of 3. When taking action, \"Fuyuan\" launches Follow-Up ATK, dealing Fire DMG equal to <u><b>83%</u></b> of Lingsha's ATK to all enemies. Additionally deals Fire DMG equal to <u><b>83%</u></b> of Lingsha's ATK to one random enemy, and this DMG prioritizes targets that have both Toughness greater than 0 and Fire Weakness. Dispels 1 debuff(s) from all allies and restores HP equal to <u><b>12.8%</u></b> of Lingsha's ATK plus <u><b>401</u></b>. \"Fuyuan's\" action count can accumulate up to 5. When the action count reaches 0 or when Lingsha is knocked down, \"Fuyuan\" disappears. While \"Fuyuan\" is on the field, using Skill can increase \"Fuyuan's\" action count by 3."
+        },
+        technique: {
+            id: "technique",
+            name: "Technique: Wisps of Aurora",
+            type: "technique",
+            level: "1/1",
+            icon: CA.LingshaTechnique,
+            description: "After using Technique, immediately summons Fuyuan at the start of the next battle and inflicts \"Befog\" on all enemies, lasting for 2 turn(s)."
+        },
+
+        // --- Pasivas ---
+        b1: {
+            id: "b1",
+            name: "Ember's Echo",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.EmbersEcho,
+            description: "While \"Fuyuan\" is on the field and any ally character takes DMG or consumes HP, if a character in the team has their current HP percentage lower than or equal to 60%, \"Fuyuan\" will immediately launch the Talent's Follow-Up ATK against enemies. This does not consume Fuyuan's action count. This effect can trigger again after 2 turn(s).",
+        },
+        b2: {
+            id: "b2",
+            name: "Sylvan Smoke",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.SylvanSmoke,
+            description: "When using Basic ATK, additionally regenerates 10 Energy.",
+        },
+        b3: {
+            id: "b3",
+            name: "Vermilion Waft",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.VermilionWaft,
+            description: "Increases this unit's ATK or Outgoing Healing by an amount equal to 25%/10% of Break Effect, up to a maximum increase of 50%/20% respectively.",
+        },
+        // --- Stats Nodes (Nodos Pequeños) ---
+        s1: {
+            id: "s1",
+            name: "Max HP Boost",
+            type: "stat",
+            icon: CA.MaxHP,
+            description: "Max HP Increases by: <b><u>8.0%</u></b>",
+        },
+        s2: {
+            id: "s2",
+            name: "ATK Boost",
+            type: "stat",
+            icon: CA.ATK,
+            description: "ATK Increases by: <b><u>6.0%</u></b>",
+        },
+        s3: {
+            id: "s3",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+            description: "Break Effect Increases by: <b><u>8.0%</u></b>",
+        },
+        s4: {
+            id: "s4",
+            name: "Max HP Boost",
+            type: "stat",
+            icon: CA.MaxHP,
+            description: "Max HP Increases by: <b><u>6.0%</u></b>",
+        },
+        s5: {
+            id: "s5",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+            description: "Break Effect Increases by: <b><u>8.0%</u></b>",
+        },
+        s6: {
+            id: "s6",
+            name: "Max HP Boost",
+            type: "stat",
+            icon: CA.MaxHP,
+            description: "Max HP Increases by: <b><u>4.0%</u></b>",
+        },
+        s7: {
+            id: "s7",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+            description: "Break Effect Increases by: <b><u>5.3%</u></b>",
+        },
+        s8: {
+            id: "s8",
+            name: "ATK Boost",
+            type: "stat",
+            icon: CA.ATK,
+            description: "ATK Increases by: <b><u>4.0%</u></b>",
+        },
+        s9: {
+            id: "s9",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+            description: "Break Effect Increases by: <b><u>10.7%</u></b>",
+        },
+        s10: {
+            id: "s10",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+            description: "Break Effect Increases by: <b><u>5.3%</u></b>",
+        },
+    }
+}
+
 Characters.push(Cipher);
 Characters.push(Midey);
 Characters.push(AventurineWaveflair);
 Characters.push(Ruanmei);
+Characters.push(Lingsha);

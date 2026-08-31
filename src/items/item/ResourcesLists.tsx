@@ -110,7 +110,21 @@ export const Texts = {
         const Energy = EnergyVal[index]; 
 
         return `Increases the wearer's Break Effect by <b><u>${Break}%</u></b>. When the wearer uses their Ultimate, increases all allies' DMG by <b><u>${DMG}%</u></b>, lasting for 3 turn(s). If the wearer's Break Effect exceeds or equals 150%, 1 Skill Point will be recovered. At the start of each wave, all allies regenerate <b><u>${Energy}</u></b> Energy immediately. Abilities of the same type cannot stack.`;
-    }
+    },
+
+    ScentAloneStaysTrueEng: (rank: number): string => {
+        const BreakVal = [60, 70, 80, 90, 100];
+        const DMGVal = [10, 12, 14, 16, 18];
+        const DMGVal2 = [8, 10, 12, 14, 16];
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const Break = BreakVal[index];
+        const DMG = DMGVal[index];
+        const DMG2 = DMGVal2[index]; 
+
+        return `Increases the wearer's Break Effect by <u><b>${Break}%</u></b> After the wearer uses Ultimate to attack enemy targets, inflicts the targets with the "Woefree" state, lasting for 2 turn(s). While in "Woefree," enemy targets take <u><b>${DMG}%</u></b> increased DMG. The effect of increasing DMG taken is additionally boosted by <u><b>${DMG2}%</u></b> if the wearer's current Break Effect is 150% or higher.`;
+    },
 } as const;
 
 export type Text = typeof Texts[keyof typeof Texts];
