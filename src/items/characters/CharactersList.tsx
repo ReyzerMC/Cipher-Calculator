@@ -969,6 +969,160 @@ const Castorice: Character = {
     }
 };
 
+const Topaz: Character = {
+    name: "Topaz & Numby",
+    path: Paths.Hunt,
+    element: Elements.Fire,
+    world: Worlds.InterastralPeaceCorporation,
+    image: CA.TopazImg,
+
+    baseATK: 620,
+    baseDEF: 412,
+    baseHP: 931,
+    baseSPD: 110,
+    aggro: 75,
+    dupe: 0,
+
+    traces: {
+        attack: {
+            id: "attack",
+            name: "Basic ATK: Deficit...",
+            type: "basic",
+            level: "7/7",
+            icon: CA.TopazBasicATK,
+            description: "Deals Fire DMG equal to <u><b>110%</u></b> of Topaz's ATK to one designated enemy."
+        },
+        skill: {
+            id: "skill",
+            name: "Skill: Difficulty Paying?",
+            type: "skill",
+            level: "12/12",
+            icon: CA.TopazSkill,
+            description: "Inflicts one designated enemy target with a \"Proof of Debt\" state, increasing the Follow-Up ATK DMG it receives by <u><b>55%</u></b>. \"Proof of Debt\" only takes effect on the most recent target it is applied to. If there are no enemies inflicted with \"Proof of Debt\" on the field when an ally's turn starts or when an ally takes action, Topaz will inflict a random enemy with \"Proof of Debt\". Numby deals Fire DMG equal to <u><b>165%</u></b> of Topaz's ATK to this target. Using this Skill to deal DMG is considered as launching a Follow-Up ATK."
+            },
+        ultimate: {
+            id: "ultimate",
+            name: "Ultimate: Turn a Profit!",
+            type: "ultimate",
+            level: "12/12",
+            icon: CA.TopazUltimate,
+            description: "<b>Energy: 130</b><br>Numby enters the Windfall Bonanza! state and its DMG multiplier increases by <u><b>165%</u></b> and CRIT DMG increases by <u><b>28%</u></b>. Also, when enemies with Proof of Debt are hit by an ally's Basic ATK, Skill, or Ultimate, Numby's action is Advanced Forward by 50%. Numby exits the Windfall Bonanza! state after using 2 attacks."
+        },
+        talent: {
+            id: "talent",
+            name: "Talent: Trotter Market!?",
+            type: "talent",
+            level: "12/12",
+            icon: CA.TopazTalent,
+            description: "Summons Numby at the start of battle. Numby has 80 SPD by default. When taking action, Numby launches Follow-Up ATKs on one enemy target afflicted with \"Proof of Debt\", dealing Fire DMG equal to <u><b>165%</u></b> of Topaz's ATK. When enemies afflicted with \"Proof of Debt\" receive an ally's Follow-Up ATKs, Numby's action is Advanced Forward by 50%. The action Advance Forward effect cannot be triggered during Numby's own turn. When Topaz is downed, Numby disappears."
+        },
+        technique: {
+            id: "technique",
+            name: "Technique: Explicit Subsidy",
+            type: "technique",
+            level: "1/1",
+            icon: CA.TopazTechnique,
+            description: "Summons Numby when Topaz enters the overworld. Numby will automatically search for Basic Treasures and Trotters within a set radius. Using her Technique will regenerate 60 Energy for Topaz after Numby's first attack in the next battle. If Topaz is still in the team after using her Technique and defeating overworld enemies, a small bonus amount of credits will be added to the earned credits. A maximum of 10000 bonus credits can be received per calendar day. After using her Technique and defeating enemies in Simulated Universe or Divergent Universe, additionally receive a small amount of Cosmic Fragments with a small chance to obtain 1 random Curio."
+        },
+
+        // --- Pasivas ---
+        b1: {
+            id: "b1",
+            name: "Stonks Market",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.StonksMarket,
+            description: "After Numby uses an attack while in the Windfall Bonanza! state, Topaz additionally regenerates 10 Energy.",
+        },
+        b2: {
+            id: "b2",
+            name: "Overdraft",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.Overdraft,
+            description: "When Topaz uses Basic ATK to deal DMG, it is considered as a Follow-Up ATK.",
+        },
+        b3: {
+            id: "b3",
+            name: "Financial Turmoil",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.FinancialTurmoil,
+            description: "Increases Topaz & Numby's DMG dealt to enemy targets with Fire Weakness by 15%.",
+        },
+        // --- Stats Nodes (Nodos Pequeños) ---
+        s1: {
+            id: "s1",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "CRIT Rate Increases by: <b><u>5.3%</u></b>",
+        },
+        s2: {
+            id: "s2",
+            name: "Max HP Boost",
+            type: "stat",
+            icon: CA.MaxHP,
+            description: "Max HP Increases by: <b><u>6.0%</u></b>",
+        },
+        s3: {
+            id: "s3",
+            name: "DMG Boost: Fire",
+            type: "stat",
+            icon: CA.FireBoost,
+            description: "Fire DMG Increases by: <b><u>6.4%</u></b>",
+        },
+        s4: {
+            id: "s4",
+            name: "Max HP Boost",
+            type: "stat",
+            icon: CA.MaxHP,
+            description: "Max HP Increases by: <b><u>4.0%</u></b>",
+        },
+        s5: {
+            id: "s5",
+            name: "DMG Boost: Fire",
+            type: "stat",
+            icon: CA.FireBoost,
+            description: "Fire DMG Increases by: <b><u>3.2%</u></b>",
+        },
+        s6: {
+            id: "s6",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.MaxHP,
+            description: "CRIT Rate Increases by: <b><u>2.7%</u></b>",
+        },
+        s7: {
+            id: "s7",
+            name: "DMG Boost: Fire",
+            type: "stat",
+            icon: CA.FireBoost,
+            description: "Fire DMG Increases by: <b><u>4.8%</u></b>",
+        },
+        s8: {
+            id: "s8",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "CRIT Rate Increases by: <b><u>4.0%</u></b>",
+        },
+        s9: {
+            id: "s9",
+            name: "DMG Boost: Fire",
+            type: "stat",
+            icon: CA.FireBoost,
+            description: "Fire DMG Increases by: <b><u>4.8%</u></b>",
+        },
+        s10: {
+            id: "s10",
+            name: "DMG Boost: Fire",
+            type: "stat",
+            icon: CA.FireBoost,
+            description: "Fire DMG Increases by: <b><u>3.2%</u></b>",
+        },
+    }
+};
 
 // Nihility
 Characters.push(Cipher);
@@ -982,3 +1136,5 @@ Characters.push(Ruanmei);
 Characters.push(Lingsha);
 // Remembrance
 Characters.push(Castorice);
+// Hunt
+Characters.push(Topaz);

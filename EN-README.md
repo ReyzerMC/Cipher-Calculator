@@ -30,13 +30,13 @@ The project is currently in a very early stage of development.
 
 ### Characters
 
-There are currently only **5 characters available**.
+There are currently only **6 characters available**.
 
 ### Light Cones
 
-There are currently **8 Light Cones implemented**.
+There are currently **9 Light Cones implemented**.
 
-Of these 8, only **7 are currently displayed in the interface**, as the available Light Cones are filtered according to the Paths of the currently implemented characters.
+Of these 9, only **8 are currently displayed in the interface**, as the available Light Cones are filtered according to the Paths of the currently implemented characters.
 
 ---
 

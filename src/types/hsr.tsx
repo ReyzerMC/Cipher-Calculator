@@ -409,3 +409,72 @@ export class RemembranceTreeLayout {
     { from: "b3", to: "s10", arc: { radius: 33, sweep: 0} },
   ];
 }
+
+export class HuntTreeLayout {
+  static readonly positions: Record<string, { x: number; y: number }> = {
+    // --- NODOS CENTRALES ---
+    talent: { x: 50, y: 31 },   // Definitiva (Arriba)
+    attack: { x: 34, y: 44 },     // Ataque Básico (Izquierda)
+    ultimate: { x: 50, y: 52 },      // Habilidad Básica (Centro)
+    skill: { x: 66, y: 44 },     // Talento (Derecha)
+    technique: { x: 50, y: 66 },  // Técnica (Abajo)
+
+    // --- PASIVAS MAYORES (B1, B2, B3) ---
+    b1: { x: 50, y: 17 },         // Pasiva Mayor Superior
+    b2: { x: 31, y: 68 },         // Pasiva Mayor Inferior Izquierda
+    b3: { x: 69, y: 68 },         // Pasiva Mayor Inferior Derecha
+
+    // --- ANILLO EXTERIOR Y STAT BONUS (s1 a s10) ---
+    // Arco Superior (Conectado a b1)
+    s1: { x: 34, y: 11 },         // Stat Bonus (Arriba Izq)
+    s2: { x: 50, y: 7 },          // Stat Bonus (HP% - Arriba Centro)
+    s3: { x: 66, y: 11 },         // Stat Bonus (Arriba Der)
+
+    // Diagonal Superior Izquierda (Conectada desde attack)
+    s4: { x: 21, y: 28 },         // Stat Bonus (Extremo Diagonal Superior Izq)
+
+    // Rama Lateral Izquierda
+    s5: { x: 12, y: 44 },         // Stat Bonus (Extremo Izquierda)
+    s6: { x: 21, y: 56 },         // Stat Bonus (Inferior Izq)
+
+    // Diagonal Superior Derecha (Conectada desde talent)
+    s7: { x: 79, y: 28 },         // Stat Bonus (Extremo Diagonal Superior Der)
+
+    // Rama Lateral Derecha
+    s8: { x: 88, y: 44 },         // Stat Bonus (Extremo Derecha)
+    s9: { x: 79, y: 56 },         // Stat Bonus (Inferior Der)
+
+    // Base Inferior (Conectada desde Technique)
+    s10: { x: 50, y: 85 },        // Stat Bonus (Abajo Centro)
+  };
+
+  static readonly connections: Connection[] = [
+    // --- TRONCO Y CONEXIONES CENTRALES ---
+    { from: "b1", to: "talent" },
+    { from: "ultimate", to: "skill" },
+    { from: "ultimate", to: "technique" },
+    { from: "technique", to: "s10" },
+    { from: "b2", to: "technique", arc: { radius: 45, sweep: 1 } },
+    { from: "technique", to: "b3", arc: { radius: 45, sweep: 1 } },
+
+    // --- ARCOS CENTRALES (Anillo Interior - Radio 21) ---
+    { from: "attack", to: "ultimate", arc: { radius: 21, sweep: 0 } },
+    { from: "talent", to: "ultimate" },
+
+    // --- ARCOS SUPERIORES (Anillo Exterior - Radio 33) ---
+    { from: "s1", to: "s2", arc: { radius: 33, sweep: 1 } },
+    { from: "s2", to: "s3", arc: { radius: 33, sweep: 1 } },
+    { from: "b1", to: "s2" },
+
+    // --- RAMAS EXTERIORES ---
+    // Izquierda
+    { from: "attack", to: "s4" },
+    { from: "s5", to: "s6" },
+    { from: "s6", to: "b2" },
+
+    // Derecha
+    { from: "skill", to: "s7" },
+    { from: "s8", to: "s9" },
+    { from: "s9", to: "b3" },
+  ];
+}

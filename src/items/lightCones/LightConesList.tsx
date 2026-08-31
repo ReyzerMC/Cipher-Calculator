@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg } from "../../assets/lightcones/index";
+import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg, WorrisomeBlissfulImg } from "../../assets/lightcones/index";
 
 export const LightCones : LightCone[] = [];
 
@@ -112,6 +112,18 @@ const MakeFarewellsMoreBeautiful : LightCone = {
     dupe: 1,
 };
 
+const WorrisomeBlissful : LightCone = {
+    name: "Worrisome, Blissful",
+    path: Paths.Hunt,
+    description: Texts.WorrisomeBlissfulENG,
+    image: WorrisomeBlissfulImg,
+
+    baseHP: 1058,
+    baseATK: 582,
+    baseDEF: 463,
+    dupe: 1,
+};
+
 // Nihility
 LightCones.push(LiesDanceOnTheBreeze);
 LightCones.push(GoodNightAndSleepWell);
@@ -119,6 +131,7 @@ LightCones.push(GoodNightAndSleepWell);
 LightCones.push(FlameOfBlood_BlazeMyPath);
 LightCones.push(ATrailOfBygoneBlood);
 // Hunt
+LightCones.push(WorrisomeBlissful);
 LightCones.push(InTheNight);
 // Elation
 LightCones.push(SummerRidesTheSurf);

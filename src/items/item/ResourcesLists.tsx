@@ -139,6 +139,20 @@ export const Texts = {
 
         return `Increases the wearer's Max HP by <b><u>${MaxHP}</u></b>. When the wearer or their memosprite loses HP during their own turn, the wearer gains "Death Flower." "Death Flower" allows the wearer and their memosprite to ignore <b><u>${Ignore}</u></b> of the target's DEF when dealing DMG, lasting for 2 turn(s). When the wearer's memosprite disappears, advances the wearer's action by <b><u>${Action}</u></b>. This effect can only trigger up to 1 time, and the trigger count resets every time the wearer uses Ultimate.`;
     },
+
+    WorrisomeBlissfulENG: (rank: number): string => {
+        const CRITRateVal = [30, 38, 45, 53, 60];
+        const ATKVal = [30, 35, 40, 45, 50];
+        const CRITDmgVal = [12, 15, 18, 21, 24];
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const CRITRate = CRITRateVal[index];
+        const ATK = ATKVal[index];
+        const CRITDmg = CRITDmgVal[index]; 
+
+        return `Increase the wearer's CRIT Rate by <b><u>${CRITRate}</u></b> and increases DMG dealt by Follow-Up ATK by <b><u>${ATK}</u></b>. After the wearer uses a Follow-Up ATK, inflicts the target with the "Tame" state, stacking up to 2 time(s). When allies hit enemy targets under the "Tame" state, each "Tame" stack increases the CRIT DMG dealt by <b><u>${CRITDmg}</u></b>.`;
+    },
 } as const;
 
 export type Text = typeof Texts[keyof typeof Texts];

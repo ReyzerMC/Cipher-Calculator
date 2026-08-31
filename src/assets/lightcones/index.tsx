@@ -4,6 +4,7 @@ import SummerRidesTheSurfImg from "./SummerRidesTheSurf.png";
 import PastSelfInMirrorImg from "./PastSelfInMirror.png";
 import ScentAloneStaysTrueImg from "./ScentAloneStaysTrue.png";
 import MakeFarewellsMoreBeautifulImg from "./MakeFarewellsMoreBeautiful.png";
+import WorrisomeBlissfulImg from "./WorrisomeBlissful.png";
 
 export {
     LiesDanceOnTheBreezeImg,
@@ -12,4 +13,5 @@ export {
     PastSelfInMirrorImg,
     ScentAloneStaysTrueImg,
     MakeFarewellsMoreBeautifulImg,
+    WorrisomeBlissfulImg,
 }

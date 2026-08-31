@@ -9,6 +9,7 @@ import ElationStat from "./global/ElationStat.webp";
 import Def from "./global/DEF.webp";
 import Break from "./global/Break.webp";
 import ATK from "./global/ATK.webp";
+import FireBoost from "./global/FireBoost.webp";
 
 // Cipher
 import cipherImg from "./cipher.png";
@@ -81,6 +82,17 @@ import WhereTheWestWindDwells from "./Castorice/WhereTheWestWindDwells.png";
 import ContainedDarkTide from "./Castorice/ContainedDarkTide.png";
 import InvertedTorch from "./Castorice/InvertedTorch.png";
 
+// Topaz
+import TopazImg from "./Topaz.png";
+import TopazBasicATK from "./Topaz/BasicATK.png";
+import TopazSkill from "./Topaz/Skill.png";
+import TopazUltimate from "./Topaz/Ultimate.png";
+import TopazTalent from "./Topaz/Talent.png";
+import TopazTechnique from "./Topaz/Technique.png";
+import StonksMarket from "./Topaz/StonksMarket.png";
+import Overdraft from "./Topaz/Overdraft.png";
+import FinancialTurmoil from "./Topaz/FinancialTurmoil.png";
+
 export {
     //Global
     SPD,
@@ -93,6 +105,7 @@ export {
     Def,
     Break,
     ATK,
+    FireBoost,
 
     //Cipher
     cipherImg,
@@ -162,5 +175,16 @@ export {
     WhereTheWestWindDwells,
     ContainedDarkTide,
     InvertedTorch,
+
+    // Topaz
+    TopazImg,
+    TopazBasicATK,
+    TopazSkill,
+    TopazUltimate,
+    TopazTalent,
+    TopazTechnique,
+    StonksMarket,
+    Overdraft,
+    FinancialTurmoil,
 
 };
