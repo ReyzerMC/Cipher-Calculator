@@ -69,7 +69,7 @@ The experience may vary on other resolutions or aspect ratios.
 
 > [!NOTE]
 >
-> Mobile and tablet compatibility **has not been fully tested yet**.
+> Mobile and tablet compatibility **has just been added, if errors are found, please create an github issue**.
 
 Support for these devices is currently **under development and testing**, so the interface may not work correctly on smaller screens.
 

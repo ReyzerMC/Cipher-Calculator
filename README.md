@@ -68,9 +68,7 @@ La experiencia puede variar en otras resoluciones o relaciones de aspecto.
 ### 📱 Móviles y tablets
 
 > [!NOTE]
-> La compatibilidad con móviles y tablets **todavía no ha sido testeada completamente**.
-
-El soporte para estos dispositivos se encuentra actualmente **en proceso de desarrollo y pruebas**, por lo que la interfaz puede no funcionar correctamente en pantallas pequeñas.
+> La compatibilidad con móviles y tablets **recien implementada, si experimentan algun tipo de falla crear una issue en github**.
 
 ---
 
