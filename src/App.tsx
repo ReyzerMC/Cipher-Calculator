@@ -12,11 +12,13 @@ const useTraceScale = () => {
 
   useEffect(() => {
     const updateScale = () => {
-      if (window.screen.width >= 2500 || window.innerWidth >= 2500) {
-        setScale(1.35)
-      } else {
-        setScale(1.0)
-      }
+        const width = window.innerWidth;
+
+        if (width >= 2500) {
+            setScale(1.35);
+        } else {
+            setScale(1.0);
+        }
     };
 
     updateScale();

@@ -288,20 +288,29 @@
         width: 65%;
     }
 
-    .hsr-trace-info-popover {
-        top: auto;
-        bottom: 16px;
-        right: 8px;
+   .hsr-trace-info-popover {
+        position: static;
 
-        width: min(320px, calc(100vw - 32px));
+        width: 100%;
+        max-width: 500px;
 
         max-height: 45vh;
 
-        padding: 16px;
+        margin: 16px auto 0;
 
         box-sizing: border-box;
 
         overflow-y: auto;
         overflow-x: hidden;
+
+        padding: 16px;
+
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+        /* Evita que interfiera con los nodos */
+        z-index: 10;
     }
 }
