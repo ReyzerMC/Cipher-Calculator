@@ -362,7 +362,7 @@ const AventurineWaveflair: Character = {
             type: "talent",
             level: "12/12",
             icon: CA.AvWfTalent,
-            description: "he duration of Aventurine • Waveflair's \"Certified Banger\" increases by 1 turn. After a teammate uses an attack, Aventurine • Waveflair gains 1 \"Fervor\" and 1 Punchline. \"Fervor\" is capped at 30 points. When \"Fervor\" reaches 10, Aventurine • Waveflair uses 1 instance of \"Cheers! To Summer's Blaze\" that takes into account a fixed amount of 20 Punchline. After this use, the next Elation Skill used by this unit in the Aha Instant gets enhanced into \"All In! To Summer's Blaze.\" While Aventurine • Waveflair holds \"Certified Banger,\" Skill additionally deals <b><u>44%</u></b> Quantum Elation DMG to all enemies, and Ultimate additionally deals <b><u>79%</u></b> Quantum Elation DMG to all enemies.<br><br>"+
+            description: "The duration of Aventurine • Waveflair's \"Certified Banger\" increases by 1 turn. After a teammate uses an attack, Aventurine • Waveflair gains 1 \"Fervor\" and 1 Punchline. \"Fervor\" is capped at 30 points. When \"Fervor\" reaches 10, Aventurine • Waveflair uses 1 instance of \"Cheers! To Summer's Blaze\" that takes into account a fixed amount of 20 Punchline. After this use, the next Elation Skill used by this unit in the Aha Instant gets enhanced into \"All In! To Summer's Blaze.\" While Aventurine • Waveflair holds \"Certified Banger,\" Skill additionally deals <b><u>44%</u></b> Quantum Elation DMG to all enemies, and Ultimate additionally deals <b><u>79%</u></b> Quantum Elation DMG to all enemies.<br><br>"+
                          "<b>Certified Banger</b><br>Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account. Punchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation. The duration of each \"Certified Banger\" state is tracked independently.<br><br>"+
                          "<b>Elation DMG</b><br>The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt. Elation DMG is not affected by DMG Boost effects."
         },
@@ -1124,6 +1124,161 @@ const Topaz: Character = {
     }
 };
 
+const Aventurine: Character = {
+    name: "Aventurine",
+    path: Paths.Preservation,
+    element: Elements.Imaginary,
+    world: Worlds.InterastralPeaceCorporation,
+    image: CA.AvImg,
+
+    baseATK: 446,
+    baseDEF: 654,
+    baseHP: 1203,
+    baseSPD: 106,
+    aggro: 100,
+    dupe: 0,
+
+    traces: {
+        attack: {
+            id: "attack",
+            name: "Basic ATK: Straight Bet",
+            type: "basic",
+            level: "7/7",
+            icon: CA.AvBasicATK,
+            description: "Deals Imaginary DMG equal to <u><b>110%</u></b> of Aventurine's DEF to one designated enemy target."
+        },
+        skill: {
+            id: "skill",
+            name: "Skill: Cornerstone Deluxe",
+            type: "skill",
+            level: "12/12",
+            icon: CA.AvSkill,
+            description: "Provides all allies with a Fortified Wager shield that can block DMG equal to <u><b>25.6%</u></b> of Aventurine's DEF plus <u><b>356</u></b>, lasting for 3 turn(s). When Fortified Wager is gained repeatedly, the Shield Effect can stack, up to 200% of the current Shield Effect provided by the Skill."
+            },
+        ultimate: {
+            id: "ultimate",
+            name: "Ultimate: Roulette Shark",
+            type: "ultimate",
+            level: "12/12",
+            icon: CA.AvUltimate,
+            description: "<b>Energy: 110</b><br>Randomly gains 1 to 7 points of \"Blind Bet\". Then, inflicts \"Unnerved\" on one designated enemy target for 3 turn(s) and deals Imaginary DMG equal to <u><b>292%</u></b> of Aventurine's DEF to that enemy target. When an ally hits an \"Unnerved\" enemy target, the CRIT DMG dealt increases by <u><b>16.2%</u></b>."
+        },
+        talent: {
+            id: "talent",
+            name: "Talent: Shot Loaded Right",
+            type: "talent",
+            level: "12/12",
+            icon: CA.AvTalent,
+            description: "For any single ally with \"Fortified Wager\", their Effect RES increases by <u><b>55.0%</u></b>, and when they get attacked, Aventurine gains 1 point of \"Blind Bet.\" When Aventurine has \"Fortified Wager,\" he can resist Crowd Control debuffs. This effect can trigger again after 2 turn(s). Aventurine additionally gains 1 point(s) of \"Blind Bet\" after getting attacked. Upon reaching 7 points of \"Blind Bet,\" Aventurine consumes the 7 points to launch a 7-hit Follow-Up ATK, with each hit dealing Imaginary DMG equal to <u><b>28%</u></b> of Aventurine's DEF to one random enemy. \"Blind Bet\" is capped at 10 points."
+        },
+        technique: {
+            id: "technique",
+            name: "Technique: The Red or the Black",
+            type: "technique",
+            level: "1/1",
+            icon: CA.AvTechnique,
+            description: "After using the Technique, 1 of the following effects will be granted:<br>There is a chance for DEF to increase by 24%.<br>There is a high chance for DEF to increase by 36%.<br>There is a small chance for DEF to increase by 60%.<br>When this Technique is used repeatedly, the acquired effect with the highest buff value is retained.<br>When the next battle starts, increases all allies' DEF by the corresponding value, lasting for 3 turn(s)."
+        },
+
+        // --- Pasivas ---
+        b1: {
+            id: "b1",
+            name: "Bingo!",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.Bingo,
+            description: "After a teammate with \"Fortified Wager\" launches Follow-Up ATK, Aventurine accumulates 1 \"Blind Bet\" point. This effect can trigger up to 3 time(s). Its trigger count resets at the start of Aventurine's turn. After Aventurine launches his Talent's Follow-Up ATK, provides all ally targets with a \"Fortified Wager\" that can offset DMG equal to 7% of Aventurine's DEF plus 96, and additionally grants a \"Fortified Wager\" that can block DMG equal to 7% of Aventurine's DEF plus 96 to the ally with the lowest Shield Effect, lasting for 3 turns.",
+        },
+        b2: {
+            id: "b2",
+            name: "Leverage",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.Leverage,
+            description: "For every 100 of Aventurine's DEF that exceeds 1600, increases his own CRIT Rate by 2%, up to a maximum increase of 48%.",
+        },
+        b3: {
+            id: "b3",
+            name: "Hot Hand",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.HotHand,
+            description: "When battle starts, grants all allies a Fortified Wager shield, whose Shield Effect is equal to 100% of the one provided by the Skill, lasting for 3 turn(s).",
+        },
+        // --- Stats Nodes (Nodos Pequeños) ---
+        s1: {
+            id: "s1",
+            name: "DMG Boost: Imaginary",
+            type: "stat",
+            icon: CA.ImaginaryBoost,
+            description: "Imaginary DMG Increases by: <b><u>6.4%</u></b>",
+        },
+        s2: {
+            id: "s2",
+            name: "Effect RES Boost",
+            type: "stat",
+            icon: CA.EffectRES,
+            description: "Effect RES Increases by: <b><u>6.0%</u></b>",
+        },
+        s3: {
+            id: "s3",
+            name: "DEF Boost: Fire",
+            type: "stat",
+            icon: CA.Def,
+            description: "DEF Increases by: <b><u>10.0%</u></b>",
+        },
+        s4: {
+            id: "s4",
+            name: "Effect RES Boost",
+            type: "stat",
+            icon: CA.EffectRES,
+            description: "Effect RES Increases by: <b><u>4.0%</u></b>",
+        },
+        s5: {
+            id: "s5",
+            name: "DEF Boost",
+            type: "stat",
+            icon: CA.Def,
+            description: "DEF Increases by: <b><u>5.0%</u></b>",
+        },
+        s6: {
+            id: "s6",
+            name: "DMG Boost: Imaginary",
+            type: "stat",
+            icon: CA.ImaginaryBoost,
+            description: "Imaginary DMG Increases by: <b><u>3.2%</u></b>",
+        },
+        s7: {
+            id: "s7",
+            name: "DEF Boost",
+            type: "stat",
+            icon: CA.Def,
+            description: "DEF Increases by: <b><u>7.5%</u></b>",
+        },
+        s8: {
+            id: "s8",
+            name: "DMG Boost: Imaginary",
+            type: "stat",
+            icon: CA.ImaginaryBoost,
+            description: "DEF Increases by: <b><u>4.8%</u></b>",
+        },
+        s9: {
+            id: "s9",
+            name: "DEF Boost",
+            type: "stat",
+            icon: CA.Def,
+            description: "DEF Increases by: <b><u>7.5%</u></b>",
+        },
+        s10: {
+            id: "s10",
+            name: "DEF Boost",
+            type: "stat",
+            icon: CA.Def,
+            description: "DEF DMG Increases by: <b><u>5.0%</u></b>",
+        },
+    }
+};
+
 // Nihility
 Characters.push(Cipher);
 // Destruction
@@ -1138,3 +1293,5 @@ Characters.push(Lingsha);
 Characters.push(Castorice);
 // Hunt
 Characters.push(Topaz);
+// Preservation
+Characters.push(Aventurine);

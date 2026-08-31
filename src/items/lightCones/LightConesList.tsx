@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg, WorrisomeBlissfulImg } from "../../assets/lightcones/index";
+import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg, WorrisomeBlissfulImg, InherentlyUnjustDestinyImg } from "../../assets/lightcones/index";
 
 export const LightCones : LightCone[] = [];
 
@@ -124,6 +124,18 @@ const WorrisomeBlissful : LightCone = {
     dupe: 1,
 };
 
+const InherentlyUnjustDestiny : LightCone = {
+    name: "Inherently Unjust Destiny",
+    path: Paths.Preservation,
+    description: Texts.InherentlyUnjustDestinyENG,
+    image: InherentlyUnjustDestinyImg,
+
+    baseHP: 1058,
+    baseATK: 423,
+    baseDEF: 661,
+    dupe: 1,
+};
+
 // Nihility
 LightCones.push(LiesDanceOnTheBreeze);
 LightCones.push(GoodNightAndSleepWell);
@@ -141,3 +153,5 @@ LightCones.push(PastSelfInMirror);
 LightCones.push(ScentAloneStaysTrue);
 // Remembrance
 LightCones.push(MakeFarewellsMoreBeautiful);
+// Preservation
+LightCones.push(InherentlyUnjustDestiny);

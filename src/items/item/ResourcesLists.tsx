@@ -153,6 +153,23 @@ export const Texts = {
 
         return `Increase the wearer's CRIT Rate by <b><u>${CRITRate}</u></b> and increases DMG dealt by Follow-Up ATK by <b><u>${ATK}</u></b>. After the wearer uses a Follow-Up ATK, inflicts the target with the "Tame" state, stacking up to 2 time(s). When allies hit enemy targets under the "Tame" state, each "Tame" stack increases the CRIT DMG dealt by <b><u>${CRITDmg}</u></b>.`;
     },
+
+    InherentlyUnjustDestinyENG: (rank: number): string => {
+        const DEFVal = [40, 46, 52, 58, 64];
+        const CRITDmgVal = [40, 46, 52, 58, 64];
+        const ChanceVal = [100, 115, 130, 145, 160];
+        const DMGVal = [10, 11.5, 13.0, 14.5, 16.0];
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const DEF = DEFVal[index];
+        const CRITDmg = CRITDmgVal[index];
+        const Chance = ChanceVal[index];
+        const DMG = DMGVal[index]; 
+
+        return `Increases the wearer's DEF by <b><u>${DEF}%</u></b>. When the wearer provides a Shield to an ally, the wearer's CRIT DMG increases by <b><u>${CRITDmg}%</u></b>, lasting for 2 turn(s). When the wearer's Follow-Up ATK hits an enemy target, there is a <b><u>${Chance}%</u></b> base chance to increase the DMG taken by the attacked enemy target by <b><u>${DMG}%</u></b>, lasting for 2 turn(s).`;
+    },
+
 } as const;
 
 export type Text = typeof Texts[keyof typeof Texts];

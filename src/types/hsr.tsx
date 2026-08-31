@@ -478,3 +478,58 @@ export class HuntTreeLayout {
     { from: "s9", to: "b3" },
   ];
 }
+
+export class PreservationTreeLayout {
+  static readonly positions: Record<string, { x: number; y: number }> = {
+    // --- NODOS CENTRALES ---
+    talent: { x: 50, y: 36 },
+    attack: { x: 34, y: 55 },
+    ultimate: { x: 50, y: 53 },
+    skill: { x: 66, y: 55 },
+    technique: { x: 50, y: 69 },
+
+    // --- PASIVAS MAYORES (B1, B2, B3) ---
+    b1: { x: 50, y: 23 },
+    b2: { x: 33, y: 83 },
+    b3: { x: 67, y: 83 },
+
+    // --- ANILLO EXTERIOR Y STAT BONUS (s1 a s10) ---
+    // Arco Superior (Conectado a b1)
+    s1: { x: 32, y: 14 },
+    s2: { x: 50, y: 10 },
+    s3: { x: 68, y: 14 },
+
+    // Rama Diagonal Izquierda (Conectada desde skill y b2)
+    s4: { x: 22, y: 39 },
+    s5: { x: 8, y: 52 },
+    s6: { x: 19, y: 66 },
+
+    // Rama Diagonal Derecha (Conectada desde attack y b3)
+    s7: { x: 78, y: 39 },
+    s8: { x: 92, y: 52 },
+    s9: { x: 82, y: 67 },
+
+    // Base Inferior (Conectada entre b2, Technique y b3)
+    s10: { x: 50, y: 82 },
+  };
+
+  static readonly connections: Connection[] = [
+    { from: "ultimate", to: "talent" },
+    { from: "ultimate", to: "attack", arc: { radius: 55, sweep: 0 } },
+    { from: "ultimate", to: "skill", arc: { radius: 55, sweep: 1 } },
+    { from: "ultimate", to: "technique" },
+    { from: "attack", to: "s4" },
+    { from: "skill", to: "s7" },
+    { from: "b1", to: "talent" },
+    { from: "b1", to: "s2" },
+    { from: "s2", to: "s1", arc: { radius: 55, sweep: 0 } },
+    { from: "s2", to: "s3", arc: { radius: 55, sweep: 1 } },
+    { from: "technique", to: "s10" },
+    { from: "s10", to: "b2", arc: { radius: 65, sweep: 0 } },
+    { from: "s10", to: "b3", arc: { radius: 65, sweep: 1 } },
+    { from: "b2", to: "s6" },
+    { from: "s6", to: "s5" },
+    { from: "b3", to: "s9" },
+    { from: "s9", to: "s8" },
+  ];
+}

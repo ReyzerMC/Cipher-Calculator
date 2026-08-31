@@ -10,6 +10,8 @@ import Def from "./global/DEF.webp";
 import Break from "./global/Break.webp";
 import ATK from "./global/ATK.webp";
 import FireBoost from "./global/FireBoost.webp";
+import EffectRES from "./global/EffectRES.webp";
+import ImaginaryBoost from "./global/ImaginaryBoost.webp";
 
 // Cipher
 import cipherImg from "./cipher.png";
@@ -18,7 +20,6 @@ import CipherSkill from "./cipher/Skill.png";
 import CipherUltimate from "./cipher/Ultimate.png";
 import CipherTalent from "./cipher/Talent.png";
 import CipherTechnique from "./cipher/Technique.png";
-
 import EmpyreanStrides from "./cipher/EmpyreanStrides.png";
 import SleightOfSky from "./cipher/SleightOfSky.png";
 import Rogues from "./cipher/300Rogues.png";
@@ -30,7 +31,6 @@ import mideySkill from "./midey/Skill.png";
 import mideyUltimate from "./midey/Ultimate.png";
 import mideyTalent from "./midey/Talent.png";
 import mideyTechnique from "./midey/Technique.png";
-
 import EarthAndWater from "./midey/EarthAndWater.png";
 import ThirtyTyrants from "./midey/ThirtyTyrants.png";
 import BloodiedChiton from "./midey/BloodiedChiton.png";
@@ -93,6 +93,17 @@ import StonksMarket from "./Topaz/StonksMarket.png";
 import Overdraft from "./Topaz/Overdraft.png";
 import FinancialTurmoil from "./Topaz/FinancialTurmoil.png";
 
+// Aventurine
+import AvImg from "./Aventurine.png";
+import AvBasicATK from "./Av/BasicATK.png";
+import AvSkill from "./Av/Skill.png";
+import AvUltimate from "./Av/Ultimate.png";
+import AvTalent from "./Av/Talent.png";
+import AvTechnique from "./Av/Technique.png";
+import Leverage from "./Av/Leverage.png";
+import Bingo from "./Av/Bingo!.png";
+import HotHand from "./Av/HotHand.png";
+
 export {
     //Global
     SPD,
@@ -106,6 +117,8 @@ export {
     Break,
     ATK,
     FireBoost,
+    EffectRES,
+    ImaginaryBoost,
 
     //Cipher
     cipherImg,
@@ -186,5 +199,16 @@ export {
     StonksMarket,
     Overdraft,
     FinancialTurmoil,
+
+    // Aventurine
+    AvImg,
+    AvBasicATK,
+    AvSkill,
+    AvUltimate,
+    AvTalent,
+    AvTechnique,
+    Leverage,
+    Bingo,
+    HotHand,
 
 };

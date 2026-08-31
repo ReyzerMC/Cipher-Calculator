@@ -5,6 +5,7 @@ import PastSelfInMirrorImg from "./PastSelfInMirror.png";
 import ScentAloneStaysTrueImg from "./ScentAloneStaysTrue.png";
 import MakeFarewellsMoreBeautifulImg from "./MakeFarewellsMoreBeautiful.png";
 import WorrisomeBlissfulImg from "./WorrisomeBlissful.png";
+import InherentlyUnjustDestinyImg from "./InherentlyUnjustDestiny.png";
 
 export {
     LiesDanceOnTheBreezeImg,
@@ -14,4 +15,5 @@ export {
     ScentAloneStaysTrueImg,
     MakeFarewellsMoreBeautifulImg,
     WorrisomeBlissfulImg,
+    InherentlyUnjustDestinyImg,
 }
