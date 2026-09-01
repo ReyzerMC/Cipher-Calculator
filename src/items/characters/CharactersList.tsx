@@ -634,34 +634,7 @@ const AventurineWaveflair: Character = {
 
                 `and Ultimate additionally deals ${
                     scaleValue(AvWfScalling.talent.adj, i)
-                } Quantum Elation DMG to all enemies.` +
-
-                `<br><br>` +
-
-                `<b>Certified Banger</b><br>` +
-
-                `Characters participating in the Aha Instant gain the ` +
-                `"Certified Banger" state. And the Punchline points from ` +
-                `the current Aha Instant are taken into account for this state, ` +
-                `lasting for 2 turns. ` +
-
-                `Ability effects and Elation DMG produced by the ` +
-                `"Certified Banger" state are calculated based on the ` +
-                `Punchline points taken into account. ` +
-
-                `Punchline points taken into account for multiple ` +
-                `"Certified Banger" states are combined for the calculation. ` +
-
-                `The duration of each "Certified Banger" state is tracked independently.` +
-
-                `<br><br>` +
-
-                `<b>Elation DMG</b><br>` +
-
-                `The more Punchline taken into account, and the higher the ` +
-                `Elation and Character Level, the greater the Elation DMG dealt. ` +
-
-                `Elation DMG is not affected by DMG Boost effects.`
+                } Quantum Elation DMG to all enemies.`
         },
 
         technique: {
