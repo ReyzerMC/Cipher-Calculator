@@ -170,6 +170,19 @@ export const Texts = {
         return `Increases the wearer's DEF by <b><u>${DEF}%</u></b>. When the wearer provides a Shield to an ally, the wearer's CRIT DMG increases by <b><u>${CRITDmg}%</u></b>, lasting for 2 turn(s). When the wearer's Follow-Up ATK hits an enemy target, there is a <b><u>${Chance}%</u></b> base chance to increase the DMG taken by the attacked enemy target by <b><u>${DMG}%</u></b>, lasting for 2 turn(s).`;
     },
 
+    WhereaboutsShouldDreamsRestENG: (rank: number): string => {
+        const BreakVal = [60, 70, 80, 90, 100];
+        const BreakDMGVal = [24.0, 28.0, 32.0, 36.0, 40.0];
+
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const Break = BreakVal[index];
+        const BreakDMG = BreakDMGVal[index];
+
+        return `Increases the wearer's Break Effect by <b><u>${Break}%</u></b>. When the wearer deals Break DMG to an enemy target, inflicts Routed on the enemy, lasting for 2 turn(s). Targets afflicted with Routed receive <b><u>${BreakDMG}%</u></b> increased Break DMG from the wearer, and their SPD is lowered by 20%. Effects of the same type cannot be stacked.`;
+    },
+
 } as const;
 
 export type Text = typeof Texts[keyof typeof Texts];

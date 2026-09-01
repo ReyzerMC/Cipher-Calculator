@@ -264,3 +264,36 @@ export const AvEidolons: Eidolon = {
         image: CA.AvE6,
     },
 };
+
+export const FireflyEidolons: Eidolon = {
+    e1: {
+        title: "In Reddened Chrysalis, I Once Rest",
+        desc: "When using the Enhanced Skill, ignores 15% of the target's DEF. The Enhanced Skill does not consume Skill Points.",
+        image: CA.FireflyE1,
+    },
+    e2: {
+        title: "From Shattered Sky, I Free Fall",
+        desc: "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can only trigger 1 time per turn, and the trigger count resets at the start of SAM's turn.",
+        image: CA.FireflyE2,
+    },
+    e3: {
+        title: "Amidst Silenced Stars, I Deep Sleep",
+        desc: "Skill Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10.",
+        image: CA.FireflyE3,
+    },
+    e4: {
+        title: "Upon Lighted Fyrefly, I Soon Gaze",
+        desc: "While in Complete Combustion, increases SAM's Effect RES by 50%.",
+        image: CA.FireflyE4,
+    },
+    e5: {
+        title: "From Undreamt Night, I Thence Shine",
+        desc: "Ultimate Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15.",
+        image: CA.FireflyE5,
+    },
+    e6: {
+        title: "In Finalized Morrow, I Full Bloom",
+        desc: "While in Complete Combustion, increases SAM's Fire RES PEN by 20%. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by 50%.",
+        image: CA.FireflyE6,
+    },
+};

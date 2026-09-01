@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg, WorrisomeBlissfulImg, InherentlyUnjustDestinyImg } from "../../assets/lightcones/index";
+import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg, WorrisomeBlissfulImg, InherentlyUnjustDestinyImg, WhereaboutsShouldDreamsRestImg } from "../../assets/lightcones/index";
 
 export const LightCones : LightCone[] = [];
 
@@ -136,12 +136,25 @@ const InherentlyUnjustDestiny : LightCone = {
     dupe: 1,
 };
 
+const WhereaboutsShouldDreamsRest : LightCone = {
+    name: "Whereabouts Should Dreams Rest",
+    path: Paths.Destruction,
+    description: Texts.WhereaboutsShouldDreamsRestENG,
+    image: WhereaboutsShouldDreamsRestImg,
+
+    baseHP: 1164,
+    baseATK: 476,
+    baseDEF: 529,
+    dupe: 1,
+};
+
 // Nihility
 LightCones.push(LiesDanceOnTheBreeze);
 LightCones.push(GoodNightAndSleepWell);
 // Destruction
 LightCones.push(FlameOfBlood_BlazeMyPath);
 LightCones.push(ATrailOfBygoneBlood);
+LightCones.push(WhereaboutsShouldDreamsRest);
 // Hunt
 LightCones.push(WorrisomeBlissful);
 LightCones.push(InTheNight);

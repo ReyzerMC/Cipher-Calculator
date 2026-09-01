@@ -1,7 +1,7 @@
 import type { Character } from '../../types/hsr';
 import { Paths, Elements, Worlds } from "../item/ResourcesLists";
 import * as CA from '../../assets/characters/index';
-import { CipherScaling, MydeiScaling, AvWfScalling, RuanmeiScalling, LingshaScaling, CastoriceScaling, TopazScaling, AvScaling } from './scalingData';
+import { CipherScaling, MydeiScaling, AvWfScalling, RuanmeiScalling, LingshaScaling, CastoriceScaling, TopazScaling, AvScaling, FireflyScaling } from './scalingData';
 import * as Eidolons from './eidolons/Eidolons';
 
 export const scaleValue = (
@@ -2053,7 +2053,7 @@ const Aventurine: Character = {
 
         s3: {
             id: "s3",
-            name: "DEF Boost: Fire",
+            name: "DEF Boost",
             type: "stat",
             icon: CA.Def,
 
@@ -2120,15 +2120,237 @@ const Aventurine: Character = {
             type: "stat",
             icon: CA.Def,
 
-            description: "DEF DMG Increases by: <b><u>5.0%</u></b>",
+            description: "DEF Increases by: <b><u>5.0%</u></b>",
         },
     },
 };
+
+const Firefly: Character = {
+    name: "Firefly",
+    path: Paths.Destruction,
+    element: Elements.Fire,
+    world: Worlds.StellaronHunters,
+    image: CA.FireflyImg,
+    eidolons: Eidolons.FireflyEidolons,
+
+    baseATK: 523,
+    baseDEF: 776,
+    baseHP: 814,
+    baseSPD: 104,
+    aggro: 125,
+    dupe: 0,
+
+    traces: {
+        attack: {
+            id: "attack",
+            name: "Basic ATK: Order: Flare Propulsion",
+            type: "basic",
+            level: "7/7",
+            icon: CA.FireflyBasicATK,
+
+            description: (i) =>
+                `Deals Fire DMG equal to ${scaleValue(FireflyScaling.attack.main, i)} of SAM's ATK to one designated enemy.<br><br>`+
+                `Restores HP by an amount equal to 20% of this unit's Max HP. Deals Fire DMG equal to ${scaleValue(FireflyScaling.attack.adj, i)} of SAM's ATK to one designated enemy.`,
+        },
+
+        skill: {
+            id: "skill",
+            name: "Skill: Order: Aerial Bombardment",
+            type: "skill",
+            level: "12/12",
+            icon: CA.FireflySkill,
+
+            description: (i) =>
+                `Consumes HP equal to 40% of this unit's Max HP and regenerates a fixed amount of Energy equal to ${scaleValue(FireflyScaling.skill.main, i)} 
+                 of this unit's Max Energy. Deals Fire DMG equal to ${scaleValue(FireflyScaling.skill.adj, i)} of SAM's ATK to one designated enemy. If the current 
+                 HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by 25%.`+
+                `Restores HP by an amount equal to 25% of this unit's Max HP. Adds Fire Weakness to one designated enemy and its adjacent targets, lasting for 2 turns. 
+                 Deals Fire DMG equal to (0.2 × Break Effect + ${scaleValue(FireflyScaling.skill.adj2, i)}) of SAM's ATK to this target. At the same time, deals Fire DMG 
+                 equal to (0.1 × Break Effect + ${scaleValue(FireflyScaling.skill.adj3, i)}) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation 
+                 is capped at 360%.`,
+        },
+
+        ultimate: {
+            id: "ultimate",
+            name: "Ultimate: Fyrefly Type-IV: Complete Combustion",
+            type: "ultimate",
+            level: "12/12",
+            icon: CA.FireflyUltimate,
+
+            description: (i) =>
+                `<b>Energy: 240</b><br>
+                Enters the Complete Combustion state, advances this unit's Action by 100%, and gains Enhanced Basic ATK and Enhanced Skill. 
+                While in Complete Combustion, increases SPD by ${scaleValue(FireflyScaling.ultimate.main, i, "")}, and when using the Enhanced Basic ATK or Enhanced Skill, 
+                increases this unit's Weakness Break Efficiency by 50% and increases the Break DMG dealt by SAM to the enemy targets by 
+                ${scaleValue(FireflyScaling.ultimate.adj, i)}, lasting until this current attack ends. A countdown timer for the Complete Combustion state appears in the Action Order. 
+                When the countdown timer's turn starts, SAM exits the Complete Combustion state. The countdown timer has a fixed SPD of 70.
+                SAM cannot use Ultimate while in Complete Combustion.`,
+        },
+
+        talent: {
+            id: "talent",
+            name: "Talent: Shot Loaded Right",
+            type: "talent",
+            level: "12/12",
+            icon: CA.FireflyTalent,
+
+            description: (i) =>
+                `The lower the HP, the less DMG received. When HP is 20% or lower, the DMG Reduction reaches its maximum effect, reducing up to ${scaleValue(FireflyScaling.talent.main, i)}. 
+                 During the Complete Combustion, the DMG Reduction remains at its maximum effect, and the Effect RES increases by ${scaleValue(FireflyScaling.talent.adj, i)}.
+                 If Energy is lower than 50% when the battle starts, regenerates Energy to 50%. Once Energy is regenerated to its maximum, dispels all debuffs on this unit.`,
+        },
+
+        technique: {
+            id: "technique",
+            name: "Technique: The Red or the Black",
+            type: "technique",
+            level: "1/1",
+            icon: CA.FireflyTechnique,
+
+            description:
+                `After using the Technique, 1 of the following effects will be granted:<br>
+                There is a chance for DEF to increase by 24%.<br>
+                There is a high chance for DEF to increase by 36%.<br>
+                There is a small chance for DEF to increase by 60%.<br>
+                When this Technique is used repeatedly, the acquired effect with the highest buff value is retained.<br>
+                When the next battle starts, increases all allies' DEF by the corresponding value, lasting for 3 turn(s).`,
+        },
+
+        // --- Pasivas ---
+
+        b1: {
+            id: "b1",
+            name: "Module γ: Core Overload",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.ModuleγCoreOverload,
+
+            description:
+                `For every 10 point(s) of SAM's ATK that exceeds 1800, increases this unit's Break Effect by 0.8%.`,
+        },
+
+        b2: {
+            id: "b2",
+            name: "Module α: Antilag Outburst",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.ModuleαAntilagOutburst,
+
+            description:
+                `While in the Complete Combustion state, SAM's Break Effect increases by 25%. When using Enhanced Basic ATK or Enhanced Skill to inflict Weakness Break on a target, the Complete Combustion countdown is delayed by 10%. This effect can trigger a maximum of 3 time(s) during each Complete Combustion state.`,
+        },
+
+        b3: {
+            id: "b3",
+            name: "Module β: Autoreactive Armor",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.ModuleβAutoreactiveArmor,
+
+            description:
+                `When SAM is in Complete Combustion with a Break Effect that is equal to or greater than 150%/300%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of 100%/150% Super Break DMG.`,
+        },
+
+        // --- Stats Nodes (Nodos Pequeños) ---
+
+        s1: {
+            id: "s1",
+            name: "Effect RES Boost",
+            type: "stat",
+            icon: CA.EffectRES,
+
+            description: "Effect RES Increases by: <b><u>8.0%</u></b>",
+        },
+
+        s2: {
+            id: "s2",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+
+            description: "SPD Increases by: <b><u>3</u></b>",
+        },
+
+        s3: {
+            id: "s3",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+
+            description: "Break Effect Increases by: <b><u>10.7%</u></b>",
+        },
+
+        s4: {
+            id: "s4",
+            name: "Effect RES Boost",
+            type: "stat",
+            icon: CA.EffectRES,
+
+            description: "Effect RES Increases by: <b><u>6.0%</u></b>",
+        },
+
+        s5: {
+            id: "s5",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+
+            description: "Break Effect Increases by: <b><u>8.0%</u></b>",
+        },
+
+        s6: {
+            id: "s6",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+
+            description: "Break Effect Increases by: <b><u>8.0%</u></b>",
+        },
+
+        s7: {
+            id: "s7",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+
+            description: "Break Effect Increases by: <b><u>5.3%</u></b>",
+        },
+
+        s8: {
+            id: "s8",
+            name: "Effect RES Boost",
+            type: "stat",
+            icon: CA.EffectRES,
+
+            description: "Effect RES Increases by: <b><u>4.0%</u></b>",
+        },
+
+        s9: {
+            id: "s9",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+
+            description: "SPD Increases by: <b><u>2</u></b>",
+        },
+
+        s10: {
+            id: "s10",
+            name: "Break Boost",
+            type: "stat",
+            icon: CA.Break,
+
+            description: "Break Effect Increases by: <b><u>5.3%</u></b>",
+        },
+    },
+};
+
 
 // Nihility
 Characters.push(Cipher);
 // Destruction
 Characters.push(Mydei);
+Characters.push(Firefly);
 // Elation
 Characters.push(AventurineWaveflair);
 // Harmony

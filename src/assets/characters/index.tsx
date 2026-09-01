@@ -152,6 +152,23 @@ import AvE4 from "./Av/eidolons/AvE4.png";
 import AvE5 from "./Av/eidolons/AvE5.png";
 import AvE6 from "./Av/eidolons/AvE6.png";
 
+// Firefly
+import FireflyImg from "./Firefly.png";
+import FireflyBasicATK from "./Firefly/BasicATK.png";
+import FireflySkill from "./Firefly/Skill.png";
+import FireflyUltimate from "./Firefly/Ultimate.png";
+import FireflyTalent from "./Firefly/Talent.png";
+import FireflyTechnique from "./Firefly/Technique.png";
+import ModuleαAntilagOutburst from "./Firefly/ModuleαAntilagOutburst.png";
+import ModuleβAutoreactiveArmor from "./Firefly/ModuleβAutoreactiveArmor.png";
+import ModuleγCoreOverload from "./Firefly/ModuleγCoreOverload.png";
+import FireflyE1 from "./Firefly/eidolons/FireflyE1.webp";
+import FireflyE2 from "./Firefly/eidolons/FireflyE2.webp";
+import FireflyE3 from "./Firefly/eidolons/FireflyE3.webp";
+import FireflyE4 from "./Firefly/eidolons/FireflyE4.webp";
+import FireflyE5 from "./Firefly/eidolons/FireflyE5.webp";
+import FireflyE6 from "./Firefly/eidolons/FireflyE6.webp";
+
 export {
     //Global
     SPD,
@@ -167,7 +184,9 @@ export {
     FireBoost,
     EffectRES,
     ImaginaryBoost,
+};
 
+export {
     //Cipher
     cipherImg,
     CipherBasicATK,
@@ -184,7 +203,9 @@ export {
     CipherE4,
     CipherE5,
     CipherE6,
+};
 
+export {
     //Mydei
     MydeiImg,
     MydeiBasicATK,
@@ -201,7 +222,9 @@ export {
     MydeiE4,
     MydeiE5,
     MydeiE6,
+};
 
+export {
     // Aventurine - Waveflair
     AvWfImg,
     RevelInRagingTides,
@@ -219,7 +242,9 @@ export {
     AvWfE4,
     AvWfE5,
     AvWfE6,
+};
 
+export {
     // Ruan Mei
     RuanmeiImg,
     RuanmeiBasicATK,
@@ -236,7 +261,9 @@ export {
     RuanE4,
     RuanE5,
     RuanE6,
+}
 
+export {
     // Lingsha
     LingshaImg,
     LingshaBasicATK,
@@ -253,7 +280,9 @@ export {
     LingshaE4,
     LingshaE5,
     LingshaE6,
+};
 
+export {
     // Castorice
     CastoriceImg,
     CastoriceBasicATK,
@@ -272,7 +301,9 @@ export {
     CastorE4,
     CastorE5,
     CastorE6,
+};
 
+export {
     // Topaz
     TopazImg,
     TopazBasicATK,
@@ -289,7 +320,9 @@ export {
     TopazE4,
     TopazE5,
     TopazE6,
+};
 
+export {
     // Aventurine
     AvImg,
     AvBasicATK,
@@ -306,5 +339,22 @@ export {
     AvE4,
     AvE5,
     AvE6,
+};
 
+export {
+    FireflyImg,
+    FireflyBasicATK,
+    FireflySkill,
+    FireflyUltimate,
+    FireflyTalent,
+    FireflyTechnique,
+    ModuleαAntilagOutburst,
+    ModuleβAutoreactiveArmor,
+    ModuleγCoreOverload,
+    FireflyE1,
+    FireflyE2,
+    FireflyE3,
+    FireflyE4,
+    FireflyE5,
+    FireflyE6,
 };
