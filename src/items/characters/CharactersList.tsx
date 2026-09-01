@@ -2,6 +2,7 @@ import type { Character } from '../../types/hsr';
 import { Paths, Elements, Worlds } from "../item/ResourcesLists";
 import * as CA from '../../assets/characters/index';
 import { CipherScaling, MydeiScaling, AvWfScalling, RuanmeiScalling, LingshaScaling, CastoriceScaling, TopazScaling, AvScaling } from './scalingData';
+import * as Eidolons from './eidolons/Eidolons';
 
 export const scaleValue = (
     values: number[],
@@ -19,6 +20,7 @@ const Cipher: Character = {
   element: Elements.Quantum,
   world: Worlds.Amphoreus,
   image: CA.cipherImg,
+  eidolons: Eidolons.CipherEidolons,
 
   baseATK: 640,
   baseDEF: 509,
@@ -207,11 +209,10 @@ const Cipher: Character = {
 
 const Mydei: Character = {
     name: "Mydei",
-
     path: Paths.Destruction,
     element: Elements.Imaginary,
     world: Worlds.Amphoreus,
-
+    eidolons: Eidolons.MydeiEidolons,
     image: CA.MydeiImg,
 
     baseATK: 426,
@@ -536,8 +537,8 @@ const AventurineWaveflair: Character = {
     path: Paths.Elation,
     element: Elements.Quantum,
     world: Worlds.InterastralPeaceCorporation,
-
     image: CA.AvWfImg,
+    eidolons: Eidolons.AvWfEidolons,
 
     baseATK: 485,
     baseDEF: 606,
@@ -863,12 +864,11 @@ const AventurineWaveflair: Character = {
 
 const Ruanmei: Character = {
     name: "Ruan Mei",
-
     path: Paths.Harmony,
     element: Elements.Ice,
     world: Worlds.HertaSpaceStation,
-
     image: CA.RuanmeiImg,
+    eidolons: Eidolons.RuanEidolons,
 
     baseATK: 659,
     baseDEF: 485,
@@ -1154,6 +1154,7 @@ const Lingsha: Character = {
     element: Elements.Fire,
     world: Worlds.TheXianzhouLuofu,
     image: CA.LingshaImg,
+    eidolons: Eidolons.LingshaEidolons,
 
     baseATK: 679,
     baseDEF: 436,
@@ -1421,6 +1422,7 @@ const Castorice: Character = {
     element: Elements.Quantum,
     world: Worlds.Amphoreus,
     image: CA.CastoriceImg,
+    eidolons: Eidolons.CastorEidolons,
 
     baseATK: 523,
     baseDEF: 485,
@@ -1537,7 +1539,7 @@ const Castorice: Character = {
             id: "b4",
             name: "Memosprite Talent: Mooncocoon Shrouds the Form",
             type: "bonus",
-            level: "10/10",
+            level: "7/7",
             icon: CA.CastoriceMemoTalent,
             description: (i) => 
                          "When Netherwing is on the field, it acts as backup for allies. When allies take DMG or consume HP, their current HP can be reduced down to a minimum of 1, after which Netherwing will bear the HP loss. " +
@@ -1558,7 +1560,7 @@ const Castorice: Character = {
             id: "b5",
             name: "Memosprite Skill: Claw Splits the Veil",
             type: "bonus",
-            level: "10/10",
+            level: "7/7",
             icon: CA.CastoriceMemoSkill,
             description: (i) => 
                          "Deals Quantum DMG equal to " +
@@ -1674,11 +1676,11 @@ const Castorice: Character = {
 const Topaz: Character = {
 
     name: "Topaz & Numby",
-
     path: Paths.Hunt,
     element: Elements.Fire,
     world: Worlds.InterastralPeaceCorporation,
     image: CA.TopazImg,
+    eidolons: Eidolons.TopazEidolons,
 
     baseATK: 620,
     baseDEF: 412,
@@ -1919,11 +1921,11 @@ const Topaz: Character = {
 
 const Aventurine: Character = {
     name: "Aventurine",
-
     path: Paths.Preservation,
     element: Elements.Imaginary,
     world: Worlds.InterastralPeaceCorporation,
     image: CA.AvImg,
+    eidolons: Eidolons.AvEidolons,
 
     baseATK: 446,
     baseDEF: 654,

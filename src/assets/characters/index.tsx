@@ -23,6 +23,12 @@ import CipherTechnique from "./cipher/Technique.png";
 import EmpyreanStrides from "./cipher/EmpyreanStrides.png";
 import SleightOfSky from "./cipher/SleightOfSky.png";
 import Rogues from "./cipher/300Rogues.png";
+import CipherE1 from "./cipher/eidolons/CipherE1.webp";
+import CipherE2 from "./cipher/eidolons/CipherE2.webp";
+import CipherE3 from "./cipher/eidolons/CipherE3.webp";
+import CipherE4 from "./cipher/eidolons/CipherE4.webp";
+import CipherE5 from "./cipher/eidolons/CipherE5.webp";
+import CipherE6 from "./cipher/eidolons/CipherE6.webp";
 
 // Mydei
 import MydeiImg from "./Mydei.png";
@@ -34,6 +40,12 @@ import MydeiTechnique from "./Mydei/Technique.png";
 import EarthAndWater from "./Mydei/EarthAndWater.png";
 import ThirtyTyrants from "./Mydei/ThirtyTyrants.png";
 import BloodiedChiton from "./Mydei/BloodiedChiton.png";
+import MydeiE1 from "./Mydei/eidolons/MydeiE1.png";
+import MydeiE2 from "./Mydei/eidolons/MydeiE2.png";
+import MydeiE3 from "./Mydei/eidolons/MydeiE3.png";
+import MydeiE4 from "./Mydei/eidolons/MydeiE4.png";
+import MydeiE5 from "./Mydei/eidolons/MydeiE5.png";
+import MydeiE6 from "./Mydei/eidolons/MydeiE6.png";
 
 // Aventurine - Waveflair
 import AvWfImg from "./AventurineWaveflair.png";
@@ -46,6 +58,12 @@ import AvWfElationSkill from "./AvWf/ElationSkill.png";
 import AvWfUltimate from "./AvWf/Ultimate.png";
 import AvWfTalent from "./AvWf/Talent.png";
 import AvWfTechnique from "./AvWf/Technique.png";
+import AvWfE1 from "./AvWf/eidolons/AvWfE1.png";
+import AvWfE2 from "./AvWf/eidolons/AvWfE2.png";
+import AvWfE3 from "./AvWf/eidolons/AvWfE3.png";
+import AvWfE4 from "./AvWf/eidolons/AvWfE4.png";
+import AvWfE5 from "./AvWf/eidolons/AvWfE5.png";
+import AvWfE6 from "./AvWf/eidolons/AvWfE6.png";
 
 // Ruan Mei
 import RuanmeiImg from "./Ruanmei.png";
@@ -57,6 +75,12 @@ import RuanmeiTechnique from "./Ruanmei/Technique.png";
 import CandleLightsOnStillWaters from "./Ruanmei/CandleLightsOnStillWaters.png";
 import InertRespiration from "./Ruanmei/InertRespiration.png";
 import DaysWaneThoughtsWax from "./Ruanmei/DaysWaneThoughtsWax.png";
+import RuanE1 from "./Ruanmei/eidolons/RuanE1.png";
+import RuanE2 from "./Ruanmei/eidolons/RuanE2.png";
+import RuanE3 from "./Ruanmei/eidolons/RuanE3.png";
+import RuanE4 from "./Ruanmei/eidolons/RuanE4.png";
+import RuanE5 from "./Ruanmei/eidolons/RuanE5.png";
+import RuanE6 from "./Ruanmei/eidolons/RuanE6.png";
 
 // Lingsha
 import LingshaImg from "./Lingsha.png";
@@ -68,6 +92,12 @@ import LingshaTechnique from "./Lingsha/Technique.png";
 import VermilionWaft from "./Lingsha/Vermilion Waft.png";
 import SylvanSmoke from "./Lingsha/SylvanSmoke.png";
 import EmbersEcho from "./Lingsha/EmbersEcho.png";
+import LingshaE1 from "./Lingsha/eidolons/LingshaE1.png";
+import LingshaE2 from "./Lingsha/eidolons/LingshaE2.png";
+import LingshaE3 from "./Lingsha/eidolons/LingshaE3.png";
+import LingshaE4 from "./Lingsha/eidolons/LingshaE4.png";
+import LingshaE5 from "./Lingsha/eidolons/LingshaE5.png";
+import LingshaE6 from "./Lingsha/eidolons/LingshaE6.png";
 
 // Castorice
 import CastoriceImg from "./Castorice.png";
@@ -81,6 +111,12 @@ import CastoriceMemoTalent from "./Castorice/MemospriteTalent.png";
 import WhereTheWestWindDwells from "./Castorice/WhereTheWestWindDwells.png";
 import ContainedDarkTide from "./Castorice/ContainedDarkTide.png";
 import InvertedTorch from "./Castorice/InvertedTorch.png";
+import CastorE1 from "./Castorice/eidolons/CastorE1.png";
+import CastorE2 from "./Castorice/eidolons/CastorE2.png";
+import CastorE3 from "./Castorice/eidolons/CastorE3.png";
+import CastorE4 from "./Castorice/eidolons/CastorE4.png";
+import CastorE5 from "./Castorice/eidolons/CastorE5.png";
+import CastorE6 from "./Castorice/eidolons/CastorE6.png";
 
 // Topaz
 import TopazImg from "./Topaz.png";
@@ -92,6 +128,12 @@ import TopazTechnique from "./Topaz/Technique.png";
 import StonksMarket from "./Topaz/StonksMarket.png";
 import Overdraft from "./Topaz/Overdraft.png";
 import FinancialTurmoil from "./Topaz/FinancialTurmoil.png";
+import TopazE1 from "./Topaz/eidolons/TopazE1.png";
+import TopazE2 from "./Topaz/eidolons/TopazE2.png";
+import TopazE3 from "./Topaz/eidolons/TopazE3.png";
+import TopazE4 from "./Topaz/eidolons/TopazE4.png";
+import TopazE5 from "./Topaz/eidolons/TopazE5.png";
+import TopazE6 from "./Topaz/eidolons/TopazE6.png";
 
 // Aventurine
 import AvImg from "./Aventurine.png";
@@ -103,6 +145,12 @@ import AvTechnique from "./Av/Technique.png";
 import Leverage from "./Av/Leverage.png";
 import Bingo from "./Av/Bingo!.png";
 import HotHand from "./Av/HotHand.png";
+import AvE1 from "./Av/eidolons/AvE1.png";
+import AvE2 from "./Av/eidolons/AvE2.png";
+import AvE3 from "./Av/eidolons/AvE3.png";
+import AvE4 from "./Av/eidolons/AvE4.png";
+import AvE5 from "./Av/eidolons/AvE5.png";
+import AvE6 from "./Av/eidolons/AvE6.png";
 
 export {
     //Global
@@ -130,6 +178,12 @@ export {
     Rogues,
     EmpyreanStrides,
     SleightOfSky,
+    CipherE1,
+    CipherE2,
+    CipherE3,
+    CipherE4,
+    CipherE5,
+    CipherE6,
 
     //Mydei
     MydeiImg,
@@ -141,6 +195,12 @@ export {
     EarthAndWater,
     ThirtyTyrants,
     BloodiedChiton,
+    MydeiE1,
+    MydeiE2,
+    MydeiE3,
+    MydeiE4,
+    MydeiE5,
+    MydeiE6,
 
     // Aventurine - Waveflair
     AvWfImg,
@@ -153,6 +213,12 @@ export {
     AvWfUltimate,
     AvWfTalent,
     AvWfTechnique,
+    AvWfE1,
+    AvWfE2,
+    AvWfE3,
+    AvWfE4,
+    AvWfE5,
+    AvWfE6,
 
     // Ruan Mei
     RuanmeiImg,
@@ -164,6 +230,12 @@ export {
     CandleLightsOnStillWaters,
     InertRespiration,
     DaysWaneThoughtsWax,
+    RuanE1,
+    RuanE2,
+    RuanE3,
+    RuanE4,
+    RuanE5,
+    RuanE6,
 
     // Lingsha
     LingshaImg,
@@ -175,6 +247,12 @@ export {
     VermilionWaft,
     SylvanSmoke,
     EmbersEcho,
+    LingshaE1,
+    LingshaE2,
+    LingshaE3,
+    LingshaE4,
+    LingshaE5,
+    LingshaE6,
 
     // Castorice
     CastoriceImg,
@@ -188,6 +266,12 @@ export {
     WhereTheWestWindDwells,
     ContainedDarkTide,
     InvertedTorch,
+    CastorE1,
+    CastorE2,
+    CastorE3,
+    CastorE4,
+    CastorE5,
+    CastorE6,
 
     // Topaz
     TopazImg,
@@ -199,6 +283,12 @@ export {
     StonksMarket,
     Overdraft,
     FinancialTurmoil,
+    TopazE1,
+    TopazE2,
+    TopazE3,
+    TopazE4,
+    TopazE5,
+    TopazE6,
 
     // Aventurine
     AvImg,
@@ -210,5 +300,11 @@ export {
     Leverage,
     Bingo,
     HotHand,
+    AvE1,
+    AvE2,
+    AvE3,
+    AvE4,
+    AvE5,
+    AvE6,
 
 };

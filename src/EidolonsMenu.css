@@ -1,0 +1,276 @@
+/* Contenedor principal vertical */
+.hsr-eidolons-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 720px; /* Tarjetas más anchas */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Caja gótica oscura */
+.hsr-eidolon-box {
+    background: linear-gradient(135deg, #0a0d18 0%, #121626 100%);
+    border: 1.5px solid rgba(197, 160, 89, 0.35); /* Borde dorado tenue base */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Hover con brillo dorado y elevación */
+.hsr-eidolon-box:hover {
+    border-color: #d4af37;
+    box-shadow: 0 6px 24px rgba(212, 175, 55, 0.15), inset 0 0 20px rgba(0, 0, 0, 0.9);
+    transform: translateY(-2px);
+}
+
+.hsr-eidolon-box.open {
+    border-color: #f3d884;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.9), 0 0 12px rgba(212, 175, 55, 0.25);
+}
+
+/* Cabecera */
+.hsr-eidolon-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px; /* Más espacio interno */
+    cursor: pointer;
+    user-select: none;
+    background: radial-gradient(circle at left, rgba(30, 36, 60, 0.4) 0%, transparent 70%);
+}
+
+.hsr-eidolon-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    overflow: hidden;
+}
+
+/* Badge del número en dorado */
+.hsr-eidolon-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #060810;
+    border: 1.5px solid #d4af37;
+    color: #f3d884;
+    font-weight: 700;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+/* Marco e Imagen ampliada */
+.hsr-eidolon-thumb-frame {
+    width: 72px; /* Tamaño considerablemente mayor */
+    height: 72px;
+    border-radius: 6px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    overflow: hidden;
+    background: #04050a;
+    flex-shrink: 0;
+    box-shadow: inset 0 0 8px #000;
+}
+
+.hsr-eidolon-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hsr-eidolon-box:hover .hsr-eidolon-thumb {
+    transform: scale(1.08);
+}
+
+/* Título estilo tipografía del juego */
+.hsr-eidolon-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ece5d8;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Flecha dorada */
+.hsr-eidolon-arrow {
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+    padding: 6px;
+}
+
+.hsr-eidolon-box.open .hsr-eidolon-arrow {
+    transform: rotate(180deg);
+    color: #fff;
+    text-shadow: 0 0 8px #d4af37;
+}
+
+/* Contenido interno desplegado */
+.hsr-eidolon-content {
+    padding: 16px 20px 20px;
+    border-top: 1px solid rgba(197, 160, 89, 0.2);
+    background: rgba(4, 5, 12, 0.6);
+}
+
+.hsr-eidolon-desc {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #c0c6e0;
+}
+
+/* =========================================================
+   RESPONSIVE - 2K / MONITORES GRANDES (>= 2000px)
+   ========================================================= */
+@media (min-width: 2000px) {
+    .hsr-eidolons-list {
+        max-width: 900px;
+        gap: 20px;
+    }
+
+    .hsr-eidolon-box {
+        border-width: 2px;
+        border-radius: 12px;
+    }
+
+    .hsr-eidolon-header {
+        padding: 20px 24px;
+    }
+
+    .hsr-eidolon-info {
+        gap: 24px;
+    }
+
+    .hsr-eidolon-num {
+        width: 40px;
+        height: 40px;
+        font-size: 1.15rem;
+    }
+
+    .hsr-eidolon-thumb-frame {
+        width: 96px;
+        height: 96px;
+        border-radius: 8px;
+    }
+
+    .hsr-eidolon-title {
+        font-size: 1.35rem;
+    }
+
+    .hsr-eidolon-arrow {
+        font-size: 1.1rem;
+    }
+
+    .hsr-eidolon-content {
+        padding: 20px 24px 24px;
+    }
+
+    .hsr-eidolon-desc {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE - FULL HD / 1920x1080 (1200px a 1999px)
+   ========================================================= */
+@media (min-width: 1200px) and (max-width: 1999px) {
+    .hsr-eidolons-list {
+        max-width: 720px;
+        gap: 16px;
+    }
+
+    .hsr-eidolon-header {
+        padding: 16px 20px;
+    }
+
+    .hsr-eidolon-info {
+        gap: 18px;
+    }
+
+    .hsr-eidolon-num {
+        width: 34px;
+        height: 34px;
+        font-size: 0.95rem;
+    }
+
+    .hsr-eidolon-thumb-frame {
+        width: 72px;
+        height: 72px;
+    }
+
+    .hsr-eidolon-title {
+        font-size: 1.1rem;
+    }
+
+    .hsr-eidolon-content {
+        padding: 16px 20px 20px;
+    }
+
+    .hsr-eidolon-desc {
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE - TABLETS Y MÓVILES (<= 900px)
+   ========================================================= */
+@media (max-width: 900px) {
+    .hsr-eidolons-list {
+        width: 100%;
+        max-width: 100%;
+        gap: 12px;
+    }
+
+    .hsr-eidolon-header {
+        padding: 12px 14px;
+    }
+
+    .hsr-eidolon-info {
+        gap: 12px;
+    }
+
+    .hsr-eidolon-num {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+    }
+
+    .hsr-eidolon-thumb-frame {
+        width: 56px;
+        height: 56px;
+        border-radius: 6px;
+    }
+
+    .hsr-eidolon-title {
+        font-size: 0.95rem;
+    }
+
+    .hsr-eidolon-arrow {
+        font-size: 0.75rem;
+        padding: 4px;
+    }
+
+    .hsr-eidolon-content {
+        padding: 12px 14px 14px;
+    }
+
+    .hsr-eidolon-desc {
+        font-size: 0.85rem;
+        line-height: 1.45;
+    }
+}

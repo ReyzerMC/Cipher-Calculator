@@ -173,4 +173,3 @@ export const Texts = {
 } as const;
 
 export type Text = typeof Texts[keyof typeof Texts];
-

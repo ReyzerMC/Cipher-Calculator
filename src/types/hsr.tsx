@@ -8,6 +8,7 @@ export interface Character {
     element: Element;
     world: World;
     image: string;
+    eidolons: Eidolon;
 
     // Stats
     baseATK: number;
@@ -31,6 +32,39 @@ export interface LightCone {
     baseHP: number;
     baseDEF: number;
     dupe: number;
+}
+
+export interface Eidolon {
+  e1: {
+    title: string;
+    desc: string;
+    image: string;
+  };
+  e2: {
+    title: string;
+    desc: string;
+    image: string;
+  };
+  e3: {
+    title: string;
+    desc: string;
+    image: string;
+  };
+  e4: {
+    title: string;
+    desc: string;
+    image: string;
+  };
+  e5: {
+    title: string;
+    desc: string;
+    image: string;
+  };
+  e6: {
+    title: string;
+    desc: string;
+    image: string;
+  };
 }
 
 export interface TraceNodeData {

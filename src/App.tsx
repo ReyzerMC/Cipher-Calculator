@@ -6,6 +6,7 @@ import "./App.css";
 import { TracesMenu } from "./TracesMenu";
 import { nihilityImg, destructionImg, elationImg, harmonyImg, abundanceImg, eruditionImg, huntImg, preservationImg, remembranceImg } from "./assets/paths";
 import { Paths } from "./items/item/ResourcesLists";
+import { EidolonsMenu } from "./EidolonsMenu";
 
 const useTraceScale = () => {
   const [scale, setScale] = useState(1.0);
@@ -114,6 +115,17 @@ export default function App() {
                 [Paths.Remembrance]: remembranceImg
               } [selectedCharacter.path]
             }
+          />
+        )}
+
+        {activeTab === "eidolons" && selectedCharacter && (
+          <EidolonsMenu
+          e1={selectedCharacter.eidolons.e1}
+          e2={selectedCharacter.eidolons.e2}
+          e3={selectedCharacter.eidolons.e3}
+          e4={selectedCharacter.eidolons.e4}
+          e5={selectedCharacter.eidolons.e5}
+          e6={selectedCharacter.eidolons.e6}
           />
         )}
       </main>

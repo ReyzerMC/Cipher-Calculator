@@ -485,6 +485,7 @@ body {
         min-height: 50vh;
 
         order: 2;
+        overflow: hidden;
     }
 
     .hsr-character-img {
