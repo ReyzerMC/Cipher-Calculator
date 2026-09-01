@@ -39,7 +39,7 @@ export interface TraceNodeData {
     type: "basic" | "skill" | "ultimate" | "talent" | "technique" | "bonus" | "stat";
     level?: string;
     icon: string;
-    description: string;
+    description: string | ((levelIndex: number) => string);
 }
 
 export interface NodePosition {

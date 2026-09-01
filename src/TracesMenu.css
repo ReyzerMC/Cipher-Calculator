@@ -264,6 +264,80 @@
   }
 }
 
+/* --- Control de Nivel & Slider */
+.hsr-info-level-control {
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hsr-level-header {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.hsr-info-max-level {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 500;
+}
+
+/* Slider Personalizado Estilo HSR */
+.hsr-level-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.15);
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.hsr-level-slider:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Puntero del slider (Chrome/Safari/Edge) */
+.hsr-level-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffc700;
+  border: 2px solid #121626;
+  box-shadow: 0 0 8px rgba(255, 199, 0, 0.8);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.hsr-level-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #ffe380;
+}
+
+/* Puntero del slider (Firefox) */
+.hsr-level-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffc700;
+  border: 2px solid #121626;
+  box-shadow: 0 0 8px rgba(255, 199, 0, 0.8);
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.hsr-level-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  background: #ffe380;
+}
+
 @media (max-width: 900px) {
 
     .hsr-traces-container {
