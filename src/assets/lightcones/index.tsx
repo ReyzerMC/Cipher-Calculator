@@ -1,13 +1,13 @@
-import LiesDanceOnTheBreezeImg from "./LiesDanceOnTheBreeze.png";
-import FlameOfBloodBlazeMyPathImg from "./FlameOfBloodBlazeMyPath.png";
-import SummerRidesTheSurfImg from "./SummerRidesTheSurf.png";
-import PastSelfInMirrorImg from "./PastSelfInMirror.png";
-import ScentAloneStaysTrueImg from "./ScentAloneStaysTrue.png";
-import MakeFarewellsMoreBeautifulImg from "./MakeFarewellsMoreBeautiful.png";
-import WorrisomeBlissfulImg from "./WorrisomeBlissful.png";
-import InherentlyUnjustDestinyImg from "./InherentlyUnjustDestiny.png";
-import WhereaboutsShouldDreamsRestImg from "./WhereaboutsShouldDreamsRest.png";
-import RiseAndSingImg from "./RiseAndSing.png";
+import LiesDanceOnTheBreezeImg from "./LiesDanceOnTheBreeze.webp";
+import FlameOfBloodBlazeMyPathImg from "./FlameOfBloodBlazeMyPath.webp";
+import SummerRidesTheSurfImg from "./SummerRidesTheSurf.webp";
+import PastSelfInMirrorImg from "./PastSelfInMirror.webp";
+import ScentAloneStaysTrueImg from "./ScentAloneStaysTrue.webp";
+import MakeFarewellsMoreBeautifulImg from "./MakeFarewellsMoreBeautiful.webp";
+import WorrisomeBlissfulImg from "./WorrisomeBlissful.webp";
+import InherentlyUnjustDestinyImg from "./InherentlyUnjustDestiny.webp";
+import WhereaboutsShouldDreamsRestImg from "./WhereaboutsShouldDreamsRest.webp";
+import RiseAndSingImg from "./RiseAndSing.webp";
 
 export {
     LiesDanceOnTheBreezeImg,

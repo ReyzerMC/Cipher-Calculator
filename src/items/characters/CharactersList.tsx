@@ -2569,7 +2569,6 @@ const RbnSummeretto: Character = {
     },
 };
 
-
 // Nihility
 Characters.push(Cipher);
 // Destruction
