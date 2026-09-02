@@ -297,3 +297,36 @@ export const FireflyEidolons: Eidolon = {
         image: CA.FireflyE6,
     },
 };
+
+export const RbnSummerettoEidolons: Eidolon = {
+    e1: {
+        title: "Stray Bird of Summer",
+        desc: "\"Summer Songbirds\" will keep a tally of 100% of the non-True DMG dealt by ally targets. When using the Memosprite Skill, additionally deals True DMG to the enemy target with the highest HP, equal to (11% + current Vibes × 0.1%) of the total tally. Then, clears 50% of the tally.",
+        image: CA.RbnE1,
+    },
+    e2: {
+        title: "A Heart of Still Water",
+        desc: "Ally targets' All-Type RES PEN increases by 18%. The upper limit of Robin • Summeretto's Vibes increases by 20. The first time an ally target uses an ability during any target's turn to cause Robin • Summeretto to gain Vibes, she gains an additional 2 points.",
+        image: CA.RbnE2,
+    },
+    e3: {
+        title: "Echoes Left Along the Way",
+        desc: "Skill Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15. Memosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        image: CA.RbnE3,
+    },
+    e4: {
+        title: "Her Variation on the Theme",
+        desc: "Upon entering the \"Fever\" state, immediately gains 12 Vibes, and increases the SPD of \"Summer Songbirds\" by an amount equal to (20% + current Vibes × 0.5%).",
+        image: CA.RbnE4,
+    },
+    e5: {
+        title: "To Chase the Dawn Anew",
+        desc: "Ultimate Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10. Memosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        image: CA.RbnE5,
+    },
+    e6: {
+        title: "A Song Yet Unnamed",
+        desc: "Increases the Memosprite Skill's DMG multiplier by 100% of its original value. While in the \"Fever\" state, Robin • Summeretto can store her Ultimate up to 2 times. After entering the \"Fever\" state for the first time in this battle or when the the \"Fever\" countdown's turn starts, regenerates a fixed 140 Energy.",
+        image: CA.RbnE6,
+    },
+};

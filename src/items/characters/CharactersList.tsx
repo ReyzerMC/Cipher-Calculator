@@ -1,7 +1,7 @@
 import type { Character } from '../../types/hsr';
 import { Paths, Elements, Worlds } from "../item/ResourcesLists";
 import * as CA from '../../assets/characters/index';
-import { CipherScaling, MydeiScaling, AvWfScalling, RuanmeiScalling, LingshaScaling, CastoriceScaling, TopazScaling, AvScaling, FireflyScaling } from './scalingData';
+import { CipherScaling, MydeiScaling, AvWfScalling, RuanmeiScalling, LingshaScaling, CastoriceScaling, TopazScaling, AvScaling, FireflyScaling, RbnSummerettoScaling } from './scalingData';
 import * as Eidolons from './eidolons/Eidolons';
 
 export const scaleValue = (
@@ -836,7 +836,7 @@ const AventurineWaveflair: Character = {
             icon: CA.ElationStat,
 
             description:
-                `CRIT Rate Increases by: <b><u>4.0%</u></b>`
+                `Elation Increases by: <b><u>4.0%</u></b>`
         },
 
         s9: {
@@ -1628,7 +1628,7 @@ const Castorice: Character = {
             name: "CRIT Rate Boost",
             type: "stat",
             icon: CA.CritRate,
-            description: "Crit Rate Increases by: <b><u>2.7%</u></b>",
+            description: "CRIT Rate Increases by: <b><u>2.7%</u></b>",
         },
 
         s6: {
@@ -1636,7 +1636,7 @@ const Castorice: Character = {
             name: "CRIT Rate Boost",
             type: "stat",
             icon: CA.CritRate,
-            description: "Crit Rate Increases by: <b><u>2.7%</u></b>",
+            description: "CRIT Rate Increases by: <b><u>2.7%</u></b>",
         },
 
         s7: {
@@ -1652,7 +1652,7 @@ const Castorice: Character = {
             name: "CRIT Rate Boost",
             type: "stat",
             icon: CA.CritRate,
-            description: "Crit Rate Increases by: <b><u>4.0%</u></b>",
+            description: "CRIT Rate Increases by: <b><u>4.0%</u></b>",
         },
 
         s9: {
@@ -1668,7 +1668,7 @@ const Castorice: Character = {
             name: "CRIT Rate Boost",
             type: "stat",
             icon: CA.CritRate,
-            description: "Crit Rate Increases by: <b><u>4.0%</u></b>",
+            description: "CRIT Rate Increases by: <b><u>4.0%</u></b>",
         },
     }
 };
@@ -2345,6 +2345,230 @@ const Firefly: Character = {
     },
 };
 
+const RbnSummeretto: Character = {
+    name: "Robin • Summeretto",
+    path: Paths.Remembrance,
+    element: Elements.Wind,
+    world: Worlds.Penacony,
+    image: CA.RbnSummerettoImg,
+    eidolons: Eidolons.RbnSummerettoEidolons,
+
+    baseATK: 601,
+    baseDEF: 485,
+    baseHP: 1203,
+    baseSPD: 95,
+    aggro: 100,
+    dupe: 0,
+
+    traces: {
+        attack: {
+            id: "attack",
+            name: "Basic ATK: The Sea Sings in My Key",
+            type: "basic",
+            level: "7/7",
+            icon: CA.RbnSummerettoBasicATK,
+
+            description: (i) =>
+                `Deals Wind DMG equal to ${scaleValue(RbnSummerettoScaling.main, i)} of Robin • Summeretto's Max HP to one enemy.`,
+        },
+
+        skill: {
+            id: "skill",
+            name: "Skill: Summer Strums the Soul",
+            type: "skill",
+            level: "12/12",
+            icon: CA.RbnSummerettoSkill,
+
+            description: (i) =>
+                `Summons the memosprite "Summer Songbirds" Bessie. If any member of the "Summer Songbirds" is already on the field, 
+                 restores their HP by an amount equal to ${scaleValue(RbnSummerettoScaling.skill, i)} of "Summer Songbirds'" Max HP, and gains 6 Vibes.`,
+        },
+
+        ultimate: {
+            id: "ultimate",
+            name: "Ultimate: Ascend That Rhapsody in Blue",
+            type: "ultimate",
+            level: "12/12",
+            icon: CA.RbnSummerettoUltimate,
+
+            description: (i) =>
+                `<b>Energy: 140</b><br>
+                Advances the action of one designated ally character (excluding Robin • Summeretto) by 100% and regenerates a fixed amount of Energy equal 
+                to ${scaleValue(RbnSummerettoScaling.ultimate, i)} of their Max Energy. Then, grants them the "Special Guest" effect. When the "Special Guest" character or their summon attacks, they 
+                additionally grant Robin • Summeretto 2 Vibes but cannot make other friendly targets gain the action advance effect. This lasts for 2 turn(s), 
+                and its duration decreases by 1 at the start of this character's turn.`,
+        },
+
+        talent: {
+            id: "talent",
+            name: "Talent: Wings Heed No Borders",
+            type: "talent",
+            level: "12/12",
+            icon: CA.RbnSummerettoTalent,
+
+            description: (i) =>
+                `Memosprite "Summer Songbirds" has an initial Max HP equal to 70% of Robin • Summeretto's Max HP and an initial SPD equal to 180% of Robin • Summeretto's SPD. 
+                 When an ally target uses an attack, or when they provide healing or Shield for the first time in any target's turn, Robin • Summeretto gains Vibes by 1 point, 
+                 capped at 50. While "Summer Songbirds" Bessie is on the field, if Robin • Summeretto's Vibes is 6 or higher, immediately summons "Summer Songbirds" Drummie, 
+                 and if Vibes is 12 or higher, immediately summons "Summer Songbirds" Paddie. When all "Summer Songbirds" take the stage, 
+                 dispels all Crowd Control debuffs inflicted upon Robin • Summeretto and the "Summer Songbirds", starts the "Fever" state, 
+                 and deploys a Zone. When ally targets deal DMG within the Zone, they ignore a percentage of enemy targets' DEF equal to (${scaleValue(RbnSummerettoScaling.talent, i)} + Vibes × 0.5%).
+                 While in the "Fever" state, Robin • Summeretto and the "Summer Songbirds" are immune to Crowd Control debuffs. Robin • Summeretto will not enter her turn until the "Fever" state ends.`,
+        },
+
+        technique: {
+            id: "technique",
+            name: "Technique: We Are the Melody",
+            type: "technique",
+            level: "1/1",
+            icon: CA.RbnSummerettoTechnique,
+
+            description:
+                `After using Technique, advances action by 20% at the start of the next battle, immediately gains 6 Vibes, and increases all allies' DMG dealt by 30%, lasting for 2 turn(s).`,
+        },
+
+        // --- Pasivas ---
+
+        b1: {
+            id: "b1",
+            name: "Rebuilt Harmony",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.RebuiltHarmony,
+            description: "Increases the CRIT Rate of Robin • Summeretto and \"Summer Songbirds\" by 50%.",
+        },
+
+        b2: {
+            id: "b2",
+            name: "Deviated Chords",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.DeviatedChords,
+            description: "When an ally target causes Robin • Summeretto to gain Vibes, if their ATK is higher than Robin • Summeretto's, increases that target's ATK by an amount equal to (16% + Vibes × 0.4%) of Robin • Summeretto's Max HP. Otherwise, increases that target's CRIT DMG by an amount equal to (40% + Vibes × 1.5%). Lasts for 2 turn(s).",
+        },
+
+        b3: {
+            id: "b3",
+            name: "Improvised Blues",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.ImprovisedBlues,
+            description: "When Robin • Summeretto or the \"Summer Songbirds\" receive healing or Shield provided by teammates, causes Robin • Summeretto to gain 12 stack(s) of \"Groove\", capped at 12. The first time Robin • Summeretto gains Vibes during any target's turn, if she has \"Groove\", consumes 1 stack of \"Groove\" and regenerates a fixed 3 Energy.",
+        },
+
+        b4: {
+            id: "b4",
+            name: "Memosprite Talent: A Warble of Wings",
+            type: "bonus",
+            level: "7/7",
+            icon: CA.RbnMemoTalent,
+            description: (i) => 
+                         `While in the "Fever" state, the "Summer Songbirds" and a countdown will appear on the Action Order. 
+                          And the DMG dealt by Robin • Summeretto and "Summer Songbirds" increases by an amount equal to (${scaleValue(RbnSummerettoScaling.memotalent.main, i)} 
+                          + Vibes × ${scaleValue(RbnSummerettoScaling.memotalent.adj, i)}). 
+                          When "Summer Songbirds'" turn starts, uses the Memosprite Skill. The countdown has an initial SPD of 140. And when its turn starts, 
+                          deducts 50% of the current Vibes (minimum 12 points). When the Vibes reaches 0, the "Summer Songbirds" 
+                          disappears and Robin • Summeretto exits the "Fever" state. While the "Summer Songbirds" is on the field, 
+                          based on the number of its members present, increases the DMG taken by all enemies by ${scaleValue(RbnSummerettoScaling.memotalent.adj2, i)}/
+                          ${scaleValue(RbnSummerettoScaling.memotalent.adj3, i)}/${scaleValue(RbnSummerettoScaling.memotalent.adj4, i)} respectively.<br><br>`+
+                          `<b>Near the Sea's Heartbeat</b><br>When the "Summer Songbirds" gets summoned, regenerates 20 Energy for Robin • Summeretto.<br><br>`+
+                          `<b>Astride Summer's Nightwind</b><br>When the "Summer Songbirds" disappears, Robin • Summeretto's action advances by 50%.`,
+        },
+
+        b5: {
+            id: "b5",
+            name: "Memosprite Skill: Chirrup Quartet",
+            type: "bonus",
+            level: "7/7",
+            icon: CA.RbnMemoSkill,
+            description: (i) => 
+                         `Deals Wind DMG equal to ${scaleValue(RbnSummerettoScaling.memoskill, i)} of "Summer Songbirds'" Max HP to all enemies.`,
+        },
+
+        // --- Stats Nodes (Nodos Pequeños) ---
+
+        s1: {
+            id: "s1",
+            name: "Max HP Boost",
+            type: "stat",
+            icon: CA.MaxHP,
+            description: "Max HP Increases by: <b><u>8.0%</u></b>",
+        },
+
+        s2: {
+            id: "s2",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>4</u></b>",
+        },
+
+        s3: {
+            id: "s3",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "Crit Rate Increases by: <b><u>4.0%</u></b>",
+        },
+
+        s4: {
+            id: "s4",
+            name: "Max HP Boost",
+            type: "stat",
+            icon: CA.MaxHP,
+            description: "Max HP Increases by: <b><u>4.0%</u></b>",
+        },
+
+        s5: {
+            id: "s5",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>2</u></b>",
+        },
+
+        s6: {
+            id: "s6",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>2</u></b>",
+        },
+
+        s7: {
+            id: "s7",
+            name: "CRIT Rate Boost",
+            type: "stat",
+            icon: CA.CritRate,
+            description: "Crit Rate Increases by: <b><u>2.7%</u></b>",
+        },
+
+        s8: {
+            id: "s8",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>3</u></b>",
+        },
+
+        s9: {
+            id: "s9",
+            name: "Max HP Boost",
+            type: "stat",
+            icon: CA.MaxHP,
+            description: "Max HP Increases by: <b><u>6.0%</u></b>",
+        },
+
+        s10: {
+            id: "s10",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>3</u></b>",
+        },
+    },
+};
+
 
 // Nihility
 Characters.push(Cipher);
@@ -2359,6 +2583,7 @@ Characters.push(Ruanmei);
 Characters.push(Lingsha);
 // Remembrance
 Characters.push(Castorice);
+Characters.push(RbnSummeretto);
 // Hunt
 Characters.push(Topaz);
 // Preservation

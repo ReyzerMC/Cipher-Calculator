@@ -169,6 +169,25 @@ import FireflyE4 from "./Firefly/eidolons/FireflyE4.webp";
 import FireflyE5 from "./Firefly/eidolons/FireflyE5.webp";
 import FireflyE6 from "./Firefly/eidolons/FireflyE6.webp";
 
+// Robin • Summeretto
+import RbnSummerettoImg from "./RbnSummeretto.png";
+import RbnSummerettoBasicATK from "./RbnSummeretto/BasicATK.png";
+import RbnSummerettoSkill from "./RbnSummeretto/Skill.png";
+import RbnSummerettoUltimate from "./RbnSummeretto/Ultimate.png";
+import RbnSummerettoTalent from "./RbnSummeretto/Talent.png";
+import RbnSummerettoTechnique from "./RbnSummeretto/Technique.png";
+import RbnMemoSkill from "./RbnSummeretto/MemoSkill.png";
+import RbnMemoTalent from "./RbnSummeretto/MemoTalent.png";
+import RebuiltHarmony from "./RbnSummeretto/RebuiltHarmony.png";
+import DeviatedChords from "./RbnSummeretto/DeviatedChords.png";
+import ImprovisedBlues from "./RbnSummeretto/ImprovisedBlues.png";
+import RbnE1 from "./RbnSummeretto/eidolons/RbnE1.webp";
+import RbnE2 from "./RbnSummeretto/eidolons/RbnE2.webp";
+import RbnE3 from "./RbnSummeretto/eidolons/RbnE3.webp";
+import RbnE4 from "./RbnSummeretto/eidolons/RbnE4.webp";
+import RbnE5 from "./RbnSummeretto/eidolons/RbnE5.webp";
+import RbnE6 from "./RbnSummeretto/eidolons/RbnE6.webp";
+
 export {
     //Global
     SPD,
@@ -357,4 +376,24 @@ export {
     FireflyE4,
     FireflyE5,
     FireflyE6,
+};
+
+export {
+    RbnSummerettoImg,
+    RbnSummerettoBasicATK,
+    RbnSummerettoSkill,
+    RbnSummerettoUltimate,
+    RbnSummerettoTalent,
+    RbnSummerettoTechnique,
+    RbnMemoSkill,
+    RbnMemoTalent,
+    RebuiltHarmony,
+    DeviatedChords,
+    ImprovisedBlues,
+    RbnE1,
+    RbnE2,
+    RbnE3,
+    RbnE4,
+    RbnE5,
+    RbnE6,
 };

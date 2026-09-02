@@ -7,6 +7,7 @@ import MakeFarewellsMoreBeautifulImg from "./MakeFarewellsMoreBeautiful.png";
 import WorrisomeBlissfulImg from "./WorrisomeBlissful.png";
 import InherentlyUnjustDestinyImg from "./InherentlyUnjustDestiny.png";
 import WhereaboutsShouldDreamsRestImg from "./WhereaboutsShouldDreamsRest.png";
+import RiseAndSingImg from "./RiseAndSing.png";
 
 export {
     LiesDanceOnTheBreezeImg,
@@ -18,4 +19,5 @@ export {
     WorrisomeBlissfulImg,
     InherentlyUnjustDestinyImg,
     WhereaboutsShouldDreamsRestImg,
+    RiseAndSingImg,
 }

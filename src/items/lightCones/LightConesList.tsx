@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg, WorrisomeBlissfulImg, InherentlyUnjustDestinyImg, WhereaboutsShouldDreamsRestImg } from "../../assets/lightcones/index";
+import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg, WorrisomeBlissfulImg, InherentlyUnjustDestinyImg, WhereaboutsShouldDreamsRestImg, RiseAndSingImg } from "../../assets/lightcones/index";
 
 export const LightCones : LightCone[] = [];
 
@@ -148,6 +148,18 @@ const WhereaboutsShouldDreamsRest : LightCone = {
     dupe: 1,
 };
 
+const RiseAndSing : LightCone = {
+    name: "Rise and Sing",
+    path: Paths.Remembrance,
+    description: Texts.RiseAndSingENG,
+    image: RiseAndSingImg,
+
+    baseHP: 1164,
+    baseATK: 582,
+    baseDEF: 396,
+    dupe: 1,
+};
+
 // Nihility
 LightCones.push(LiesDanceOnTheBreeze);
 LightCones.push(GoodNightAndSleepWell);
@@ -166,5 +178,6 @@ LightCones.push(PastSelfInMirror);
 LightCones.push(ScentAloneStaysTrue);
 // Remembrance
 LightCones.push(MakeFarewellsMoreBeautiful);
+LightCones.push(RiseAndSing);
 // Preservation
 LightCones.push(InherentlyUnjustDestiny);

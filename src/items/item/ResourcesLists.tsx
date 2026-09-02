@@ -51,6 +51,7 @@ export const Worlds = {
 export type World = typeof Worlds[keyof typeof Worlds];
 
 export const Texts = {
+
     LiesDanceOnTheBreezeTextENG: (rank: number): string => {
         // Rangos de valores [S1, S2, S3, S4, S5]
         const spdValues = [18, 21, 24, 27, 30];
@@ -181,6 +182,21 @@ export const Texts = {
         const BreakDMG = BreakDMGVal[index];
 
         return `Increases the wearer's Break Effect by <b><u>${Break}%</u></b>. When the wearer deals Break DMG to an enemy target, inflicts Routed on the enemy, lasting for 2 turn(s). Targets afflicted with Routed receive <b><u>${BreakDMG}%</u></b> increased Break DMG from the wearer, and their SPD is lowered by 20%. Effects of the same type cannot be stacked.`;
+    },
+
+    RiseAndSingENG: (rank: number): string => {
+        const HPVal = [30, 38, 45, 53, 60];
+        const ActionVal = [30, 33, 35, 38, 40];
+        const SPDVal = [20, 25, 30, 35, 40];
+
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const HP = HPVal[index];
+        const Action = ActionVal[index];
+        const SPD = SPDVal[index];
+
+        return `Increases the wearer's Max HP by <b><u>${HP}%</u></b>. After the wearer uses Ultimate, recovers 1 Skill Point for allies. When entering combat, advances the wearer's action by <b><u>${Action}%</u></b> and grants the wearer "New Melody," lasting for 2 turn(s). While the wearer holds "New Melody," all allies' SPD increases by <b><u>${SPD}%</u></b>.`;
     },
 
 } as const;
