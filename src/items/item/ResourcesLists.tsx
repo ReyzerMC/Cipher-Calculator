@@ -227,6 +227,42 @@ export const Texts = {
         return `Increases the wearer's CRIT Rate by <b><u>${CritRate}%</u></b>. When any ally character consumes a total of 4 or more Skill Points in a single turn, the wearer gains "Radiant Crown," lasting for 3 turn(s). While the wearer holds "Radiant Crown," all allies' DMG dealt ignores <b><u>${Ignore}%</u></b> of the target's DEF, and the Skill DMG dealt by the wearer increases by <b><u>${SkillDMG}%</u></b>. Effects of the same type cannot stack.`;
     },
 
+    ATrailOfBygoneBloodENG: (rank: number): string => {
+        const CritRateVal = [12, 14, 16, 18, 20];
+        const DMGVal = [24, 28, 32, 36, 40];
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const CritRate = CritRateVal[index];
+        const DMG = DMGVal[index];
+
+        return `Increases the wearer's CRIT Rate by <b><u>${CritRate}%</u></b>. The Skill DMG and Ultimate DMG dealt by the wearer increase by <b><u>${DMG}%</u></b>.`;
+    },
+
+    GoodNightAndSleepWellENG: (rank: number): string => {
+        const DMGVal = [12, 15, 18, 21, 24];
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const DMG = DMGVal[index];
+
+        return `For every debuff the target enemy has, the DMG dealt by the wearer increases by <b><u>${DMG}%</u></b>, stacking up to 3 time(s). This effect also applies to DoT.`;
+    },
+
+    InTheNightENG: (rank: number): string => {
+        const CritRateVal = [18, 21, 24, 27, 30];
+        const DMGVal = [6, 7, 8, 9, 10];
+        const CritDmgVal = [12, 14, 16, 18, 20];
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const CritRate = CritRateVal[index];
+        const DMG = DMGVal[index];
+        const CritDmg = CritDmgVal[index];
+
+        return `Increases the wearer's CRIT Rate by <b><u>${CritRate}%</u></b>. While the wearer is in battle, for every 10 SPD that exceeds 100, increases DMG dealt by Basic ATK and Skill by <b><u>${DMG}%</u></b>. At the same time, increases the CRIT DMG of Ultimate by <b><u>${CritDmg}%</u></b>. This effect can stack up to 6 time(s).`;
+    },
+
 } as const;
 
 export type Text = typeof Texts[keyof typeof Texts];

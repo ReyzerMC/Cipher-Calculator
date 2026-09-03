@@ -31,8 +31,8 @@ const FlameOfBlood_BlazeMyPath : LightCone = {
 const ATrailOfBygoneBlood : LightCone = {
     name: "A Trail of Bygone Blood",
     path: Paths.Destruction,
-    description: Texts.FlameOfBloodBlazeMyPathTextENG,
-    image: "",
+    description: Texts.ATrailOfBygoneBloodENG,
+    image: LA.ATrailOfBygoneBloodImg,
 
     baseHP: 1058,
     baseATK: 529,
@@ -43,8 +43,8 @@ const ATrailOfBygoneBlood : LightCone = {
 const GoodNightAndSleepWell : LightCone = {
     name: "Good Night and Sleep Well",
     path: Paths.Nihility,
-    description: Texts.LiesDanceOnTheBreezeTextENG,
-    image: "",
+    description: Texts.GoodNightAndSleepWellENG,
+    image: LA.GoodNightAndSleepWellImg,
 
     baseHP: 952,
     baseATK: 476,
@@ -52,11 +52,11 @@ const GoodNightAndSleepWell : LightCone = {
     dupe: 1,
 };
 
-const InTheNight : LightCone = {
+const InTheNight : LightCone = { 
     name: "In the Night",
     path: Paths.Hunt,
-    description: Texts.LiesDanceOnTheBreezeTextENG,
-    image: "",
+    description: Texts.InTheNightENG,
+    image: LA.InTheNightImg,
 
     baseHP: 1058,
     baseATK: 582,
