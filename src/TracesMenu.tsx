@@ -4,6 +4,7 @@ import {
   AbundanceTreeLayout,
   DestructionTreeLayout,
   ElationTreeLayout,
+  EruditionTreeLayout,
   HarmonyTreeLayout,
   HuntTreeLayout,
   NihilityTreeLayout,
@@ -15,6 +16,7 @@ import {
   abundanceImg,
   destructionImg,
   elationImg,
+  eruditionImg,
   harmonyImg,
   huntImg,
   nihilityImg,
@@ -98,6 +100,7 @@ export const TracesMenu: React.FC<TracesMenuProps> = ({
     if (bgWatermark === remembranceImg) return RemembranceTreeLayout.connections;
     if (bgWatermark === huntImg) return HuntTreeLayout.connections;
     if (bgWatermark === preservationImg) return PreservationTreeLayout.connections;
+    if (bgWatermark === eruditionImg) return EruditionTreeLayout.connections;
     return [];
   };
 
@@ -110,6 +113,7 @@ export const TracesMenu: React.FC<TracesMenuProps> = ({
     if (bgWatermark === remembranceImg) return RemembranceTreeLayout.positions;
     if (bgWatermark === huntImg) return HuntTreeLayout.positions;
     if (bgWatermark === preservationImg) return PreservationTreeLayout.positions;
+    if (bgWatermark === eruditionImg) return EruditionTreeLayout.positions;
     return {};
   };
 
