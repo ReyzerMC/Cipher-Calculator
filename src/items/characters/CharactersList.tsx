@@ -1,7 +1,7 @@
 import type { Character } from '../../types/hsr';
 import { Paths, Elements, Worlds } from "../item/ResourcesLists";
 import * as CA from '../../assets/characters/index';
-import { CipherScaling, MydeiScaling, AvWfScalling, RuanmeiScalling, LingshaScaling, CastoriceScaling, TopazScaling, AvScaling, FireflyScaling, RbnSummerettoScaling } from './scalingData';
+import { CipherScaling, MydeiScaling, AvWfScalling, RuanmeiScalling, LingshaScaling, CastoriceScaling, TopazScaling, AvScaling, FireflyScaling, RbnSummerettoScaling, HysilensScaling } from './scalingData';
 import * as Eidolons from './eidolons/Eidolons';
 
 export const scaleValue = (
@@ -20,6 +20,7 @@ const Cipher: Character = {
   element: Elements.Quantum,
   world: Worlds.Amphoreus,
   image: CA.cipherImg,
+  pfp: CA.cipherPfp,
   eidolons: Eidolons.CipherEidolons,
 
   baseATK: 640,
@@ -214,6 +215,7 @@ const Mydei: Character = {
     world: Worlds.Amphoreus,
     eidolons: Eidolons.MydeiEidolons,
     image: CA.MydeiImg,
+    pfp: CA.MydeiPfp,
 
     baseATK: 426,
     baseDEF: 194,
@@ -539,6 +541,7 @@ const AventurineWaveflair: Character = {
     world: Worlds.InterastralPeaceCorporation,
     image: CA.AvWfImg,
     eidolons: Eidolons.AvWfEidolons,
+    pfp: CA.AvWfPfp,
 
     baseATK: 485,
     baseDEF: 606,
@@ -869,6 +872,7 @@ const Ruanmei: Character = {
     world: Worlds.HertaSpaceStation,
     image: CA.RuanmeiImg,
     eidolons: Eidolons.RuanEidolons,
+    pfp: CA.RuanmeiPfp,
 
     baseATK: 659,
     baseDEF: 485,
@@ -1155,6 +1159,7 @@ const Lingsha: Character = {
     world: Worlds.TheXianzhouLuofu,
     image: CA.LingshaImg,
     eidolons: Eidolons.LingshaEidolons,
+    pfp: CA.LingshaPfp,
 
     baseATK: 679,
     baseDEF: 436,
@@ -1423,6 +1428,7 @@ const Castorice: Character = {
     world: Worlds.Amphoreus,
     image: CA.CastoriceImg,
     eidolons: Eidolons.CastorEidolons,
+    pfp: CA.CastoricePfp,
 
     baseATK: 523,
     baseDEF: 485,
@@ -1681,6 +1687,7 @@ const Topaz: Character = {
     world: Worlds.InterastralPeaceCorporation,
     image: CA.TopazImg,
     eidolons: Eidolons.TopazEidolons,
+    pfp: CA.TopazPfp,
 
     baseATK: 620,
     baseDEF: 412,
@@ -1926,6 +1933,7 @@ const Aventurine: Character = {
     world: Worlds.InterastralPeaceCorporation,
     image: CA.AvImg,
     eidolons: Eidolons.AvEidolons,
+    pfp: CA.AvPfp,
 
     baseATK: 446,
     baseDEF: 654,
@@ -2132,6 +2140,7 @@ const Firefly: Character = {
     world: Worlds.StellaronHunters,
     image: CA.FireflyImg,
     eidolons: Eidolons.FireflyEidolons,
+    pfp: CA.FireflyPfp,
 
     baseATK: 523,
     baseDEF: 776,
@@ -2352,6 +2361,7 @@ const RbnSummeretto: Character = {
     world: Worlds.Penacony,
     image: CA.RbnSummerettoImg,
     eidolons: Eidolons.RbnSummerettoEidolons,
+    pfp: CA.RbnSummerettoPfp,
 
     baseATK: 601,
     baseDEF: 485,
@@ -2569,8 +2579,187 @@ const RbnSummeretto: Character = {
     },
 };
 
+const Hysilens: Character = {
+  name: "Hysilens",
+  path: Paths.Nihility,
+  element: Elements.Physical,
+  world: Worlds.Amphoreus,
+  image: CA.HysilensImg,
+  eidolons: Eidolons.HysilensEidolons,
+  pfp: CA.HysilensPfp,
+
+  baseATK: 601,
+  baseDEF: 485,
+  baseHP: 1203,
+  baseSPD: 102,
+  aggro: 100,
+  dupe: 0,
+
+  traces: {
+    attack: {
+      id: "attack",
+      name: "Basic ATK: Aeolian Mode: Echoes in Still Waters",
+      type: "basic",
+      level: "1/7",
+      icon: CA.HysilensBasicATK,
+
+      description: (i) => `
+        Deals Physical DMG equal to ${scaleValue(HysilensScaling.attack, i)} of Hysilens's ATK to one designated enemy.
+      `,
+    },
+
+    skill: {
+      id: "skill",
+      name: "Skill: Overtone Hum: Chorus After Dark Tides",
+      type: "skill",
+      level: "1/12",
+      icon: CA.HysilensSkill,
+
+      description: (i) => `
+        Has a 100% base chance to increase the DMG taken by all enemies by ${scaleValue(HysilensScaling.skill.main, i)}, lasting for 3 turn(s). At the same time, deals Physical DMG equal to ${scaleValue(HysilensScaling.skill.adj, i)} of Hysilens's ATK to all enemies.
+      `,
+    },
+
+    ultimate: {
+      id: "ultimate",
+      name: "Ultimate: Maelstrom Rhapsody",
+      type: "ultimate",
+      level: "1/12",
+      icon: CA.HysilensUltimate,
+
+      description: (i) => `
+        <b>Energy: 110</b><br>
+
+        Hysilens deploys a Zone that reduces enemy targets' ATK by 15.0% and DEF by ${scaleValue(HysilensScaling.ultimate.main, i)}, and deals Physical DMG equal to ${scaleValue(HysilensScaling.ultimate.adj, i)} of Hysilens's ATK to all enemies.
+        For every 1 instance of DoT taken by an enemy target within the Zone, Hysilens deals Physical DoT equal to ${scaleValue(HysilensScaling.ultimate.adj2, i)} of her ATK to them. This damage triggers at the start of each turn or after one attack by an ally target, up to 8 time(s). And it cannot repeatedly trigger this effect.
+        The Zone lasts for 3 turn(s) and this duration decreases by 1 at the start of this unit's every turn. When Hysilens gets knocked down, the Zone will also be dispelled.
+      `,
+    },
+
+    talent: {
+      id: "talent",
+      name: "Talent: Sirenic Serenade",
+      type: "talent",
+      level: "1/12",
+      icon: CA.HysilensTalent,
+
+      description: (i) => `
+        When an ally target attacks, there is a 100% base chance for Hysilens to inflict the hit enemy target with one of the following states: Wind Shear, Bleed, Burn, or Shock. Priority is given to inflicting a different state.
+        While in the Wind Shear/Burn/Shock state, at the start of each turn, the enemy target takes Wind/Fire/Lightning DoT equal to ${scaleValue(HysilensScaling.talent.main, i)} of Hysilens's ATK for 2 turn(s).
+        While in the Bleed state, at the start of each turn, the enemy target takes Physical DoT equal to 20.0% of their Max HP, up to ${scaleValue(HysilensScaling.talent.adj, i)} of Hysilens's ATK, lasting for 2 turn(s).
+      `,
+    },
+        technique: {
+            id: "technique",
+            name: "Technique: At Ocean's Abode",
+            type: "technique",
+            level: "1/1",
+            icon: CA.HysilensTechnique,
+            description: "After using Technique, creates a Special Dimension that lasts for 20 seconds and automatically moves forward. Enemies within the Special Dimension enter the \"Soulstruck\" state. \"Soulstruck\" enemies will not attack ally targets and will follow the dimension while it persists. After entering combat with \"Soulstruck\" enemies, there is a 100% base chance to inflict each enemy target with 2 of the following states: Wind Shear/Bleed/Burn/Shock, all of which are equivalent to those provided by Hysilens's Talent effect. Only 1 Dimension Effect created by allies can exist at the same time."
+        },
+
+        // --- Pasivas ---
+        b1: {
+            id: "b1",
+            name: "The Fiddle of Pearls",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.TheFiddleOfPearls,
+            description: "For every 10% of Hysilens's Effect Hit Rate that exceeds 60%, increases her DMG dealt by 15%, up to a max increase of 90%.",
+        },
+        b2: {
+            id: "b2",
+            name: "The Gladius of Conquest",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.TheGladiusOfConquest,
+            description: "At the start of combat, Hysilens deploys a Zone, equivalent to that provided by her Ultimate, lasting for 3 turn(s). Whenever Hysilens deploys a Zone, she recovers 1 Skill Point(s).",
+        },
+        b3: {
+            id: "b3",
+            name: "The Bubble of Banquets",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.TheBubbleOfBanquets,
+            description: "When Hysilens uses Ultimate, if the enemy target is currently afflicted with DoT(s), all DoTs currently applied on the target will immediately produce DMG equal to 150% of their original DMG.",
+        },
+        // --- Stats Nodes (Nodos Pequeños) ---
+        s1: {
+            id: "s1",
+            name: "Effect Hit Rate Boost",
+            type: "stat",
+            icon: CA.EffectHitRate,
+            description: "Effect Hit Rate Increases by: <b><u>6.0%</u></b>",
+        },
+        s2: {
+            id: "s2",
+            name: "ATK Boost",
+            type: "stat",
+            icon: CA.ATK,
+            description: "Quantum DMG Increases by: <b><u>8.0%</u></b>",
+        },
+        s3: {
+            id: "s3",
+            name: "ATK Boost",
+            type: "stat",
+            icon: CA.ATK,
+            description: "SPD Increases by: <b><u>4.0%</u></b>",
+        },
+        s4: {
+            id: "s4",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>2</u></b>",
+        },
+        s5: {
+            id: "s5",
+            name: "Effect Hit Rate Boost",
+            type: "stat",
+            icon: CA.EffectHitRate,
+            description: "Effect Hit Rate Increases by: <b><u>4.0%</u></b>",
+        },
+        s6: {
+            id: "s6",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>2</u></b>",
+        },
+        s7: {
+            id: "s7",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>4</u></b>",
+        },
+        s8: {
+            id: "s8",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>3</u></b>",
+        },
+        s9: {
+            id: "s9",
+            name: "ATK Boost",
+            type: "stat",
+            icon: CA.ATK,
+            description: "ATK Increases by: <b><u>6.0%</u></b>",
+        },
+        s10: {
+            id: "s10",
+            name: "SPD Boost",
+            type: "stat",
+            icon: CA.SPD,
+            description: "SPD Increases by: <b><u>3</u></b>",
+        },
+    },
+};
+
 // Nihility
 Characters.push(Cipher);
+Characters.push(Hysilens);
 // Destruction
 Characters.push(Mydei);
 Characters.push(Firefly);

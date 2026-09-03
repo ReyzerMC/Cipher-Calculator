@@ -330,3 +330,36 @@ export const RbnSummerettoEidolons: Eidolon = {
         image: CA.RbnE6,
     },
 };
+
+export const HysilensEidolons: Eidolon = {
+    e1: {
+        title: "You Ask Why Hearts Cry",
+        desc: "While Hysilens is on the field, the DoT dealt by ally targets is equal to 116% of their original value. When Hysilens inflicts Wind Shear/Bleed/Burn/Shock on enemies via her Talent, there is a 100% base chance to additionally inflict the target with 1 instance of Wind Shear/Bleed/Burn/Shock state that is equivalent to those from the original Talent effect and can coexist with such pre-existing states.",
+        image: CA.HysilensE1,
+    },
+    e2: {
+        title: "Tell Me Why Waves Roar High",
+        desc: "Ally targets' All-Type RES PEN increases by 18%. The upper limit of Robin • Summeretto's Vibes increases by 20. The first time an ally target uses an ability during any target's turn to cause Robin • Summeretto to gain Vibes, she gains an additional 2 points.",
+        image: CA.HysilensE2,
+    },
+    e3: {
+        title: "Why Do Lights Bid Goodbye",
+        desc: "Ultimate Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10.",
+        image: CA.HysilensE3,
+    },
+    e4: {
+        title: "Lo, How Time Flows By",
+        desc: "While the Zone is active, reduces All-Type RES of all enemies by 20%.",
+        image: CA.HysilensE4,
+    },
+    e5: {
+        title: "In Ablution, I Hum and Sigh",
+        desc: "Skill Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15.",
+        image: CA.HysilensE5,
+    },
+    e6: {
+        title: "When to Return From Where You Lie",
+        desc: "While the Zone is active, at the start of each turn or after one attack by an ally target, increases the maximum trigger count for Hysilens's Physical DoT effect to 12, and increases the multiplier of the DMG dealt by 20%.",
+        image: CA.HysilensE6,
+    },
+};

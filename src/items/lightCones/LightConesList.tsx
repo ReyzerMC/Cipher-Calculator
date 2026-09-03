@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg, WorrisomeBlissfulImg, InherentlyUnjustDestinyImg, WhereaboutsShouldDreamsRestImg, RiseAndSingImg } from "../../assets/lightcones/index";
+import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg, WorrisomeBlissfulImg, InherentlyUnjustDestinyImg, WhereaboutsShouldDreamsRestImg, RiseAndSingImg, WhyDoesTheOceanSingImg } from "../../assets/lightcones/index";
 
 export const LightCones : LightCone[] = [];
 
@@ -160,9 +160,22 @@ const RiseAndSing : LightCone = {
     dupe: 1,
 };
 
+const WhyDoesTheOceanSing : LightCone = {
+    name: "Why Does the Ocean Sing",
+    path: Paths.Nihility,
+    description: Texts.WhyDoesTheOceanSingENG,
+    image: WhyDoesTheOceanSingImg,
+
+    baseHP: 952,
+    baseATK: 635,
+    baseDEF: 463,
+    dupe: 1,
+};
+
 // Nihility
 LightCones.push(LiesDanceOnTheBreeze);
 LightCones.push(GoodNightAndSleepWell);
+LightCones.push(WhyDoesTheOceanSing);
 // Destruction
 LightCones.push(FlameOfBlood_BlazeMyPath);
 LightCones.push(ATrailOfBygoneBlood);

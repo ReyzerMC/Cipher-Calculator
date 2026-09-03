@@ -8,6 +8,7 @@ export interface Character {
     element: Element;
     world: World;
     image: string;
+    pfp: string;
     eidolons: Eidolon;
 
     // Stats

@@ -8,6 +8,7 @@ import WorrisomeBlissfulImg from "./WorrisomeBlissful.webp";
 import InherentlyUnjustDestinyImg from "./InherentlyUnjustDestiny.webp";
 import WhereaboutsShouldDreamsRestImg from "./WhereaboutsShouldDreamsRest.webp";
 import RiseAndSingImg from "./RiseAndSing.webp";
+import WhyDoesTheOceanSingImg from "./WhyDoesTheOceanSing.png";
 
 export {
     LiesDanceOnTheBreezeImg,
@@ -20,4 +21,5 @@ export {
     InherentlyUnjustDestinyImg,
     WhereaboutsShouldDreamsRestImg,
     RiseAndSingImg,
+    WhyDoesTheOceanSingImg,
 }

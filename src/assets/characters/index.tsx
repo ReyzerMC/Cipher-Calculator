@@ -15,6 +15,7 @@ import ImaginaryBoost from "./global/ImaginaryBoost.webp";
 
 // Cipher
 import cipherImg from "./cipher.webp";
+import cipherPfp from "./cipher/pfp.webp";
 import CipherBasicATK from "./cipher/BasicATK.webp";
 import CipherSkill from "./cipher/Skill.webp";
 import CipherUltimate from "./cipher/Ultimate.webp";
@@ -32,6 +33,7 @@ import CipherE6 from "./cipher/eidolons/CipherE6.webp";
 
 // Mydei
 import MydeiImg from "./Mydei.webp";
+import MydeiPfp from "./Mydei/pfp.webp";
 import MydeiBasicATK from "./Mydei/BasicATK.webp";
 import MydeiSkill from "./Mydei/Skill.webp";
 import MydeiUltimate from "./Mydei/Ultimate.webp";
@@ -49,6 +51,7 @@ import MydeiE6 from "./Mydei/eidolons/MydeiE6.webp";
 
 // Aventurine - Waveflair
 import AvWfImg from "./AventurineWaveflair.webp";
+import AvWfPfp from "./AvWf/pfp.webp";
 import RevelInRagingTides from "./AvWf/RevelInRagingTides.webp";
 import SiftThroughGildedDreams from "./AvWf/SiftThroughGildedDreams.webp";
 import PartyInPerfectParadise from "./AvWf/PartyInPerfectParadise.webp";
@@ -67,6 +70,7 @@ import AvWfE6 from "./AvWf/eidolons/AvWfE6.webp";
 
 // Ruan Mei
 import RuanmeiImg from "./Ruanmei.webp";
+import RuanmeiPfp from "./Ruanmei/pfp.webp";
 import RuanmeiBasicATK from "./Ruanmei/BasicATK.webp";
 import RuanmeiSkill from "./Ruanmei/Skill.webp";
 import RuanmeiUltimate from "./Ruanmei/Ultimate.webp";
@@ -84,6 +88,7 @@ import RuanE6 from "./Ruanmei/eidolons/RuanE6.webp";
 
 // Lingsha
 import LingshaImg from "./Lingsha.webp";
+import LingshaPfp from "./Lingsha/pfp.webp";
 import LingshaBasicATK from "./Lingsha/BasicATK.webp";
 import LingshaSkill from "./Lingsha/Skill.webp";
 import LingshaUltimate from "./Lingsha/Ultimate.webp";
@@ -101,6 +106,7 @@ import LingshaE6 from "./Lingsha/eidolons/LingshaE6.webp";
 
 // Castorice
 import CastoriceImg from "./Castorice.webp";
+import CastoricePfp from "./Castorice/pfp.webp";
 import CastoriceBasicATK from "./Castorice/BasicATK.webp";
 import CastoriceSkill from "./Castorice/Skill.webp";
 import CastoriceUltimate from "./Castorice/Ultimate.webp";
@@ -120,6 +126,7 @@ import CastorE6 from "./Castorice/eidolons/CastorE6.webp";
 
 // Topaz
 import TopazImg from "./Topaz.webp";
+import TopazPfp from "./Topaz/pfp.webp";
 import TopazBasicATK from "./Topaz/BasicATK.webp";
 import TopazSkill from "./Topaz/Skill.webp";
 import TopazUltimate from "./Topaz/Ultimate.webp";
@@ -137,6 +144,7 @@ import TopazE6 from "./Topaz/eidolons/TopazE6.webp";
 
 // Aventurine
 import AvImg from "./Aventurine.webp";
+import AvPfp from "./Av/pfp.webp";
 import AvBasicATK from "./Av/BasicATK.webp";
 import AvSkill from "./Av/Skill.webp";
 import AvUltimate from "./Av/Ultimate.webp";
@@ -154,6 +162,7 @@ import AvE6 from "./Av/eidolons/AvE6.webp";
 
 // Firefly
 import FireflyImg from "./Firefly.webp";
+import FireflyPfp from "./Firefly/pfp.webp";
 import FireflyBasicATK from "./Firefly/BasicATK.webp";
 import FireflySkill from "./Firefly/Skill.webp";
 import FireflyUltimate from "./Firefly/Ultimate.webp";
@@ -171,6 +180,7 @@ import FireflyE6 from "./Firefly/eidolons/FireflyE6.webp";
 
 // Robin • Summeretto
 import RbnSummerettoImg from "./RbnSummeretto.webp";
+import RbnSummerettoPfp from "./RbnSummeretto/pfp.webp";
 import RbnSummerettoBasicATK from "./RbnSummeretto/BasicATK.webp";
 import RbnSummerettoSkill from "./RbnSummeretto/Skill.webp";
 import RbnSummerettoUltimate from "./RbnSummeretto/Ultimate.webp";
@@ -187,6 +197,24 @@ import RbnE3 from "./RbnSummeretto/eidolons/RbnE3.webp";
 import RbnE4 from "./RbnSummeretto/eidolons/RbnE4.webp";
 import RbnE5 from "./RbnSummeretto/eidolons/RbnE5.webp";
 import RbnE6 from "./RbnSummeretto/eidolons/RbnE6.webp";
+
+// Hysilens
+import HysilensImg from "./Hysilens.webp";
+import HysilensPfp from "./Hysilens/pfp.webp";
+import HysilensBasicATK from "./Hysilens/BasicATK.webp";
+import HysilensSkill from "./Hysilens/Skill.webp";
+import HysilensUltimate from "./Hysilens/Ultimate.webp";
+import HysilensTalent from "./Hysilens/Talent.webp";
+import HysilensTechnique from "./Hysilens/Technique.webp";
+import TheGladiusOfConquest from "./Hysilens/TheGladiusOfConquest.webp";
+import TheBubbleOfBanquets from "./Hysilens/TheBubbleOfBanquets.webp";
+import TheFiddleOfPearls from "./Hysilens/TheFiddleOfPearls.webp";
+import HysilensE1 from "./Hysilens/eidolons/HysilensE1.webp";
+import HysilensE2 from "./Hysilens/eidolons/HysilensE2.webp";
+import HysilensE3 from "./Hysilens/eidolons/HysilensE3.webp";
+import HysilensE4 from "./Hysilens/eidolons/HysilensE4.webp";
+import HysilensE5 from "./Hysilens/eidolons/HysilensE5.webp";
+import HysilensE6 from "./Hysilens/eidolons/HysilensE6.webp";
 
 export {
     //Global
@@ -208,6 +236,7 @@ export {
 export {
     //Cipher
     cipherImg,
+    cipherPfp,
     CipherBasicATK,
     CipherSkill,
     CipherUltimate,
@@ -227,6 +256,7 @@ export {
 export {
     //Mydei
     MydeiImg,
+    MydeiPfp,
     MydeiBasicATK,
     MydeiSkill,
     MydeiUltimate,
@@ -246,6 +276,7 @@ export {
 export {
     // Aventurine - Waveflair
     AvWfImg,
+    AvWfPfp,
     RevelInRagingTides,
     SiftThroughGildedDreams,
     PartyInPerfectParadise,
@@ -266,6 +297,7 @@ export {
 export {
     // Ruan Mei
     RuanmeiImg,
+    RuanmeiPfp,
     RuanmeiBasicATK,
     RuanmeiSkill,
     RuanmeiUltimate,
@@ -285,6 +317,7 @@ export {
 export {
     // Lingsha
     LingshaImg,
+    LingshaPfp,
     LingshaBasicATK,
     LingshaSkill,
     LingshaUltimate,
@@ -304,6 +337,7 @@ export {
 export {
     // Castorice
     CastoriceImg,
+    CastoricePfp,
     CastoriceBasicATK,
     CastoriceSkill,
     CastoriceUltimate,
@@ -325,6 +359,7 @@ export {
 export {
     // Topaz
     TopazImg,
+    TopazPfp,
     TopazBasicATK,
     TopazSkill,
     TopazUltimate,
@@ -344,6 +379,7 @@ export {
 export {
     // Aventurine
     AvImg,
+    AvPfp,
     AvBasicATK,
     AvSkill,
     AvUltimate,
@@ -361,7 +397,9 @@ export {
 };
 
 export {
+    // Firefly
     FireflyImg,
+    FireflyPfp,
     FireflyBasicATK,
     FireflySkill,
     FireflyUltimate,
@@ -379,7 +417,9 @@ export {
 };
 
 export {
+    // Robin Summeretto
     RbnSummerettoImg,
+    RbnSummerettoPfp,
     RbnSummerettoBasicATK,
     RbnSummerettoSkill,
     RbnSummerettoUltimate,
@@ -396,4 +436,24 @@ export {
     RbnE4,
     RbnE5,
     RbnE6,
+};
+
+export {
+    // Hysilens
+    HysilensImg,
+    HysilensPfp,
+    HysilensBasicATK,
+    HysilensSkill,
+    HysilensUltimate,
+    HysilensTalent,
+    HysilensTechnique,
+    TheGladiusOfConquest,
+    TheBubbleOfBanquets,
+    TheFiddleOfPearls,
+    HysilensE1,
+    HysilensE2,
+    HysilensE3,
+    HysilensE4,
+    HysilensE5,
+    HysilensE6,
 };

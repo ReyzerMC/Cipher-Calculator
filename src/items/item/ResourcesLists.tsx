@@ -199,6 +199,20 @@ export const Texts = {
         return `Increases the wearer's Max HP by <b><u>${HP}%</u></b>. After the wearer uses Ultimate, recovers 1 Skill Point for allies. When entering combat, advances the wearer's action by <b><u>${Action}%</u></b> and grants the wearer "New Melody," lasting for 2 turn(s). While the wearer holds "New Melody," all allies' SPD increases by <b><u>${SPD}%</u></b>.`;
     },
 
+    WhyDoesTheOceanSingENG: (rank: number): string => {
+        const EffectHitVal = [40, 45, 50, 55, 60];
+        const DoTVal = [5.0, 6.3, 7.5, 8.8, 10.0];
+        const SPDVal = [10.0, 12.5, 15.0, 17.5, 20.0];
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const EffectHit = EffectHitVal[index];
+        const DoT = DoTVal[index];
+        const SPD = SPDVal[index];
+
+        return `Increases the wearer's Effect Hit Rate by <b><u>${EffectHit}%</u></b>. When an enemy target gets inflicted with a debuff by the wearer, there is a 80% base chance for them to enter "Enthrallment", lasting for 3 turn(s). Effects of the same type cannot stack. While the target is in "Enthrallment", for every 1 debuff applied by the wearer on the target, increases the target's received DoT by <b><u>${DoT}%</u></b>, stacking up to 6 time(s). When the target gets attacked by an ally, increases the attacker's SPD by <b><u>${SPD}%</u></b> for 3 turn(s). When the wearer gets knocked down, removes all "Enthrallment."`;
+    },
+
 } as const;
 
 export type Text = typeof Texts[keyof typeof Texts];
