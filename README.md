@@ -20,7 +20,7 @@ Una calculadora de daño para **Honkai: Star Rail**, desarrollada como proyecto 
 
 Puedes probar la versión actualmente desplegada aquí:
 
-**https://reyzermc.github.io/Cipher-Calculator/**
+**https://cipher-calculator.reyzer.org/**
 
 ---
 
