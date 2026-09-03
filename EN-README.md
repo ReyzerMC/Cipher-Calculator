@@ -42,7 +42,7 @@ There are currently **14 Light Cones implemented**.
 
 The following features **have not been created yet**:
 
-* [ ] Eidolons
+* [X] Eidolons (Recently implemented)
 * [ ] DMG Calculation
 * [ ] Skills
 * [ ] Complete stat system

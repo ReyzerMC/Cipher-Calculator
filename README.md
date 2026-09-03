@@ -42,7 +42,7 @@ Actualmente hay **14 Conos de Luz implementados**.
 
 Las siguientes funcionalidades **todavía no han sido creadas**:
 
-* [ ] Eidolones
+* [X] Eidolones (Recien implementada)
 * [ ] Cálculo de DMG
 * [ ] Habilidades / Skills
 * [ ] Sistema completo de estadísticas
