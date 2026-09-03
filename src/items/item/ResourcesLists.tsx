@@ -213,6 +213,20 @@ export const Texts = {
         return `Increases the wearer's Effect Hit Rate by <b><u>${EffectHit}%</u></b>. When an enemy target gets inflicted with a debuff by the wearer, there is a 80% base chance for them to enter "Enthrallment", lasting for 3 turn(s). Effects of the same type cannot stack. While the target is in "Enthrallment", for every 1 debuff applied by the wearer on the target, increases the target's received DoT by <b><u>${DoT}%</u></b>, stacking up to 6 time(s). When the target gets attacked by an ally, increases the attacker's SPD by <b><u>${SPD}%</u></b> for 3 turn(s). When the wearer gets knocked down, removes all "Enthrallment."`;
     },
 
+    FlickeringStarsENG: (rank: number): string => {
+        const CritRateVal = [18, 21, 24, 27, 30];
+        const IgnoreVal = [20, 24, 28, 32, 36];
+        const SkillDMGVal = [72, 84, 96, 108, 120];
+
+        const index = Math.max(0, Math.min(rank - 1, 4));
+
+        const CritRate = CritRateVal[index];
+        const Ignore = IgnoreVal[index];
+        const SkillDMG = SkillDMGVal[index];
+
+        return `Increases the wearer's CRIT Rate by <b><u>${CritRate}%</u></b>. When any ally character consumes a total of 4 or more Skill Points in a single turn, the wearer gains "Radiant Crown," lasting for 3 turn(s). While the wearer holds "Radiant Crown," all allies' DMG dealt ignores <b><u>${Ignore}%</u></b> of the target's DEF, and the Skill DMG dealt by the wearer increases by <b><u>${SkillDMG}%</u></b>. Effects of the same type cannot stack.`;
+    },
+
 } as const;
 
 export type Text = typeof Texts[keyof typeof Texts];

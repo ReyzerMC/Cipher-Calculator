@@ -1,7 +1,7 @@
 import type { Character } from '../../types/hsr';
 import { Paths, Elements, Worlds } from "../item/ResourcesLists";
 import * as CA from '../../assets/characters/index';
-import { CipherScaling, MydeiScaling, AvWfScalling, RuanmeiScalling, LingshaScaling, CastoriceScaling, TopazScaling, AvScaling, FireflyScaling, RbnSummerettoScaling, HysilensScaling } from './scalingData';
+import * as S from './scalingData';
 import * as Eidolons from './eidolons/Eidolons';
 
 export const scaleValue = (
@@ -40,7 +40,7 @@ const Cipher: Character = {
 
       description: (i) => `
         Deals Quantum DMG equal to
-        ${scaleValue(CipherScaling.attack, i)}
+        ${scaleValue(S.CipherScaling.attack, i)}
         of Cipher's ATK to one designated enemy.
       `,
     },
@@ -58,9 +58,9 @@ const Cipher: Character = {
         lasting for 2 turn(s).
 
         Moreover, deals Quantum DMG equal to
-        <b><u>${CipherScaling.skill.damage[i]}%</u></b>
+        ${scaleValue(S.CipherScaling.skill.damage, i)}
         of Cipher's ATK to one designated enemy, and Quantum DMG equal to
-        <b><u>${CipherScaling.skill.adjacent[i]}%</u></b>
+        ${scaleValue(S.CipherScaling.skill.adjacent, i)}
         of Cipher's ATK to adjacent targets.
       `,
     },
@@ -76,11 +76,11 @@ const Cipher: Character = {
         <b>Energy: 130</b><br>
 
         Deals Quantum DMG equal to
-        <b><u>${CipherScaling.ultimate.main[i]}%</u></b>
+        ${scaleValue(S.CipherScaling.ultimate.main, i)}
         of Cipher's ATK to one designated enemy.
 
         Moreover, deals Quantum DMG equal to
-        <b><u>${CipherScaling.ultimate.adjacent[i]}%</u></b>
+        ${scaleValue(S.CipherScaling.ultimate.adjacent, i)}
         of Cipher's ATK to the one designated enemy and its adjacent targets.
       `,
     },
@@ -96,7 +96,7 @@ const Cipher: Character = {
         After the "Patron" gets attacked by other ally targets,
         Cipher immediately launches Follow-Up ATK against the "Patron",
         dealing Quantum DMG equal to
-        <b><u>${CipherScaling.talent[i]}%</u></b>
+        ${scaleValue(S.CipherScaling.talent, i)}
         of Cipher's ATK.
       `,
     },
@@ -234,7 +234,7 @@ const Mydei: Character = {
 
             description: (i) => `
                 Deals Imaginary DMG equal to
-                ${scaleValue(MydeiScaling.attack, i)}
+                ${scaleValue(S.MydeiScaling.attack, i)}
                 of Mydei's Max HP to one designated enemy.
             `,
         },
@@ -251,9 +251,9 @@ const Mydei: Character = {
 
                 Consumes HP by an amount equal to 50% of Mydei's current HP.
                 Deals Imaginary DMG equal to
-                ${scaleValue(MydeiScaling.skill.main, i)}
+                ${scaleValue(S.MydeiScaling.skill.main, i)}
                 of Mydei's Max HP to one designated enemy and Imaginary DMG equal to
-                ${scaleValue(MydeiScaling.skill.adj, i)}
+                ${scaleValue(S.MydeiScaling.skill.adj, i)}
                 of Mydei's Max HP to adjacent targets.
 
                 If the current HP is not sufficient, using Skill reduces Mydei's
@@ -265,9 +265,9 @@ const Mydei: Character = {
 
                 Consumes HP by an amount equal to 35% of Mydei's current HP.
                 Deals Imaginary DMG equal to
-                ${scaleValue(MydeiScaling.skill.adj2, i)}
+                ${scaleValue(S.MydeiScaling.skill.adj2, i)}
                 of Mydei's Max HP to one enemy and Imaginary DMG equal to
-                ${scaleValue(MydeiScaling.skill.adj3, i)}
+                ${scaleValue(S.MydeiScaling.skill.adj3, i)}
                 of Mydei's Max HP to adjacent targets.
 
                 If the current HP is not sufficient, using Skill reduces Mydei's
@@ -281,9 +281,9 @@ const Mydei: Character = {
 
                 Consumes 150 point(s) of Charge.
                 Deals Imaginary DMG equal to
-                ${scaleValue(MydeiScaling.skill.adj4, i)}
+                ${scaleValue(S.MydeiScaling.skill.adj4, i)}
                 of Mydei's Max HP to one enemy and Imaginary DMG equal to
-                ${scaleValue(MydeiScaling.skill.adj5, i)}
+                ${scaleValue(S.MydeiScaling.skill.adj5, i)}
                 of Mydei's Max HP to adjacent targets.
 
                 This ability will be automatically used.
@@ -302,14 +302,14 @@ const Mydei: Character = {
                 <b>Energy: 160</b><br>
 
                 Restores HP by
-                ${scaleValue(MydeiScaling.ultimate.main, i)}
+                ${scaleValue(S.MydeiScaling.ultimate.main, i)}
                 of Mydei's Max HP and accumulates 20 Talent's Charge point(s).
 
                 Deals Imaginary DMG equal to
-                ${scaleValue(MydeiScaling.ultimate.adj, i)}
+                ${scaleValue(S.MydeiScaling.ultimate.adj, i)}
                 of Mydei's Max HP to one designated enemy, and deals Imaginary DMG
                 equal to
-                ${scaleValue(MydeiScaling.ultimate.adj2, i)}
+                ${scaleValue(S.MydeiScaling.ultimate.adj2, i)}
                 of Mydei's Max HP to adjacent targets.
 
                 Additionally, Taunts the target and targets adjacent to it,
@@ -332,7 +332,7 @@ const Mydei: Character = {
                 (up to 200 points).
 
                 When Charge reaches 100, consumes 100 points of Charge to enter
-                the "Vendetta" state, restores HP equal to ${scaleValue(MydeiScaling.talent, i)}
+                the "Vendetta" state, restores HP equal to ${scaleValue(S.MydeiScaling.talent, i)}
                 of Mydei's Max HP, and advances action by 100%.
 
                 While the "Vendetta" state is active, Max HP increases by 50%
@@ -561,7 +561,7 @@ const AventurineWaveflair: Character = {
 
             description: (i) =>
                 `Deals Quantum DMG equal to ${
-                    scaleValue(AvWfScalling.attack, i)
+                    scaleValue(S.AvWfScalling.attack, i)
                 } of Aventurine • Waveflair's ATK to one designated enemy.`
         },
 
@@ -574,7 +574,7 @@ const AventurineWaveflair: Character = {
 
             description: (i) =>
                 `Deals Quantum DMG equal to ${
-                    scaleValue(AvWfScalling.skill, i)
+                    scaleValue(S.AvWfScalling.skill, i)
                 } of Aventurine • Waveflair's ATK to all enemies. ` +
 
                 `Gains 4 Punchline and 4 "Fervor."` +
@@ -598,13 +598,13 @@ const AventurineWaveflair: Character = {
                 `<b>Energy: 130</b><br>` +
 
                 `Deals Quantum DMG equal to ${
-                    scaleValue(AvWfScalling.ultimate.main, i)
+                    scaleValue(S.AvWfScalling.ultimate.main, i)
                 } of Aventurine • Waveflair's ATK to all enemies. ` +
 
                 `Gains 6 Punchline and 8 "Fervor." ` +
 
                 `Increases this unit's SPD by ${
-                    scaleValue(AvWfScalling.ultimate.adj, i)
+                    scaleValue(S.AvWfScalling.ultimate.adj, i)
                 }, lasting for 4 turn(s).`
         },
 
@@ -633,11 +633,11 @@ const AventurineWaveflair: Character = {
 
                 `While Aventurine • Waveflair holds "Certified Banger", ` +
                 `Skill additionally deals ${
-                    scaleValue(AvWfScalling.talent.main, i)
+                    scaleValue(S.AvWfScalling.talent.main, i)
                 } Quantum Elation DMG to all enemies, ` +
 
                 `and Ultimate additionally deals ${
-                    scaleValue(AvWfScalling.talent.adj, i)
+                    scaleValue(S.AvWfScalling.talent.adj, i)
                 } Quantum Elation DMG to all enemies.`
         },
 
@@ -672,12 +672,12 @@ const AventurineWaveflair: Character = {
 
             description: (index: number = 11) =>
                 `Deals ${
-                    scaleValue(AvWfScalling.ElationSkill.main, index)
+                    scaleValue(S.AvWfScalling.ElationSkill.main, index)
                 } Quantum Elation DMG to all enemies, ` +
 
                 `and additionally deals 10 instance(s) of DMG, ` +
                 `with each instance dealing ${
-                    scaleValue(AvWfScalling.ElationSkill.adj, index)
+                    scaleValue(S.AvWfScalling.ElationSkill.adj, index)
                 } Quantum Elation DMG to one random enemy.` +
 
                 `<br><br>` +
@@ -685,19 +685,19 @@ const AventurineWaveflair: Character = {
                 `<b>All In! To Summer's Blaze</b><br>` +
 
                 `Deals ${
-                    scaleValue(AvWfScalling.ElationSkill.adj2, index)
+                    scaleValue(S.AvWfScalling.ElationSkill.adj2, index)
                 } Quantum Elation DMG to all enemies, ` +
 
                 `and additionally deals 10 instances of DMG, ` +
                 `with each instance dealing ${
-                    scaleValue(AvWfScalling.ElationSkill.adj3, index)
+                    scaleValue(S.AvWfScalling.ElationSkill.adj3, index)
                 } Quantum Elation DMG to one random enemy. ` +
 
                 `Consumes all "Fervor" upon use. ` +
 
                 `For every 1 point of "Fervor" consumed, ` +
                 `additionally deals 1 instance of ${
-                    scaleValue(AvWfScalling.ElationSkill.adj4, index)
+                    scaleValue(S.AvWfScalling.ElationSkill.adj4, index)
                 } Quantum Elation DMG to one random enemy.`
         },
 
@@ -891,7 +891,7 @@ const Ruanmei: Character = {
 
             description: (i) => `
                 Deals Ice DMG equal to
-                ${scaleValue(RuanmeiScalling.attack, i)}
+                ${scaleValue(S.RuanmeiScalling.attack, i)}
                 of Ruan Mei's ATK to one designated enemy target.
             `,
         },
@@ -911,7 +911,7 @@ const Ruanmei: Character = {
                 Ruan Mei's every turn.
 
                 When Ruan Mei has Overtone, all allies' DMG increases by
-                ${scaleValue(RuanmeiScalling.skill, i)}
+                ${scaleValue(S.RuanmeiScalling.skill, i)}
                 and Weakness Break Efficiency increases by 50%.
             `,
         },
@@ -930,7 +930,7 @@ const Ruanmei: Character = {
                 The Zone's duration decreases by 1 at the start of her turn.
 
                 While inside the Zone, all allies' All-Type RES PEN increases by
-                ${scaleValue(RuanmeiScalling.ultimate.main, i)}
+                ${scaleValue(S.RuanmeiScalling.ultimate.main, i)}
                 and their attacks apply Thanatoplum Rebloom to the enemies hit.
 
                 When these enemies attempt to recover from Weakness Break,
@@ -938,7 +938,7 @@ const Ruanmei: Character = {
                 their Weakness Break, delaying their action by an amount equal
                 to 20% of Ruan Mei's Break Effect plus 10%, and dealing Break DMG
                 equal to
-                ${scaleValue(RuanmeiScalling.ultimate.adj, i)}
+                ${scaleValue(S.RuanmeiScalling.ultimate.adj, i)}
                 of Ruan Mei's Ice Break DMG.
 
                 Enemy targets cannot have Thanatoplum Rebloom re-applied
@@ -955,12 +955,12 @@ const Ruanmei: Character = {
 
             description: (i) => `
                 Increases SPD by
-                ${scaleValue(RuanmeiScalling.talent.main, i)}
+                ${scaleValue(S.RuanmeiScalling.talent.main, i)}
                 for all teammates (i.e., excluding this unit).
 
                 When allies Break an enemy target's Weakness,
                 Ruan Mei deals to this enemy target Break DMG equal to
-                ${scaleValue(RuanmeiScalling.talent.adj, i)}
+                ${scaleValue(S.RuanmeiScalling.talent.adj, i)}
                 of her Ice Break DMG.
             `,
         },
@@ -1179,7 +1179,7 @@ const Lingsha: Character = {
 
             description: (i) =>
                 `Deals Fire DMG equal to ${
-                    scaleValue(LingshaScaling.attack, i)
+                    scaleValue(S.LingshaScaling.attack, i)
                 } of Lingsha's ATK to one designated enemy target.`
         },
 
@@ -1192,13 +1192,13 @@ const Lingsha: Character = {
 
             description: (i) =>
                 `Deals Fire DMG equal to ${
-                    scaleValue(LingshaScaling.skill.main, i)
+                    scaleValue(S.LingshaScaling.skill.main, i)
                 } of Lingsha's ATK to all enemies and at the same time, ` +
 
                 `restores HP equal to ${
-                    scaleValue(LingshaScaling.skill.adj, i)
+                    scaleValue(S.LingshaScaling.skill.adj, i)
                 } of Lingsha's ATK plus ${
-                    scaleValue(LingshaScaling.skill.adj2, i, "")
+                    scaleValue(S.LingshaScaling.skill.adj2, i, "")
                 } for all allies. Fuyuan's action advances by 20%.`
         },
 
@@ -1214,16 +1214,16 @@ const Lingsha: Character = {
 
                 `Inflicts "Befog" on all enemies. While in "Befog," ` +
                 `targets receive ${
-                    scaleValue(LingshaScaling.ultimate.main, i)
+                    scaleValue(S.LingshaScaling.ultimate.main, i)
                 } increased Break DMG, lasting for 2 turn(s). ` +
 
                 `Deals Fire DMG equal to ${
-                    scaleValue(LingshaScaling.ultimate.adj, i)
+                    scaleValue(S.LingshaScaling.ultimate.adj, i)
                 } of Lingsha's ATK to all enemies, and at the same time ` +
                 `restores HP equal to ${
-                    scaleValue(LingshaScaling.ultimate.adj2, i)
+                    scaleValue(S.LingshaScaling.ultimate.adj2, i)
                 } of Lingsha's ATK plus ${
-                    scaleValue(LingshaScaling.ultimate.adj3, i, "")
+                    scaleValue(S.LingshaScaling.ultimate.adj3, i, "")
                 } for all allies. ` +
 
                 `Fuyuan's action advances by 100%.`
@@ -1240,18 +1240,18 @@ const Lingsha: Character = {
                 `When using Skill, summons "Fuyuan," with an initial SPD of 90 ` +
                 `and an initial action count of 3. When taking action, "Fuyuan" ` +
                 `launches Follow-Up ATK, dealing Fire DMG equal to ${
-                    scaleValue(LingshaScaling.talent.main, i)
+                    scaleValue(S.LingshaScaling.talent.main, i)
                 } of Lingsha's ATK to all enemies. ` +
 
                 `Additionally deals Fire DMG equal to ${
-                    scaleValue(LingshaScaling.talent.adj, i)
+                    scaleValue(S.LingshaScaling.talent.adj, i)
                 } of Lingsha's ATK to one random enemy, and this DMG prioritizes ` +
                 `targets that have both Toughness greater than 0 and Fire Weakness. ` +
 
                 `Dispels 1 debuff(s) from all allies and restores HP equal to ${
-                    scaleValue(LingshaScaling.talent.adj2, i)
+                    scaleValue(S.LingshaScaling.talent.adj2, i)
                 } of Lingsha's ATK plus ${
-                    scaleValue(LingshaScaling.talent.adj3, i, "")
+                    scaleValue(S.LingshaScaling.talent.adj3, i, "")
                 }. ` +
 
                 `"Fuyuan's" action count can accumulate up to 5. When the action ` +
@@ -1445,7 +1445,7 @@ const Castorice: Character = {
             level: "7/7",
             icon: CA.CastoriceBasicATK,
             description: (i) => "Deals Quantum DMG equal to " +
-                         `${scaleValue(CastoriceScaling.attack, i)}` +
+                         `${scaleValue(S.CastoriceScaling.attack, i)}` +
                          " of Castorice's Max HP to one designated enemy."
         },
 
@@ -1456,17 +1456,17 @@ const Castorice: Character = {
             level: "12/12",
             icon: CA.CastoriceSkill,
             description: (i) => "Consumes 30% of all allies' current HP. Deals Quantum DMG equal to " +
-                         `${scaleValue(CastoriceScaling.skill.main, i)}` +
+                         `${scaleValue(S.CastoriceScaling.skill.main, i)}` +
                          " of Castorice's Max HP to one designated enemy and Quantum DMG equal to " +
-                         `${scaleValue(CastoriceScaling.skill.adj, i)}` +
+                         `${scaleValue(S.CastoriceScaling.skill.adj, i)}` +
                          " of Castorice's Max HP to adjacent targets. If the current HP is insufficient, reduces the current HP down to 1. " +
                          "If Netherwing is on the battlefield, the Skill becomes \"Boneclaw, Doomdrake's Embrace\" instead." +
                          "<br><br>" +
                          "<b>Boneclaw, Doomdrake's Embrace</b><br>" +
                          "Consumes 40% of the current HP of all allies (except Netherwing). Castorice and Netherwing launch Joint ATK on the targets, dealing Quantum DMG equal to " +
-                         `${scaleValue(CastoriceScaling.skill.adj2, i)}` +
+                         `${scaleValue(S.CastoriceScaling.skill.adj2, i)}` +
                          " and " +
-                         `${scaleValue(CastoriceScaling.skill.adj3, i)}` +
+                         `${scaleValue(S.CastoriceScaling.skill.adj3, i)}` +
                          " of Castorice's Max HP to all enemies. If the current HP is insufficient, reduces the current HP down to 1"
         },
 
@@ -1477,7 +1477,7 @@ const Castorice: Character = {
             level: "12/12",
             icon: CA.CastoriceUltimate,
             description: (i) => "<b>Energy: --</b><br>" +
-                         `Summons the memosprite Netherwing and advances its action by 100%. At the same time, deploys the Territory \"Lost Netherland,\" which decreases all enemies' All-Type RES by ${scaleValue(CastoriceScaling.ultimate, i)}. ` +
+                         `Summons the memosprite Netherwing and advances its action by 100%. At the same time, deploys the Territory \"Lost Netherland,\" which decreases all enemies' All-Type RES by ${scaleValue(S.CastoriceScaling.ultimate, i)}. ` +
                          "If Castorice has the DMG Boost effect from her Talent, then this effect spreads to Netherwing. Netherwing has an initial SPD of 165 and a set Max HP equal to 100% of max \"Newbud.\" " +
                          "After Netherwing experiences 3 turns or when its HP is 0, it disappears and dispels the Territory \"Lost Netherland.\""
         },
@@ -1491,7 +1491,7 @@ const Castorice: Character = {
             description: (i) => 
                          "The maximum limit of \"Newbud\" is related to the levels of all characters on the battlefield. " +
                          "For every 1 point of HP lost by all allies, Castorice gains 1 point of \"Newbud.\" When \"Newbud\" reaches its maximum limit, can activate the Ultimate. " +
-                         `When allies lose HP, Castorice's and Netherwing's DMG dealt increases by ${scaleValue(CastoriceScaling.talent, i)}. This effect can stack up to 3 time(s), lasting for 3 turn(s). ` +
+                         `When allies lose HP, Castorice's and Netherwing's DMG dealt increases by ${scaleValue(S.CastoriceScaling.talent, i)}. This effect can stack up to 3 time(s), lasting for 3 turn(s). ` +
                          "When Netherwing is on the field, \"Newbud\" cannot be gained through Talent, and every 1 point of HP lost by all allies (except Netherwing) will be converted to an equal amount of HP for Netherwing."
         },
 
@@ -1556,9 +1556,9 @@ const Castorice: Character = {
                          "<br><br>" +
                          "<b>Wings Sweep the Ruins</b><br>" +
                          "When Netherwing disappears, deals 6 instance(s) of DMG, with each instance dealing Quantum DMG equal to " +
-                         `${scaleValue(CastoriceScaling.memotalent.main, i)}` +
-                         ` of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to ${scaleValue(CastoriceScaling.memotalent.adj, i, "")} of Castorice's Max HP plus ` +
-                         `${scaleValue(CastoriceScaling.memotalent.adj2, i, "")}` +
+                         `${scaleValue(S.CastoriceScaling.memotalent.main, i)}` +
+                         ` of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to ${scaleValue(S.CastoriceScaling.memotalent.adj, i, "")} of Castorice's Max HP plus ` +
+                         `${scaleValue(S.CastoriceScaling.memotalent.adj2, i, "")}` +
                          " for all allies.",
         },
 
@@ -1570,28 +1570,28 @@ const Castorice: Character = {
             icon: CA.CastoriceMemoSkill,
             description: (i) => 
                          "Deals Quantum DMG equal to " +
-                         `${scaleValue(CastoriceScaling.memoskill.main, i)}` +
+                         `${scaleValue(S.CastoriceScaling.memoskill.main, i)}` +
                          " of Castorice's Max HP to all enemies." +
                          "<br><br>" +
                          "<b>Breath Scorches the Shadow</b><br>" +
                          "Launching \"Breath Scorches the Shadow\" will consume 25% of Netherwing's Max HP to deal Quantum DMG equal to " +
-                         `${scaleValue(CastoriceScaling.memoskill.adj1, i)}` +
+                         `${scaleValue(S.CastoriceScaling.memoskill.adj1, i)}` +
                          " of Castorice's Max HP to all enemies. In one attack, \"Breath Scorches the Shadow\" can be launched repeatedly, " +
                          "with the DMG multiplier increased progressively to " +
-                         `${scaleValue(CastoriceScaling.memoskill.adj2, i)}` +
+                         `${scaleValue(S.CastoriceScaling.memoskill.adj2, i)}` +
                          " / " +
-                         `${scaleValue(CastoriceScaling.memoskill.adj3, i)}` +
+                         `${scaleValue(S.CastoriceScaling.memoskill.adj3, i)}` +
                          ". After reaching " +
-                         `${scaleValue(CastoriceScaling.memoskill.adj4, i)}` +
+                         `${scaleValue(S.CastoriceScaling.memoskill.adj4, i)}` +
                          ", it will not increase further. The DMG Multiplier Boost effect will not decrease before Netherwing disappears. " +
                          "When Netherwing's current HP is equal to or less than 25% of its Max HP, launching this ability will actively reduce HP down to 1, " +
                          "and then trigger the ability effect equal to that of the Talent \"Wings Sweep the Ruins\"." +
                          "<br><br>" +
                          "<b>Wings Sweep the Ruins</b><br>" +
                          "Consumes all HP and deals 6 instance(s) of DMG, with each instance dealing Quantum DMG equal to " +
-                         `${scaleValue(CastoriceScaling.memoskill.adj5, i)}` +
+                         `${scaleValue(S.CastoriceScaling.memoskill.adj5, i)}` +
                          " of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to 8% of Castorice's Max HP plus " +
-                         `${scaleValue(CastoriceScaling.memoskill.adj7, i, "")}` +
+                         `${scaleValue(S.CastoriceScaling.memoskill.adj7, i, "")}` +
                          " for all allies.",
         },
 
@@ -1707,7 +1707,7 @@ const Topaz: Character = {
 
             description: (i) =>
                 "Deals Fire DMG equal to " +
-                `${scaleValue(TopazScaling.attack, i)}` +
+                `${scaleValue(S.TopazScaling.attack, i)}` +
                 " of Topaz's ATK to one designated enemy."
         },
 
@@ -1725,7 +1725,7 @@ const Topaz: Character = {
                 "If there are no enemies inflicted with \"Proof of Debt\" on the field when an ally's turn starts or when an ally takes action, " +
                 "Topaz will inflict a random enemy with \"Proof of Debt\". " +
                 "Numby deals Fire DMG equal to " +
-                `${scaleValue(TopazScaling.skill.adj, i)}` +
+                `${scaleValue(S.TopazScaling.skill.adj, i)}` +
                 " of Topaz's ATK to this target. " +
                 "Using this Skill to deal DMG is considered as launching a Follow-Up ATK."
         },
@@ -1740,9 +1740,9 @@ const Topaz: Character = {
             description: (i) =>
                 "<b>Energy: 130</b><br>" +
                 "Numby enters the Windfall Bonanza! state and its DMG multiplier increases by " +
-                `${scaleValue(TopazScaling.ultimate.main, i)}` +
+                `${scaleValue(S.TopazScaling.ultimate.main, i)}` +
                 " and CRIT DMG increases by " +
-                `${scaleValue(TopazScaling.ultimate.adj, i)}` +
+                `${scaleValue(S.TopazScaling.ultimate.adj, i)}` +
                 ". Also, when enemies with Proof of Debt are hit by an ally's Basic ATK, Skill, or Ultimate, " +
                 "Numby's action is Advanced Forward by 50%. " +
                 "Numby exits the Windfall Bonanza! state after using 2 attacks."
@@ -1759,7 +1759,7 @@ const Topaz: Character = {
                 "Summons Numby at the start of battle. Numby has 80 SPD by default. " +
                 "When taking action, Numby launches Follow-Up ATKs on one enemy target afflicted with \"Proof of Debt\", " +
                 "dealing Fire DMG equal to " +
-                `${scaleValue(TopazScaling.talent, i)}` +
+                `${scaleValue(S.TopazScaling.talent, i)}` +
                 " of Topaz's ATK. " +
                 "When enemies afflicted with \"Proof of Debt\" receive an ally's Follow-Up ATKs, Numby's action is Advanced Forward by 50%. " +
                 "The action Advance Forward effect cannot be triggered during Numby's own turn. " +
@@ -1951,7 +1951,7 @@ const Aventurine: Character = {
             icon: CA.AvBasicATK,
 
             description: (i) =>
-                `Deals Imaginary DMG equal to ${scaleValue(AvScaling.attack, i)} of Aventurine's DEF to one designated enemy target.`,
+                `Deals Imaginary DMG equal to ${scaleValue(S.AvScaling.attack, i)} of Aventurine's DEF to one designated enemy target.`,
         },
 
         skill: {
@@ -1962,7 +1962,7 @@ const Aventurine: Character = {
             icon: CA.AvSkill,
 
             description: (i) =>
-                `Provides all allies with a Fortified Wager shield that can block DMG equal to ${scaleValue(AvScaling.skill.main, i)} of Aventurine's DEF plus ${scaleValue(AvScaling.skill.adj, i, "")}, lasting for 3 turn(s). When Fortified Wager is gained repeatedly, the Shield Effect can stack, up to 200% of the current Shield Effect provided by the Skill.`,
+                `Provides all allies with a Fortified Wager shield that can block DMG equal to ${scaleValue(S.AvScaling.skill.main, i)} of Aventurine's DEF plus ${scaleValue(S.AvScaling.skill.adj, i, "")}, lasting for 3 turn(s). When Fortified Wager is gained repeatedly, the Shield Effect can stack, up to 200% of the current Shield Effect provided by the Skill.`,
         },
 
         ultimate: {
@@ -1974,7 +1974,7 @@ const Aventurine: Character = {
 
             description: (i) =>
                 `<b>Energy: 110</b><br>
-                Randomly gains 1 to 7 points of "Blind Bet". Then, inflicts "Unnerved" on one designated enemy target for 3 turn(s) and deals Imaginary DMG equal to ${scaleValue(AvScaling.ultimate.main, i)} of Aventurine's DEF to that enemy target. When an ally hits an "Unnerved" enemy target, the CRIT DMG dealt increases by ${scaleValue(AvScaling.ultimate.adj, i)}.`,
+                Randomly gains 1 to 7 points of "Blind Bet". Then, inflicts "Unnerved" on one designated enemy target for 3 turn(s) and deals Imaginary DMG equal to ${scaleValue(S.AvScaling.ultimate.main, i)} of Aventurine's DEF to that enemy target. When an ally hits an "Unnerved" enemy target, the CRIT DMG dealt increases by ${scaleValue(S.AvScaling.ultimate.adj, i)}.`,
         },
 
         talent: {
@@ -1985,7 +1985,7 @@ const Aventurine: Character = {
             icon: CA.AvTalent,
 
             description: (i) =>
-                `For any single ally with "Fortified Wager", their Effect RES increases by ${scaleValue(AvScaling.talent.main, i)}, and when they get attacked, Aventurine gains 1 point of "Blind Bet." When Aventurine has "Fortified Wager," he can resist Crowd Control debuffs. This effect can trigger again after 2 turn(s). Aventurine additionally gains 1 point(s) of "Blind Bet" after getting attacked. Upon reaching 7 points of "Blind Bet," Aventurine consumes the 7 points to launch a 7-hit Follow-Up ATK, with each hit dealing Imaginary DMG equal to ${scaleValue(AvScaling.talent.adj, i)} of Aventurine's DEF to one random enemy. "Blind Bet" is capped at 10 points.`,
+                `For any single ally with "Fortified Wager", their Effect RES increases by ${scaleValue(S.AvScaling.talent.main, i)}, and when they get attacked, Aventurine gains 1 point of "Blind Bet." When Aventurine has "Fortified Wager," he can resist Crowd Control debuffs. This effect can trigger again after 2 turn(s). Aventurine additionally gains 1 point(s) of "Blind Bet" after getting attacked. Upon reaching 7 points of "Blind Bet," Aventurine consumes the 7 points to launch a 7-hit Follow-Up ATK, with each hit dealing Imaginary DMG equal to ${scaleValue(S.AvScaling.talent.adj, i)} of Aventurine's DEF to one random enemy. "Blind Bet" is capped at 10 points.`,
         },
 
         technique: {
@@ -2158,8 +2158,8 @@ const Firefly: Character = {
             icon: CA.FireflyBasicATK,
 
             description: (i) =>
-                `Deals Fire DMG equal to ${scaleValue(FireflyScaling.attack.main, i)} of SAM's ATK to one designated enemy.<br><br>`+
-                `Restores HP by an amount equal to 20% of this unit's Max HP. Deals Fire DMG equal to ${scaleValue(FireflyScaling.attack.adj, i)} of SAM's ATK to one designated enemy.`,
+                `Deals Fire DMG equal to ${scaleValue(S.FireflyScaling.attack.main, i)} of SAM's ATK to one designated enemy.<br><br>`+
+                `Restores HP by an amount equal to 20% of this unit's Max HP. Deals Fire DMG equal to ${scaleValue(S.FireflyScaling.attack.adj, i)} of SAM's ATK to one designated enemy.`,
         },
 
         skill: {
@@ -2170,12 +2170,12 @@ const Firefly: Character = {
             icon: CA.FireflySkill,
 
             description: (i) =>
-                `Consumes HP equal to 40% of this unit's Max HP and regenerates a fixed amount of Energy equal to ${scaleValue(FireflyScaling.skill.main, i)} 
-                 of this unit's Max Energy. Deals Fire DMG equal to ${scaleValue(FireflyScaling.skill.adj, i)} of SAM's ATK to one designated enemy. If the current 
+                `Consumes HP equal to 40% of this unit's Max HP and regenerates a fixed amount of Energy equal to ${scaleValue(S.FireflyScaling.skill.main, i)} 
+                 of this unit's Max Energy. Deals Fire DMG equal to ${scaleValue(S.FireflyScaling.skill.adj, i)} of SAM's ATK to one designated enemy. If the current 
                  HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by 25%.`+
                 `Restores HP by an amount equal to 25% of this unit's Max HP. Adds Fire Weakness to one designated enemy and its adjacent targets, lasting for 2 turns. 
-                 Deals Fire DMG equal to (0.2 × Break Effect + ${scaleValue(FireflyScaling.skill.adj2, i)}) of SAM's ATK to this target. At the same time, deals Fire DMG 
-                 equal to (0.1 × Break Effect + ${scaleValue(FireflyScaling.skill.adj3, i)}) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation 
+                 Deals Fire DMG equal to (0.2 × Break Effect + ${scaleValue(S.FireflyScaling.skill.adj2, i)}) of SAM's ATK to this target. At the same time, deals Fire DMG 
+                 equal to (0.1 × Break Effect + ${scaleValue(S.FireflyScaling.skill.adj3, i)}) of SAM's ATK to adjacent targets. The Break Effect taken into the calculation 
                  is capped at 360%.`,
         },
 
@@ -2189,9 +2189,9 @@ const Firefly: Character = {
             description: (i) =>
                 `<b>Energy: 240</b><br>
                 Enters the Complete Combustion state, advances this unit's Action by 100%, and gains Enhanced Basic ATK and Enhanced Skill. 
-                While in Complete Combustion, increases SPD by ${scaleValue(FireflyScaling.ultimate.main, i, "")}, and when using the Enhanced Basic ATK or Enhanced Skill, 
+                While in Complete Combustion, increases SPD by ${scaleValue(S.FireflyScaling.ultimate.main, i, "")}, and when using the Enhanced Basic ATK or Enhanced Skill, 
                 increases this unit's Weakness Break Efficiency by 50% and increases the Break DMG dealt by SAM to the enemy targets by 
-                ${scaleValue(FireflyScaling.ultimate.adj, i)}, lasting until this current attack ends. A countdown timer for the Complete Combustion state appears in the Action Order. 
+                ${scaleValue(S.FireflyScaling.ultimate.adj, i)}, lasting until this current attack ends. A countdown timer for the Complete Combustion state appears in the Action Order. 
                 When the countdown timer's turn starts, SAM exits the Complete Combustion state. The countdown timer has a fixed SPD of 70.
                 SAM cannot use Ultimate while in Complete Combustion.`,
         },
@@ -2204,8 +2204,8 @@ const Firefly: Character = {
             icon: CA.FireflyTalent,
 
             description: (i) =>
-                `The lower the HP, the less DMG received. When HP is 20% or lower, the DMG Reduction reaches its maximum effect, reducing up to ${scaleValue(FireflyScaling.talent.main, i)}. 
-                 During the Complete Combustion, the DMG Reduction remains at its maximum effect, and the Effect RES increases by ${scaleValue(FireflyScaling.talent.adj, i)}.
+                `The lower the HP, the less DMG received. When HP is 20% or lower, the DMG Reduction reaches its maximum effect, reducing up to ${scaleValue(S.FireflyScaling.talent.main, i)}. 
+                 During the Complete Combustion, the DMG Reduction remains at its maximum effect, and the Effect RES increases by ${scaleValue(S.FireflyScaling.talent.adj, i)}.
                  If Energy is lower than 50% when the battle starts, regenerates Energy to 50%. Once Energy is regenerated to its maximum, dispels all debuffs on this unit.`,
         },
 
@@ -2379,7 +2379,7 @@ const RbnSummeretto: Character = {
             icon: CA.RbnSummerettoBasicATK,
 
             description: (i) =>
-                `Deals Wind DMG equal to ${scaleValue(RbnSummerettoScaling.main, i)} of Robin • Summeretto's Max HP to one enemy.`,
+                `Deals Wind DMG equal to ${scaleValue(S.RbnSummerettoScaling.main, i)} of Robin • Summeretto's Max HP to one enemy.`,
         },
 
         skill: {
@@ -2391,7 +2391,7 @@ const RbnSummeretto: Character = {
 
             description: (i) =>
                 `Summons the memosprite "Summer Songbirds" Bessie. If any member of the "Summer Songbirds" is already on the field, 
-                 restores their HP by an amount equal to ${scaleValue(RbnSummerettoScaling.skill, i)} of "Summer Songbirds'" Max HP, and gains 6 Vibes.`,
+                 restores their HP by an amount equal to ${scaleValue(S.RbnSummerettoScaling.skill, i)} of "Summer Songbirds'" Max HP, and gains 6 Vibes.`,
         },
 
         ultimate: {
@@ -2404,7 +2404,7 @@ const RbnSummeretto: Character = {
             description: (i) =>
                 `<b>Energy: 140</b><br>
                 Advances the action of one designated ally character (excluding Robin • Summeretto) by 100% and regenerates a fixed amount of Energy equal 
-                to ${scaleValue(RbnSummerettoScaling.ultimate, i)} of their Max Energy. Then, grants them the "Special Guest" effect. When the "Special Guest" character or their summon attacks, they 
+                to ${scaleValue(S.RbnSummerettoScaling.ultimate, i)} of their Max Energy. Then, grants them the "Special Guest" effect. When the "Special Guest" character or their summon attacks, they 
                 additionally grant Robin • Summeretto 2 Vibes but cannot make other friendly targets gain the action advance effect. This lasts for 2 turn(s), 
                 and its duration decreases by 1 at the start of this character's turn.`,
         },
@@ -2422,7 +2422,7 @@ const RbnSummeretto: Character = {
                  capped at 50. While "Summer Songbirds" Bessie is on the field, if Robin • Summeretto's Vibes is 6 or higher, immediately summons "Summer Songbirds" Drummie, 
                  and if Vibes is 12 or higher, immediately summons "Summer Songbirds" Paddie. When all "Summer Songbirds" take the stage, 
                  dispels all Crowd Control debuffs inflicted upon Robin • Summeretto and the "Summer Songbirds", starts the "Fever" state, 
-                 and deploys a Zone. When ally targets deal DMG within the Zone, they ignore a percentage of enemy targets' DEF equal to (${scaleValue(RbnSummerettoScaling.talent, i)} + Vibes × 0.5%).
+                 and deploys a Zone. When ally targets deal DMG within the Zone, they ignore a percentage of enemy targets' DEF equal to (${scaleValue(S.RbnSummerettoScaling.talent, i)} + Vibes × 0.5%).
                  While in the "Fever" state, Robin • Summeretto and the "Summer Songbirds" are immune to Crowd Control debuffs. Robin • Summeretto will not enter her turn until the "Fever" state ends.`,
         },
 
@@ -2474,13 +2474,13 @@ const RbnSummeretto: Character = {
             icon: CA.RbnMemoTalent,
             description: (i) => 
                          `While in the "Fever" state, the "Summer Songbirds" and a countdown will appear on the Action Order. 
-                          And the DMG dealt by Robin • Summeretto and "Summer Songbirds" increases by an amount equal to (${scaleValue(RbnSummerettoScaling.memotalent.main, i)} 
-                          + Vibes × ${scaleValue(RbnSummerettoScaling.memotalent.adj, i)}). 
+                          And the DMG dealt by Robin • Summeretto and "Summer Songbirds" increases by an amount equal to (${scaleValue(S.RbnSummerettoScaling.memotalent.main, i)} 
+                          + Vibes × ${scaleValue(S.RbnSummerettoScaling.memotalent.adj, i)}). 
                           When "Summer Songbirds'" turn starts, uses the Memosprite Skill. The countdown has an initial SPD of 140. And when its turn starts, 
                           deducts 50% of the current Vibes (minimum 12 points). When the Vibes reaches 0, the "Summer Songbirds" 
                           disappears and Robin • Summeretto exits the "Fever" state. While the "Summer Songbirds" is on the field, 
-                          based on the number of its members present, increases the DMG taken by all enemies by ${scaleValue(RbnSummerettoScaling.memotalent.adj2, i)}/
-                          ${scaleValue(RbnSummerettoScaling.memotalent.adj3, i)}/${scaleValue(RbnSummerettoScaling.memotalent.adj4, i)} respectively.<br><br>`+
+                          based on the number of its members present, increases the DMG taken by all enemies by ${scaleValue(S.RbnSummerettoScaling.memotalent.adj2, i)}/
+                          ${scaleValue(S.RbnSummerettoScaling.memotalent.adj3, i)}/${scaleValue(S.RbnSummerettoScaling.memotalent.adj4, i)} respectively.<br><br>`+
                           `<b>Near the Sea's Heartbeat</b><br>When the "Summer Songbirds" gets summoned, regenerates 20 Energy for Robin • Summeretto.<br><br>`+
                           `<b>Astride Summer's Nightwind</b><br>When the "Summer Songbirds" disappears, Robin • Summeretto's action advances by 50%.`,
         },
@@ -2492,7 +2492,7 @@ const RbnSummeretto: Character = {
             level: "7/7",
             icon: CA.RbnMemoSkill,
             description: (i) => 
-                         `Deals Wind DMG equal to ${scaleValue(RbnSummerettoScaling.memoskill, i)} of "Summer Songbirds'" Max HP to all enemies.`,
+                         `Deals Wind DMG equal to ${scaleValue(S.RbnSummerettoScaling.memoskill, i)} of "Summer Songbirds'" Max HP to all enemies.`,
         },
 
         // --- Stats Nodes (Nodos Pequeños) ---
@@ -2604,7 +2604,7 @@ const Hysilens: Character = {
       icon: CA.HysilensBasicATK,
 
       description: (i) => `
-        Deals Physical DMG equal to ${scaleValue(HysilensScaling.attack, i)} of Hysilens's ATK to one designated enemy.
+        Deals Physical DMG equal to ${scaleValue(S.HysilensScaling.attack, i)} of Hysilens's ATK to one designated enemy.
       `,
     },
 
@@ -2616,7 +2616,7 @@ const Hysilens: Character = {
       icon: CA.HysilensSkill,
 
       description: (i) => `
-        Has a 100% base chance to increase the DMG taken by all enemies by ${scaleValue(HysilensScaling.skill.main, i)}, lasting for 3 turn(s). At the same time, deals Physical DMG equal to ${scaleValue(HysilensScaling.skill.adj, i)} of Hysilens's ATK to all enemies.
+        Has a 100% base chance to increase the DMG taken by all enemies by ${scaleValue(S.HysilensScaling.skill.main, i)}, lasting for 3 turn(s). At the same time, deals Physical DMG equal to ${scaleValue(S.HysilensScaling.skill.adj, i)} of Hysilens's ATK to all enemies.
       `,
     },
 
@@ -2630,8 +2630,8 @@ const Hysilens: Character = {
       description: (i) => `
         <b>Energy: 110</b><br>
 
-        Hysilens deploys a Zone that reduces enemy targets' ATK by 15.0% and DEF by ${scaleValue(HysilensScaling.ultimate.main, i)}, and deals Physical DMG equal to ${scaleValue(HysilensScaling.ultimate.adj, i)} of Hysilens's ATK to all enemies.
-        For every 1 instance of DoT taken by an enemy target within the Zone, Hysilens deals Physical DoT equal to ${scaleValue(HysilensScaling.ultimate.adj2, i)} of her ATK to them. This damage triggers at the start of each turn or after one attack by an ally target, up to 8 time(s). And it cannot repeatedly trigger this effect.
+        Hysilens deploys a Zone that reduces enemy targets' ATK by 15.0% and DEF by ${scaleValue(S.HysilensScaling.ultimate.main, i)}, and deals Physical DMG equal to ${scaleValue(S.HysilensScaling.ultimate.adj, i)} of Hysilens's ATK to all enemies.
+        For every 1 instance of DoT taken by an enemy target within the Zone, Hysilens deals Physical DoT equal to ${scaleValue(S.HysilensScaling.ultimate.adj2, i)} of her ATK to them. This damage triggers at the start of each turn or after one attack by an ally target, up to 8 time(s). And it cannot repeatedly trigger this effect.
         The Zone lasts for 3 turn(s) and this duration decreases by 1 at the start of this unit's every turn. When Hysilens gets knocked down, the Zone will also be dispelled.
       `,
     },
@@ -2645,8 +2645,8 @@ const Hysilens: Character = {
 
       description: (i) => `
         When an ally target attacks, there is a 100% base chance for Hysilens to inflict the hit enemy target with one of the following states: Wind Shear, Bleed, Burn, or Shock. Priority is given to inflicting a different state.
-        While in the Wind Shear/Burn/Shock state, at the start of each turn, the enemy target takes Wind/Fire/Lightning DoT equal to ${scaleValue(HysilensScaling.talent.main, i)} of Hysilens's ATK for 2 turn(s).
-        While in the Bleed state, at the start of each turn, the enemy target takes Physical DoT equal to 20.0% of their Max HP, up to ${scaleValue(HysilensScaling.talent.adj, i)} of Hysilens's ATK, lasting for 2 turn(s).
+        While in the Wind Shear/Burn/Shock state, at the start of each turn, the enemy target takes Wind/Fire/Lightning DoT equal to ${scaleValue(S.HysilensScaling.talent.main, i)} of Hysilens's ATK for 2 turn(s).
+        While in the Bleed state, at the start of each turn, the enemy target takes Physical DoT equal to 20.0% of their Max HP, up to ${scaleValue(S.HysilensScaling.talent.adj, i)} of Hysilens's ATK, lasting for 2 turn(s).
       `,
     },
         technique: {
@@ -2757,6 +2757,196 @@ const Hysilens: Character = {
     },
 };
 
+const Rin: Character = {
+  name: "Rin",
+  path: Paths.Erudition,
+  element: Elements.Quantum,
+  world: Worlds.AnotherWorld,
+  image: CA.RinImg,
+  eidolons: Eidolons.RinEidolons,
+  pfp: CA.RinPfp,
+
+  baseATK: 698,
+  baseDEF: 460,
+  baseHP: 1047,
+  baseSPD: 102,
+  aggro: 75,
+  dupe: 0,
+
+  traces: {
+    attack: {
+      id: "attack",
+      name: "Basic ATK: Bajiquan",
+      type: "basic",
+      level: "1/7",
+      icon: CA.RinBasicATK,
+
+      description: (i) => `
+        Deals Quantum DMG equal to ${scaleValue(S.RinScaling.attack, i)} of Rin Tohsaka's ATK to one designated enemy.
+      `,
+    },
+
+    skill: {
+      id: "skill",
+      name: "Skill: Jeweled Sword Zelretch",
+      type: "skill",
+      level: "1/12",
+      icon: CA.RinSkill,
+
+      description: (i) => `
+        Deals Quantum DMG equal to ${scaleValue(S.RinScaling.skill.main, i)} of Rin Tohsaka's ATK to one designated enemy.<br><br>
+        <b>Second Magic Experiment</b><br>
+        Deals Quantum DMG equal to ${scaleValue(S.RinScaling.skill.adj, i)} of Rin Tohsaka's ATK to all enemies. 
+        Then, consumes 3 "Gem Energy" to additionally deal Quantum DMG equal to ${scaleValue(S.RinScaling.skill.adj2, i)} of Rin Tohsaka's ATK to one random enemy target. 
+        This repeats until "Gem Energy" is less than 3 or there are no enemy targets with current HP greater than 0. Can repeat up to 33 cycle(s). 
+        When used, if the current Skill Points are greater than 2, consumes Skill Points down to 2, and for each Point consumed, immediately gains 2 "Gem Energy."
+      `,
+    },
+
+    ultimate: {
+      id: "ultimate",
+      name: "Ultimate: An Gal Ta Ki Gal Šè",
+      type: "ultimate",
+      level: "1/12",
+      icon: CA.RinUltimate,
+
+      description: (i) => `
+        <b>Energy: 110</b><br>
+
+        Deals Quantum DMG equal to ${scaleValue(S.RinScaling.ultimate.main, i)} of Rin Tohsaka's ATK to one designated enemy, 
+        and Quantum DMG equal to ${scaleValue(S.RinScaling.ultimate.adj, i)} of Rin Tohsaka's ATK to other enemy targets. 
+        When used, recovers 1 Skill Point(s) for allies, and increases the DMG taken by all enemies by ${scaleValue(S.RinScaling.ultimate.adj2, i)}, 
+        lasting for 3 turn(s).
+      `,
+    },
+
+    talent: {
+      id: "talent",
+      name: "Talent: Gem Magecraft",
+      type: "talent",
+      level: "1/12",
+      icon: CA.RinTalent,
+
+      description: (i) => `
+        When entering combat, gains 20 "Gem Energy." When an ally target consumes or recovers Skill Points, 
+        increases their CRIT DMG by ${scaleValue(S.RinScaling.talent.main, i)} for 2 turn(s). For every 1 Skill Point consumed or recovered, Rin Tohsaka gains 1 "Gem Energy." 
+        If Rin Tohsaka holds 15 or more "Gem Energy," or if the current Skill Points are 7 or more, her Skill is enhanced to "Second Magic Experiment."<br><br>
+        <b>Freeform Tohsaka Style</b><br>
+        After Archer uses his Skill "Caladbolg II: Fake Spiral Sword" to attack, 
+        if Skill Points are 3 or fewer or if "Caladbolg II: Fake Spiral Sword" has been actively used 5 times during the current "Circuit Connection" state, 
+        and the Joint Follow-Up ATK from "Freeform Tohsaka Style" has not been triggered, Rin Tohsaka and Archer will launch Joint Follow-Up ATK on all enemies, 
+        dealing Quantum DMG equal to ${scaleValue(S.RinScaling.talent.adj, i)}% of Rin Tohsaka's ATK and ${scaleValue(S.RinScaling.talent.adj2, i)} of Archer's ATK respectively, and recovering 4 Skill Point(s) for allies. 
+        This Joint Follow-Up ATK can only trigger once. The trigger count resets when Rin Tohsaka's turn ends.
+      `,
+    },
+        technique: {
+            id: "technique",
+            name: "Technique: Conversion Charge",
+            type: "technique",
+            level: "1/1",
+            icon: CA.RinTechnique,
+            description: "After using Technique, creates a Special Dimension that lasts for 20 seconds and automatically moves forward. Enemies within the Special Dimension enter the \"Soulstruck\" state. \"Soulstruck\" enemies will not attack ally targets and will follow the dimension while it persists. After entering combat with \"Soulstruck\" enemies, there is a 100% base chance to inflict each enemy target with 2 of the following states: Wind Shear/Bleed/Burn/Shock, all of which are equivalent to those provided by Hysilens's Talent effect. Only 1 Dimension Effect created by allies can exist at the same time."
+        },
+
+        // --- Pasivas ---
+        b1: {
+            id: "b1",
+            name: "Inbound Prosperity",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.InboundProsperity,
+            description: "When Rin Tohsaka uses Ultimate, gains 12 \"Gem Energy.\"",
+        },
+        b2: {
+            id: "b2",
+            name: "Elegant Conduct",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.ElegantConduct,
+            description: "While Rin Tohsaka is on the field, additionally increases the upper limit of Skill Points by 2. When entering combat, Rin Tohsaka's ATK increases by 150%, and Quantum RES PEN increases by 15%. If Archer is in the team, Archer also gains this effect.",
+        },
+        b3: {
+            id: "b3",
+            name: "Ladylike Poise",
+            type: "bonus",
+            level: "1/1",
+            icon: CA.LadylikePoise,
+            description: "When entering combat or after using Enhanced Skill, increases Rin Tohsaka's SPD by 20%, lasting for 3 turn(s).",
+        },
+        // --- Stats Nodes (Nodos Pequeños) ---
+        s1: {
+            id: "s1",
+            name: "DMG Boost: Quantum",
+            type: "stat",
+            icon: CA.QuantumBoost,
+            description: "Quantum DMG Increases by: <b><u>4.8%</u></b>",
+        },
+        s2: {
+            id: "s2",
+            name: "ATK Boost",
+            type: "stat",
+            icon: CA.ATK,
+            description: "Quantum DMG Increases by: <b><u>8.0%</u></b>",
+        },
+        s3: {
+            id: "s3",
+            name: "DMG Boost: Quantum",
+            type: "stat",
+            icon: CA.QuantumBoost,
+            description: "Quantum DMG Increases by: <b><u>3.2%</u></b>",
+        },
+        s4: {
+            id: "s4",
+            name: "CRIT DMG Boost",
+            type: "stat",
+            icon: CA.CritDMG,
+            description: "CRIT DMG Increases by: <b><u>8.0%</u></b>",
+        },
+        s5: {
+            id: "s5",
+            name: "ATK Boost",
+            type: "stat",
+            icon: CA.ATK,
+            description: "AKT Increases by: <b><u>4.0%</u></b>",
+        },
+        s6: {
+            id: "s6",
+            name: "CRIT DMG Boost",
+            type: "stat",
+            icon: CA.CritDMG,
+            description: "CRIT DMG Increases by: <b><u>8.0%</u></b>",
+        },
+        s7: {
+            id: "s7",
+            name: "CRIT DMG Boost",
+            type: "stat",
+            icon: CA.CritDMG,
+            description: "CRIT DMG Increases by: <b><u>5.3%</u></b>",
+        },
+        s8: {
+            id: "s8",
+            name: "ATK Boost",
+            type: "stat",
+            icon: CA.ATK,
+            description: "AKT Increases by: <b><u>6.0%</u></b>",
+        },
+        s9: {
+            id: "s9",
+            name: "CRIT DMG Boost",
+            type: "stat",
+            icon: CA.CritDMG,
+            description: "CRIT DMG Increases by: <b><u>5.3%</u></b>",
+        },
+        s10: {
+            id: "s10",
+            name: "CRIT DMG Boost",
+            type: "stat",
+            icon: CA.CritDMG,
+            description: "CRIT DMG Increases by: <b><u>10.7%</u></b>",
+        },
+    },
+};
+
 // Nihility
 Characters.push(Cipher);
 Characters.push(Hysilens);
@@ -2776,3 +2966,5 @@ Characters.push(RbnSummeretto);
 Characters.push(Topaz);
 // Preservation
 Characters.push(Aventurine);
+// Erudition
+Characters.push(Rin);

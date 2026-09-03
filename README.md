@@ -30,17 +30,17 @@ El proyecto se encuentra en una fase muy temprana de desarrollo.
 
 ### Personajes
 
-Actualmente solamente hay **11 personajes disponibles**.
+Actualmente solamente hay **12 personajes disponibles**.
 
 ### Conos de Luz
 
-Actualmente hay **14 Conos de Luz implementados**.
+Actualmente hay **15 Conos de Luz implementados**.
 
 ---
 
 ## ❌ Funciones todavía no disponibles
 
-Las siguientes funcionalidades **todavía no han sido creadas**:
+Las siguientes funcionalidades **estan en desarrollo (X = Implementada)**:
 
 * [X] Eidolones (Recien implementada)
 * [ ] Cálculo de DMG

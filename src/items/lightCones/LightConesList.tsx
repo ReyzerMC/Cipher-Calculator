@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import { LiesDanceOnTheBreezeImg, FlameOfBloodBlazeMyPathImg, SummerRidesTheSurfImg, PastSelfInMirrorImg, ScentAloneStaysTrueImg, MakeFarewellsMoreBeautifulImg, WorrisomeBlissfulImg, InherentlyUnjustDestinyImg, WhereaboutsShouldDreamsRestImg, RiseAndSingImg, WhyDoesTheOceanSingImg } from "../../assets/lightcones/index";
+import * as LA from "../../assets/lightcones/index";
 
 export const LightCones : LightCone[] = [];
 
@@ -8,7 +8,7 @@ const LiesDanceOnTheBreeze : LightCone = {
     name: "Lies Dance On The Breeze",
     path: Paths.Nihility,
     description: Texts.LiesDanceOnTheBreezeTextENG,
-    image: LiesDanceOnTheBreezeImg,
+    image: LA.LiesDanceOnTheBreezeImg,
 
     baseHP: 952,
     baseATK: 582,
@@ -20,7 +20,7 @@ const FlameOfBlood_BlazeMyPath : LightCone = {
     name: "Flame of Blood, Blaze My Path",
     path: Paths.Destruction,
     description: Texts.FlameOfBloodBlazeMyPathTextENG,
-    image: FlameOfBloodBlazeMyPathImg,
+    image: LA.FlameOfBloodBlazeMyPathImg,
 
     baseHP: 1375,
     baseATK: 476,
@@ -68,7 +68,7 @@ const SummerRidesTheSurf : LightCone = {
     name: "Summer Rides the Surf",
     path: Paths.Elation,
     description: Texts.SummerRidesTheSurfENG,
-    image: SummerRidesTheSurfImg,
+    image: LA.SummerRidesTheSurfImg,
 
     baseHP: 1058,
     baseATK: 582,
@@ -80,7 +80,7 @@ const PastSelfInMirror : LightCone = {
     name: "Past Self in Mirror",
     path: Paths.Harmony,
     description: Texts.PastSelfInMirrorENG,
-    image: PastSelfInMirrorImg,
+    image: LA.PastSelfInMirrorImg,
 
     baseHP: 1058,
     baseATK: 529,
@@ -92,7 +92,7 @@ const ScentAloneStaysTrue : LightCone = {
     name: "Scent Alone Stays True",
     path: Paths.Abundance,
     description: Texts.ScentAloneStaysTrueENG,
-    image: ScentAloneStaysTrueImg,
+    image: LA.ScentAloneStaysTrueImg,
 
     baseHP: 1058,
     baseATK: 529,
@@ -104,7 +104,7 @@ const MakeFarewellsMoreBeautiful : LightCone = {
     name: "Make Farewells More Beautiful",
     path: Paths.Remembrance,
     description: Texts.MakeFarewellsMoreBeautifulENG,
-    image: MakeFarewellsMoreBeautifulImg,
+    image: LA.MakeFarewellsMoreBeautifulImg,
 
     baseHP: 1270,
     baseATK: 529,
@@ -116,7 +116,7 @@ const WorrisomeBlissful : LightCone = {
     name: "Worrisome, Blissful",
     path: Paths.Hunt,
     description: Texts.WorrisomeBlissfulENG,
-    image: WorrisomeBlissfulImg,
+    image: LA.WorrisomeBlissfulImg,
 
     baseHP: 1058,
     baseATK: 582,
@@ -128,7 +128,7 @@ const InherentlyUnjustDestiny : LightCone = {
     name: "Inherently Unjust Destiny",
     path: Paths.Preservation,
     description: Texts.InherentlyUnjustDestinyENG,
-    image: InherentlyUnjustDestinyImg,
+    image: LA.InherentlyUnjustDestinyImg,
 
     baseHP: 1058,
     baseATK: 423,
@@ -140,7 +140,7 @@ const WhereaboutsShouldDreamsRest : LightCone = {
     name: "Whereabouts Should Dreams Rest",
     path: Paths.Destruction,
     description: Texts.WhereaboutsShouldDreamsRestENG,
-    image: WhereaboutsShouldDreamsRestImg,
+    image: LA.WhereaboutsShouldDreamsRestImg,
 
     baseHP: 1164,
     baseATK: 476,
@@ -152,7 +152,7 @@ const RiseAndSing : LightCone = {
     name: "Rise and Sing",
     path: Paths.Remembrance,
     description: Texts.RiseAndSingENG,
-    image: RiseAndSingImg,
+    image: LA.RiseAndSingImg,
 
     baseHP: 1164,
     baseATK: 582,
@@ -164,11 +164,23 @@ const WhyDoesTheOceanSing : LightCone = {
     name: "Why Does the Ocean Sing",
     path: Paths.Nihility,
     description: Texts.WhyDoesTheOceanSingENG,
-    image: WhyDoesTheOceanSingImg,
+    image: LA.WhyDoesTheOceanSingImg,
 
     baseHP: 952,
     baseATK: 635,
     baseDEF: 463,
+    dupe: 1,
+};
+
+const FlickeringStars : LightCone = {
+    name: "Flickering Stars",
+    path: Paths.Erudition,
+    description: Texts.FlickeringStarsENG,
+    image: LA.FlickeringStarsImg,
+
+    baseHP: 856,
+    baseATK: 635,
+    baseDEF: 529,
     dupe: 1,
 };
 
@@ -194,3 +206,5 @@ LightCones.push(MakeFarewellsMoreBeautiful);
 LightCones.push(RiseAndSing);
 // Preservation
 LightCones.push(InherentlyUnjustDestiny);
+// Erudition
+LightCones.push(FlickeringStars);

@@ -30,17 +30,17 @@ The project is currently in a very early stage of development.
 
 ### Characters
 
-There are currently only **11 characters available**.
+There are currently only **12 characters available**.
 
 ### Light Cones
 
-There are currently **14 Light Cones implemented**.
+There are currently **15 Light Cones implemented**.
 
 ---
 
 ## ❌ Features Not Yet Available
 
-The following features **have not been created yet**:
+The following features **in development (X = Implemented)**:
 
 * [X] Eidolons (Recently implemented)
 * [ ] DMG Calculation

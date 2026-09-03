@@ -216,6 +216,24 @@ import HysilensE4 from "./Hysilens/eidolons/HysilensE4.webp";
 import HysilensE5 from "./Hysilens/eidolons/HysilensE5.webp";
 import HysilensE6 from "./Hysilens/eidolons/HysilensE6.webp";
 
+// Rin
+import RinImg from "./Rin.webp";
+import RinPfp from "./Rin/pfp.webp";
+import RinBasicATK from "./Rin/BasicATK.webp";
+import RinSkill from "./Rin/Skill.webp";
+import RinUltimate from "./Rin/Ultimate.webp";
+import RinTalent from "./Rin/Talent.webp";
+import RinTechnique from "./Rin/Technique.webp";
+import ElegantConduct from "./Rin/ElegantConduct.webp";
+import LadylikePoise from "./Rin/LadylikePoise.webp";
+import InboundProsperity from "./Rin/InboundProsperity.webp";
+import RinE1 from "./Rin/eidolons/RinE1.webp";
+import RinE2 from "./Rin/eidolons/RinE2.webp";
+import RinE3 from "./Rin/eidolons/RinE3.webp";
+import RinE4 from "./Rin/eidolons/RinE4.webp";
+import RinE5 from "./Rin/eidolons/RinE5.webp";
+import RinE6 from "./Rin/eidolons/RinE6.webp";
+
 export {
     //Global
     SPD,
@@ -456,4 +474,24 @@ export {
     HysilensE4,
     HysilensE5,
     HysilensE6,
+};
+
+export {
+    // Rin
+    RinImg,
+    RinPfp,
+    RinBasicATK,
+    RinSkill,
+    RinUltimate,
+    RinTalent,
+    RinTechnique,
+    ElegantConduct,
+    LadylikePoise,
+    InboundProsperity,
+    RinE1,
+    RinE2,
+    RinE3,
+    RinE4,
+    RinE5,
+    RinE6,
 };

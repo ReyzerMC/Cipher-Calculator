@@ -363,3 +363,36 @@ export const HysilensEidolons: Eidolon = {
         image: CA.HysilensE6,
     },
 };
+
+export const RinEidolons: Eidolon = {
+    e1: {
+        title: "Zelretch's Apprentice",
+        desc: "If one instance of the Enhanced Skill consumes 30 or more \"Gem Energy,\" Rin Tohsaka gains \"Shadow Gem\" equal to the amount of \"Gem Energy\" consumed. While holding \"Shadow Gem,\" enhances Skill to \"Second Magic Experiment.\" The Enhanced Skill consumes all \"Shadow Gem,\" does not trigger the effect that converts Skill Points into \"Gem Energy,\" and does not consume \"Gem Energy.\"",
+        image: CA.RinE1,
+    },
+    e2: {
+        title: "Dimensional Traveler",
+        desc: "Rin Tohsaka's Skill DMG dealt increases by 30%. While Rin Tohsaka is on the field, Skill DMG dealt by all allies becomes 130% of the original DMG.",
+        image: CA.RinE2,
+    },
+    e3: {
+        title: "Holy Grail War: Victory Memorial",
+        desc: "Skill Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10.",
+        image: CA.RinE3,
+    },
+    e4: {
+        title: "Red Devil: Triple Speed",
+        desc: "When the CRIT DMG boost effect from the Talent \"Gem Magecraft\" applies to Rin Tohsaka, the effect can stack, up to 2 time(s).",
+        image: CA.RinE4,
+    },
+    e5: {
+        title: "Goddess of Venus's Favor",
+        desc: "Ultimate Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15.",
+        image: CA.RinE5,
+    },
+    e6: {
+        title: "Nailed It This Time!",
+        desc: "Rin Tohsaka's All-Type RES PEN increases by 20%. When using Ultimate, gains 24 \"Gem Energy\" and 1 extra turn.",
+        image: CA.RinE6,
+    },
+};
