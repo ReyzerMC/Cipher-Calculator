@@ -12,17 +12,6 @@ import {
   RemembranceTreeLayout
 } from "./types/hsr";
 import "./TracesMenu.css";
-import {
-  abundanceImg,
-  destructionImg,
-  elationImg,
-  eruditionImg,
-  harmonyImg,
-  huntImg,
-  nihilityImg,
-  preservationImg,
-  remembranceImg
-} from "./assets/paths";
 
 interface TracesMenuProps {
   path: string;
@@ -32,6 +21,14 @@ interface TracesMenuProps {
   onLevelChange?: (nodeId: string, level: number, index: number) => void;
 }
 
+// Codigo duplicado, piensa en sacarlo en utils. Mira otras partes,
+// Lo mas probable es que tengas otras funciones que puedas sacar para reutilizar.
+// Tambien mira entre los menus de eidolons, traces y la propia app para mirar codigo html duplicado
+//
+// Normalmente, cuando haces una aplicacion en front end, quieres que toda la aplicacion y pagina
+// se vea igual (mismos espacios, colores, etc), vaya que quieres que parezca la misma aplicacion y no
+// un frankenstein. Para eso se hace una carpeta componentes/ donde pones los componentes que quieres reutilizar
+// Por ejemplo, el que te he hecho: Modal (src/components/Modal.tsx, usado en App.tsx).
 const useTraceScale = () => {
   const [scale, setScale] = useState(1.0);
 
@@ -71,7 +68,7 @@ export const TracesMenu: React.FC<TracesMenuProps> = ({
   onLevelChange
 }) => {
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
-  
+
   // Diccionario para almacenar el nivel dinámico actual de cada nodo (id -> nivel)
   const [nodeLevels, setNodeLevels] = useState<Record<string, number>>({});
 
@@ -92,28 +89,28 @@ export const TracesMenu: React.FC<TracesMenuProps> = ({
   };
 
   const getLayoutConnections = () => {
-    if (bgWatermark === nihilityImg) return NihilityTreeLayout.connections;
-    if (bgWatermark === destructionImg) return DestructionTreeLayout.connections;
-    if (bgWatermark === elationImg) return ElationTreeLayout.connections;
-    if (bgWatermark === harmonyImg) return HarmonyTreeLayout.connections;
-    if (bgWatermark === abundanceImg) return AbundanceTreeLayout.connections;
-    if (bgWatermark === remembranceImg) return RemembranceTreeLayout.connections;
-    if (bgWatermark === huntImg) return HuntTreeLayout.connections;
-    if (bgWatermark === preservationImg) return PreservationTreeLayout.connections;
-    if (bgWatermark === eruditionImg) return EruditionTreeLayout.connections;
+    if (path === "Nihility") return NihilityTreeLayout.connections;
+    if (path === "Destruction") return DestructionTreeLayout.connections;
+    if (path === "Elation") return ElationTreeLayout.connections;
+    if (path === "Harmony") return HarmonyTreeLayout.connections;
+    if (path === "Abundance") return AbundanceTreeLayout.connections;
+    if (path === "Remembrance") return RemembranceTreeLayout.connections;
+    if (path === "Hunt") return HuntTreeLayout.connections;
+    if (path === "Preservation") return PreservationTreeLayout.connections;
+    if (path === "Erudition") return EruditionTreeLayout.connections;
     return [];
   };
 
   const getLayoutPositions = () => {
-    if (bgWatermark === nihilityImg) return NihilityTreeLayout.positions;
-    if (bgWatermark === destructionImg) return DestructionTreeLayout.positions;
-    if (bgWatermark === elationImg) return ElationTreeLayout.positions;
-    if (bgWatermark === harmonyImg) return HarmonyTreeLayout.positions;
-    if (bgWatermark === abundanceImg) return AbundanceTreeLayout.positions;
-    if (bgWatermark === remembranceImg) return RemembranceTreeLayout.positions;
-    if (bgWatermark === huntImg) return HuntTreeLayout.positions;
-    if (bgWatermark === preservationImg) return PreservationTreeLayout.positions;
-    if (bgWatermark === eruditionImg) return EruditionTreeLayout.positions;
+    if (path === "Nihility") return NihilityTreeLayout.positions;
+    if (path === "Destruction") return DestructionTreeLayout.positions;
+    if (path === "Elation") return ElationTreeLayout.positions;
+    if (path === "Harmony") return HarmonyTreeLayout.positions;
+    if (path === "Abundance") return AbundanceTreeLayout.positions;
+    if (path === "Remembrance") return RemembranceTreeLayout.positions;
+    if (path === "Hunt") return HuntTreeLayout.positions;
+    if (path === "Preservation") return PreservationTreeLayout.positions;
+    if (path === "Erudition") return EruditionTreeLayout.positions;
     return {};
   };
 
@@ -122,18 +119,18 @@ export const TracesMenu: React.FC<TracesMenuProps> = ({
 
   // Datos para el nodo seleccionado actualmente
   const currentMaxLevel = selectedNode
-  ? getMaxLevel(selectedNode.level)
-  : 1;
+    ? getMaxLevel(selectedNode.level)
+    : 1;
 
-const currentLevel = selectedNodeId
-  ? (nodeLevels[selectedNodeId] ?? 1)
-  : 1;
+  const currentLevel = selectedNodeId
+    ? (nodeLevels[selectedNodeId] ?? 1)
+    : 1;
 
-const currentDescription = selectedNode
-  ? typeof selectedNode.description === "function"
-    ? selectedNode.description(currentLevel - 1)
-    : selectedNode.description
-  : "";
+  const currentDescription = selectedNode
+    ? typeof selectedNode.description === "function"
+      ? selectedNode.description(currentLevel - 1)
+      : selectedNode.description
+    : "";
 
   return (
     <div className="hsr-traces-container">
@@ -210,8 +207,8 @@ const currentDescription = selectedNode
               {selectedNode.type === "bonus"
                 ? "Bonus Ability"
                 : selectedNode.type === "stat"
-                ? "Stat Bonus"
-                : "Ability"}
+                  ? "Stat Bonus"
+                  : "Ability"}
             </span>
             <h3 className="hsr-info-title">{selectedNode.name}</h3>
 

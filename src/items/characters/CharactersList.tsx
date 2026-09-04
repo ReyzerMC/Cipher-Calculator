@@ -1,6 +1,6 @@
 import type { Character } from '../../types/hsr';
 import { Paths, Elements, Worlds } from "../item/ResourcesLists";
-import * as CA from '../../assets/characters/index';
+import { charSplash, charPfp, charIcon, statIcon } from '../../utils/assets';
 import * as S from './scalingData';
 import * as Eidolons from './eidolons/Eidolons';
 
@@ -19,8 +19,8 @@ const Cipher: Character = {
   path: Paths.Nihility,
   element: Elements.Quantum,
   world: Worlds.Amphoreus,
-  image: CA.cipherImg,
-  pfp: CA.cipherPfp,
+  image: charSplash("Cipher"),
+  pfp: charPfp("Cipher"),
   eidolons: Eidolons.CipherEidolons,
 
   baseATK: 640,
@@ -36,7 +36,7 @@ const Cipher: Character = {
       name: "Basic ATK: Oops, a Missed Catch",
       type: "basic",
       level: "1/7",
-      icon: CA.CipherBasicATK,
+      icon: charIcon("Cipher", "BasicATK"),
 
       description: (i) => `
         Deals Quantum DMG equal to
@@ -50,7 +50,7 @@ const Cipher: Character = {
       name: "Skill: Hey, Jackpot for the Taking",
       type: "skill",
       level: "1/12",
-      icon: CA.CipherSkill,
+      icon: charIcon("Cipher", "Skill"),
 
       description: (i) => `
         Has a 120% base chance to Weaken one designated enemy and its adjacent targets
@@ -70,7 +70,7 @@ const Cipher: Character = {
       name: "Ultimate: Yours Truly, Kitty Phantom Thief!",
       type: "ultimate",
       level: "1/12",
-      icon: CA.CipherUltimate,
+      icon: charIcon("Cipher", "Ultimate"),
 
       description: (i) => `
         <b>Energy: 130</b><br>
@@ -90,7 +90,7 @@ const Cipher: Character = {
       name: "Talent: The Hospitable Dolosian",
       type: "talent",
       level: "1/12",
-      icon: CA.CipherTalent,
+      icon: charIcon("Cipher", "Talent"),
 
       description: (i) => `
         After the "Patron" gets attacked by other ally targets,
@@ -105,7 +105,7 @@ const Cipher: Character = {
             name: "Technique: Puss in Boots",
             type: "technique",
             level: "1/1",
-            icon: CA.CipherTechnique,
+            icon: charIcon("Cipher", "Technique"),
             description: "Gains \"Zagreus's Blessing\" that lasts for 15 second(s). During this time, Cipher will be undetectable by enemies and her movement speed increases by 50%. When approaching an enemy in the overworld/Simulated Universe/Divergent Universe, can immediately gain a random Consumable. Consumables can be gained this way for up to 50 time(s) in each Earth day. When entering battle with \"Zagreus's Blessing\" active, deals Quantum DMG equal to 100% of Cipher's ATK to all enemies. And the tallied amount Cipher gains from this instance of DMG increases by 200%."
         },
 
@@ -115,7 +115,7 @@ const Cipher: Character = {
             name: "Sleight of Sky",
             type: "bonus",
             level: "1/1",
-            icon: CA.SleightOfSky,
+            icon: charIcon("Cipher", "SleightOfSky"),
             description: "Increases the CRIT DMG dealt by the Talent's Follow-Up ATK by 100%. When Cipher is on the battlefield, DMG received by all enemy targets increases by 40%.",
         },
         b2: {
@@ -123,7 +123,7 @@ const Cipher: Character = {
             name: "Empyrean Strides",
             type: "bonus",
             level: "1/1",
-            icon: CA.EmpyreanStrides,
+            icon: charIcon("Cipher", "EmpyreanStrides"),
             description: "When Cipher's SPD is higher than or equal to 140/170, CRIT Rate increases by 25%/50%, and the gained tally increases by 50%/100%.",
         },
         b3: {
@@ -131,7 +131,7 @@ const Cipher: Character = {
             name: "300 Rogues",
             type: "bonus",
             level: "1/1",
-            icon: CA.Rogues,
+            icon: charIcon("Cipher", "300Rogues"),
             description: "Cipher can tally 8% of the non-True DMG dealt by ally targets to the enemy targets other than the \"Patron.\" Overflow DMG is not tallied.",
         },
         // --- Stats Nodes (Nodos Pequeños) ---
@@ -139,70 +139,70 @@ const Cipher: Character = {
             id: "s1",
             name: "Effect Hit Rate Boost",
             type: "stat",
-            icon: CA.EffectHitRate,
+            icon: statIcon("EffectHitRate"),
             description: "Effect Hit Rate Increases by: <b><u>6.0%</u></b>",
         },
         s2: {
             id: "s2",
             name: "DMG Boost: Quantum",
             type: "stat",
-            icon: CA.QuantumBoost,
+            icon: statIcon("QuantumBoost"),
             description: "Quantum DMG Increases by: <b><u>6.4%</u></b>",
         },
         s3: {
             id: "s3",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>3</u></b>",
         },
         s4: {
             id: "s4",
             name: "DMG Boost: Quantum",
             type: "stat",
-            icon: CA.QuantumBoost,
+            icon: statIcon("QuantumBoost"),
             description: "Quantum DMG Increases by: <b><u>4.8%</u></b>",
         },
         s5: {
             id: "s5",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>3</u></b>",
         },
         s6: {
             id: "s6",
             name: "DMG Boost: Quantum",
             type: "stat",
-            icon: CA.QuantumBoost,
+            icon: statIcon("QuantumBoost"),
             description: "Quantum DMG Increases by: <b><u>3.2%</u></b>",
         },
         s7: {
             id: "s7",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>2</u></b>",
         },
         s8: {
             id: "s8",
             name: "Effect Hit Rate Boost",
             type: "stat",
-            icon: CA.EffectHitRate,
+            icon: statIcon("EffectHitRate"),
             description: "Effect Hit Rate Increases by: <b><u>4.0%</u></b>",
         },
         s9: {
             id: "s9",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>2</u></b>",
         },
         s10: {
             id: "s10",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>4</u></b>",
         },
     },
@@ -214,8 +214,8 @@ const Mydei: Character = {
     element: Elements.Imaginary,
     world: Worlds.Amphoreus,
     eidolons: Eidolons.MydeiEidolons,
-    image: CA.MydeiImg,
-    pfp: CA.MydeiPfp,
+    image: charSplash("Mydei"),
+    pfp: charPfp("Mydei"),
 
     baseATK: 426,
     baseDEF: 194,
@@ -230,7 +230,7 @@ const Mydei: Character = {
             name: "Basic ATK: Vow of Voyage",
             type: "basic",
             level: "7/7",
-            icon: CA.MydeiBasicATK,
+            icon: charIcon("Mydei", "BasicATK"),
 
             description: (i) => `
                 Deals Imaginary DMG equal to
@@ -244,7 +244,7 @@ const Mydei: Character = {
             name: "Skill: Deaths are Legion, Regrets are None",
             type: "skill",
             level: "12/12",
-            icon: CA.MydeiSkill,
+            icon: charIcon("Mydei", "Skill"),
 
             description: (i) => `
                 <b>Deaths are Legion, Regrets are None</b><br>
@@ -296,7 +296,7 @@ const Mydei: Character = {
             name: "Ultimate: Throne of Bones",
             type: "ultimate",
             level: "12/12",
-            icon: CA.MydeiUltimate,
+            icon: charIcon("Mydei", "Ultimate"),
 
             description: (i) => `
                 <b>Energy: 160</b><br>
@@ -325,7 +325,7 @@ const Mydei: Character = {
             name: "Talent: Blood for Blood",
             type: "talent",
             level: "12/12",
-            icon: CA.MydeiTalent,
+            icon: charIcon("Mydei", "Talent"),
 
             description: (i) => `
                 For each 1% of HP lost, accumulates 1 point of Charge
@@ -356,7 +356,7 @@ const Mydei: Character = {
             name: "Technique: Cage of Broken Lance",
             type: "technique",
             level: "1/1",
-            icon: CA.MydeiTechnique,
+            icon: charIcon("Mydei", "Technique"),
 
             description: `
                 After using Technique, pulls in enemies within a certain area
@@ -379,7 +379,7 @@ const Mydei: Character = {
             name: "Bloodied Chiton",
             type: "bonus",
             level: "1/1",
-            icon: CA.BloodiedChiton,
+            icon: charIcon("Mydei", "BloodiedChiton"),
 
             description: `
                 When battle starts, if Mydei's Max HP exceeds 4000,
@@ -396,7 +396,7 @@ const Mydei: Character = {
             name: "Earth and Water",
             type: "bonus",
             level: "1/1",
-            icon: CA.EarthAndWater,
+            icon: charIcon("Mydei", "EarthAndWater"),
 
             description: `
                 During the "Vendetta" state, Mydei will not exit the
@@ -411,7 +411,7 @@ const Mydei: Character = {
             name: "Thirty Tyrants",
             type: "bonus",
             level: "1/1",
-            icon: CA.ThirtyTyrants,
+            icon: charIcon("Mydei", "ThirtyTyrants"),
 
             description: `
                 While in the "Vendetta" state, Mydei is immune to
@@ -425,7 +425,7 @@ const Mydei: Character = {
             id: "s1",
             name: "HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
 
             description: `
                 Max HP Increases by: <b><u>8.0%</u></b>
@@ -436,7 +436,7 @@ const Mydei: Character = {
             id: "s2",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
 
             description: `
                 SPD Increases by: <b><u>3</u></b>
@@ -447,7 +447,7 @@ const Mydei: Character = {
             id: "s3",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
 
             description: `
                 CRIT DMG Increases by: <b><u>10.7%</u></b>
@@ -458,7 +458,7 @@ const Mydei: Character = {
             id: "s4",
             name: "HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
 
             description: `
                 Max HP Increases by: <b><u>6.0%</u></b>
@@ -469,7 +469,7 @@ const Mydei: Character = {
             id: "s5",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
 
             description: `
                 CRIT DMG Increases by: <b><u>8.0%</u></b>
@@ -480,7 +480,7 @@ const Mydei: Character = {
             id: "s6",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
 
             description: `
                 CRIT DMG Increases by: <b><u>8.0%</u></b>
@@ -491,7 +491,7 @@ const Mydei: Character = {
             id: "s7",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
 
             description: `
                 CRIT DMG Increases by: <b><u>5.3%</u></b>
@@ -502,7 +502,7 @@ const Mydei: Character = {
             id: "s8",
             name: "HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
 
             description: `
                 Max HP Increases by: <b><u>4.0%</u></b>
@@ -513,7 +513,7 @@ const Mydei: Character = {
             id: "s9",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
 
             description: `
                 SPD Increases by: <b><u>2</u></b>
@@ -524,7 +524,7 @@ const Mydei: Character = {
             id: "s10",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
 
             description: `
                 CRIT DMG Increases by: <b><u>5.3%</u></b>
@@ -539,9 +539,9 @@ const AventurineWaveflair: Character = {
     path: Paths.Elation,
     element: Elements.Quantum,
     world: Worlds.InterastralPeaceCorporation,
-    image: CA.AvWfImg,
+    image: charSplash("AventurineWaveflair"),
     eidolons: Eidolons.AvWfEidolons,
-    pfp: CA.AvWfPfp,
+    pfp: charPfp("AventurineWaveflair"),
 
     baseATK: 485,
     baseDEF: 606,
@@ -557,7 +557,7 @@ const AventurineWaveflair: Character = {
             name: "Basic ATK: Dead Center, the Torrent Hits",
             type: "basic",
             level: "7/7",
-            icon: CA.AvWfBaseATK,
+            icon: charIcon("AventurineWaveflair", "BasicATK"),
 
             description: (i) =>
                 `Deals Quantum DMG equal to ${
@@ -570,7 +570,7 @@ const AventurineWaveflair: Character = {
             name: "Skill: Kill Shot, the Sands Boil",
             type: "skill",
             level: "12/12",
-            icon: CA.AvWfSkill,
+            icon: charIcon("AventurineWaveflair", "Skill"),
 
             description: (i) =>
                 `Deals Quantum DMG equal to ${
@@ -592,7 +592,7 @@ const AventurineWaveflair: Character = {
             name: "Ultimate: Grand Slam, Crest That High Tide",
             type: "ultimate",
             level: "12/12",
-            icon: CA.AvWfUltimate,
+            icon: charIcon("AventurineWaveflair", "Ultimate"),
 
             description: (i) =>
                 `<b>Energy: 130</b><br>` +
@@ -613,7 +613,7 @@ const AventurineWaveflair: Character = {
             name: "Talent: Ante Up, the Abyss Answers",
             type: "talent",
             level: "12/12",
-            icon: CA.AvWfTalent,
+            icon: charIcon("AventurineWaveflair", "Talent"),
 
             description: (i) =>
                 `The duration of Aventurine • Waveflair's "Certified Banger" ` +
@@ -646,7 +646,7 @@ const AventurineWaveflair: Character = {
             name: "Technique: Make Waves in Still Waters",
             type: "technique",
             level: "1/1",
-            icon: CA.AvWfTechnique,
+            icon: charIcon("AventurineWaveflair", "Technique"),
 
             description:
                 `Moves forward rapidly for a set distance, attacking all enemies ` +
@@ -668,7 +668,7 @@ const AventurineWaveflair: Character = {
             name: "Elation Skill: Cheers! To Summer's Blaze",
             type: "bonus",
             level: "12/12",
-            icon: CA.AvWfElationSkill,
+            icon: charIcon("AventurineWaveflair", "ElationSkill"),
 
             description: (index: number = 11) =>
                 `Deals ${
@@ -706,7 +706,7 @@ const AventurineWaveflair: Character = {
             name: "Party in Perfect Paradise",
             type: "bonus",
             level: "1/1",
-            icon: CA.PartyInPerfectParadise,
+            icon: charIcon("AventurineWaveflair", "PartyInPerfectParadise"),
 
             description:
                 `When SPD is 140 or higher, increases this unit's Elation by 30%. ` +
@@ -720,7 +720,7 @@ const AventurineWaveflair: Character = {
             name: "Revel in Raging Tides",
             type: "bonus",
             level: "1/1",
-            icon: CA.RevelInRagingTides,
+            icon: charIcon("AventurineWaveflair", "RevelInRagingTides"),
 
             description:
                 `At the start of combat, if the team includes an Elation ` +
@@ -745,7 +745,7 @@ const AventurineWaveflair: Character = {
             name: "Sift Through Gilded Dreams",
             type: "bonus",
             level: "1/1",
-            icon: CA.SiftThroughGildedDreams,
+            icon: charIcon("AventurineWaveflair", "SiftThroughGildedDreams"),
 
             description:
                 `Increases CRIT DMG by 48%. ` +
@@ -766,7 +766,7 @@ const AventurineWaveflair: Character = {
             id: "s1",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
 
             description:
                 `CRIT Rate Increases by: <b><u>2.7%</u></b>`
@@ -776,7 +776,7 @@ const AventurineWaveflair: Character = {
             id: "s2",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
 
             description:
                 `CRIT Rate Increases by: <b><u>4.0%</u></b>`
@@ -786,7 +786,7 @@ const AventurineWaveflair: Character = {
             id: "s3",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
 
             description:
                 `SPD Increases by: <b><u>3</u></b>`
@@ -796,7 +796,7 @@ const AventurineWaveflair: Character = {
             id: "s4",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
 
             description:
                 `SPD Increases by: <b><u>2</u></b>`
@@ -806,7 +806,7 @@ const AventurineWaveflair: Character = {
             id: "s5",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
 
             description:
                 `CRIT Rate Increases by: <b><u>5.3%</u></b>`
@@ -816,7 +816,7 @@ const AventurineWaveflair: Character = {
             id: "s6",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
 
             description:
                 `SPD Increases by: <b><u>4</u></b>`
@@ -826,7 +826,7 @@ const AventurineWaveflair: Character = {
             id: "s7",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
 
             description:
                 `CRIT Rate Increases by: <b><u>2.7%</u></b>`
@@ -836,7 +836,7 @@ const AventurineWaveflair: Character = {
             id: "s8",
             name: "Elation Boost",
             type: "stat",
-            icon: CA.ElationStat,
+            icon: statIcon("ElationStat"),
 
             description:
                 `Elation Increases by: <b><u>4.0%</u></b>`
@@ -846,7 +846,7 @@ const AventurineWaveflair: Character = {
             id: "s9",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
 
             description:
                 `CRIT Rate Increases by: <b><u>4.0%</u></b>`
@@ -856,7 +856,7 @@ const AventurineWaveflair: Character = {
             id: "s10",
             name: "Elation Boost",
             type: "stat",
-            icon: CA.ElationStat,
+            icon: statIcon("ElationStat"),
 
             description:
                 `Elation Increases by: <b><u>6.0%</u></b>`
@@ -870,9 +870,9 @@ const Ruanmei: Character = {
     path: Paths.Harmony,
     element: Elements.Ice,
     world: Worlds.HertaSpaceStation,
-    image: CA.RuanmeiImg,
+    image: charSplash("Ruanmei"),
     eidolons: Eidolons.RuanEidolons,
-    pfp: CA.RuanmeiPfp,
+    pfp: charPfp("Ruanmei"),
 
     baseATK: 659,
     baseDEF: 485,
@@ -887,7 +887,7 @@ const Ruanmei: Character = {
             name: "Basic ATK: Threading Fragrance",
             type: "basic",
             level: "7/7",
-            icon: CA.RuanmeiBasicATK,
+            icon: charIcon("Ruanmei", "BasicATK"),
 
             description: (i) => `
                 Deals Ice DMG equal to
@@ -901,7 +901,7 @@ const Ruanmei: Character = {
             name: "Skill: String Sings Slow Swirls",
             type: "skill",
             level: "12/12",
-            icon: CA.RuanmeiSkill,
+            icon: charIcon("Ruanmei", "Skill"),
 
             description: (i) => `
                 After using her Skill, Ruan Mei gains Overtone,
@@ -921,7 +921,7 @@ const Ruanmei: Character = {
             name: "Ultimate: Petals to Stream, Repose in Dream",
             type: "ultimate",
             level: "12/12",
-            icon: CA.RuanmeiUltimate,
+            icon: charIcon("Ruanmei", "Ultimate"),
 
             description: (i) => `
                 <b>Energy: 130</b><br>
@@ -951,7 +951,7 @@ const Ruanmei: Character = {
             name: "Talent: Somatotypical Helix",
             type: "talent",
             level: "12/12",
-            icon: CA.RuanmeiTalent,
+            icon: charIcon("Ruanmei", "Talent"),
 
             description: (i) => `
                 Increases SPD by
@@ -970,7 +970,7 @@ const Ruanmei: Character = {
             name: "Technique: Silken Serenade",
             type: "technique",
             level: "1/1",
-            icon: CA.RuanmeiTechnique,
+            icon: charIcon("Ruanmei", "Technique"),
 
             description: `
                 After using the Technique, gains Silken Serenade.
@@ -1004,7 +1004,7 @@ const Ruanmei: Character = {
             name: "Candle Lights on Still Waters",
             type: "bonus",
             level: "1/1",
-            icon: CA.CandleLightsOnStillWaters,
+            icon: charIcon("Ruanmei", "CandleLightsOnStillWaters"),
 
             description: `
                 In battle, for every 10% of Ruan Mei's Break Effect
@@ -1018,7 +1018,7 @@ const Ruanmei: Character = {
             name: "Inert Respiration",
             type: "bonus",
             level: "1/1",
-            icon: CA.InertRespiration,
+            icon: charIcon("Ruanmei", "InertRespiration"),
 
             description: `
                 Increases Break Effect by 20% for all allies.
@@ -1030,7 +1030,7 @@ const Ruanmei: Character = {
             name: "Days Wane, Thoughts Wax",
             type: "bonus",
             level: "1/1",
-            icon: CA.DaysWaneThoughtsWax,
+            icon: charIcon("Ruanmei", "DaysWaneThoughtsWax"),
 
             description: `
                 Ruan Mei regenerates 5 Energy at the start of her turn.
@@ -1043,7 +1043,7 @@ const Ruanmei: Character = {
             id: "s1",
             name: "DEF Boost",
             type: "stat",
-            icon: CA.Def,
+            icon: statIcon("DEF"),
 
             description: `
                 DEF Increases by: <b><u>10.0%</u></b>
@@ -1054,7 +1054,7 @@ const Ruanmei: Character = {
             id: "s2",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
 
             description: `
                 SPD Increases by: <b><u>3</u></b>
@@ -1065,7 +1065,7 @@ const Ruanmei: Character = {
             id: "s3",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description: `
                 Break Effect Increases by: <b><u>10.7%</u></b>
@@ -1076,7 +1076,7 @@ const Ruanmei: Character = {
             id: "s4",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description: `
                 Break Effect Increases by: <b><u>5.3%</u></b>
@@ -1087,7 +1087,7 @@ const Ruanmei: Character = {
             id: "s5",
             name: "DEF Boost",
             type: "stat",
-            icon: CA.Def,
+            icon: statIcon("DEF"),
 
             description: `
                 DEF Increases by: <b><u>5.0%</u></b>
@@ -1098,7 +1098,7 @@ const Ruanmei: Character = {
             id: "s6",
             name: "DEF Boost",
             type: "stat",
-            icon: CA.Def,
+            icon: statIcon("DEF"),
 
             description: `
                 DEF Increases by: <b><u>7.5%</u></b>
@@ -1109,7 +1109,7 @@ const Ruanmei: Character = {
             id: "s7",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description: `
                 Break Effect Increases by: <b><u>8.0%</u></b>
@@ -1120,7 +1120,7 @@ const Ruanmei: Character = {
             id: "s8",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description: `
                 Break Effect Increases by: <b><u>5.3%</u></b>
@@ -1131,7 +1131,7 @@ const Ruanmei: Character = {
             id: "s9",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
 
             description: `
                 SPD Increases by: <b><u>2</u></b>
@@ -1142,7 +1142,7 @@ const Ruanmei: Character = {
             id: "s10",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description: `
                 Break Effect Increases by: <b><u>8.0%</u></b>
@@ -1157,9 +1157,9 @@ const Lingsha: Character = {
     path: Paths.Abundance,
     element: Elements.Fire,
     world: Worlds.TheXianzhouLuofu,
-    image: CA.LingshaImg,
+    image: charSplash("Lingsha"),
     eidolons: Eidolons.LingshaEidolons,
-    pfp: CA.LingshaPfp,
+    pfp: charPfp("Lingsha"),
 
     baseATK: 679,
     baseDEF: 436,
@@ -1175,7 +1175,7 @@ const Lingsha: Character = {
             name: "Basic ATK: Votive Incense",
             type: "basic",
             level: "7/7",
-            icon: CA.LingshaBasicATK,
+            icon: charIcon("Lingsha", "BasicATK"),
 
             description: (i) =>
                 `Deals Fire DMG equal to ${
@@ -1188,7 +1188,7 @@ const Lingsha: Character = {
             name: "Skill: Smoke and Splendor",
             type: "skill",
             level: "12/12",
-            icon: CA.LingshaSkill,
+            icon: charIcon("Lingsha", "Skill"),
 
             description: (i) =>
                 `Deals Fire DMG equal to ${
@@ -1207,7 +1207,7 @@ const Lingsha: Character = {
             name: "Ultimate: Dripping Mistscape",
             type: "ultimate",
             level: "12/12",
-            icon: CA.LingshaUltimate,
+            icon: charIcon("Lingsha", "Ultimate"),
 
             description: (i) =>
                 `<b>Energy: 110</b><br>` +
@@ -1234,7 +1234,7 @@ const Lingsha: Character = {
             name: "Talent: Mistdance Manifest",
             type: "talent",
             level: "12/12",
-            icon: CA.LingshaTalent,
+            icon: charIcon("Lingsha", "Talent"),
 
             description: (i) =>
                 `When using Skill, summons "Fuyuan," with an initial SPD of 90 ` +
@@ -1266,7 +1266,7 @@ const Lingsha: Character = {
             name: "Technique: Wisps of Aurora",
             type: "technique",
             level: "1/1",
-            icon: CA.LingshaTechnique,
+            icon: charIcon("Lingsha", "Technique"),
 
             description:
                 `After using Technique, immediately summons Fuyuan at the start ` +
@@ -1281,7 +1281,7 @@ const Lingsha: Character = {
             name: "Ember's Echo",
             type: "bonus",
             level: "1/1",
-            icon: CA.EmbersEcho,
+            icon: charIcon("Lingsha", "EmbersEcho"),
 
             description:
                 `While "Fuyuan" is on the field and any ally character takes DMG ` +
@@ -1298,7 +1298,7 @@ const Lingsha: Character = {
             name: "Sylvan Smoke",
             type: "bonus",
             level: "1/1",
-            icon: CA.SylvanSmoke,
+            icon: charIcon("Lingsha", "SylvanSmoke"),
 
             description:
                 `When using Basic ATK, additionally regenerates 10 Energy.`
@@ -1309,7 +1309,7 @@ const Lingsha: Character = {
             name: "Vermilion Waft",
             type: "bonus",
             level: "1/1",
-            icon: CA.VermilionWaft,
+            icon: charIcon("Lingsha", "VermilionWaft"),
 
             description:
                 `Increases this unit's ATK or Outgoing Healing by an amount equal ` +
@@ -1322,7 +1322,7 @@ const Lingsha: Character = {
             id: "s1",
             name: "Max HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
 
             description:
                 "Max HP Increases by: <b><u>8.0%</u></b>",
@@ -1332,7 +1332,7 @@ const Lingsha: Character = {
             id: "s2",
             name: "ATK Boost",
             type: "stat",
-            icon: CA.ATK,
+            icon: statIcon("ATK"),
 
             description:
                 "ATK Increases by: <b><u>6.0%</u></b>",
@@ -1342,7 +1342,7 @@ const Lingsha: Character = {
             id: "s3",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description:
                 "Break Effect Increases by: <b><u>8.0%</u></b>",
@@ -1352,7 +1352,7 @@ const Lingsha: Character = {
             id: "s4",
             name: "Max HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
 
             description:
                 "Max HP Increases by: <b><u>6.0%</u></b>",
@@ -1362,7 +1362,7 @@ const Lingsha: Character = {
             id: "s5",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description:
                 "Break Effect Increases by: <b><u>8.0%</u></b>",
@@ -1372,7 +1372,7 @@ const Lingsha: Character = {
             id: "s6",
             name: "Max HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
 
             description:
                 "Max HP Increases by: <b><u>4.0%</u></b>",
@@ -1382,7 +1382,7 @@ const Lingsha: Character = {
             id: "s7",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description:
                 "Break Effect Increases by: <b><u>5.3%</u></b>",
@@ -1392,7 +1392,7 @@ const Lingsha: Character = {
             id: "s8",
             name: "ATK Boost",
             type: "stat",
-            icon: CA.ATK,
+            icon: statIcon("ATK"),
 
             description:
                 "ATK Increases by: <b><u>4.0%</u></b>",
@@ -1402,7 +1402,7 @@ const Lingsha: Character = {
             id: "s9",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description:
                 "Break Effect Increases by: <b><u>10.7%</u></b>",
@@ -1412,7 +1412,7 @@ const Lingsha: Character = {
             id: "s10",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description:
                 "Break Effect Increases by: <b><u>5.3%</u></b>",
@@ -1426,9 +1426,9 @@ const Castorice: Character = {
     path: Paths.Remembrance,
     element: Elements.Quantum,
     world: Worlds.Amphoreus,
-    image: CA.CastoriceImg,
+    image: charSplash("Castorice"),
     eidolons: Eidolons.CastorEidolons,
-    pfp: CA.CastoricePfp,
+    pfp: charPfp("Castorice"),
 
     baseATK: 523,
     baseDEF: 485,
@@ -1443,7 +1443,7 @@ const Castorice: Character = {
             name: "Basic ATK: Lament, Nethersea's Ripple",
             type: "basic",
             level: "7/7",
-            icon: CA.CastoriceBasicATK,
+            icon: charIcon("Castorice", "BasicATK"),
             description: (i) => "Deals Quantum DMG equal to " +
                          `${scaleValue(S.CastoriceScaling.attack, i)}` +
                          " of Castorice's Max HP to one designated enemy."
@@ -1454,7 +1454,7 @@ const Castorice: Character = {
             name: "Skill: Silence, Wraithfly's Caress",
             type: "skill",
             level: "12/12",
-            icon: CA.CastoriceSkill,
+            icon: charIcon("Castorice", "Skill"),
             description: (i) => "Consumes 30% of all allies' current HP. Deals Quantum DMG equal to " +
                          `${scaleValue(S.CastoriceScaling.skill.main, i)}` +
                          " of Castorice's Max HP to one designated enemy and Quantum DMG equal to " +
@@ -1475,7 +1475,7 @@ const Castorice: Character = {
             name: "Ultimate: Doomshriek, Dawn's Chime",
             type: "ultimate",
             level: "12/12",
-            icon: CA.CastoriceUltimate,
+            icon: charIcon("Castorice", "Ultimate"),
             description: (i) => "<b>Energy: --</b><br>" +
                          `Summons the memosprite Netherwing and advances its action by 100%. At the same time, deploys the Territory \"Lost Netherland,\" which decreases all enemies' All-Type RES by ${scaleValue(S.CastoriceScaling.ultimate, i)}. ` +
                          "If Castorice has the DMG Boost effect from her Talent, then this effect spreads to Netherwing. Netherwing has an initial SPD of 165 and a set Max HP equal to 100% of max \"Newbud.\" " +
@@ -1487,7 +1487,7 @@ const Castorice: Character = {
             name: "Talent: Desolation Across Palms",
             type: "talent",
             level: "12/12",
-            icon: CA.CastoriceTalent,
+            icon: charIcon("Castorice", "Talent"),
             description: (i) => 
                          "The maximum limit of \"Newbud\" is related to the levels of all characters on the battlefield. " +
                          "For every 1 point of HP lost by all allies, Castorice gains 1 point of \"Newbud.\" When \"Newbud\" reaches its maximum limit, can activate the Ultimate. " +
@@ -1500,7 +1500,7 @@ const Castorice: Character = {
             name: "Technique: Wail, Death's Herald",
             type: "technique",
             level: "1/1",
-            icon: CA.CastoriceTechnique,
+            icon: charIcon("Castorice", "Technique"),
             description: "After using Technique, enters the \"Netherveil\" state that lasts for 20 seconds. While \"Netherveil\" is active, enemies are unable to actively approach Castorice. " +
                          "During \"Netherveil\", active attacks will cause all enemies within range to enter combat. At the same time, summons the memosprite Netherwing, advances its action by 100%, and deploys the Territory \"Lost Netherland\". " +
                          "Netherwing has its current HP equal to 50% of max \"Newbud.\" After entering battle, consumes 40% of the current HP of all allies (except Netherwing). " +
@@ -1514,7 +1514,7 @@ const Castorice: Character = {
             name: "Where The West Wind Dwells",
             type: "bonus",
             level: "1/1",
-            icon: CA.WhereTheWestWindDwells,
+            icon: charIcon("Castorice", "WhereTheWestWindDwells"),
             description: "Each time Netherwing uses \"Breath Scorches the Shadow\", the DMG dealt increases by 30%. " +
                          "This effect stacks up to 6 time(s) and lasts until the end of this turn.",
         },
@@ -1524,7 +1524,7 @@ const Castorice: Character = {
             name: "Contained Dark Tide",
             type: "bonus",
             level: "1/1",
-            icon: CA.ContainedDarkTide,
+            icon: charIcon("Castorice", "ContainedDarkTide"),
             description: "After ally targets (excluding Netherwing) receive healing, converts 100% of the healed amount into \"Newbud\". " +
                          "If Netherwing is on the field, this is converted to Netherwing's HP instead. Each ally target can accumulate a conversion amount up to 12% of the max \"Newbud\". " +
                          "After any unit takes action, all units reset their accumulated conversion amount.",
@@ -1535,7 +1535,7 @@ const Castorice: Character = {
             name: "Inverted Torch",
             type: "bonus",
             level: "1/1",
-            icon: CA.InvertedTorch,
+            icon: charIcon("Castorice", "InvertedTorch"),
             description: "When Castorice's current HP is higher than or equal to 50% of her Max HP, her SPD increases by 40%. " +
                          "When Netherwing uses \"Breath Scorches the Shadow\" and deals fatal damage to all enemies on the field or brings them to a point where their HP cannot be reduced further, " +
                          "Netherwing's SPD increases by 100%, lasting for 1 turn.",
@@ -1546,7 +1546,7 @@ const Castorice: Character = {
             name: "Memosprite Talent: Mooncocoon Shrouds the Form",
             type: "bonus",
             level: "7/7",
-            icon: CA.CastoriceMemoTalent,
+            icon: charIcon("Castorice", "MemoTalent"),
             description: (i) => 
                          "When Netherwing is on the field, it acts as backup for allies. When allies take DMG or consume HP, their current HP can be reduced down to a minimum of 1, after which Netherwing will bear the HP loss. " +
                          "But Netherwing consumes HP equal to 500% of the original value. This lasts until Netherwing disappears." +
@@ -1567,7 +1567,7 @@ const Castorice: Character = {
             name: "Memosprite Skill: Claw Splits the Veil",
             type: "bonus",
             level: "7/7",
-            icon: CA.CastoriceMemoSkill,
+            icon: charIcon("Castorice", "MemoSkill"),
             description: (i) => 
                          "Deals Quantum DMG equal to " +
                          `${scaleValue(S.CastoriceScaling.memoskill.main, i)}` +
@@ -1601,7 +1601,7 @@ const Castorice: Character = {
             id: "s1",
             name: "DMG Boost: Quantum",
             type: "stat",
-            icon: CA.QuantumBoost,
+            icon: statIcon("QuantumBoost"),
             description: "Quantum DMG Increases by: <b><u>6.4%</u></b>",
         },
 
@@ -1609,7 +1609,7 @@ const Castorice: Character = {
             id: "s2",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
             description: "CRIT Rate Increases by: <b><u>5.3%</u></b>",
         },
 
@@ -1617,7 +1617,7 @@ const Castorice: Character = {
             id: "s3",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
             description: "CRIT DMG Increases by: <b><u>8.0%</u></b>",
         },
 
@@ -1625,7 +1625,7 @@ const Castorice: Character = {
             id: "s4",
             name: "DMG Boost: Quantum",
             type: "stat",
-            icon: CA.QuantumBoost,
+            icon: statIcon("QuantumBoost"),
             description: "Quantum DMG Increases by: <b><u>3.2%</u></b>",
         },
 
@@ -1633,7 +1633,7 @@ const Castorice: Character = {
             id: "s5",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
             description: "CRIT Rate Increases by: <b><u>2.7%</u></b>",
         },
 
@@ -1641,7 +1641,7 @@ const Castorice: Character = {
             id: "s6",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
             description: "CRIT Rate Increases by: <b><u>2.7%</u></b>",
         },
 
@@ -1649,7 +1649,7 @@ const Castorice: Character = {
             id: "s7",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
             description: "CRIT DMG Increases by: <b><u>5.3%</u></b>",
         },
 
@@ -1657,7 +1657,7 @@ const Castorice: Character = {
             id: "s8",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
             description: "CRIT Rate Increases by: <b><u>4.0%</u></b>",
         },
 
@@ -1665,7 +1665,7 @@ const Castorice: Character = {
             id: "s9",
             name: "DMG Boost: Quantum",
             type: "stat",
-            icon: CA.QuantumBoost,
+            icon: statIcon("QuantumBoost"),
             description: "Quantum DMG Increases by: <b><u>4.8%</u></b>",
         },
 
@@ -1673,7 +1673,7 @@ const Castorice: Character = {
             id: "s10",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
             description: "CRIT Rate Increases by: <b><u>4.0%</u></b>",
         },
     }
@@ -1685,9 +1685,9 @@ const Topaz: Character = {
     path: Paths.Hunt,
     element: Elements.Fire,
     world: Worlds.InterastralPeaceCorporation,
-    image: CA.TopazImg,
+    image: charSplash("Topaz"),
     eidolons: Eidolons.TopazEidolons,
-    pfp: CA.TopazPfp,
+    pfp: charPfp("Topaz"),
 
     baseATK: 620,
     baseDEF: 412,
@@ -1703,7 +1703,7 @@ const Topaz: Character = {
             name: "Basic ATK: Deficit...",
             type: "basic",
             level: "7/7",
-            icon: CA.TopazBasicATK,
+            icon: charIcon("Topaz", "BasicATK"),
 
             description: (i) =>
                 "Deals Fire DMG equal to " +
@@ -1716,7 +1716,7 @@ const Topaz: Character = {
             name: "Skill: Difficulty Paying?",
             type: "skill",
             level: "12/12",
-            icon: CA.TopazSkill,
+            icon: charIcon("Topaz", "Skill"),
 
             description: (i) =>
                 "Inflicts one designated enemy target with a \"Proof of Debt\" state, " +
@@ -1735,7 +1735,7 @@ const Topaz: Character = {
             name: "Ultimate: Turn a Profit!",
             type: "ultimate",
             level: "12/12",
-            icon: CA.TopazUltimate,
+            icon: charIcon("Topaz", "Ultimate"),
 
             description: (i) =>
                 "<b>Energy: 130</b><br>" +
@@ -1753,7 +1753,7 @@ const Topaz: Character = {
             name: "Talent: Trotter Market!?",
             type: "talent",
             level: "12/12",
-            icon: CA.TopazTalent,
+            icon: charIcon("Topaz", "Talent"),
 
             description: (i) =>
                 "Summons Numby at the start of battle. Numby has 80 SPD by default. " +
@@ -1771,7 +1771,7 @@ const Topaz: Character = {
             name: "Technique: Explicit Subsidy",
             type: "technique",
             level: "1/1",
-            icon: CA.TopazTechnique,
+            icon: charIcon("Topaz", "Technique"),
 
             description:
                 "Summons Numby when Topaz enters the overworld. " +
@@ -1791,7 +1791,7 @@ const Topaz: Character = {
             name: "Stonks Market",
             type: "bonus",
             level: "1/1",
-            icon: CA.StonksMarket,
+            icon: charIcon("Topaz", "StonksMarket"),
 
             description:
                 "After Numby uses an attack while in the Windfall Bonanza! state, " +
@@ -1803,7 +1803,7 @@ const Topaz: Character = {
             name: "Overdraft",
             type: "bonus",
             level: "1/1",
-            icon: CA.Overdraft,
+            icon: charIcon("Topaz", "Overdraft"),
 
             description:
                 "When Topaz uses Basic ATK to deal DMG, it is considered as a Follow-Up ATK.",
@@ -1814,7 +1814,7 @@ const Topaz: Character = {
             name: "Financial Turmoil",
             type: "bonus",
             level: "1/1",
-            icon: CA.FinancialTurmoil,
+            icon: charIcon("Topaz", "FinancialTurmoil"),
 
             description:
                 "Increases Topaz & Numby's DMG dealt to enemy targets with Fire Weakness by 15%.",
@@ -1826,7 +1826,7 @@ const Topaz: Character = {
             id: "s1",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
 
             description:
                 "CRIT Rate Increases by: <b><u>5.3%</u></b>",
@@ -1836,7 +1836,7 @@ const Topaz: Character = {
             id: "s2",
             name: "Max HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
 
             description:
                 "Max HP Increases by: <b><u>6.0%</u></b>",
@@ -1846,7 +1846,7 @@ const Topaz: Character = {
             id: "s3",
             name: "DMG Boost: Fire",
             type: "stat",
-            icon: CA.FireBoost,
+            icon: statIcon("FireBoost"),
 
             description:
                 "Fire DMG Increases by: <b><u>6.4%</u></b>",
@@ -1856,7 +1856,7 @@ const Topaz: Character = {
             id: "s4",
             name: "Max HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
 
             description:
                 "Max HP Increases by: <b><u>4.0%</u></b>",
@@ -1866,7 +1866,7 @@ const Topaz: Character = {
             id: "s5",
             name: "DMG Boost: Fire",
             type: "stat",
-            icon: CA.FireBoost,
+            icon: statIcon("FireBoost"),
 
             description:
                 "Fire DMG Increases by: <b><u>3.2%</u></b>",
@@ -1876,7 +1876,7 @@ const Topaz: Character = {
             id: "s6",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
 
             description:
                 "CRIT Rate Increases by: <b><u>2.7%</u></b>",
@@ -1886,7 +1886,7 @@ const Topaz: Character = {
             id: "s7",
             name: "DMG Boost: Fire",
             type: "stat",
-            icon: CA.FireBoost,
+            icon: statIcon("FireBoost"),
 
             description:
                 "Fire DMG Increases by: <b><u>4.8%</u></b>",
@@ -1896,7 +1896,7 @@ const Topaz: Character = {
             id: "s8",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
 
             description:
                 "CRIT Rate Increases by: <b><u>4.0%</u></b>",
@@ -1906,7 +1906,7 @@ const Topaz: Character = {
             id: "s9",
             name: "DMG Boost: Fire",
             type: "stat",
-            icon: CA.FireBoost,
+            icon: statIcon("FireBoost"),
 
             description:
                 "Fire DMG Increases by: <b><u>4.8%</u></b>",
@@ -1916,7 +1916,7 @@ const Topaz: Character = {
             id: "s10",
             name: "DMG Boost: Fire",
             type: "stat",
-            icon: CA.FireBoost,
+            icon: statIcon("FireBoost"),
 
             description:
                 "Fire DMG Increases by: <b><u>3.2%</u></b>",
@@ -1931,9 +1931,9 @@ const Aventurine: Character = {
     path: Paths.Preservation,
     element: Elements.Imaginary,
     world: Worlds.InterastralPeaceCorporation,
-    image: CA.AvImg,
+    image: charSplash("Aventurine"),
     eidolons: Eidolons.AvEidolons,
-    pfp: CA.AvPfp,
+    pfp: charPfp("Aventurine"),
 
     baseATK: 446,
     baseDEF: 654,
@@ -1948,7 +1948,7 @@ const Aventurine: Character = {
             name: "Basic ATK: Straight Bet",
             type: "basic",
             level: "7/7",
-            icon: CA.AvBasicATK,
+            icon: charIcon("Aventurine", "BasicATK"),
 
             description: (i) =>
                 `Deals Imaginary DMG equal to ${scaleValue(S.AvScaling.attack, i)} of Aventurine's DEF to one designated enemy target.`,
@@ -1959,7 +1959,7 @@ const Aventurine: Character = {
             name: "Skill: Cornerstone Deluxe",
             type: "skill",
             level: "12/12",
-            icon: CA.AvSkill,
+            icon: charIcon("Aventurine", "Skill"),
 
             description: (i) =>
                 `Provides all allies with a Fortified Wager shield that can block DMG equal to ${scaleValue(S.AvScaling.skill.main, i)} of Aventurine's DEF plus ${scaleValue(S.AvScaling.skill.adj, i, "")}, lasting for 3 turn(s). When Fortified Wager is gained repeatedly, the Shield Effect can stack, up to 200% of the current Shield Effect provided by the Skill.`,
@@ -1970,7 +1970,7 @@ const Aventurine: Character = {
             name: "Ultimate: Roulette Shark",
             type: "ultimate",
             level: "12/12",
-            icon: CA.AvUltimate,
+            icon: charIcon("Aventurine", "Ultimate"),
 
             description: (i) =>
                 `<b>Energy: 110</b><br>
@@ -1982,7 +1982,7 @@ const Aventurine: Character = {
             name: "Talent: Shot Loaded Right",
             type: "talent",
             level: "12/12",
-            icon: CA.AvTalent,
+            icon: charIcon("Aventurine", "Talent"),
 
             description: (i) =>
                 `For any single ally with "Fortified Wager", their Effect RES increases by ${scaleValue(S.AvScaling.talent.main, i)}, and when they get attacked, Aventurine gains 1 point of "Blind Bet." When Aventurine has "Fortified Wager," he can resist Crowd Control debuffs. This effect can trigger again after 2 turn(s). Aventurine additionally gains 1 point(s) of "Blind Bet" after getting attacked. Upon reaching 7 points of "Blind Bet," Aventurine consumes the 7 points to launch a 7-hit Follow-Up ATK, with each hit dealing Imaginary DMG equal to ${scaleValue(S.AvScaling.talent.adj, i)} of Aventurine's DEF to one random enemy. "Blind Bet" is capped at 10 points.`,
@@ -1993,7 +1993,7 @@ const Aventurine: Character = {
             name: "Technique: The Red or the Black",
             type: "technique",
             level: "1/1",
-            icon: CA.AvTechnique,
+            icon: charIcon("Aventurine", "Technique"),
 
             description:
                 `After using the Technique, 1 of the following effects will be granted:<br>
@@ -2011,7 +2011,7 @@ const Aventurine: Character = {
             name: "Bingo!",
             type: "bonus",
             level: "1/1",
-            icon: CA.Bingo,
+            icon: charIcon("Aventurine", "Bingo"),
 
             description:
                 `After a teammate with "Fortified Wager" launches Follow-Up ATK, Aventurine accumulates 1 "Blind Bet" point. This effect can trigger up to 3 time(s). Its trigger count resets at the start of Aventurine's turn. After Aventurine launches his Talent's Follow-Up ATK, provides all ally targets with a "Fortified Wager" that can offset DMG equal to 7% of Aventurine's DEF plus 96, and additionally grants a "Fortified Wager" that can block DMG equal to 7% of Aventurine's DEF plus 96 to the ally with the lowest Shield Effect, lasting for 3 turns.`,
@@ -2022,7 +2022,7 @@ const Aventurine: Character = {
             name: "Leverage",
             type: "bonus",
             level: "1/1",
-            icon: CA.Leverage,
+            icon: charIcon("Aventurine", "Leverage"),
 
             description:
                 `For every 100 of Aventurine's DEF that exceeds 1600, increases his own CRIT Rate by 2%, up to a maximum increase of 48%.`,
@@ -2033,7 +2033,7 @@ const Aventurine: Character = {
             name: "Hot Hand",
             type: "bonus",
             level: "1/1",
-            icon: CA.HotHand,
+            icon: charIcon("Aventurine", "HotHand"),
 
             description:
                 `When battle starts, grants all allies a Fortified Wager shield, whose Shield Effect is equal to 100% of the one provided by the Skill, lasting for 3 turn(s).`,
@@ -2045,7 +2045,7 @@ const Aventurine: Character = {
             id: "s1",
             name: "DMG Boost: Imaginary",
             type: "stat",
-            icon: CA.ImaginaryBoost,
+            icon: statIcon("ImaginaryBoost"),
 
             description: "Imaginary DMG Increases by: <b><u>6.4%</u></b>",
         },
@@ -2054,7 +2054,7 @@ const Aventurine: Character = {
             id: "s2",
             name: "Effect RES Boost",
             type: "stat",
-            icon: CA.EffectRES,
+            icon: statIcon("EffectRES"),
 
             description: "Effect RES Increases by: <b><u>6.0%</u></b>",
         },
@@ -2063,7 +2063,7 @@ const Aventurine: Character = {
             id: "s3",
             name: "DEF Boost",
             type: "stat",
-            icon: CA.Def,
+            icon: statIcon("DEF"),
 
             description: "DEF Increases by: <b><u>10.0%</u></b>",
         },
@@ -2072,7 +2072,7 @@ const Aventurine: Character = {
             id: "s4",
             name: "Effect RES Boost",
             type: "stat",
-            icon: CA.EffectRES,
+            icon: statIcon("EffectRES"),
 
             description: "Effect RES Increases by: <b><u>4.0%</u></b>",
         },
@@ -2081,7 +2081,7 @@ const Aventurine: Character = {
             id: "s5",
             name: "DEF Boost",
             type: "stat",
-            icon: CA.Def,
+            icon: statIcon("DEF"),
 
             description: "DEF Increases by: <b><u>5.0%</u></b>",
         },
@@ -2090,7 +2090,7 @@ const Aventurine: Character = {
             id: "s6",
             name: "DMG Boost: Imaginary",
             type: "stat",
-            icon: CA.ImaginaryBoost,
+            icon: statIcon("ImaginaryBoost"),
 
             description: "Imaginary DMG Increases by: <b><u>3.2%</u></b>",
         },
@@ -2099,7 +2099,7 @@ const Aventurine: Character = {
             id: "s7",
             name: "DEF Boost",
             type: "stat",
-            icon: CA.Def,
+            icon: statIcon("DEF"),
 
             description: "DEF Increases by: <b><u>7.5%</u></b>",
         },
@@ -2108,7 +2108,7 @@ const Aventurine: Character = {
             id: "s8",
             name: "DMG Boost: Imaginary",
             type: "stat",
-            icon: CA.ImaginaryBoost,
+            icon: statIcon("ImaginaryBoost"),
 
             description: "DEF Increases by: <b><u>4.8%</u></b>",
         },
@@ -2117,7 +2117,7 @@ const Aventurine: Character = {
             id: "s9",
             name: "DEF Boost",
             type: "stat",
-            icon: CA.Def,
+            icon: statIcon("DEF"),
 
             description: "DEF Increases by: <b><u>7.5%</u></b>",
         },
@@ -2126,7 +2126,7 @@ const Aventurine: Character = {
             id: "s10",
             name: "DEF Boost",
             type: "stat",
-            icon: CA.Def,
+            icon: statIcon("DEF"),
 
             description: "DEF Increases by: <b><u>5.0%</u></b>",
         },
@@ -2138,9 +2138,9 @@ const Firefly: Character = {
     path: Paths.Destruction,
     element: Elements.Fire,
     world: Worlds.StellaronHunters,
-    image: CA.FireflyImg,
+    image: charSplash("Firefly"),
     eidolons: Eidolons.FireflyEidolons,
-    pfp: CA.FireflyPfp,
+    pfp: charPfp("Firefly"),
 
     baseATK: 523,
     baseDEF: 776,
@@ -2155,7 +2155,7 @@ const Firefly: Character = {
             name: "Basic ATK: Order: Flare Propulsion",
             type: "basic",
             level: "7/7",
-            icon: CA.FireflyBasicATK,
+            icon: charIcon("Firefly", "BasicATK"),
 
             description: (i) =>
                 `Deals Fire DMG equal to ${scaleValue(S.FireflyScaling.attack.main, i)} of SAM's ATK to one designated enemy.<br><br>`+
@@ -2167,7 +2167,7 @@ const Firefly: Character = {
             name: "Skill: Order: Aerial Bombardment",
             type: "skill",
             level: "12/12",
-            icon: CA.FireflySkill,
+            icon: charIcon("Firefly", "Skill"),
 
             description: (i) =>
                 `Consumes HP equal to 40% of this unit's Max HP and regenerates a fixed amount of Energy equal to ${scaleValue(S.FireflyScaling.skill.main, i)} 
@@ -2184,7 +2184,7 @@ const Firefly: Character = {
             name: "Ultimate: Fyrefly Type-IV: Complete Combustion",
             type: "ultimate",
             level: "12/12",
-            icon: CA.FireflyUltimate,
+            icon: charIcon("Firefly", "Ultimate"),
 
             description: (i) =>
                 `<b>Energy: 240</b><br>
@@ -2201,7 +2201,7 @@ const Firefly: Character = {
             name: "Talent: Shot Loaded Right",
             type: "talent",
             level: "12/12",
-            icon: CA.FireflyTalent,
+            icon: charIcon("Firefly", "Talent"),
 
             description: (i) =>
                 `The lower the HP, the less DMG received. When HP is 20% or lower, the DMG Reduction reaches its maximum effect, reducing up to ${scaleValue(S.FireflyScaling.talent.main, i)}. 
@@ -2214,7 +2214,7 @@ const Firefly: Character = {
             name: "Technique: The Red or the Black",
             type: "technique",
             level: "1/1",
-            icon: CA.FireflyTechnique,
+            icon: charIcon("Firefly", "Technique"),
 
             description:
                 `After using the Technique, 1 of the following effects will be granted:<br>
@@ -2232,7 +2232,7 @@ const Firefly: Character = {
             name: "Module γ: Core Overload",
             type: "bonus",
             level: "1/1",
-            icon: CA.ModuleγCoreOverload,
+            icon: charIcon("Firefly", "ModuleGammaCoreOverload"),
 
             description:
                 `For every 10 point(s) of SAM's ATK that exceeds 1800, increases this unit's Break Effect by 0.8%.`,
@@ -2243,7 +2243,7 @@ const Firefly: Character = {
             name: "Module α: Antilag Outburst",
             type: "bonus",
             level: "1/1",
-            icon: CA.ModuleαAntilagOutburst,
+            icon: charIcon("Firefly", "ModuleAlphaAntilagOutburst"),
 
             description:
                 `While in the Complete Combustion state, SAM's Break Effect increases by 25%. When using Enhanced Basic ATK or Enhanced Skill to inflict Weakness Break on a target, the Complete Combustion countdown is delayed by 10%. This effect can trigger a maximum of 3 time(s) during each Complete Combustion state.`,
@@ -2254,7 +2254,7 @@ const Firefly: Character = {
             name: "Module β: Autoreactive Armor",
             type: "bonus",
             level: "1/1",
-            icon: CA.ModuleβAutoreactiveArmor,
+            icon: charIcon("Firefly", "ModuleBetaAutoreactiveArmor"),
 
             description:
                 `When SAM is in Complete Combustion with a Break Effect that is equal to or greater than 150%/300%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of 100%/150% Super Break DMG.`,
@@ -2266,7 +2266,7 @@ const Firefly: Character = {
             id: "s1",
             name: "Effect RES Boost",
             type: "stat",
-            icon: CA.EffectRES,
+            icon: statIcon("EffectRES"),
 
             description: "Effect RES Increases by: <b><u>8.0%</u></b>",
         },
@@ -2275,7 +2275,7 @@ const Firefly: Character = {
             id: "s2",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
 
             description: "SPD Increases by: <b><u>3</u></b>",
         },
@@ -2284,7 +2284,7 @@ const Firefly: Character = {
             id: "s3",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description: "Break Effect Increases by: <b><u>10.7%</u></b>",
         },
@@ -2293,7 +2293,7 @@ const Firefly: Character = {
             id: "s4",
             name: "Effect RES Boost",
             type: "stat",
-            icon: CA.EffectRES,
+            icon: statIcon("EffectRES"),
 
             description: "Effect RES Increases by: <b><u>6.0%</u></b>",
         },
@@ -2302,7 +2302,7 @@ const Firefly: Character = {
             id: "s5",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description: "Break Effect Increases by: <b><u>8.0%</u></b>",
         },
@@ -2311,7 +2311,7 @@ const Firefly: Character = {
             id: "s6",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description: "Break Effect Increases by: <b><u>8.0%</u></b>",
         },
@@ -2320,7 +2320,7 @@ const Firefly: Character = {
             id: "s7",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description: "Break Effect Increases by: <b><u>5.3%</u></b>",
         },
@@ -2329,7 +2329,7 @@ const Firefly: Character = {
             id: "s8",
             name: "Effect RES Boost",
             type: "stat",
-            icon: CA.EffectRES,
+            icon: statIcon("EffectRES"),
 
             description: "Effect RES Increases by: <b><u>4.0%</u></b>",
         },
@@ -2338,7 +2338,7 @@ const Firefly: Character = {
             id: "s9",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
 
             description: "SPD Increases by: <b><u>2</u></b>",
         },
@@ -2347,7 +2347,7 @@ const Firefly: Character = {
             id: "s10",
             name: "Break Boost",
             type: "stat",
-            icon: CA.Break,
+            icon: statIcon("Break"),
 
             description: "Break Effect Increases by: <b><u>5.3%</u></b>",
         },
@@ -2359,9 +2359,9 @@ const RbnSummeretto: Character = {
     path: Paths.Remembrance,
     element: Elements.Wind,
     world: Worlds.Penacony,
-    image: CA.RbnSummerettoImg,
+    image: charSplash("RbnSummeretto"),
     eidolons: Eidolons.RbnSummerettoEidolons,
-    pfp: CA.RbnSummerettoPfp,
+    pfp: charPfp("RbnSummeretto"),
 
     baseATK: 601,
     baseDEF: 485,
@@ -2376,7 +2376,7 @@ const RbnSummeretto: Character = {
             name: "Basic ATK: The Sea Sings in My Key",
             type: "basic",
             level: "7/7",
-            icon: CA.RbnSummerettoBasicATK,
+            icon: charIcon("RbnSummeretto", "BasicATK"),
 
             description: (i) =>
                 `Deals Wind DMG equal to ${scaleValue(S.RbnSummerettoScaling.main, i)} of Robin • Summeretto's Max HP to one enemy.`,
@@ -2387,7 +2387,7 @@ const RbnSummeretto: Character = {
             name: "Skill: Summer Strums the Soul",
             type: "skill",
             level: "12/12",
-            icon: CA.RbnSummerettoSkill,
+            icon: charIcon("RbnSummeretto", "Skill"),
 
             description: (i) =>
                 `Summons the memosprite "Summer Songbirds" Bessie. If any member of the "Summer Songbirds" is already on the field, 
@@ -2399,7 +2399,7 @@ const RbnSummeretto: Character = {
             name: "Ultimate: Ascend That Rhapsody in Blue",
             type: "ultimate",
             level: "12/12",
-            icon: CA.RbnSummerettoUltimate,
+            icon: charIcon("RbnSummeretto", "Ultimate"),
 
             description: (i) =>
                 `<b>Energy: 140</b><br>
@@ -2414,7 +2414,7 @@ const RbnSummeretto: Character = {
             name: "Talent: Wings Heed No Borders",
             type: "talent",
             level: "12/12",
-            icon: CA.RbnSummerettoTalent,
+            icon: charIcon("RbnSummeretto", "Talent"),
 
             description: (i) =>
                 `Memosprite "Summer Songbirds" has an initial Max HP equal to 70% of Robin • Summeretto's Max HP and an initial SPD equal to 180% of Robin • Summeretto's SPD. 
@@ -2431,7 +2431,7 @@ const RbnSummeretto: Character = {
             name: "Technique: We Are the Melody",
             type: "technique",
             level: "1/1",
-            icon: CA.RbnSummerettoTechnique,
+            icon: charIcon("RbnSummeretto", "Technique"),
 
             description:
                 `After using Technique, advances action by 20% at the start of the next battle, immediately gains 6 Vibes, and increases all allies' DMG dealt by 30%, lasting for 2 turn(s).`,
@@ -2444,7 +2444,7 @@ const RbnSummeretto: Character = {
             name: "Rebuilt Harmony",
             type: "bonus",
             level: "1/1",
-            icon: CA.RebuiltHarmony,
+            icon: charIcon("RbnSummeretto", "RebuiltHarmony"),
             description: "Increases the CRIT Rate of Robin • Summeretto and \"Summer Songbirds\" by 50%.",
         },
 
@@ -2453,7 +2453,7 @@ const RbnSummeretto: Character = {
             name: "Deviated Chords",
             type: "bonus",
             level: "1/1",
-            icon: CA.DeviatedChords,
+            icon: charIcon("RbnSummeretto", "DeviatedChords"),
             description: "When an ally target causes Robin • Summeretto to gain Vibes, if their ATK is higher than Robin • Summeretto's, increases that target's ATK by an amount equal to (16% + Vibes × 0.4%) of Robin • Summeretto's Max HP. Otherwise, increases that target's CRIT DMG by an amount equal to (40% + Vibes × 1.5%). Lasts for 2 turn(s).",
         },
 
@@ -2462,7 +2462,7 @@ const RbnSummeretto: Character = {
             name: "Improvised Blues",
             type: "bonus",
             level: "1/1",
-            icon: CA.ImprovisedBlues,
+            icon: charIcon("RbnSummeretto", "ImprovisedBlues"),
             description: "When Robin • Summeretto or the \"Summer Songbirds\" receive healing or Shield provided by teammates, causes Robin • Summeretto to gain 12 stack(s) of \"Groove\", capped at 12. The first time Robin • Summeretto gains Vibes during any target's turn, if she has \"Groove\", consumes 1 stack of \"Groove\" and regenerates a fixed 3 Energy.",
         },
 
@@ -2471,7 +2471,7 @@ const RbnSummeretto: Character = {
             name: "Memosprite Talent: A Warble of Wings",
             type: "bonus",
             level: "7/7",
-            icon: CA.RbnMemoTalent,
+            icon: charIcon("RbnSummeretto", "MemoTalent"),
             description: (i) => 
                          `While in the "Fever" state, the "Summer Songbirds" and a countdown will appear on the Action Order. 
                           And the DMG dealt by Robin • Summeretto and "Summer Songbirds" increases by an amount equal to (${scaleValue(S.RbnSummerettoScaling.memotalent.main, i)} 
@@ -2490,7 +2490,7 @@ const RbnSummeretto: Character = {
             name: "Memosprite Skill: Chirrup Quartet",
             type: "bonus",
             level: "7/7",
-            icon: CA.RbnMemoSkill,
+            icon: charIcon("RbnSummeretto", "MemoSkill"),
             description: (i) => 
                          `Deals Wind DMG equal to ${scaleValue(S.RbnSummerettoScaling.memoskill, i)} of "Summer Songbirds'" Max HP to all enemies.`,
         },
@@ -2501,7 +2501,7 @@ const RbnSummeretto: Character = {
             id: "s1",
             name: "Max HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
             description: "Max HP Increases by: <b><u>8.0%</u></b>",
         },
 
@@ -2509,7 +2509,7 @@ const RbnSummeretto: Character = {
             id: "s2",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>4</u></b>",
         },
 
@@ -2517,7 +2517,7 @@ const RbnSummeretto: Character = {
             id: "s3",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
             description: "Crit Rate Increases by: <b><u>4.0%</u></b>",
         },
 
@@ -2525,7 +2525,7 @@ const RbnSummeretto: Character = {
             id: "s4",
             name: "Max HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
             description: "Max HP Increases by: <b><u>4.0%</u></b>",
         },
 
@@ -2533,7 +2533,7 @@ const RbnSummeretto: Character = {
             id: "s5",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>2</u></b>",
         },
 
@@ -2541,7 +2541,7 @@ const RbnSummeretto: Character = {
             id: "s6",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>2</u></b>",
         },
 
@@ -2549,7 +2549,7 @@ const RbnSummeretto: Character = {
             id: "s7",
             name: "CRIT Rate Boost",
             type: "stat",
-            icon: CA.CritRate,
+            icon: statIcon("CritRate"),
             description: "Crit Rate Increases by: <b><u>2.7%</u></b>",
         },
 
@@ -2557,7 +2557,7 @@ const RbnSummeretto: Character = {
             id: "s8",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>3</u></b>",
         },
 
@@ -2565,7 +2565,7 @@ const RbnSummeretto: Character = {
             id: "s9",
             name: "Max HP Boost",
             type: "stat",
-            icon: CA.MaxHP,
+            icon: statIcon("MaxHP"),
             description: "Max HP Increases by: <b><u>6.0%</u></b>",
         },
 
@@ -2573,7 +2573,7 @@ const RbnSummeretto: Character = {
             id: "s10",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>3</u></b>",
         },
     },
@@ -2584,9 +2584,9 @@ const Hysilens: Character = {
   path: Paths.Nihility,
   element: Elements.Physical,
   world: Worlds.Amphoreus,
-  image: CA.HysilensImg,
+  image: charSplash("Hysilens"),
   eidolons: Eidolons.HysilensEidolons,
-  pfp: CA.HysilensPfp,
+  pfp: charPfp("Hysilens"),
 
   baseATK: 601,
   baseDEF: 485,
@@ -2601,7 +2601,7 @@ const Hysilens: Character = {
       name: "Basic ATK: Aeolian Mode: Echoes in Still Waters",
       type: "basic",
       level: "1/7",
-      icon: CA.HysilensBasicATK,
+      icon: charIcon("Hysilens", "BasicATK"),
 
       description: (i) => `
         Deals Physical DMG equal to ${scaleValue(S.HysilensScaling.attack, i)} of Hysilens's ATK to one designated enemy.
@@ -2613,7 +2613,7 @@ const Hysilens: Character = {
       name: "Skill: Overtone Hum: Chorus After Dark Tides",
       type: "skill",
       level: "1/12",
-      icon: CA.HysilensSkill,
+      icon: charIcon("Hysilens", "Skill"),
 
       description: (i) => `
         Has a 100% base chance to increase the DMG taken by all enemies by ${scaleValue(S.HysilensScaling.skill.main, i)}, lasting for 3 turn(s). At the same time, deals Physical DMG equal to ${scaleValue(S.HysilensScaling.skill.adj, i)} of Hysilens's ATK to all enemies.
@@ -2625,7 +2625,7 @@ const Hysilens: Character = {
       name: "Ultimate: Maelstrom Rhapsody",
       type: "ultimate",
       level: "1/12",
-      icon: CA.HysilensUltimate,
+      icon: charIcon("Hysilens", "Ultimate"),
 
       description: (i) => `
         <b>Energy: 110</b><br>
@@ -2641,7 +2641,7 @@ const Hysilens: Character = {
       name: "Talent: Sirenic Serenade",
       type: "talent",
       level: "1/12",
-      icon: CA.HysilensTalent,
+      icon: charIcon("Hysilens", "Talent"),
 
       description: (i) => `
         When an ally target attacks, there is a 100% base chance for Hysilens to inflict the hit enemy target with one of the following states: Wind Shear, Bleed, Burn, or Shock. Priority is given to inflicting a different state.
@@ -2654,7 +2654,7 @@ const Hysilens: Character = {
             name: "Technique: At Ocean's Abode",
             type: "technique",
             level: "1/1",
-            icon: CA.HysilensTechnique,
+            icon: charIcon("Hysilens", "Technique"),
             description: "After using Technique, creates a Special Dimension that lasts for 20 seconds and automatically moves forward. Enemies within the Special Dimension enter the \"Soulstruck\" state. \"Soulstruck\" enemies will not attack ally targets and will follow the dimension while it persists. After entering combat with \"Soulstruck\" enemies, there is a 100% base chance to inflict each enemy target with 2 of the following states: Wind Shear/Bleed/Burn/Shock, all of which are equivalent to those provided by Hysilens's Talent effect. Only 1 Dimension Effect created by allies can exist at the same time."
         },
 
@@ -2664,7 +2664,7 @@ const Hysilens: Character = {
             name: "The Fiddle of Pearls",
             type: "bonus",
             level: "1/1",
-            icon: CA.TheFiddleOfPearls,
+            icon: charIcon("Hysilens", "TheFiddleOfPearls"),
             description: "For every 10% of Hysilens's Effect Hit Rate that exceeds 60%, increases her DMG dealt by 15%, up to a max increase of 90%.",
         },
         b2: {
@@ -2672,7 +2672,7 @@ const Hysilens: Character = {
             name: "The Gladius of Conquest",
             type: "bonus",
             level: "1/1",
-            icon: CA.TheGladiusOfConquest,
+            icon: charIcon("Hysilens", "TheGladiusOfConquest"),
             description: "At the start of combat, Hysilens deploys a Zone, equivalent to that provided by her Ultimate, lasting for 3 turn(s). Whenever Hysilens deploys a Zone, she recovers 1 Skill Point(s).",
         },
         b3: {
@@ -2680,7 +2680,7 @@ const Hysilens: Character = {
             name: "The Bubble of Banquets",
             type: "bonus",
             level: "1/1",
-            icon: CA.TheBubbleOfBanquets,
+            icon: charIcon("Hysilens", "TheBubbleOfBanquets"),
             description: "When Hysilens uses Ultimate, if the enemy target is currently afflicted with DoT(s), all DoTs currently applied on the target will immediately produce DMG equal to 150% of their original DMG.",
         },
         // --- Stats Nodes (Nodos Pequeños) ---
@@ -2688,70 +2688,70 @@ const Hysilens: Character = {
             id: "s1",
             name: "Effect Hit Rate Boost",
             type: "stat",
-            icon: CA.EffectHitRate,
+            icon: statIcon("EffectHitRate"),
             description: "Effect Hit Rate Increases by: <b><u>6.0%</u></b>",
         },
         s2: {
             id: "s2",
             name: "ATK Boost",
             type: "stat",
-            icon: CA.ATK,
+            icon: statIcon("ATK"),
             description: "Quantum DMG Increases by: <b><u>8.0%</u></b>",
         },
         s3: {
             id: "s3",
             name: "ATK Boost",
             type: "stat",
-            icon: CA.ATK,
+            icon: statIcon("ATK"),
             description: "SPD Increases by: <b><u>4.0%</u></b>",
         },
         s4: {
             id: "s4",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>2</u></b>",
         },
         s5: {
             id: "s5",
             name: "Effect Hit Rate Boost",
             type: "stat",
-            icon: CA.EffectHitRate,
+            icon: statIcon("EffectHitRate"),
             description: "Effect Hit Rate Increases by: <b><u>4.0%</u></b>",
         },
         s6: {
             id: "s6",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>2</u></b>",
         },
         s7: {
             id: "s7",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>4</u></b>",
         },
         s8: {
             id: "s8",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>3</u></b>",
         },
         s9: {
             id: "s9",
             name: "ATK Boost",
             type: "stat",
-            icon: CA.ATK,
+            icon: statIcon("ATK"),
             description: "ATK Increases by: <b><u>6.0%</u></b>",
         },
         s10: {
             id: "s10",
             name: "SPD Boost",
             type: "stat",
-            icon: CA.SPD,
+            icon: statIcon("SPD"),
             description: "SPD Increases by: <b><u>3</u></b>",
         },
     },
@@ -2762,9 +2762,9 @@ const Rin: Character = {
   path: Paths.Erudition,
   element: Elements.Quantum,
   world: Worlds.AnotherWorld,
-  image: CA.RinImg,
+  image: charSplash("Rin"),
   eidolons: Eidolons.RinEidolons,
-  pfp: CA.RinPfp,
+  pfp: charPfp("Rin"),
 
   baseATK: 698,
   baseDEF: 460,
@@ -2779,7 +2779,7 @@ const Rin: Character = {
       name: "Basic ATK: Bajiquan",
       type: "basic",
       level: "1/7",
-      icon: CA.RinBasicATK,
+      icon: charIcon("Rin", "BasicATK"),
 
       description: (i) => `
         Deals Quantum DMG equal to ${scaleValue(S.RinScaling.attack, i)} of Rin Tohsaka's ATK to one designated enemy.
@@ -2791,7 +2791,7 @@ const Rin: Character = {
       name: "Skill: Jeweled Sword Zelretch",
       type: "skill",
       level: "1/12",
-      icon: CA.RinSkill,
+      icon: charIcon("Rin", "Skill"),
 
       description: (i) => `
         Deals Quantum DMG equal to ${scaleValue(S.RinScaling.skill.main, i)} of Rin Tohsaka's ATK to one designated enemy.<br><br>
@@ -2808,7 +2808,7 @@ const Rin: Character = {
       name: "Ultimate: An Gal Ta Ki Gal Šè",
       type: "ultimate",
       level: "1/12",
-      icon: CA.RinUltimate,
+      icon: charIcon("Rin", "Ultimate"),
 
       description: (i) => `
         <b>Energy: 110</b><br>
@@ -2825,7 +2825,7 @@ const Rin: Character = {
       name: "Talent: Gem Magecraft",
       type: "talent",
       level: "1/12",
-      icon: CA.RinTalent,
+      icon: charIcon("Rin", "Talent"),
 
       description: (i) => `
         When entering combat, gains 20 "Gem Energy." When an ally target consumes or recovers Skill Points, 
@@ -2844,7 +2844,7 @@ const Rin: Character = {
             name: "Technique: Conversion Charge",
             type: "technique",
             level: "1/1",
-            icon: CA.RinTechnique,
+            icon: charIcon("Rin", "Technique"),
             description: "After using Technique, creates a Special Dimension that lasts for 20 seconds and automatically moves forward. Enemies within the Special Dimension enter the \"Soulstruck\" state. \"Soulstruck\" enemies will not attack ally targets and will follow the dimension while it persists. After entering combat with \"Soulstruck\" enemies, there is a 100% base chance to inflict each enemy target with 2 of the following states: Wind Shear/Bleed/Burn/Shock, all of which are equivalent to those provided by Hysilens's Talent effect. Only 1 Dimension Effect created by allies can exist at the same time."
         },
 
@@ -2854,7 +2854,7 @@ const Rin: Character = {
             name: "Inbound Prosperity",
             type: "bonus",
             level: "1/1",
-            icon: CA.InboundProsperity,
+            icon: charIcon("Rin", "InboundProsperity"),
             description: "When Rin Tohsaka uses Ultimate, gains 12 \"Gem Energy.\"",
         },
         b2: {
@@ -2862,7 +2862,7 @@ const Rin: Character = {
             name: "Elegant Conduct",
             type: "bonus",
             level: "1/1",
-            icon: CA.ElegantConduct,
+            icon: charIcon("Rin", "ElegantConduct"),
             description: "While Rin Tohsaka is on the field, additionally increases the upper limit of Skill Points by 2. When entering combat, Rin Tohsaka's ATK increases by 150%, and Quantum RES PEN increases by 15%. If Archer is in the team, Archer also gains this effect.",
         },
         b3: {
@@ -2870,7 +2870,7 @@ const Rin: Character = {
             name: "Ladylike Poise",
             type: "bonus",
             level: "1/1",
-            icon: CA.LadylikePoise,
+            icon: charIcon("Rin", "LadylikePoise"),
             description: "When entering combat or after using Enhanced Skill, increases Rin Tohsaka's SPD by 20%, lasting for 3 turn(s).",
         },
         // --- Stats Nodes (Nodos Pequeños) ---
@@ -2878,70 +2878,70 @@ const Rin: Character = {
             id: "s1",
             name: "DMG Boost: Quantum",
             type: "stat",
-            icon: CA.QuantumBoost,
+            icon: statIcon("QuantumBoost"),
             description: "Quantum DMG Increases by: <b><u>4.8%</u></b>",
         },
         s2: {
             id: "s2",
             name: "ATK Boost",
             type: "stat",
-            icon: CA.ATK,
+            icon: statIcon("ATK"),
             description: "Quantum DMG Increases by: <b><u>8.0%</u></b>",
         },
         s3: {
             id: "s3",
             name: "DMG Boost: Quantum",
             type: "stat",
-            icon: CA.QuantumBoost,
+            icon: statIcon("QuantumBoost"),
             description: "Quantum DMG Increases by: <b><u>3.2%</u></b>",
         },
         s4: {
             id: "s4",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
             description: "CRIT DMG Increases by: <b><u>8.0%</u></b>",
         },
         s5: {
             id: "s5",
             name: "ATK Boost",
             type: "stat",
-            icon: CA.ATK,
+            icon: statIcon("ATK"),
             description: "AKT Increases by: <b><u>4.0%</u></b>",
         },
         s6: {
             id: "s6",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
             description: "CRIT DMG Increases by: <b><u>8.0%</u></b>",
         },
         s7: {
             id: "s7",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
             description: "CRIT DMG Increases by: <b><u>5.3%</u></b>",
         },
         s8: {
             id: "s8",
             name: "ATK Boost",
             type: "stat",
-            icon: CA.ATK,
+            icon: statIcon("ATK"),
             description: "AKT Increases by: <b><u>6.0%</u></b>",
         },
         s9: {
             id: "s9",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
             description: "CRIT DMG Increases by: <b><u>5.3%</u></b>",
         },
         s10: {
             id: "s10",
             name: "CRIT DMG Boost",
             type: "stat",
-            icon: CA.CritDMG,
+            icon: statIcon("CritDMG"),
             description: "CRIT DMG Increases by: <b><u>10.7%</u></b>",
         },
     },

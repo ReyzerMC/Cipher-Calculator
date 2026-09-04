@@ -1,6 +1,6 @@
 import type { LightCone } from "../../types/hsr";
 import { Paths, Texts } from "../item/ResourcesLists";
-import * as LA from "../../assets/lightcones/index";
+import { lightConeImg } from "../../utils/assets";
 
 export const LightCones : LightCone[] = [];
 
@@ -8,7 +8,7 @@ const LiesDanceOnTheBreeze : LightCone = {
     name: "Lies Dance On The Breeze",
     path: Paths.Nihility,
     description: Texts.LiesDanceOnTheBreezeTextENG,
-    image: LA.LiesDanceOnTheBreezeImg,
+    image: lightConeImg("LiesDanceOnTheBreeze"),
 
     baseHP: 952,
     baseATK: 582,
@@ -20,7 +20,7 @@ const FlameOfBlood_BlazeMyPath : LightCone = {
     name: "Flame of Blood, Blaze My Path",
     path: Paths.Destruction,
     description: Texts.FlameOfBloodBlazeMyPathTextENG,
-    image: LA.FlameOfBloodBlazeMyPathImg,
+    image: lightConeImg("FlameOfBloodBlazeMyPath"),
 
     baseHP: 1375,
     baseATK: 476,
@@ -32,7 +32,7 @@ const ATrailOfBygoneBlood : LightCone = {
     name: "A Trail of Bygone Blood",
     path: Paths.Destruction,
     description: Texts.ATrailOfBygoneBloodENG,
-    image: LA.ATrailOfBygoneBloodImg,
+    image: lightConeImg("ATrailOfBygoneBlood"),
 
     baseHP: 1058,
     baseATK: 529,
@@ -44,7 +44,7 @@ const GoodNightAndSleepWell : LightCone = {
     name: "Good Night and Sleep Well",
     path: Paths.Nihility,
     description: Texts.GoodNightAndSleepWellENG,
-    image: LA.GoodNightAndSleepWellImg,
+    image: lightConeImg("GoodNightAndSleepWell"),
 
     baseHP: 952,
     baseATK: 476,
@@ -56,7 +56,7 @@ const InTheNight : LightCone = {
     name: "In the Night",
     path: Paths.Hunt,
     description: Texts.InTheNightENG,
-    image: LA.InTheNightImg,
+    image: lightConeImg("InTheNight"),
 
     baseHP: 1058,
     baseATK: 582,
@@ -68,7 +68,7 @@ const SummerRidesTheSurf : LightCone = {
     name: "Summer Rides the Surf",
     path: Paths.Elation,
     description: Texts.SummerRidesTheSurfENG,
-    image: LA.SummerRidesTheSurfImg,
+    image: lightConeImg("SummerRidesTheSurf"),
 
     baseHP: 1058,
     baseATK: 582,
@@ -80,7 +80,7 @@ const PastSelfInMirror : LightCone = {
     name: "Past Self in Mirror",
     path: Paths.Harmony,
     description: Texts.PastSelfInMirrorENG,
-    image: LA.PastSelfInMirrorImg,
+    image: lightConeImg("PastSelfInMirror"),
 
     baseHP: 1058,
     baseATK: 529,
@@ -92,7 +92,7 @@ const ScentAloneStaysTrue : LightCone = {
     name: "Scent Alone Stays True",
     path: Paths.Abundance,
     description: Texts.ScentAloneStaysTrueENG,
-    image: LA.ScentAloneStaysTrueImg,
+    image: lightConeImg("ScentAloneStaysTrue"),
 
     baseHP: 1058,
     baseATK: 529,
@@ -104,7 +104,7 @@ const MakeFarewellsMoreBeautiful : LightCone = {
     name: "Make Farewells More Beautiful",
     path: Paths.Remembrance,
     description: Texts.MakeFarewellsMoreBeautifulENG,
-    image: LA.MakeFarewellsMoreBeautifulImg,
+    image: lightConeImg("MakeFarewellsMoreBeautiful"),
 
     baseHP: 1270,
     baseATK: 529,
@@ -116,7 +116,7 @@ const WorrisomeBlissful : LightCone = {
     name: "Worrisome, Blissful",
     path: Paths.Hunt,
     description: Texts.WorrisomeBlissfulENG,
-    image: LA.WorrisomeBlissfulImg,
+    image: lightConeImg("WorrisomeBlissful"),
 
     baseHP: 1058,
     baseATK: 582,
@@ -128,7 +128,7 @@ const InherentlyUnjustDestiny : LightCone = {
     name: "Inherently Unjust Destiny",
     path: Paths.Preservation,
     description: Texts.InherentlyUnjustDestinyENG,
-    image: LA.InherentlyUnjustDestinyImg,
+    image: lightConeImg("InherentlyUnjustDestiny"),
 
     baseHP: 1058,
     baseATK: 423,
@@ -140,7 +140,7 @@ const WhereaboutsShouldDreamsRest : LightCone = {
     name: "Whereabouts Should Dreams Rest",
     path: Paths.Destruction,
     description: Texts.WhereaboutsShouldDreamsRestENG,
-    image: LA.WhereaboutsShouldDreamsRestImg,
+    image: lightConeImg("WhereaboutsShouldDreamsRest"),
 
     baseHP: 1164,
     baseATK: 476,
@@ -152,7 +152,7 @@ const RiseAndSing : LightCone = {
     name: "Rise and Sing",
     path: Paths.Remembrance,
     description: Texts.RiseAndSingENG,
-    image: LA.RiseAndSingImg,
+    image: lightConeImg("RiseAndSing"),
 
     baseHP: 1164,
     baseATK: 582,
@@ -164,7 +164,7 @@ const WhyDoesTheOceanSing : LightCone = {
     name: "Why Does the Ocean Sing",
     path: Paths.Nihility,
     description: Texts.WhyDoesTheOceanSingENG,
-    image: LA.WhyDoesTheOceanSingImg,
+    image: lightConeImg("WhyDoesTheOceanSing"),
 
     baseHP: 952,
     baseATK: 635,
@@ -176,7 +176,7 @@ const FlickeringStars : LightCone = {
     name: "Flickering Stars",
     path: Paths.Erudition,
     description: Texts.FlickeringStarsENG,
-    image: LA.FlickeringStarsImg,
+    image: lightConeImg("FlickeringStars"),
 
     baseHP: 856,
     baseATK: 635,
