@@ -38,9 +38,9 @@ interface AppCookies {
 };
 
 export default function App() {
+  const [cookies, setCookie, removeCookie] = useCookies<string, AppCookies>(['selectedChar', 'selectedCone']);
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(() => cookies.selectedChar ?? null);
   const [selectedLightCone, setSelectedLightCone] = useState<LightCone | null>(() => cookies.selectedCone ?? null);
-  const [cookies, setCookie, removeCookie] = useCookies<string, AppCookies>(['selectedChar', 'selectedCone']);
 
   const [activeTab, setActiveTab] = useState<"details" | "skill" | "traces" | "eidolons">("details");
 
