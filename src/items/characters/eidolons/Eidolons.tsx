@@ -5449,7 +5449,7 @@ export const RobinSummerettoEidolons: Eidolon = {
 
         desc: "\"Summer Songbirds\" will keep a tally of 100% of the non-True DMG dealt by ally targets. When using the Memosprite Skill, additionally deals True DMG to the enemy target with the highest HP, equal to (11% + current Vibes × #2[f1]%) of the total tally. Then, clears 50% of the tally.",
 
-        image: charEidolon("Robin • Summeretto", 1),
+        image: charEidolon("RobinSummeretto", 1),
 
     },
 
@@ -5459,7 +5459,7 @@ export const RobinSummerettoEidolons: Eidolon = {
 
         desc: "Ally targets' All-Type RES PEN increases by 18%. The upper limit of Robin • Summeretto's Vibes increases by 20. The first time an ally target uses an ability during any target's turn to cause Robin • Summeretto to gain Vibes, she gains an additional 2 points.",
 
-        image: charEidolon("Robin • Summeretto", 2),
+        image: charEidolon("RobinSummeretto", 2),
 
     },
 
@@ -5469,7 +5469,7 @@ export const RobinSummerettoEidolons: Eidolon = {
 
         desc: "Skill Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15. Memosprite Talent Lv. +1, up to a maximum of Lv. 10.",
 
-        image: charEidolon("Robin • Summeretto", 3),
+        image: charEidolon("RobinSummeretto", 3),
 
     },
 
@@ -5479,7 +5479,7 @@ export const RobinSummerettoEidolons: Eidolon = {
 
         desc: "Upon entering the \"Fever\" state, immediately gains 12 Vibes, and increases the SPD of \"Summer Songbirds\" by an amount equal to (20% + current Vibes × #3[f1]%).",
 
-        image: charEidolon("Robin • Summeretto", 4),
+        image: charEidolon("RobinSummeretto", 4),
 
     },
 
@@ -5489,7 +5489,7 @@ export const RobinSummerettoEidolons: Eidolon = {
 
         desc: "Ultimate Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10. Memosprite Skill Lv. +1, up to a maximum of Lv. 10.",
 
-        image: charEidolon("Robin • Summeretto", 5),
+        image: charEidolon("RobinSummeretto", 5),
 
     },
 
@@ -5499,7 +5499,7 @@ export const RobinSummerettoEidolons: Eidolon = {
 
         desc: "Increases the Memosprite Skill's DMG multiplier by 100% of its original value. While in the \"Fever\" state, Robin • Summeretto can store her Ultimate up to 2 times. After entering the \"Fever\" state for the first time in this battle or when the the \"Fever\" countdown's turn starts, regenerates a fixed 140 Energy.",
 
-        image: charEidolon("Robin • Summeretto", 6),
+        image: charEidolon("RobinSummeretto", 6),
 
     },
 
@@ -5513,7 +5513,7 @@ export const AventurineWaveflairEidolons: Eidolon = {
 
         desc: "Increases All-Type RES PEN by 24%. Talent gets enhanced: When \"Fervor\" reaches 10/20/30 points, immediately uses \"Cheers! To Summer's Blaze.\"",
 
-        image: charEidolon("Aventurine • Waveflair", 1),
+        image: charEidolon("AventurineWaveflair", 1),
 
     },
 
@@ -5523,7 +5523,7 @@ export const AventurineWaveflairEidolons: Eidolon = {
 
         desc: "Increases the upper limit of \"Fervor\" to 50 points. \"Fervor\" reaching 40/50 points can also trigger the Talent to use \"Cheers! To Summer's Blaze.\" After using Elation Skill, additionally gains 4 \"Fervor.\"",
 
-        image: charEidolon("Aventurine • Waveflair", 2),
+        image: charEidolon("AventurineWaveflair", 2),
 
     },
 
@@ -5533,7 +5533,7 @@ export const AventurineWaveflairEidolons: Eidolon = {
 
         desc: "Skill Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15. Elation Skill Lv. +1, up to a maximum of Lv. 15.",
 
-        image: charEidolon("Aventurine • Waveflair", 3),
+        image: charEidolon("AventurineWaveflair", 3),
 
     },
 
@@ -5543,7 +5543,7 @@ export const AventurineWaveflairEidolons: Eidolon = {
 
         desc: "When Aventurine • Waveflair uses Skill, enables the DMG dealt by all allies to ignore 18% of enemy targets' DEF, lasting for 3 turn(s).",
 
-        image: charEidolon("Aventurine • Waveflair", 4),
+        image: charEidolon("AventurineWaveflair", 4),
 
     },
 
@@ -5553,7 +5553,7 @@ export const AventurineWaveflairEidolons: Eidolon = {
 
         desc: "Ultimate Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10. Elation Skill Lv. +1, up to a maximum of Lv. 15.",
 
-        image: charEidolon("Aventurine • Waveflair", 5),
+        image: charEidolon("AventurineWaveflair", 5),
 
     },
 
@@ -5563,7 +5563,7 @@ export const AventurineWaveflairEidolons: Eidolon = {
 
         desc: "Elation DMG dealt by Aventurine • Waveflair merrymakes by 25%. After Aventurine • Waveflair uses his Elation Skill 2 time(s), all subsequent Elation Skills used become \"All In! To Summer's Blaze.\" And when using the Elation Skill \"All In! To Summer's Blaze\" to additionally deal DMG outside of Aha Instant, it no longer consumes \"Fervor.\"",
 
-        image: charEidolon("Aventurine • Waveflair", 6),
+        image: charEidolon("AventurineWaveflair", 6),
 
     },
 

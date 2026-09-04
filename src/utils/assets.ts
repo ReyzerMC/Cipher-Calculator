@@ -22,7 +22,7 @@ export const charIcon = (character: string, icon: string) =>
     asset(`characters/${character}/${icon}.webp`);
 
 export const charEidolon = (character: string, n: number) =>
-    asset(`characters/${character}/eidolons/E${n}.webp`);
+    asset(`characters/${character}/eidolons/e${n}.webp`);
 
 export const statIcon = (stat: string) =>
     asset(`stats/${stat}.webp`);

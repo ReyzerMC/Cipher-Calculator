@@ -2359,9 +2359,9 @@ const RbnSummeretto: Character = {
     path: Paths.Remembrance,
     element: Elements.Wind,
     world: Worlds.Penacony,
-    image: charSplash("RbnSummeretto"),
+    image: charSplash("RobinSummeretto"),
     eidolons: Eidolons.RobinSummerettoEidolons,
-    pfp: charPfp("RbnSummeretto"),
+    pfp: charPfp("RobinSummeretto"),
 
     baseATK: 601,
     baseDEF: 485,
