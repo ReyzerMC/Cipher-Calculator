@@ -4,9 +4,10 @@ import { Characters } from "./items/characters/CharactersList";
 import { LightCones } from "./items/lightCones/LightConesList";
 import "./App.css";
 import { TracesMenu } from "./TracesMenu";
-import { nihilityImg, destructionImg, elationImg, harmonyImg, abundanceImg, eruditionImg, huntImg, preservationImg, remembranceImg } from "./assets/paths";
+import { pathIcon } from "./utils/assets";
 import { Paths } from "./items/item/ResourcesLists";
 import { EidolonsMenu } from "./EidolonsMenu";
+import { Modal } from "./components/Modal";
 
 const useTraceScale = () => {
   const [scale, setScale] = useState(1.0);
@@ -147,19 +148,7 @@ export default function App() {
           <TracesMenu
             path={selectedCharacter?.path!}
             nodes={selectedCharacter?.traces!}
-            bgWatermark={
-              {
-                [Paths.Nihility]: nihilityImg,
-                [Paths.Destruction]: destructionImg,
-                [Paths.Abundance]: abundanceImg,
-                [Paths.Elation]: elationImg,
-                [Paths.Erudition]: eruditionImg,
-                [Paths.Hunt]: huntImg,
-                [Paths.Preservation]: preservationImg,
-                [Paths.Harmony]: harmonyImg,
-                [Paths.Remembrance]: remembranceImg
-              }[selectedCharacter.path]
-            }
+            bgWatermark={pathIcon(selectedCharacter.path)}
           />
         )}
 
@@ -305,13 +294,7 @@ export default function App() {
 
       {/* Modal / Menú Flotante de Selección de Personaje */}
       {isCharModalOpen && (
-        <div className="hsr-modal-backdrop" onClick={() => setIsCharModalOpen(false)}>
-          <div className="hsr-modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="hsr-modal-header">
-              <h2>Select Character</h2>
-              <button className="hsr-modal-close" onClick={() => setIsCharModalOpen(false)}>✕</button>
-            </div>
-
+        <Modal title="Select Character" onClose={() => setIsCharModalOpen(false)}>
             {/* Buscador y Filtros */}
             <div className="hsr-modal-controls">
               <input
@@ -363,19 +346,12 @@ export default function App() {
                 <div className="hsr-no-results">No characters found</div>
               )}
             </div>
-          </div>
-        </div>
+        </Modal>
       )}
 
       {/* Modal / Menú Flotante de Selección de Conos de Luz */}
       {isLcModalOpen && (
-        <div className="hsr-modal-backdrop" onClick={() => setIsLcModalOpen(false)}>
-          <div className="hsr-modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="hsr-modal-header">
-              <h2>Select Light Cone</h2>
-              <button className="hsr-modal-close" onClick={() => setIsLcModalOpen(false)}>✕</button>
-            </div>
-
+        <Modal title="Select Light Cone" onClose={() => setIsLcModalOpen(false)}>
             {/* Buscador */}
             <div className="hsr-modal-controls">
               <input
@@ -412,8 +388,7 @@ export default function App() {
                 <div className="hsr-no-results">No Light Cones found</div>
               )}
             </div>
-          </div>
-        </div>
+        </Modal>
       )}
     </div>
   );
