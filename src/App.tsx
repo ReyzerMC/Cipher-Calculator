@@ -8,6 +8,7 @@ import { pathIcon } from "./utils/assets";
 import { Paths } from "./items/item/ResourcesLists";
 import { EidolonsMenu } from "./EidolonsMenu";
 import { Modal } from "./components/Modal";
+import { useCookies } from "react-cookie";
 
 const useTraceScale = () => {
   const [scale, setScale] = useState(1.0);
@@ -31,9 +32,16 @@ const useTraceScale = () => {
   return scale;
 };
 
+interface AppCookies {
+  selectedChar?: Character | null;
+  selectedCone?: LightCone | null;
+};
+
 export default function App() {
-  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);
-  const [selectedLightCone, setSelectedLightCone] = useState<LightCone | null>(null);
+  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(() => cookies.selectedChar ?? null);
+  const [selectedLightCone, setSelectedLightCone] = useState<LightCone | null>(() => cookies.selectedCone ?? null);
+  const [cookies, setCookie, removeCookie] = useCookies<string, AppCookies>(['selectedChar', 'selectedCone']);
+
   const [activeTab, setActiveTab] = useState<"details" | "skill" | "traces" | "eidolons">("details");
 
   // Estados para el Cono de Luz
@@ -78,11 +86,14 @@ export default function App() {
     setSelectedCharacter(char);
     setSelectedLightCone(null);
     setIsCharModalOpen(false);
+    setCookie("selectedChar", char, { path: "/", maxAge: 60 * 60 * 24 * 30 });
+    removeCookie("selectedCone", { path: "/" });
   };
 
   const handleSelectLightCone = (lc: LightCone) => {
     setSelectedLightCone(lc);
     setIsLcModalOpen(false);
+    setCookie("selectedCone", lc, { path: "/", maxAge: 60 * 60 * 24 * 30 });
   };
 
   const openLcModal = () => {
