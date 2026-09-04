@@ -34,7 +34,7 @@ Actualmente solamente hay **12 personajes disponibles**.
 
 ### Conos de Luz
 
-Actualmente hay **15 Conos de Luz implementados**.
+Actualmente estan **todos los Conos de Luz implementados**.
 
 ---
 

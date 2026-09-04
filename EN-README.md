@@ -34,7 +34,7 @@ There are currently only **12 characters available**.
 
 ### Light Cones
 
-There are currently **15 Light Cones implemented**.
+There are **all the Light Cones implemented**.
 
 ---
 
