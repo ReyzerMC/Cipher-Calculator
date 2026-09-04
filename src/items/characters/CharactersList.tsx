@@ -540,7 +540,7 @@ const AventurineWaveflair: Character = {
     element: Elements.Quantum,
     world: Worlds.InterastralPeaceCorporation,
     image: charSplash("AventurineWaveflair"),
-    eidolons: Eidolons.AvWfEidolons,
+    eidolons: Eidolons.AventurineWaveflairEidolons,
     pfp: charPfp("AventurineWaveflair"),
 
     baseATK: 485,
@@ -871,7 +871,7 @@ const Ruanmei: Character = {
     element: Elements.Ice,
     world: Worlds.HertaSpaceStation,
     image: charSplash("Ruanmei"),
-    eidolons: Eidolons.RuanEidolons,
+    eidolons: Eidolons.RuanMeiEidolons,
     pfp: charPfp("Ruanmei"),
 
     baseATK: 659,
@@ -1427,7 +1427,7 @@ const Castorice: Character = {
     element: Elements.Quantum,
     world: Worlds.Amphoreus,
     image: charSplash("Castorice"),
-    eidolons: Eidolons.CastorEidolons,
+    eidolons: Eidolons.CastoriceEidolons,
     pfp: charPfp("Castorice"),
 
     baseATK: 523,
@@ -1686,7 +1686,7 @@ const Topaz: Character = {
     element: Elements.Fire,
     world: Worlds.InterastralPeaceCorporation,
     image: charSplash("Topaz"),
-    eidolons: Eidolons.TopazEidolons,
+    eidolons: Eidolons.TopazNumbyEidolons,
     pfp: charPfp("Topaz"),
 
     baseATK: 620,
@@ -1932,7 +1932,7 @@ const Aventurine: Character = {
     element: Elements.Imaginary,
     world: Worlds.InterastralPeaceCorporation,
     image: charSplash("Aventurine"),
-    eidolons: Eidolons.AvEidolons,
+    eidolons: Eidolons.AventurineEidolons,
     pfp: charPfp("Aventurine"),
 
     baseATK: 446,
@@ -2360,7 +2360,7 @@ const RbnSummeretto: Character = {
     element: Elements.Wind,
     world: Worlds.Penacony,
     image: charSplash("RbnSummeretto"),
-    eidolons: Eidolons.RbnSummerettoEidolons,
+    eidolons: Eidolons.RobinSummerettoEidolons,
     pfp: charPfp("RbnSummeretto"),
 
     baseATK: 601,
