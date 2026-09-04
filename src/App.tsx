@@ -33,14 +33,24 @@ const useTraceScale = () => {
 };
 
 interface AppCookies {
-  selectedChar?: Character | null;
-  selectedCone?: LightCone | null;
+  selectedChar?: string | null;
+  selectedCone?: string | null;
 };
 
 export default function App() {
   const [cookies, setCookie, removeCookie] = useCookies<string, AppCookies>(['selectedChar', 'selectedCone']);
-  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(() => cookies.selectedChar ?? null);
-  const [selectedLightCone, setSelectedLightCone] = useState<LightCone | null>(() => cookies.selectedCone ?? null);
+  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(() => {
+    if (cookies.selectedChar) {
+      return Characters.find((c) => c.name === cookies.selectedChar) ?? null;
+    };
+    return null;
+  });
+  const [selectedLightCone, setSelectedLightCone] = useState<LightCone | null>(() => {
+    if (cookies.selectedCone) {
+      return LightCones.find((c) => c.name === cookies.selectedCone) ?? null;
+    };
+    return null;
+  });
 
   const [activeTab, setActiveTab] = useState<"details" | "skill" | "traces" | "eidolons">("details");
 
@@ -86,14 +96,15 @@ export default function App() {
     setSelectedCharacter(char);
     setSelectedLightCone(null);
     setIsCharModalOpen(false);
-    setCookie("selectedChar", char, { path: "/", maxAge: 60 * 60 * 24 * 30 });
+
+    setCookie("selectedChar", char.name, { path: "/", maxAge: 60 * 60 * 24 * 30 });
     removeCookie("selectedCone", { path: "/" });
   };
 
   const handleSelectLightCone = (lc: LightCone) => {
     setSelectedLightCone(lc);
     setIsLcModalOpen(false);
-    setCookie("selectedCone", lc, { path: "/", maxAge: 60 * 60 * 24 * 30 });
+    setCookie("selectedCone", lc.name, { path: "/", maxAge: 60 * 60 * 24 * 30 });
   };
 
   const openLcModal = () => {
