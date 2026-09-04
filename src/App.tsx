@@ -402,7 +402,6 @@ export default function App() {
                     {/* Nombre y Estrellas en la parte inferior */}
                     <div className="hsr-char-info-bar">
                       <div className="hsr-char-name">{lc.name}</div>
-                      <div className="hsr-char-stars">★★★★★</div>
                     </div>
                   </div>
                 ))

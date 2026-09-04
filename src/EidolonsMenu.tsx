@@ -7,7 +7,7 @@ type EidolonKey = "e1" | "e2" | "e3" | "e4" | "e5" | "e6";
 export const EidolonsMenu: React.FC<Eidolon> = (props) => {
   // Guardamos las claves de los eidolones desplegados
   const [openKeys, setOpenKeys] = useState<Record<EidolonKey, boolean>>({
-    e1: false, // E1 abierto por defecto
+    e1: false,
     e2: false,
     e3: false,
     e4: false,
