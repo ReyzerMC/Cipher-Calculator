@@ -73,7 +73,7 @@ export const DanHengEidolons: Eidolon = {
 
         desc: "When the target enemy's current HP percentage is greater than or equal to 50%, CRIT Rate increases by 12%.",
 
-        image: charEidolon("Dan Heng", 1),
+        image: charEidolon("DanHeng", 1),
 
     },
 
@@ -83,7 +83,7 @@ export const DanHengEidolons: Eidolon = {
 
         desc: "Reduces Talent cooldown by 1 turn.",
 
-        image: charEidolon("Dan Heng", 2),
+        image: charEidolon("DanHeng", 2),
 
     },
 
@@ -93,7 +93,7 @@ export const DanHengEidolons: Eidolon = {
 
         desc: "Skill Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10.",
 
-        image: charEidolon("Dan Heng", 3),
+        image: charEidolon("DanHeng", 3),
 
     },
 
@@ -103,7 +103,7 @@ export const DanHengEidolons: Eidolon = {
 
         desc: "When Dan Heng uses his Ultimate to defeat an enemy, he will immediately take action again.",
 
-        image: charEidolon("Dan Heng", 4),
+        image: charEidolon("DanHeng", 4),
 
     },
 
@@ -113,7 +113,7 @@ export const DanHengEidolons: Eidolon = {
 
         desc: "Ultimate Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15.",
 
-        image: charEidolon("Dan Heng", 5),
+        image: charEidolon("DanHeng", 5),
 
     },
 
@@ -123,7 +123,7 @@ export const DanHengEidolons: Eidolon = {
 
         desc: "The Slow state triggered by Skill reduces the enemy's SPD by an extra 8%.",
 
-        image: charEidolon("Dan Heng", 6),
+        image: charEidolon("DanHeng", 6),
 
     },
 
@@ -329,7 +329,7 @@ export const SilverWolfEidolons: Eidolon = {
 
         desc: "After using her Ultimate to attack enemies, Silver Wolf regenerates 7 Energy for every debuff that the target enemy currently has. This effect can be triggered up to 5 time(s) in each use of her Ultimate.",
 
-        image: charEidolon("Silver Wolf", 1),
+        image: charEidolon("SilverWolf", 1),
 
     },
 
@@ -339,7 +339,7 @@ export const SilverWolfEidolons: Eidolon = {
 
         desc: "When an enemy enters combat, reduces their Effect RES by 20%.",
 
-        image: charEidolon("Silver Wolf", 2),
+        image: charEidolon("SilverWolf", 2),
 
     },
 
@@ -349,7 +349,7 @@ export const SilverWolfEidolons: Eidolon = {
 
         desc: "Skill Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15.",
 
-        image: charEidolon("Silver Wolf", 3),
+        image: charEidolon("SilverWolf", 3),
 
     },
 
@@ -359,7 +359,7 @@ export const SilverWolfEidolons: Eidolon = {
 
         desc: "After using her Ultimate to attack enemies, deals Quantum Additional DMG equal to 20% of Silver Wolf's ATK for every debuff currently on the enemy target. This effect can be triggered for a maximum of 5 time(s) during each use of her Ultimate.",
 
-        image: charEidolon("Silver Wolf", 4),
+        image: charEidolon("SilverWolf", 4),
 
     },
 
@@ -369,7 +369,7 @@ export const SilverWolfEidolons: Eidolon = {
 
         desc: "Ultimate Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10.",
 
-        image: charEidolon("Silver Wolf", 5),
+        image: charEidolon("SilverWolf", 5),
 
     },
 
@@ -379,7 +379,7 @@ export const SilverWolfEidolons: Eidolon = {
 
         desc: "For every debuff the enemy target has, the DMG dealt by Silver Wolf to it increases by 20%, up to a max increase of 100%.",
 
-        image: charEidolon("Silver Wolf", 6),
+        image: charEidolon("SilverWolf", 6),
 
     },
 
@@ -2249,7 +2249,7 @@ export const DanHengImbibitorLunaeEidolons: Eidolon = {
 
         desc: "Increases the stackable Righteous Heart count by 4, and gains 1 extra stack of Righteous Heart for each hit during an attack.",
 
-        image: charEidolon("Dan Heng • Imbibitor Lunae", 1),
+        image: charEidolon("DanHengImbibitorLunae", 1),
 
     },
 
@@ -2259,7 +2259,7 @@ export const DanHengImbibitorLunaeEidolons: Eidolon = {
 
         desc: "After using his Ultimate, Dan Heng • Imbibitor Lunae's action advances by 100% and gains 1 extra \"Squama Sacrosancta.\"",
 
-        image: charEidolon("Dan Heng • Imbibitor Lunae", 2),
+        image: charEidolon("DanHengImbibitorLunae", 2),
 
     },
 
@@ -2269,7 +2269,7 @@ export const DanHengImbibitorLunaeEidolons: Eidolon = {
 
         desc: "Skill Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10.",
 
-        image: charEidolon("Dan Heng • Imbibitor Lunae", 3),
+        image: charEidolon("DanHengImbibitorLunae", 3),
 
     },
 
@@ -2279,7 +2279,7 @@ export const DanHengImbibitorLunaeEidolons: Eidolon = {
 
         desc: "The buff effect granted by \"Outroar\" lasts until the end of this unit's next turn.",
 
-        image: charEidolon("Dan Heng • Imbibitor Lunae", 4),
+        image: charEidolon("DanHengImbibitorLunae", 4),
 
     },
 
@@ -2289,7 +2289,7 @@ export const DanHengImbibitorLunaeEidolons: Eidolon = {
 
         desc: "Ultimate Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15.",
 
-        image: charEidolon("Dan Heng • Imbibitor Lunae", 5),
+        image: charEidolon("DanHengImbibitorLunae", 5),
 
     },
 
@@ -2299,7 +2299,7 @@ export const DanHengImbibitorLunaeEidolons: Eidolon = {
 
         desc: "After another ally character uses their Ultimate, the Imaginary RES PEN of Dan Heng • Imbibitor Lunae's next \"Fulgurant Leap\" attack increases by 20%. This effect can stack up to 3 time(s).",
 
-        image: charEidolon("Dan Heng • Imbibitor Lunae", 6),
+        image: charEidolon("DanHengImbibitorLunae", 6),
 
     },
 
@@ -4745,7 +4745,7 @@ export const DanHengPermansorTerraeEidolons: Eidolon = {
 
         desc: "When Dan Heng • Permansor Terrae uses Ultimate, recovers 1 Skill Point(s) and increases the \"Bondmate's\" All-Type RES PEN by 18%, lasting for 3 turn(s).",
 
-        image: charEidolon("Dan Heng • Permansor Terrae", 1),
+        image: charEidolon("DanHengPermansorTerrae", 1),
 
     },
 
@@ -4755,7 +4755,7 @@ export const DanHengPermansorTerraeEidolons: Eidolon = {
 
         desc: "Additionally increases the number of actions for the enhanced Souldragon from Ultimate by 2. After Dan Heng • Permansor Terrae uses Ultimate, Souldragon advances action by 100%. When the enhanced \"Souldragon\" takes action, the Additional DMG dealt by the \"Bondmate\" becomes 200% of its original DMG, and the Shield Effect provided in this instance becomes 200% of its original Shield Effect.",
 
-        image: charEidolon("Dan Heng • Permansor Terrae", 2),
+        image: charEidolon("DanHengPermansorTerrae", 2),
 
     },
 
@@ -4765,7 +4765,7 @@ export const DanHengPermansorTerraeEidolons: Eidolon = {
 
         desc: "Ultimate Lv. +2, up to a maximum of Lv. 15. Basic ATK Lv. +1, up to a maximum of Lv. 10.",
 
-        image: charEidolon("Dan Heng • Permansor Terrae", 3),
+        image: charEidolon("DanHengPermansorTerrae", 3),
 
     },
 
@@ -4775,7 +4775,7 @@ export const DanHengPermansorTerraeEidolons: Eidolon = {
 
         desc: "Reduces the DMG taken by the \"Bondmate\" by 20%.",
 
-        image: charEidolon("Dan Heng • Permansor Terrae", 4),
+        image: charEidolon("DanHengPermansorTerrae", 4),
 
     },
 
@@ -4785,7 +4785,7 @@ export const DanHengPermansorTerraeEidolons: Eidolon = {
 
         desc: "Skill Lv. +2, up to a maximum of Lv. 15. Talent Lv. +2, up to a maximum of Lv. 15.",
 
-        image: charEidolon("Dan Heng • Permansor Terrae", 5),
+        image: charEidolon("DanHengPermansorTerrae", 5),
 
     },
 
@@ -4795,7 +4795,7 @@ export const DanHengPermansorTerraeEidolons: Eidolon = {
 
         desc: "When the \"Bondmate\" is on the field, increases the DMG taken by all enemies by 20%. When the \"Bondmate\" deals DMG, ignores 12% of the enemy targets' DEF. When Dan Heng • Permansor Terrae uses Ultimate, the \"Bondmate\" will deal Additional DMG of the Bondmate's Type to all enemies, equal to 330% of the Bondmate's ATK.",
 
-        image: charEidolon("Dan Heng • Permansor Terrae", 6),
+        image: charEidolon("DanHengPermansorTerrae", 6),
 
     },
 
