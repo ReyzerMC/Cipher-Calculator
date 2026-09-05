@@ -198,7 +198,7 @@ export class ElationTreeLayout {
     // --- PASIVAS MAYORES ---
     b1: { x: 50, y: 15 },
     b2: { x: 50, y: 86 },
-    b3: { x: 23, y: 32 },
+    b3: { x: 20, y: 32 },
     b4: { x: 77, y: 32 },
 
     // --- ANILLO EXTERIOR Y STAT BONUS (s1 a s10) ---

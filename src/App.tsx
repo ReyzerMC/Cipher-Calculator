@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import type { Character, LightCone } from "./types/hsr";
-import { Characters } from "./items/characters/CharactersList";
+import { Characters } from "./items/characters/CharacterList";
 import { LightCones } from "./items/lightCones/LightConesList";
 import "./App.css";
 import { TracesMenu } from "./TracesMenu";

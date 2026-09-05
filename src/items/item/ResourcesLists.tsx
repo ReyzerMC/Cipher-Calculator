@@ -46,6 +46,7 @@ export const Worlds = {
     Penacony: "Penacony",
     IntelligentsiaGuild: "Intelligentsia Guild",
     TheXianzhouYaoqing: "The Xianzhou Yaoqing",
+    TheKnightsOfBeauty: "The Knights of Beauty",
 } as const;
 
 export type World = typeof Worlds[keyof typeof Worlds];

@@ -5121,7 +5121,7 @@ export const EvanesciaEidolons: Eidolon = {
 
 };
 
-export const SilverWolfLvUnbreak999UnbreakEidolons: Eidolon = {
+export const SilverWolfLV999Eidolons: Eidolon = {
 
     e1: {
 
